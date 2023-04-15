@@ -133,7 +133,7 @@ script AskPlayerMon{
         }
     else{
         bufferspeciesname(STR_VAR_1, SPECIES_HONEDGE)
-        setvar(VAR_PICKED_STARTER, SPECIES_HONEDGE) 
+        setvar(VAR_PICKED_STARTER, SPECIES_HONEDGE)
     }
     goto(ConfirmPlayerMon)
 }
