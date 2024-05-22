@@ -1,6 +1,6 @@
 # ABOUT
 
-Credit `Voluptua` (me) if you are using this branch! 
+Credit `Voluptua` (me) and `Pawkkie` if you are using this branch! 
 
 This branch contains a custom start menu for vanilla pokeemerald. 
 It's compatible with Dynamic Overworld Palettes and with the safari zone. 
