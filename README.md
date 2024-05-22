@@ -1,9 +1,6 @@
-# WARNING
-
-By using this feature branch, you consent of never making profit out of your game! That includes both pay-walls **as well as optional donations** (which includes ko-fi, Patreon, etc.).
-Credit `Voluptua` (me) if you are using this branch! 
-
 # ABOUT
+
+Credit `Voluptua` (me) if you are using this branch! 
 
 This branch contains a custom start menu for vanilla pokeemerald. 
 It's compatible with Dynamic Overworld Palettes and with the safari zone. 
