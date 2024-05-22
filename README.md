@@ -10,9 +10,10 @@ I am no professional and there are infinite other ways to write the code better 
 However, there's another problem. If you use this for your hack and in your storyline, you change the order of what new menu option is added, you have to change some horrible functions I have created :smile: .
 New options are added like this: `First the Party option, then the PokeDex and then the PokeNav`. So if the player in your hack, gets these menus in a different order, you will have a hard time to fix this... 
 
+### SHOWCASE: 
+![Normal](https://github.com/Voluptua/pokeemerald/blob/start_menu_1/normal.gif)
+![Safari](https://github.com/Voluptua/pokeemerald/blob/start_menu_1/safari.gif)
+
 ### TODO: 
 - Add tutorials
 - Make a pokeemerald-expansion branch for this
-
-
-
