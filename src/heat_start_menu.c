@@ -138,7 +138,7 @@ struct HeatStartMenu {
 };
 
 static EWRAM_DATA struct HeatStartMenu *sHeatStartMenu = NULL;
-static EWRAM_DATA u8 menuSelected = 255;
+static EWRAM_DATA u8 menuSelected = 0;
 static EWRAM_DATA u8 (*sSaveDialogCallback)(void) = NULL;
 static EWRAM_DATA u8 sSaveDialogTimer = 0;
 static EWRAM_DATA u8 sSaveInfoWindowId = 0;
@@ -148,7 +148,7 @@ static const u32 sStartMenuTiles[] = INCBIN_U32("graphics/heat_start_menu/bg.4bp
 static const u32 sStartMenuTilemap[] = INCBIN_U32("graphics/heat_start_menu/bg.bin.lz");
 static const u32 sStartMenuTilemapSafari[] = INCBIN_U32("graphics/heat_start_menu/bg_safari.bin.lz");
 static const u16 sStartMenuPalette[] = INCBIN_U16("graphics/heat_start_menu/bg.gbapal");
-static const u16 gStandardMenuPalette[] = INCBIN_U16("graphics/interface/std_menu.gbapal");
+static const u16 gStandardMenuPaletteTest[] = INCBIN_U16("graphics/interface/std_menu.gbapal");
 
 //--SPRITE-GFX--
 #define TAG_ICON_GFX 1234
@@ -731,7 +731,7 @@ static void HeatStartMenu_LoadBgGfx(void) {
   } else {
     LZDecompressWram(sStartMenuTilemapSafari, buf);
   }
-  LoadPalette(gStandardMenuPalette, BG_PLTT_ID(15), PLTT_SIZE_4BPP);
+  LoadPalette(gStandardMenuPaletteTest, BG_PLTT_ID(15), PLTT_SIZE_4BPP);
   LoadPalette(sStartMenuPalette, BG_PLTT_ID(14), PLTT_SIZE_4BPP);
   ScheduleBgCopyTilemapToVram(0);
 }
