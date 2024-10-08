@@ -396,6 +396,11 @@ OldaleTown_Text_BrendanLetsGoBack:
 	.string "{PLAYER}, you should hustle back, too.$"
 
 OldaleTown_Text_TownSign:
+    .string "{CREATE_MUGSHOT MUGSHOT_TEST EMOTE_NORMAL}"
 	.string "OLDALE TOWN\n"
+    .string "{CREATE_MUGSHOT MUGSHOT_TEST EMOTE_ALT}"
 	.string "“Where things start off scarce.”$"
+    .string "{DESTROY_MUGSHOT}$"
+
+
 
