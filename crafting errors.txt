@@ -1,0 +1,632 @@
+src/item_menu.c: In function 'Task_BagMenu_HandleInput':
+src/item_menu.c:1384:13: error: invalid storage class for function 'ReturnToItemList'
+ 1384 | static void ReturnToItemList(u8 taskId)
+      |             ^~~~~~~~~~~~~~~~
+src/item_menu.c:1395:11: error: invalid storage class for function 'GetSwitchBagPocketDirection'
+ 1395 | static u8 GetSwitchBagPocketDirection(void)
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:1414:13: error: invalid storage class for function 'ChangeBagPocketId'
+ 1414 | static void ChangeBagPocketId(u8 *bagPocketId, s8 deltaBagPocketId)
+      |             ^~~~~~~~~~~~~~~~~
+src/item_menu.c:1424:13: error: invalid storage class for function 'SwitchBagPocket'
+ 1424 | static void SwitchBagPocket(u8 taskId, s16 deltaBagPocketId, bool16 skipEraseList)
+      |             ^~~~~~~~~~~~~~~
+src/item_menu.c:1463:13: error: invalid storage class for function 'Task_SwitchBagPocket'
+ 1463 | static void Task_SwitchBagPocket(u8 taskId)
+      |             ^~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:1512:13: error: invalid storage class for function 'DrawItemListBgRow'
+ 1512 | static void DrawItemListBgRow(u8 y)
+      |             ^~~~~~~~~~~~~~~~~
+src/item_menu.c:1518:13: error: invalid storage class for function 'DrawPocketIndicatorSquare'
+ 1518 | static void DrawPocketIndicatorSquare(u8 x, bool8 isCurrentPocket)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:1527:14: error: invalid storage class for function 'CanSwapItems'
+ 1527 | static bool8 CanSwapItems(void)
+      |              ^~~~~~~~~~~~
+src/item_menu.c:1541:13: error: invalid storage class for function 'StartItemSwap'
+ 1541 | static void StartItemSwap(u8 taskId)
+      |             ^~~~~~~~~~~~~
+src/item_menu.c:1558:13: error: invalid storage class for function 'Task_HandleSwappingItemsInput'
+ 1558 | static void Task_HandleSwappingItemsInput(u8 taskId)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:1596:13: error: invalid storage class for function 'DoItemSwap'
+ 1596 | static void DoItemSwap(u8 taskId)
+      |             ^~~~~~~~~~
+src/item_menu.c:1623:12: error: invalid storage class for function 'CheckForCraftSpace'
+ 1623 | static u32 CheckForCraftSpace(u8 taskId){
+      |            ^~~~~~~~~~~~~~~~~~
+src/item_menu.c:1638:15: error: invalid storage class for function 'CanCraftItem'
+ 1638 | static bool32 CanCraftItem(u8 taskId)
+      |               ^~~~~~~~~~~~
+src/item_menu.c:1655:13: error: invalid storage class for function 'CancelItemSwap'
+ 1655 | static void CancelItemSwap(u8 taskId)
+      |             ^~~~~~~~~~~~~~
+src/item_menu.c:1672:13: error: invalid storage class for function 'OpenContextMenu'
+ 1672 | static void OpenContextMenu(u8 taskId)
+      |             ^~~~~~~~~~~~~~~
+src/item_menu.c:1813:13: error: invalid storage class for function 'PrintContextMenuItems'
+ 1813 | static void PrintContextMenuItems(u8 windowId)
+      |             ^~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:1819:13: error: invalid storage class for function 'PrintContextMenuItemGrid'
+ 1819 | static void PrintContextMenuItemGrid(u8 windowId, u8 columns, u8 rows)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:1825:13: error: invalid storage class for function 'Task_ItemContext_Normal'
+ 1825 | static void Task_ItemContext_Normal(u8 taskId)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:1837:13: error: invalid storage class for function 'Task_ItemContext_SingleRow'
+ 1837 | static void Task_ItemContext_SingleRow(u8 taskId)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:1858:13: error: invalid storage class for function 'Task_ItemContext_MultipleRows'
+ 1858 | static void Task_ItemContext_MultipleRows(u8 taskId)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:1908:14: error: invalid storage class for function 'IsValidContextMenuPos'
+ 1908 | static bool8 IsValidContextMenuPos(s8 cursorPos)
+      |              ^~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:1919:13: error: invalid storage class for function 'RemoveContextWindow'
+ 1919 | static void RemoveContextWindow(void)
+      |             ^~~~~~~~~~~~~~~~~~~
+src/item_menu.c:1931:13: error: invalid storage class for function 'ItemMenu_UseOutOfBattle'
+ 1931 | static void ItemMenu_UseOutOfBattle(u8 taskId)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:1952:13: error: invalid storage class for function 'ItemMenu_Toss'
+ 1952 | static void ItemMenu_Toss(u8 taskId)
+      |             ^~~~~~~~~~~~~
+src/item_menu.c:1974:13: error: invalid storage class for function 'AskTossItems'
+ 1974 | static void AskTossItems(u8 taskId)
+      |             ^~~~~~~~~~~~
+src/item_menu.c:1987:13: error: invalid storage class for function 'CancelToss'
+ 1987 | static void CancelToss(u8 taskId)
+      |             ^~~~~~~~~~
+src/item_menu.c:1996:13: error: invalid storage class for function 'Task_ChooseHowManyToToss'
+ 1996 | static void Task_ChooseHowManyToToss(u8 taskId)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:2018:13: error: invalid storage class for function 'ConfirmToss'
+ 2018 | static void ConfirmToss(u8 taskId)
+      |             ^~~~~~~~~~~
+src/item_menu.c:2033:13: error: invalid storage class for function 'Task_RemoveItemFromBag'
+ 2033 | static void Task_RemoveItemFromBag(u8 taskId)
+      |             ^~~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:2053:13: error: invalid storage class for function 'ItemMenu_Register'
+ 2053 | static void ItemMenu_Register(u8 taskId)
+      |             ^~~~~~~~~~~~~~~~~
+src/item_menu.c:2070:13: error: invalid storage class for function 'ItemMenu_Give'
+ 2070 | static void ItemMenu_Give(u8 taskId)
+      |             ^~~~~~~~~~~~~
+src/item_menu.c:2095:13: error: invalid storage class for function 'PrintThereIsNoPokemon'
+ 2095 | static void PrintThereIsNoPokemon(u8 taskId)
+      |             ^~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:2100:13: error: invalid storage class for function 'PrintItemCantBeHeld'
+ 2100 | static void PrintItemCantBeHeld(u8 taskId)
+      |             ^~~~~~~~~~~~~~~~~~~
+src/item_menu.c:2107:13: error: invalid storage class for function 'HandleErrorMessage'
+ 2107 | static void HandleErrorMessage(u8 taskId)
+      |             ^~~~~~~~~~~~~~~~~~
+src/item_menu.c:2116:13: error: invalid storage class for function 'ItemMenu_CheckTag'
+ 2116 | static void ItemMenu_CheckTag(u8 taskId)
+      |             ^~~~~~~~~~~~~~~~~
+src/item_menu.c:2122:13: error: invalid storage class for function 'ItemMenu_Cancel'
+ 2122 | static void ItemMenu_Cancel(u8 taskId)
+      |             ^~~~~~~~~~~~~~~
+src/item_menu.c:2134:13: error: invalid storage class for function 'ItemMenu_UseInBattle'
+ 2134 | static void ItemMenu_UseInBattle(u8 taskId)
+      |             ^~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:2155:13: error: invalid storage class for function 'Task_ItemContext_GiveToParty'
+ 2155 | static void Task_ItemContext_GiveToParty(u8 taskId)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:2178:13: error: invalid storage class for function 'Task_ItemContext_GiveToPC'
+ 2178 | static void Task_ItemContext_GiveToPC(u8 taskId)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:2222:13: error: invalid storage class for function 'Task_ItemContext_Sell'
+ 2222 | static void Task_ItemContext_Sell(u8 taskId)
+      |             ^~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:2251:13: error: invalid storage class for function 'DisplaySellItemPriceAndConfirm'
+ 2251 | static void DisplaySellItemPriceAndConfirm(u8 taskId)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:2260:13: error: invalid storage class for function 'AskSellItems'
+ 2260 | static void AskSellItems(u8 taskId)
+      |             ^~~~~~~~~~~~
+src/item_menu.c:2265:13: error: invalid storage class for function 'CancelSell'
+ 2265 | static void CancelSell(u8 taskId)
+      |             ^~~~~~~~~~
+src/item_menu.c:2275:13: error: invalid storage class for function 'InitSellHowManyInput'
+ 2275 | static void InitSellHowManyInput(u8 taskId)
+      |             ^~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:2285:13: error: invalid storage class for function 'Task_ChooseHowManyToSell'
+ 2285 | static void Task_ChooseHowManyToSell(u8 taskId)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:2310:13: error: invalid storage class for function 'ConfirmSell'
+ 2310 | static void ConfirmSell(u8 taskId)
+      |             ^~~~~~~~~~~
+src/item_menu.c:2320:13: error: invalid storage class for function 'SellItem'
+ 2320 | static void SellItem(u8 taskId)
+      |             ^~~~~~~~
+src/item_menu.c:2339:13: error: invalid storage class for function 'WaitAfterItemSell'
+ 2339 | static void WaitAfterItemSell(u8 taskId)
+      |             ^~~~~~~~~~~~~~~~~
+src/item_menu.c:2349:13: error: invalid storage class for function 'Task_ItemContext_Deposit'
+ 2349 | static void Task_ItemContext_Deposit(u8 taskId)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:2370:13: error: invalid storage class for function 'Task_ChooseHowManyToDeposit'
+ 2370 | static void Task_ChooseHowManyToDeposit(u8 taskId)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:2394:13: error: invalid storage class for function 'TryDepositItem'
+ 2394 | static void TryDepositItem(u8 taskId)
+      |             ^~~~~~~~~~~~~~
+src/item_menu.c:2423:13: error: invalid storage class for function 'WaitDepositErrorMessage'
+ 2423 | static void WaitDepositErrorMessage(u8 taskId)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:2436:14: error: invalid storage class for function 'IsWallysBag'
+ 2436 | static bool8 IsWallysBag(void)
+      |              ^~~~~~~~~~~
+src/item_menu.c:2443:13: error: invalid storage class for function 'PrepareBagForWallyTutorial'
+ 2443 | static void PrepareBagForWallyTutorial(void)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:2461:13: error: invalid storage class for function 'RestoreBagAfterWallyTutorial'
+ 2461 | static void RestoreBagAfterWallyTutorial(void)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:2487:13: error: invalid storage class for function 'Task_WallyTutorialBagMenu'
+ 2487 | static void Task_WallyTutorialBagMenu(u8 taskId)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:2525:13: error: invalid storage class for function 'ItemMenu_Show'
+ 2525 | static void ItemMenu_Show(u8 taskId)
+      |             ^~~~~~~~~~~~~
+src/item_menu.c:2533:13: error: invalid storage class for function 'CB2_ApprenticeExitBagMenu'
+ 2533 | static void CB2_ApprenticeExitBagMenu(void)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:2539:13: error: invalid storage class for function 'ItemMenu_GiveFavorLady'
+ 2539 | static void ItemMenu_GiveFavorLady(u8 taskId)
+      |             ^~~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:2547:13: error: invalid storage class for function 'CB2_FavorLadyExitBagMenu'
+ 2547 | static void CB2_FavorLadyExitBagMenu(void)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:2555:13: error: invalid storage class for function 'ItemMenu_ConfirmQuizLady'
+ 2555 | static void ItemMenu_ConfirmQuizLady(u8 taskId)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:2562:13: error: invalid storage class for function 'CB2_QuizLadyExitBagMenu'
+ 2562 | static void CB2_QuizLadyExitBagMenu(void)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:2568:13: error: invalid storage class for function 'PrintPocketNames'
+ 2568 | static void PrintPocketNames(const u8 *pocketName1, const u8 *pocketName2)
+      |             ^~~~~~~~~~~~~~~~
+src/item_menu.c:2589:13: error: invalid storage class for function 'CopyPocketNameToWindow'
+ 2589 | static void CopyPocketNameToWindow(u32 a)
+      |             ^~~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:2604:13: error: invalid storage class for function 'LoadBagMenuTextWindows'
+ 2604 | static void LoadBagMenuTextWindows(void)
+      |             ^~~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:2623:13: error: invalid storage class for function 'BagMenu_Print'
+ 2623 | static void BagMenu_Print(u8 windowId, u8 fontId, const u8 *str, u8 left, u8 top, u8 letterSpacing, u8 lineSpacing, u8 speed, u8 colorIndex)
+      |             ^~~~~~~~~~~~~
+src/item_menu.c:2628:35: error: invalid storage class for function 'BagMenu_GetWindowId'
+ 2628 | static u8 UNUSED BagMenu_GetWindowId(u8 windowType)
+      |                                   ^~~~~~~~~~~~~~~~~
+src/item_menu.c:2633:11: error: invalid storage class for function 'BagMenu_AddWindow'
+ 2633 | static u8 BagMenu_AddWindow(u8 windowType)
+      |           ^~~~~~~~~~~~~~~~~
+src/item_menu.c:2645:13: error: invalid storage class for function 'BagMenu_RemoveWindow'
+ 2645 | static void BagMenu_RemoveWindow(u8 windowType)
+      |             ^~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:2658:11: error: invalid storage class for function 'AddItemMessageWindow'
+ 2658 | static u8 AddItemMessageWindow(u8 windowType)
+      |           ^~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:2666:13: error: invalid storage class for function 'RemoveItemMessageWindow'
+ 2666 | static void RemoveItemMessageWindow(u8 windowType)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:2685:13: error: invalid storage class for function 'DisplayCurrentMoneyWindow'
+ 2685 | static void DisplayCurrentMoneyWindow(void)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:2692:13: error: invalid storage class for function 'RemoveMoneyWindow'
+ 2692 | static void RemoveMoneyWindow(void)
+      |             ^~~~~~~~~~~~~~~~~
+src/item_menu.c:2698:13: error: invalid storage class for function 'PrepareTMHMMoveWindow'
+ 2698 | static void PrepareTMHMMoveWindow(void)
+      |             ^~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:2708:13: error: invalid storage class for function 'PrintTMHMMoveData'
+ 2708 | static void PrintTMHMMoveData(u16 itemId)
+      |             ^~~~~~~~~~~~~~~~~
+src/item_menu.c:2756:1: error: expected declaration or statement at end of input
+ 2756 | }
+      | ^
+src/item_menu.c: At top level:
+src/item_menu.c:129:13: error: 'LoadBagMenuTextWindows' used but never defined [-Werror]
+  129 | static void LoadBagMenuTextWindows(void);
+      |             ^~~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:132:13: error: 'PrintPocketNames' used but never defined [-Werror]
+  132 | static void PrintPocketNames(const u8 *, const u8 *);
+      |             ^~~~~~~~~~~~~~~~
+src/item_menu.c:133:13: error: 'CopyPocketNameToWindow' used but never defined [-Werror]
+  133 | static void CopyPocketNameToWindow(u32);
+      |             ^~~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:134:13: error: 'DrawPocketIndicatorSquare' used but never defined [-Werror]
+  134 | static void DrawPocketIndicatorSquare(u8, bool8);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:138:13: error: 'PrepareTMHMMoveWindow' used but never defined [-Werror]
+  138 | static void PrepareTMHMMoveWindow(void);
+      |             ^~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:139:14: error: 'IsWallysBag' used but never defined [-Werror]
+  139 | static bool8 IsWallysBag(void);
+      |              ^~~~~~~~~~~
+src/item_menu.c:140:13: error: 'Task_WallyTutorialBagMenu' used but never defined [-Werror]
+  140 | static void Task_WallyTutorialBagMenu(u8);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:145:13: error: 'BagMenu_Print' used but never defined [-Werror]
+  145 | static void BagMenu_Print(u8, u8, const u8 *, u8, u8, u8, u8, u8, u8);
+      |             ^~~~~~~~~~~~~
+src/item_menu.c:147:11: error: 'AddItemMessageWindow' used but never defined [-Werror]
+  147 | static u8 AddItemMessageWindow(u8);
+      |           ^~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:148:13: error: 'RemoveItemMessageWindow' used but never defined [-Werror]
+  148 | static void RemoveItemMessageWindow(u8);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:149:13: error: 'ReturnToItemList' used but never defined [-Werror]
+  149 | static void ReturnToItemList(u8);
+      |             ^~~~~~~~~~~~~~~~
+src/item_menu.c:151:11: error: 'BagMenu_AddWindow' used but never defined [-Werror]
+  151 | static u8 BagMenu_AddWindow(u8);
+      |           ^~~~~~~~~~~~~~~~~
+src/item_menu.c:152:11: error: 'GetSwitchBagPocketDirection' used but never defined [-Werror]
+  152 | static u8 GetSwitchBagPocketDirection(void);
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:153:13: error: 'SwitchBagPocket' used but never defined [-Werror]
+  153 | static void SwitchBagPocket(u8, s16, bool16);
+      |             ^~~~~~~~~~~~~~~
+src/item_menu.c:154:14: error: 'CanSwapItems' used but never defined [-Werror]
+  154 | static bool8 CanSwapItems(void);
+      |              ^~~~~~~~~~~~
+src/item_menu.c:155:13: error: 'StartItemSwap' used but never defined [-Werror]
+  155 | static void StartItemSwap(u8 taskId);
+      |             ^~~~~~~~~~~~~
+src/item_menu.c:156:13: error: 'Task_SwitchBagPocket' used but never defined [-Werror]
+  156 | static void Task_SwitchBagPocket(u8);
+      |             ^~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:157:13: error: 'Task_HandleSwappingItemsInput' used but never defined [-Werror]
+  157 | static void Task_HandleSwappingItemsInput(u8);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:158:13: error: 'DoItemSwap' used but never defined [-Werror]
+  158 | static void DoItemSwap(u8);
+      |             ^~~~~~~~~~
+src/item_menu.c:159:13: error: 'CancelItemSwap' used but never defined [-Werror]
+  159 | static void CancelItemSwap(u8);
+      |             ^~~~~~~~~~~~~~
+src/item_menu.c:160:13: error: 'PrintTMHMMoveData' used but never defined [-Werror]
+  160 | static void PrintTMHMMoveData(u16);
+      |             ^~~~~~~~~~~~~~~~~
+src/item_menu.c:161:13: error: 'PrintContextMenuItems' used but never defined [-Werror]
+  161 | static void PrintContextMenuItems(u8);
+      |             ^~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:162:13: error: 'PrintContextMenuItemGrid' used but never defined [-Werror]
+  162 | static void PrintContextMenuItemGrid(u8, u8, u8);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:163:13: error: 'Task_ItemContext_SingleRow' used but never defined [-Werror]
+  163 | static void Task_ItemContext_SingleRow(u8);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:164:13: error: 'Task_ItemContext_MultipleRows' used but never defined [-Werror]
+  164 | static void Task_ItemContext_MultipleRows(u8);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:165:14: error: 'IsValidContextMenuPos' used but never defined [-Werror]
+  165 | static bool8 IsValidContextMenuPos(s8);
+      |              ^~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:166:13: error: 'BagMenu_RemoveWindow' used but never defined [-Werror]
+  166 | static void BagMenu_RemoveWindow(u8);
+      |             ^~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:167:13: error: 'PrintThereIsNoPokemon' used but never defined [-Werror]
+  167 | static void PrintThereIsNoPokemon(u8);
+      |             ^~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:168:13: error: 'Task_ChooseHowManyToToss' used but never defined [-Werror]
+  168 | static void Task_ChooseHowManyToToss(u8);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:169:13: error: 'AskTossItems' used but never defined [-Werror]
+  169 | static void AskTossItems(u8);
+      |             ^~~~~~~~~~~~
+src/item_menu.c:170:13: error: 'Task_RemoveItemFromBag' used but never defined [-Werror]
+  170 | static void Task_RemoveItemFromBag(u8);
+      |             ^~~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:199:13: error: 'ItemMenu_Cancel' used but never defined [-Werror]
+  199 | static void ItemMenu_Cancel(u8);
+      |             ^~~~~~~~~~~~~~~
+src/item_menu.c:172:13: error: 'HandleErrorMessage' used but never defined [-Werror]
+  172 | static void HandleErrorMessage(u8);
+      |             ^~~~~~~~~~~~~~~~~~
+src/item_menu.c:173:13: error: 'PrintItemCantBeHeld' used but never defined [-Werror]
+  173 | static void PrintItemCantBeHeld(u8);
+      |             ^~~~~~~~~~~~~~~~~~~
+src/item_menu.c:174:13: error: 'DisplayCurrentMoneyWindow' used but never defined [-Werror]
+  174 | static void DisplayCurrentMoneyWindow(void);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:175:13: error: 'DisplaySellItemPriceAndConfirm' used but never defined [-Werror]
+  175 | static void DisplaySellItemPriceAndConfirm(u8);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:176:13: error: 'InitSellHowManyInput' used but never defined [-Werror]
+  176 | static void InitSellHowManyInput(u8);
+      |             ^~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:177:13: error: 'AskSellItems' used but never defined [-Werror]
+  177 | static void AskSellItems(u8);
+      |             ^~~~~~~~~~~~
+src/item_menu.c:178:13: error: 'RemoveMoneyWindow' used but never defined [-Werror]
+  178 | static void RemoveMoneyWindow(void);
+      |             ^~~~~~~~~~~~~~~~~
+src/item_menu.c:179:13: error: 'Task_ChooseHowManyToSell' used but never defined [-Werror]
+  179 | static void Task_ChooseHowManyToSell(u8);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:180:13: error: 'SellItem' used but never defined [-Werror]
+  180 | static void SellItem(u8);
+      |             ^~~~~~~~
+src/item_menu.c:181:13: error: 'WaitAfterItemSell' used but never defined [-Werror]
+  181 | static void WaitAfterItemSell(u8);
+      |             ^~~~~~~~~~~~~~~~~
+src/item_menu.c:182:13: error: 'TryDepositItem' used but never defined [-Werror]
+  182 | static void TryDepositItem(u8);
+      |             ^~~~~~~~~~~~~~
+src/item_menu.c:183:13: error: 'Task_ChooseHowManyToDeposit' used but never defined [-Werror]
+  183 | static void Task_ChooseHowManyToDeposit(u8 taskId);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:184:13: error: 'WaitDepositErrorMessage' used but never defined [-Werror]
+  184 | static void WaitDepositErrorMessage(u8);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:185:13: error: 'CB2_ApprenticeExitBagMenu' used but never defined [-Werror]
+  185 | static void CB2_ApprenticeExitBagMenu(void);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:186:13: error: 'CB2_FavorLadyExitBagMenu' used but never defined [-Werror]
+  186 | static void CB2_FavorLadyExitBagMenu(void);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:187:13: error: 'CB2_QuizLadyExitBagMenu' used but never defined [-Werror]
+  187 | static void CB2_QuizLadyExitBagMenu(void);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:192:13: error: 'DrawItemListBgRow' used but never defined [-Werror]
+  192 | static void DrawItemListBgRow(u8);
+      |             ^~~~~~~~~~~~~~~~~
+src/item_menu.c:195:13: error: 'ItemMenu_UseOutOfBattle' used but never defined [-Werror]
+  195 | static void ItemMenu_UseOutOfBattle(u8);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:196:13: error: 'ItemMenu_Toss' used but never defined [-Werror]
+  196 | static void ItemMenu_Toss(u8);
+      |             ^~~~~~~~~~~~~
+src/item_menu.c:197:13: error: 'ItemMenu_Register' used but never defined [-Werror]
+  197 | static void ItemMenu_Register(u8);
+      |             ^~~~~~~~~~~~~~~~~
+src/item_menu.c:198:13: error: 'ItemMenu_Give' used but never defined [-Werror]
+  198 | static void ItemMenu_Give(u8);
+      |             ^~~~~~~~~~~~~
+src/item_menu.c:200:13: error: 'ItemMenu_UseInBattle' used but never defined [-Werror]
+  200 | static void ItemMenu_UseInBattle(u8);
+      |             ^~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:201:13: error: 'ItemMenu_CheckTag' used but never defined [-Werror]
+  201 | static void ItemMenu_CheckTag(u8);
+      |             ^~~~~~~~~~~~~~~~~
+src/item_menu.c:202:13: error: 'ItemMenu_Show' used but never defined [-Werror]
+  202 | static void ItemMenu_Show(u8);
+      |             ^~~~~~~~~~~~~
+src/item_menu.c:203:13: error: 'ItemMenu_GiveFavorLady' used but never defined [-Werror]
+  203 | static void ItemMenu_GiveFavorLady(u8);
+      |             ^~~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:204:13: error: 'ItemMenu_ConfirmQuizLady' used but never defined [-Werror]
+  204 | static void ItemMenu_ConfirmQuizLady(u8);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:205:13: error: 'Task_ItemContext_Normal' used but never defined [-Werror]
+  205 | static void Task_ItemContext_Normal(u8);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:206:13: error: 'Task_ItemContext_GiveToParty' used but never defined [-Werror]
+  206 | static void Task_ItemContext_GiveToParty(u8);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:207:13: error: 'Task_ItemContext_Sell' used but never defined [-Werror]
+  207 | static void Task_ItemContext_Sell(u8);
+      |             ^~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:208:13: error: 'Task_ItemContext_Deposit' used but never defined [-Werror]
+  208 | static void Task_ItemContext_Deposit(u8);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:209:13: error: 'Task_ItemContext_GiveToPC' used but never defined [-Werror]
+  209 | static void Task_ItemContext_GiveToPC(u8);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:210:13: error: 'ConfirmToss' used but never defined [-Werror]
+  210 | static void ConfirmToss(u8);
+      |             ^~~~~~~~~~~
+src/item_menu.c:211:13: error: 'CancelToss' used but never defined [-Werror]
+  211 | static void CancelToss(u8);
+      |             ^~~~~~~~~~
+src/item_menu.c:212:13: error: 'ConfirmSell' used but never defined [-Werror]
+  212 | static void ConfirmSell(u8);
+      |             ^~~~~~~~~~~
+src/item_menu.c:213:13: error: 'CancelSell' used but never defined [-Werror]
+  213 | static void CancelSell(u8);
+      |             ^~~~~~~~~~
+src/item_menu.c:214:12: error: 'CheckForCraftSpace' used but never defined [-Werror]
+  214 | static u32 CheckForCraftSpace(u8);
+      |            ^~~~~~~~~~~~~~~~~~
+src/item_menu.c:216:15: error: 'CanCraftItem' used but never defined [-Werror]
+  216 | static bool32 CanCraftItem(u8);
+      |               ^~~~~~~~~~~~
+src/item_menu.c:2708:13: warning: 'PrintTMHMMoveData' defined but not used [-Wunused-function]
+ 2708 | static void PrintTMHMMoveData(u16 itemId)
+      |             ^~~~~~~~~~~~~~~~~
+src/item_menu.c:2698:13: warning: 'PrepareTMHMMoveWindow' defined but not used [-Wunused-function]
+ 2698 | static void PrepareTMHMMoveWindow(void)
+      |             ^~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:2692:13: warning: 'RemoveMoneyWindow' defined but not used [-Wunused-function]
+ 2692 | static void RemoveMoneyWindow(void)
+      |             ^~~~~~~~~~~~~~~~~
+src/item_menu.c:2685:13: warning: 'DisplayCurrentMoneyWindow' defined but not used [-Wunused-function]
+ 2685 | static void DisplayCurrentMoneyWindow(void)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:2680:6: warning: 'BagMenu_YesNo' defined but not used [-Wunused-function]
+ 2680 | void BagMenu_YesNo(u8 taskId, u8 windowType, const struct YesNoFuncTable *funcTable)
+      |      ^~~~~~~~~~~~~
+src/item_menu.c:2666:13: warning: 'RemoveItemMessageWindow' defined but not used [-Wunused-function]
+ 2666 | static void RemoveItemMessageWindow(u8 windowType)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:2658:11: warning: 'AddItemMessageWindow' defined but not used [-Wunused-function]
+ 2658 | static u8 AddItemMessageWindow(u8 windowType)
+      |           ^~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:2604:13: warning: 'LoadBagMenuTextWindows' defined but not used [-Wunused-function]
+ 2604 | static void LoadBagMenuTextWindows(void)
+      |             ^~~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:2589:13: warning: 'CopyPocketNameToWindow' defined but not used [-Wunused-function]
+ 2589 | static void CopyPocketNameToWindow(u32 a)
+      |             ^~~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:2568:13: warning: 'PrintPocketNames' defined but not used [-Wunused-function]
+ 2568 | static void PrintPocketNames(const u8 *pocketName1, const u8 *pocketName2)
+      |             ^~~~~~~~~~~~~~~~
+src/item_menu.c:2562:13: warning: 'CB2_QuizLadyExitBagMenu' defined but not used [-Wunused-function]
+ 2562 | static void CB2_QuizLadyExitBagMenu(void)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:2555:13: warning: 'ItemMenu_ConfirmQuizLady' defined but not used [-Wunused-function]
+ 2555 | static void ItemMenu_ConfirmQuizLady(u8 taskId)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:2547:13: warning: 'CB2_FavorLadyExitBagMenu' defined but not used [-Wunused-function]
+ 2547 | static void CB2_FavorLadyExitBagMenu(void)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:2539:13: warning: 'ItemMenu_GiveFavorLady' defined but not used [-Wunused-function]
+ 2539 | static void ItemMenu_GiveFavorLady(u8 taskId)
+      |             ^~~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:2533:13: warning: 'CB2_ApprenticeExitBagMenu' defined but not used [-Wunused-function]
+ 2533 | static void CB2_ApprenticeExitBagMenu(void)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:2525:13: warning: 'ItemMenu_Show' defined but not used [-Wunused-function]
+ 2525 | static void ItemMenu_Show(u8 taskId)
+      |             ^~~~~~~~~~~~~
+src/item_menu.c:2487:13: warning: 'Task_WallyTutorialBagMenu' defined but not used [-Wunused-function]
+ 2487 | static void Task_WallyTutorialBagMenu(u8 taskId)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:2476:6: warning: 'DoWallyTutorialBagMenu' defined but not used [-Wunused-function]
+ 2476 | void DoWallyTutorialBagMenu(void)
+      |      ^~~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:2436:14: warning: 'IsWallysBag' defined but not used [-Wunused-function]
+ 2436 | static bool8 IsWallysBag(void)
+      |              ^~~~~~~~~~~
+src/item_menu.c:2423:13: warning: 'WaitDepositErrorMessage' defined but not used [-Wunused-function]
+ 2423 | static void WaitDepositErrorMessage(u8 taskId)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:2394:13: warning: 'TryDepositItem' defined but not used [-Wunused-function]
+ 2394 | static void TryDepositItem(u8 taskId)
+      |             ^~~~~~~~~~~~~~
+src/item_menu.c:2370:13: warning: 'Task_ChooseHowManyToDeposit' defined but not used [-Wunused-function]
+ 2370 | static void Task_ChooseHowManyToDeposit(u8 taskId)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:2349:13: warning: 'Task_ItemContext_Deposit' defined but not used [-Wunused-function]
+ 2349 | static void Task_ItemContext_Deposit(u8 taskId)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:2339:13: warning: 'WaitAfterItemSell' defined but not used [-Wunused-function]
+ 2339 | static void WaitAfterItemSell(u8 taskId)
+      |             ^~~~~~~~~~~~~~~~~
+src/item_menu.c:2320:13: warning: 'SellItem' defined but not used [-Wunused-function]
+ 2320 | static void SellItem(u8 taskId)
+      |             ^~~~~~~~
+src/item_menu.c:2310:13: warning: 'ConfirmSell' defined but not used [-Wunused-function]
+ 2310 | static void ConfirmSell(u8 taskId)
+      |             ^~~~~~~~~~~
+src/item_menu.c:2285:13: warning: 'Task_ChooseHowManyToSell' defined but not used [-Wunused-function]
+ 2285 | static void Task_ChooseHowManyToSell(u8 taskId)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:2275:13: warning: 'InitSellHowManyInput' defined but not used [-Wunused-function]
+ 2275 | static void InitSellHowManyInput(u8 taskId)
+      |             ^~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:2265:13: warning: 'CancelSell' defined but not used [-Wunused-function]
+ 2265 | static void CancelSell(u8 taskId)
+      |             ^~~~~~~~~~
+src/item_menu.c:2260:13: warning: 'AskSellItems' defined but not used [-Wunused-function]
+ 2260 | static void AskSellItems(u8 taskId)
+      |             ^~~~~~~~~~~~
+src/item_menu.c:2222:13: warning: 'Task_ItemContext_Sell' defined but not used [-Wunused-function]
+ 2222 | static void Task_ItemContext_Sell(u8 taskId)
+      |             ^~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:2190:7: warning: 'UseRegisteredKeyItemOnField' defined but not used [-Wunused-function]
+ 2190 | bool8 UseRegisteredKeyItemOnField(void)
+      |       ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:2178:13: warning: 'Task_ItemContext_GiveToPC' defined but not used [-Wunused-function]
+ 2178 | static void Task_ItemContext_GiveToPC(u8 taskId)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:2155:13: warning: 'Task_ItemContext_GiveToParty' defined but not used [-Wunused-function]
+ 2155 | static void Task_ItemContext_GiveToParty(u8 taskId)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:2150:6: warning: 'CB2_ReturnToBagMenuPocket' defined but not used [-Wunused-function]
+ 2150 | void CB2_ReturnToBagMenuPocket(void)
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:2134:13: warning: 'ItemMenu_UseInBattle' defined but not used [-Wunused-function]
+ 2134 | static void ItemMenu_UseInBattle(u8 taskId)
+      |             ^~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:2122:13: warning: 'ItemMenu_Cancel' defined but not used [-Wunused-function]
+ 2122 | static void ItemMenu_Cancel(u8 taskId)
+      |             ^~~~~~~~~~~~~~~
+src/item_menu.c:2116:13: warning: 'ItemMenu_CheckTag' defined but not used [-Wunused-function]
+ 2116 | static void ItemMenu_CheckTag(u8 taskId)
+      |             ^~~~~~~~~~~~~~~~~
+src/item_menu.c:2095:13: warning: 'PrintThereIsNoPokemon' defined but not used [-Wunused-function]
+ 2095 | static void PrintThereIsNoPokemon(u8 taskId)
+      |             ^~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:2070:13: warning: 'ItemMenu_Give' defined but not used [-Wunused-function]
+ 2070 | static void ItemMenu_Give(u8 taskId)
+      |             ^~~~~~~~~~~~~
+src/item_menu.c:2053:13: warning: 'ItemMenu_Register' defined but not used [-Wunused-function]
+ 2053 | static void ItemMenu_Register(u8 taskId)
+      |             ^~~~~~~~~~~~~~~~~
+src/item_menu.c:2018:13: warning: 'ConfirmToss' defined but not used [-Wunused-function]
+ 2018 | static void ConfirmToss(u8 taskId)
+      |             ^~~~~~~~~~~
+src/item_menu.c:1996:13: warning: 'Task_ChooseHowManyToToss' defined but not used [-Wunused-function]
+ 1996 | static void Task_ChooseHowManyToToss(u8 taskId)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:1952:13: warning: 'ItemMenu_Toss' defined but not used [-Wunused-function]
+ 1952 | static void ItemMenu_Toss(u8 taskId)
+      |             ^~~~~~~~~~~~~
+src/item_menu.c:1931:13: warning: 'ItemMenu_UseOutOfBattle' defined but not used [-Wunused-function]
+ 1931 | static void ItemMenu_UseOutOfBattle(u8 taskId)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:1908:14: warning: 'IsValidContextMenuPos' defined but not used [-Wunused-function]
+ 1908 | static bool8 IsValidContextMenuPos(s8 cursorPos)
+      |              ^~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:1858:13: warning: 'Task_ItemContext_MultipleRows' defined but not used [-Wunused-function]
+ 1858 | static void Task_ItemContext_MultipleRows(u8 taskId)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:1837:13: warning: 'Task_ItemContext_SingleRow' defined but not used [-Wunused-function]
+ 1837 | static void Task_ItemContext_SingleRow(u8 taskId)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:1825:13: warning: 'Task_ItemContext_Normal' defined but not used [-Wunused-function]
+ 1825 | static void Task_ItemContext_Normal(u8 taskId)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:1819:13: warning: 'PrintContextMenuItemGrid' defined but not used [-Wunused-function]
+ 1819 | static void PrintContextMenuItemGrid(u8 windowId, u8 columns, u8 rows)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:1813:13: warning: 'PrintContextMenuItems' defined but not used [-Wunused-function]
+ 1813 | static void PrintContextMenuItems(u8 windowId)
+      |             ^~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:1655:13: warning: 'CancelItemSwap' defined but not used [-Wunused-function]
+ 1655 | static void CancelItemSwap(u8 taskId)
+      |             ^~~~~~~~~~~~~~
+src/item_menu.c:1638:15: warning: 'CanCraftItem' defined but not used [-Wunused-function]
+ 1638 | static bool32 CanCraftItem(u8 taskId)
+      |               ^~~~~~~~~~~~
+src/item_menu.c:1623:12: warning: 'CheckForCraftSpace' defined but not used [-Wunused-function]
+ 1623 | static u32 CheckForCraftSpace(u8 taskId){
+      |            ^~~~~~~~~~~~~~~~~~
+src/item_menu.c:1596:13: warning: 'DoItemSwap' defined but not used [-Wunused-function]
+ 1596 | static void DoItemSwap(u8 taskId)
+      |             ^~~~~~~~~~
+src/item_menu.c:1558:13: warning: 'Task_HandleSwappingItemsInput' defined but not used [-Wunused-function]
+ 1558 | static void Task_HandleSwappingItemsInput(u8 taskId)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:1541:13: warning: 'StartItemSwap' defined but not used [-Wunused-function]
+ 1541 | static void StartItemSwap(u8 taskId)
+      |             ^~~~~~~~~~~~~
+src/item_menu.c:1527:14: warning: 'CanSwapItems' defined but not used [-Wunused-function]
+ 1527 | static bool8 CanSwapItems(void)
+      |              ^~~~~~~~~~~~
+src/item_menu.c:1518:13: warning: 'DrawPocketIndicatorSquare' defined but not used [-Wunused-function]
+ 1518 | static void DrawPocketIndicatorSquare(u8 x, bool8 isCurrentPocket)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~
+src/item_menu.c:1512:13: warning: 'DrawItemListBgRow' defined but not used [-Wunused-function]
+ 1512 | static void DrawItemListBgRow(u8 y)
+src/item_menu.c:1512:13: warning: 'DrawItemListBgRow' defined but not used [-Wunused-function]
+src/item_menu.c:1512:13: warning: 'DrawItemListBgRow' defined but not used [-Wunused-function]
+ 1512 | static void DrawItemListBgRow(u8 y)
+      |             ^~~~~~~~~~~~~~~~~
+src/item_menu.c:1512:13: warning: 'DrawItemListBgRow' defined but not used [-Wunused-function]
+ 1512 | static void DrawItemListBgRow(u8 y)
+src/item_menu.c:1512:13: warning: 'DrawItemListBgRow' defined but not used [-Wunused-function]
+src/item_menu.c:1512:13: warning: 'DrawItemListBgRow' defined but not used [-Wunused-function]
+ 1512 | static void DrawItemListBgRow(u8 y)
+      |             ^~~~~~~~~~~~~~~~~
+src/item_menu.c:1463:13: warning: 'Task_SwitchBagPocket' defined but not used [-Wunused-function]
+ 1463 | static void Task_SwitchBagPocket(u8 taskId)
+      |             ^~~~~~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+make: *** [Makefile:413: build/modern/src/item_menu.o] Error 1
+make: *** Deleting file 'build/modern/src/item_menu.o'
