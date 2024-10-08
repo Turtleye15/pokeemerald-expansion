@@ -473,14 +473,14 @@ static void RemoveExtraStartMenuWindows(void)
 }
 
 static bool32 PrintStartMenuActions(s8 *pIndex, u32 count)
-{
+{   //prints 2 items per frame, saves location w/ index aka "sInitStartMenuData[1]"
     s8 index = *pIndex;
 
     do
     {
         if (sStartMenuItems[sCurrentStartMenuActions[index]].func.u8_void == StartMenuPlayerNameCallback)
         {
-            PrintPlayerNameOnWindow(GetStartMenuWindowId(), sStartMenuItems[sCurrentStartMenuActions[index]].text, 8, (index << 4) + 9);
+            PrintPlayerNameOnWindow(GetStartMenuWindowId(), sStartMenuItems[sCurrentStartMenuActions[index]].text, 8, (index << 4) + 9); //where  "a << b" is "a * 2^b"
         }
         else
         {

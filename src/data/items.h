@@ -14077,4 +14077,20 @@ const struct Item gItemsInfo[] =
         .iconPic = gItemIcon_PokeshiDoll,
         .iconPalette = gItemIconPalette_PokeshiDoll,
     },
+
+    [ITEM_CRAFT_BUNDLE] =
+    {
+        .name = _("Craft Bundle"),
+        .price = 2000,
+        .description = COMPOUND_STRING(
+            "A pouch with all\n"
+            "sorts of material\n"
+            "Used for crafting"),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_FIELD,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_CraftBundle,
+        .iconPalette = gItemIconPalette_CraftBundle,
+    },
 };

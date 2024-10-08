@@ -14,6 +14,10 @@
 #include "battle_pyramid.h"
 #include "battle_pyramid_bag.h"
 #include "graphics.h"
+#include "item_icon.h"
+#include "menu.h"
+#include "overworld.h"
+#include "gpu_regs.h"
 #include "constants/battle.h"
 #include "constants/items.h"
 #include "constants/moves.h"
@@ -26,6 +30,8 @@ static const u8 *ItemId_GetPluralName(u16);
 static bool32 DoesItemHavePluralName(u16);
 
 EWRAM_DATA struct BagPocket gBagPockets[POCKETS_COUNT] = {0};
+EWRAM_DATA u8 sItemIconSpriteId = 0;
+EWRAM_DATA u8 sItemIconSpriteId2 = 0;
 
 #include "data/pokemon/item_effects.h"
 #include "data/items.h"
