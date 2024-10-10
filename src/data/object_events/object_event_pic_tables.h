@@ -310,6 +310,11 @@ static const struct SpriteFrameImage sPicTable_MauvilleOldMan2[] = {
     overworld_ascending_frames(gObjectEventPic_MauvilleOldMan2, 2, 4),
 };
 
+//Custom npcs
+static const struct SpriteFrameImage sPicTable_Isabell[] = {
+    overworld_ascending_frames(gObjectEventPic_Isabell, 2, 4),
+};
+
 static const struct SpriteFrameImage sPicTable_UnusedNatuDoll[] = {
     obj_frame_tiles(gObjectEventPic_UnusedNatuDoll),
 };
