@@ -4686,7 +4686,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Isabell = {
     .tracks = TRACKS_FOOT,
     .oam = &gObjectEventBaseOam_32x32,
     .subspriteTables = sOamTables_32x32,
-    .anims = sAnimTable_Following,
+    .anims = sAnimTable_Standard,
     .images = sPicTable_Isabell,
     .affineAnims = gDummySpriteAffineAnimTable,
 };
