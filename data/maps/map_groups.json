@@ -1,5 +1,7 @@
 {
   "group_order": [
+    "gMapGroup_WhitecliffCastle",
+    "gMapGroup_WhitecliffCastle_Indoor",
     "gMapGroup_TownsAndRoutes",
     "gMapGroup_IndoorLittleroot",
     "gMapGroup_IndoorOldale",
@@ -34,6 +36,12 @@
     "gMapGroup_IndoorRoute123",
     "gMapGroup_IndoorRoute119",
     "gMapGroup_IndoorRoute124"
+  ],
+  "gMapGroup_WhitecliffCastle": [
+
+  ],
+  "gMapGroup_WhitecliffCastle_Indoor": [
+    "Whitecliff_Castle_Infirmary"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",

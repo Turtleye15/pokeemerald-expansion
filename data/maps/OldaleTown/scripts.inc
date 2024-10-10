@@ -821,8 +821,8 @@ OldaleTown_Eventscript_Isabell_Introduction::
 # 417 "data/maps/OldaleTown/scripts.pory"
 	waitmessage
 # 418 "data/maps/OldaleTown/scripts.pory"
-	releaseall
-	end
+	release
+	return
 
 
 OldaleTown_Eventscript_Isabell_Introduction_Text_0:

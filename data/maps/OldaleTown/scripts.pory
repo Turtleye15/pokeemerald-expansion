@@ -415,6 +415,5 @@ script OldaleTown_Eventscript_Isabell_Introduction {
                   "Hello.\p..\n..\l..\pIf you don't need my help, stop bothering me"
                   ))
     waitmessage
-    releaseall
-    end
+    release
 }
