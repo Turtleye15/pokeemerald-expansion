@@ -4414,10 +4414,10 @@
     {
       "id": "LAYOUT_WHITECLIFF_CASTLE_INFIRMARY",
       "name": "Whitecliff_Castle_Infirmary_Layout",
-      "width": 20,
-      "height": 20,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Petalburg",
+      "width": 13,
+      "height": 12,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
       "border_filepath": "data/layouts/Whitecliff_Castle_Infirmary/border.bin",
       "blockdata_filepath": "data/layouts/Whitecliff_Castle_Infirmary/map.bin"
     }
