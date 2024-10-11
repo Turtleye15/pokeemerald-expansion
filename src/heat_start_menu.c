@@ -52,6 +52,7 @@
 #include "constants/rgb.h"
 #include "constants/songs.h"
 #include "rtc.h"
+#include "quests.h"
 #include "event_object_movement.h"
 #include "gba/isagbprint.h"
 
@@ -64,6 +65,7 @@ static void SpriteCB_IconTrainerCard(struct Sprite* sprite);
 static void SpriteCB_IconSave(struct Sprite* sprite);
 static void SpriteCB_IconOptions(struct Sprite* sprite);
 static void SpriteCB_IconFlag(struct Sprite* sprite);
+static void SpriteCB_IconQuest(struct Sprite* sprite);
 
 /* TASKs */
 static void Task_HeatStartMenu_HandleMainInput(u8 taskId);
@@ -93,6 +95,7 @@ static u8 SaveYesNoCallback(void);
 static void ShowSaveInfoWindow(void);
 static u8 SaveConfirmSaveCallback(void);
 static void InitSave(void);
+static bool8 QuestMenuCallback(void);
 
 /* ENUMs */
 enum MENU {
@@ -101,6 +104,7 @@ enum MENU {
   MENU_BAG,
   MENU_POKETCH,
   MENU_TRAINER_CARD,
+  MENU_QUEST,
   MENU_SAVE,
   MENU_OPTIONS,
   MENU_FLAG,
@@ -132,9 +136,11 @@ struct HeatStartMenu {
   u32 spriteIdParty;
   u32 spriteIdBag;
   u32 spriteIdTrainerCard;
+  u32 spriteIdQuest;
   u32 spriteIdSave;
   u32 spriteIdOptions;
   u32 spriteIdFlag;
+
 };
 
 static EWRAM_DATA struct HeatStartMenu *sHeatStartMenu = NULL;
@@ -298,6 +304,22 @@ static const union AnimCmd *const gIconTrainerCardAnim[] = {
     gAnimCmdTrainerCard_Selected,
 };
 
+
+static const union AnimCmd gAnimCmdQuest_NotSelected[] = {
+    ANIMCMD_FRAME(240, 0),
+    ANIMCMD_JUMP(0),
+};
+
+static const union AnimCmd gAnimCmdQuest_Selected[] = {
+    ANIMCMD_FRAME(224, 0),
+    ANIMCMD_JUMP(0),
+};
+
+static const union AnimCmd *const gIconQuestAnim[] = {
+    gAnimCmdQuest_NotSelected,
+    gAnimCmdQuest_Selected,
+};
+
 static const union AnimCmd gAnimCmdSave_NotSelected[] = {
     ANIMCMD_FRAME(192, 0),
     ANIMCMD_JUMP(0),
@@ -342,6 +364,7 @@ static const union AnimCmd *const gIconFlagAnim[] = {
     gAnimCmdFlag_NotSelected,
     gAnimCmdFlag_Selected,
 };
+
 
 static const union AffineAnimCmd sAffineAnimIcon_NoAnim[] =
 {
@@ -426,6 +449,16 @@ static const struct SpriteTemplate gSpriteIconTrainerCard = {
     .callback = SpriteCB_IconTrainerCard,
 };
 
+static const struct SpriteTemplate gSpriteIconQuest = {
+    .tileTag = TAG_ICON_GFX,
+    .paletteTag = TAG_ICON_PAL,
+    .oam = &gOamIcon,
+    .anims = gIconQuestAnim,
+    .images = NULL,
+    .affineAnims = sAffineAnimsIcon,
+    .callback = SpriteCB_IconQuest,
+};
+
 static const struct SpriteTemplate gSpriteIconSave = {
     .tileTag = TAG_ICON_GFX,
     .paletteTag = TAG_ICON_PAL,
@@ -455,6 +488,7 @@ static const struct SpriteTemplate gSpriteIconFlag = {
     .affineAnims = sAffineAnimsIcon,
     .callback = SpriteCB_IconFlag,
 };
+
 
 static void SpriteCB_IconPoketch(struct Sprite* sprite) {
   if (menuSelected == MENU_POKETCH && sHeatStartMenu->flag == FLAG_VALUE_NOT_SET) {
@@ -510,6 +544,18 @@ static void SpriteCB_IconTrainerCard(struct Sprite* sprite) {
     StartSpriteAffineAnim(sprite, 0);
   } 
 }
+
+static void SpriteCB_IconQuest(struct Sprite* sprite) {
+  if (menuSelected == MENU_QUEST && sHeatStartMenu->flag == FLAG_VALUE_NOT_SET) {
+    sHeatStartMenu->flag = FLAG_VALUE_SET;
+    StartSpriteAnim(sprite, 1);
+    StartSpriteAffineAnim(sprite, 1);
+  } else if (menuSelected != MENU_QUEST) {
+    StartSpriteAnim(sprite, 0);
+    StartSpriteAffineAnim(sprite, 0);
+  } 
+}
+
 
 static void SpriteCB_IconSave(struct Sprite* sprite) {
   if (menuSelected == MENU_SAVE && sHeatStartMenu->flag == FLAG_VALUE_NOT_SET) {
@@ -674,34 +720,37 @@ static void HeatStartMenu_CreateSprites(void) {
   u32 y7 = 150;
 
   if (FlagGet(FLAG_SYS_POKENAV_GET) == TRUE) {
-    sHeatStartMenu->spriteIdPokedex = CreateSprite(&gSpriteIconPokedex, x-1, y1-2, 0);
-    sHeatStartMenu->spriteIdParty   = CreateSprite(&gSpriteIconParty, x, y2-3, 0);
-    sHeatStartMenu->spriteIdBag     = CreateSprite(&gSpriteIconBag, x, y3-2, 0);
-    sHeatStartMenu->spriteIdPoketch = CreateSprite(&gSpriteIconPoketch, x, y4+1, 0);
+    sHeatStartMenu->spriteIdPokedex     = CreateSprite(&gSpriteIconPokedex, x-1, y1-2, 0);
+    sHeatStartMenu->spriteIdParty       = CreateSprite(&gSpriteIconParty, x, y2-3, 0);
+    sHeatStartMenu->spriteIdBag         = CreateSprite(&gSpriteIconBag, x, y3-2, 0);
+    sHeatStartMenu->spriteIdPoketch     = CreateSprite(&gSpriteIconPoketch, x, y4+1, 0);
     sHeatStartMenu->spriteIdTrainerCard = CreateSprite(&gSpriteIconTrainerCard, x, y5, 0);
-    sHeatStartMenu->spriteIdSave    = CreateSprite(&gSpriteIconSave, x, y6, 0);
-    sHeatStartMenu->spriteIdOptions = CreateSprite(&gSpriteIconOptions, x, y7, 0);
+    sHeatStartMenu->spriteIdSave        = CreateSprite(&gSpriteIconSave, x, y6, 0);
+    sHeatStartMenu->spriteIdOptions     = CreateSprite(&gSpriteIconOptions, x, y7, 0);
     return;
   } else if (FlagGet(FLAG_SYS_POKEDEX_GET) == TRUE) {
-    sHeatStartMenu->spriteIdPokedex = CreateSprite(&gSpriteIconPokedex, x-1, y1, 0);
-    sHeatStartMenu->spriteIdParty = CreateSprite(&gSpriteIconParty, x, y2-1, 0);
-    sHeatStartMenu->spriteIdBag     = CreateSprite(&gSpriteIconBag, x, y3+1, 0);
+    sHeatStartMenu->spriteIdPokedex     = CreateSprite(&gSpriteIconPokedex, x-1, y1, 0);
+    sHeatStartMenu->spriteIdParty       = CreateSprite(&gSpriteIconParty, x, y2-1, 0);
+    sHeatStartMenu->spriteIdBag         = CreateSprite(&gSpriteIconBag, x, y3+1, 0);
     sHeatStartMenu->spriteIdTrainerCard = CreateSprite(&gSpriteIconTrainerCard, x, y4 + 2, 0);
-    sHeatStartMenu->spriteIdSave    = CreateSprite(&gSpriteIconSave, x, y5 - 1, 0);
-    sHeatStartMenu->spriteIdOptions = CreateSprite(&gSpriteIconOptions, x, y6-2, 0);
+    sHeatStartMenu->spriteIdQuest       = CreateSprite(&gSpriteIconQuest,x, y5, 0);
+    sHeatStartMenu->spriteIdSave        = CreateSprite(&gSpriteIconSave, x, y6 - 1, 0);
+    sHeatStartMenu->spriteIdOptions     = CreateSprite(&gSpriteIconOptions, x, y7-2, 0);
     return;
   } else if (FlagGet(FLAG_SYS_POKEMON_GET) == TRUE) {
-    sHeatStartMenu->spriteIdParty = CreateSprite(&gSpriteIconParty, x, y1, 0);
-    sHeatStartMenu->spriteIdBag     = CreateSprite(&gSpriteIconBag, x, y2 + 1, 0);
+    sHeatStartMenu->spriteIdParty       = CreateSprite(&gSpriteIconParty, x, y1, 0);
+    sHeatStartMenu->spriteIdBag         = CreateSprite(&gSpriteIconBag, x, y2 + 1, 0);
     sHeatStartMenu->spriteIdTrainerCard = CreateSprite(&gSpriteIconTrainerCard, x, y3 + 3, 0);
-    sHeatStartMenu->spriteIdSave    = CreateSprite(&gSpriteIconSave, x, y4 + 1, 0);
-    sHeatStartMenu->spriteIdOptions = CreateSprite(&gSpriteIconOptions, x, y5 - 4, 0);
+    sHeatStartMenu->spriteIdQuest       = CreateSprite(&gSpriteIconQuest,x, y4, 0);
+    sHeatStartMenu->spriteIdSave        = CreateSprite(&gSpriteIconSave, x, y5 + 1, 0);
+    sHeatStartMenu->spriteIdOptions     = CreateSprite(&gSpriteIconOptions, x, y6 - 4, 0);
     return;
   } else {
-    sHeatStartMenu->spriteIdBag     = CreateSprite(&gSpriteIconBag, x, y1, 0);
+    sHeatStartMenu->spriteIdBag         = CreateSprite(&gSpriteIconBag, x, y1, 0);
     sHeatStartMenu->spriteIdTrainerCard = CreateSprite(&gSpriteIconTrainerCard, x, y2 + 1, 0);
-    sHeatStartMenu->spriteIdSave    = CreateSprite(&gSpriteIconSave, x, y3 + 3, 0);
-    sHeatStartMenu->spriteIdOptions = CreateSprite(&gSpriteIconOptions, x, y4 + 1, 0);
+    sHeatStartMenu->spriteIdQuest       = CreateSprite(&gSpriteIconQuest,x, y3, 0);
+    sHeatStartMenu->spriteIdSave        = CreateSprite(&gSpriteIconSave, x, y4 + 3, 0);
+    sHeatStartMenu->spriteIdOptions     = CreateSprite(&gSpriteIconOptions, x, y5 + 1, 0);
   }
 }
 
@@ -808,6 +857,7 @@ static const u8 gText_Pokedex[] = _("  Pokédex");
 static const u8 gText_Party[]   = _("    Party ");
 static const u8 gText_Bag[]     = _("      Bag  ");
 static const u8 gText_Trainer[] = _("   Trainer");
+static const u8 gText_Quest[]   = _("  Quests");
 static const u8 gText_Save[]    = _("     Save  ");
 static const u8 gText_Options[] = _("   Options");
 static const u8 gText_Flag[]    = _("   Retire");
@@ -832,6 +882,9 @@ static void HeatStartMenu_UpdateMenuName(void) {
       break;
     case MENU_TRAINER_CARD:
       AddTextPrinterParameterized(sHeatStartMenu->sMenuNameWindowId, 1, gText_Trainer, 1, 0, 0xFF, NULL);
+      break;
+    case MENU_QUEST:
+      AddTextPrinterParameterized(sHeatStartMenu->sMenuNameWindowId, 1, gText_Quest, 1, 0, 0xFF, NULL);
       break;
     case MENU_SAVE:
       AddTextPrinterParameterized(sHeatStartMenu->sMenuNameWindowId, 1, gText_Save, 1, 0, 0xFF, NULL);
@@ -897,10 +950,13 @@ static void HeatStartMenu_ExitAndClearTilemap(void) {
 
   FreeSpriteOamMatrix(&gSprites[sHeatStartMenu->spriteIdBag]);
   FreeSpriteOamMatrix(&gSprites[sHeatStartMenu->spriteIdTrainerCard]);
+  FreeSpriteOamMatrix(&gSprites[sHeatStartMenu->spriteIdQuest]);
   FreeSpriteOamMatrix(&gSprites[sHeatStartMenu->spriteIdOptions]);
   DestroySprite(&gSprites[sHeatStartMenu->spriteIdBag]);
   DestroySprite(&gSprites[sHeatStartMenu->spriteIdTrainerCard]);
+  DestroySprite(&gSprites[sHeatStartMenu->spriteIdQuest]);
   DestroySprite(&gSprites[sHeatStartMenu->spriteIdOptions]);
+
 
   if (sHeatStartMenu != NULL) {
     FreeSpriteTilesByTag(TAG_ICON_GFX);  
@@ -1313,10 +1369,19 @@ static void HeatStartMenu_OpenMenu(void) {
     case MENU_TRAINER_CARD:
       DoCleanUpAndOpenTrainerCard();
       break;
+    case MENU_QUEST:
+      QuestMenuCallback();
+      break;
     case MENU_OPTIONS:
       DoCleanUpAndChangeCallback(CB2_InitOptionMenu);
       break;
   }
+}
+
+static bool8 QuestMenuCallback(void)
+{
+    CreateTask(Task_QuestMenu_OpenFromStartMenu, 0);
+    return TRUE;
 }
 
 void GoToHandleInput(void) {

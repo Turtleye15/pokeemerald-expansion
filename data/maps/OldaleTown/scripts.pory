@@ -35,6 +35,7 @@ OldaleTown_EventScript_MoveMartEmployee::
 	return
 
 OldaleTown_EventScript_TownSign::
+	setflag FLAG_SYS_QUEST_MENU_GET
 	msgbox OldaleTown_Text_TownSign, MSGBOX_SIGN
 	end
 
