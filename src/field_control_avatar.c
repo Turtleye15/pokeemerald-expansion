@@ -197,7 +197,8 @@ int ProcessPlayerFieldInput(struct FieldInput *input)
     if (input->pressedStartButton)
     {
         PlaySE(SE_WIN_OPEN);
-        HeatStartMenu_Init();
+        //HeatStartMenu_Init();
+        ShowStartMenu();
         return TRUE;
     }
     if (input->pressedSelectButton && UseRegisteredKeyItemOnField() == TRUE)

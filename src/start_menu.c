@@ -44,6 +44,7 @@
 #include "trainer_card.h"
 #include "window.h"
 #include "union_room.h"
+#include "quests.h"
 #include "constants/battle_frontier.h"
 #include "constants/rgb.h"
 #include "constants/songs.h"
@@ -64,6 +65,7 @@ enum
     MENU_ACTION_REST_FRONTIER,
     MENU_ACTION_RETIRE_FRONTIER,
     MENU_ACTION_PYRAMID_BAG,
+    MENU_ACTION_QUEST_MENU,//quest
     MENU_ACTION_DEBUG,
 };
 
@@ -105,6 +107,7 @@ static bool8 StartMenuSafariZoneRetireCallback(void);
 static bool8 StartMenuLinkModePlayerNameCallback(void);
 static bool8 StartMenuBattlePyramidRetireCallback(void);
 static bool8 StartMenuBattlePyramidBagCallback(void);
+static bool8 QuestMenuCallback(void);//quest
 static bool8 StartMenuDebugCallback(void);
 
 // Menu callbacks
@@ -183,6 +186,7 @@ static const struct WindowTemplate sWindowTemplate_PyramidPeak = {
 };
 
 static const u8 sText_MenuDebug[] = _("DEBUG");
+static const u8 sText_QuestMenu[] = _("QUESTS");
 
 static const struct MenuAction sStartMenuItems[] =
 {
@@ -199,6 +203,7 @@ static const struct MenuAction sStartMenuItems[] =
     [MENU_ACTION_REST_FRONTIER]   = {gText_MenuRest,    {.u8_void = StartMenuSaveCallback}},
     [MENU_ACTION_RETIRE_FRONTIER] = {gText_MenuRetire,  {.u8_void = StartMenuBattlePyramidRetireCallback}},
     [MENU_ACTION_PYRAMID_BAG]     = {gText_MenuBag,     {.u8_void = StartMenuBattlePyramidBagCallback}},
+    [MENU_ACTION_QUEST_MENU]      = {sText_QuestMenu,   {.u8_void = QuestMenuCallback}},
     [MENU_ACTION_DEBUG]           = {sText_MenuDebug,   {.u8_void = StartMenuDebugCallback}},
 };
 
@@ -339,6 +344,11 @@ static void BuildNormalStartMenu(void)
     if (FlagGet(FLAG_SYS_POKENAV_GET) == TRUE)
     {
         AddStartMenuAction(MENU_ACTION_POKENAV);
+    }
+
+    if (FlagGet(FLAG_SYS_QUEST_MENU_GET))
+    {
+        AddStartMenuAction(MENU_ACTION_QUEST_MENU);
     }
 
     AddStartMenuAction(MENU_ACTION_PLAYER);
@@ -1486,4 +1496,10 @@ void AppendToList(u8 *list, u8 *pos, u8 newEntry)
 {
     list[*pos] = newEntry;
     (*pos)++;
+}
+
+static bool8 QuestMenuCallback(void)
+{
+    CreateTask(Task_QuestMenu_OpenFromStartMenu, 0);
+    return TRUE;
 }
