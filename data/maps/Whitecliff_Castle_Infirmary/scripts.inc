@@ -86,7 +86,7 @@ IsabellQuestions::
 # 35 "data/maps/Whitecliff_Castle_Infirmary/scripts.pory"
 	waitmovement 1
 # 36 "data/maps/Whitecliff_Castle_Infirmary/scripts.pory"
-	delay 40
+	delay 60
 # 37 "data/maps/Whitecliff_Castle_Infirmary/scripts.pory"
 	addobject 2
 # 38 "data/maps/Whitecliff_Castle_Infirmary/scripts.pory"
@@ -365,12 +365,12 @@ HowAreYou::
 
 TellPlayer::
 # 84 "data/maps/Whitecliff_Castle_Infirmary/scripts.pory"
-	.string "Thats an improvement. Looks like my\n"
-	.string "treatment worked wonders.\p"
+	.string "Well, Thats an improvement.\p"
 	.string "You were on Yveltal's door when you\n"
 	.string "were brought here.\p"
 	.string "Apparantly you were out cold in the\n"
-	.string "Golden Fields What happened to you?$"
+	.string "Golden Fields\p"
+	.string "What happened to you?$"
 
 Amnesia::
 # 106 "data/maps/Whitecliff_Castle_Infirmary/scripts.pory"
