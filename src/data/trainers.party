@@ -46,7 +46,7 @@ Optional fields for Pokemon:
           (Order does not matter)
     - EVs (252 HP / 128 Spe / 48 Def, defaults to all 0, is not capped at 512 total)
           (Order does not matter)
-    - Ball (Poke Ball or ITEM_POKE_BALL, defaults to Poke Ball
+    - Ball (Poke Ball or ITEM_POKE_BALL, defaults to Poke Ball)
     - Happiness (Number between 1 and 255)
     - Nature (Rash or NATURE_RASH, defaults to Hardy)
     - Shiny (Yes/No, defaults to No)
@@ -81,7 +81,23 @@ Gender: Male
 Music: Male
 Double Battle: No
 
-=== TRAINER_SAWYER_1 ===
+
+=== TRAINER_ISABELL_1 ===
+Name: Isabell
+Class: Heiress 
+Pic: Isabell
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Bulbasaur
+Level: 5  
+Ability: Weak Armor   
+IVs: 16 HP / 16 Atk / 16 Def / 16 SpA / 16 SpD / 16 Spe
+
+
+/*=== TRAINER_SAWYER_1 ===
 Name: SAWYER
 Class: Hiker
 Pic: Hiker
@@ -93,6 +109,7 @@ AI: Check Bad Move / Try To Faint / Check Viability
 Geodude
 Level: 21
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+*/
 
 === TRAINER_GRUNT_AQUA_HIDEOUT_1 ===
 Name: GRUNT

@@ -24,7 +24,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "IsabellBeforeStarterGet",
       "flag": "0"
     },
     {
@@ -37,7 +37,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "0",
+      "script": "ObtainStarterBall",
       "flag": "FLAG_STARTER_BALL"
     }
   ],
@@ -62,6 +62,24 @@
       "var": "VAR_INFIRMARY_INTRO",
       "var_value": "0",
       "script": "Infirmary_IsabellCheckPlayerRight"
+    },
+    {
+      "type": "trigger",
+      "x": 11,
+      "y": 11,
+      "elevation": 0,
+      "var": "VAR_TEMP_4",
+      "var_value": "1",
+      "script": "LeaveBeforeStarter"
+    },
+    {
+      "type": "trigger",
+      "x": 10,
+      "y": 11,
+      "elevation": 0,
+      "var": "VAR_TEMP_4",
+      "var_value": "1",
+      "script": "LeaveBeforeStarter"
     }
   ],
   "bg_events": [

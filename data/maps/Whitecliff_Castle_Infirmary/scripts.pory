@@ -33,6 +33,7 @@ movement IsabellEnter{
 script IsabellQuestions{
     applymovement(1, IsabellEnter)
     waitmovement(1)
+    setvar(VAR_TEMP_4, 1)
     delay(60)
     addobject(2)
     if (var(VAR_TEMP_0) == 1){
@@ -43,17 +44,17 @@ script IsabellQuestions{
     }
     waitmovement(1)
     msgbox(HowAreYou)
-    dynmultichoice(0,0, TRUE 3,0, DYN_MULTICHOICE_CB_NONE, "Fresh and fit.", "Could be better.","Awful...")
+    dynmultichoice(0,0, TRUE 2,0, DYN_MULTICHOICE_CB_NONE, "Could be better.","Awful...")
     msgbox(TellPlayer)
     dynmultichoice(0,0, TRUE, 3, 0, DYN_MULTICHOICE_CB_NONE, "Golden Fields?","I'm not sure...","You tell me.")
-    if(var(VAR_RESULT)==1){
-        msgbox(format("Yeah, they're right outside Whitecliff Castle.\p..\n..\l..\p You don't know where that is?"))
+    if(var(VAR_RESULT)==0){
+        msgbox(GoldenFields)
     }
-    elif(var(VAR_RESULT)==2){
-        msgbox(format("Hmm, you can't remember? Not surprising, I suppose. Up until what do you remember?"))
+    elif(var(VAR_RESULT)==1){
+        msgbox(NoIdea)
     }
     else{
-        msgbox(format("You were starving to death. No signs of physical trauma.\p When'd you eat for the last time?"))
+        msgbox(Starving)
     }
     closemessage
     goto(AskPlayerName)
@@ -62,7 +63,7 @@ movement IsabellWalkLeft{
     walk_down *2
     face_left
     emote_exclamation_mark
-    delay_16 * 8
+    delay_16 * 5
     walk_left *3
     walk_up
 }
@@ -71,25 +72,30 @@ movement IsabellWalkRight{
     walk_down *2
     face_left
     emote_exclamation_mark
-    delay_16 * 8
+    delay_16 * 5
     walk_left *5
     walk_up
 }
 text HowAreYou{
-    format("{CREATE_MUGSHOT MUGSHOT_ISABELL EMOTE_NORMAL}"
-            "Ah, you're awake. \n Good.\p"
+    format("{CREATE_MUGSHOT MUGSHOT_ISABELL EMOTE_NORMAL}Ah, you're awake. \n Good.\p"
             "How are you feeling?")
 }
 
 text TellPlayer{
-    format("Well, Thats an improvement.\p You were on Yveltal's door when you were brought here.\p Apparantly you were out cold in the Golden Fields\p"
+    format("{CREATE_MUGSHOT MUGSHOT_ISABELL EMOTE_NORMAL}Wonderful.\p You were on Yveltal's door when you were brought here.\p Apparantly you were out cold in the Golden Fields\p"
             "What happened to you?")
 }
 
-movement IsabellStepBack{
-    walk_down
-    walk_left
-    face_right
+text GoldenFields{
+    format("{CREATE_MUGSHOT MUGSHOT_ISABELL EMOTE_NORMAL}Yeah, they're right outside Whitecliff Castle.\p..\n..\l..\p You don't know where that is?")
+}
+
+text NoIdea{
+    format("{CREATE_MUGSHOT MUGSHOT_ISABELL EMOTE_NORMAL}Hmm, you can't remember? Not surprising, I suppose. Up until what do you remember?")
+}
+
+text Starving{
+    format("{CREATE_MUGSHOT MUGSHOT_ISABELL EMOTE_NORMAL}From what I could tell, you were starving to death. No signs of physical trauma.\p When'd you eat for the last time?")
 }
 
 script AskPlayerName{
@@ -98,13 +104,51 @@ script AskPlayerName{
     applymovement(1, IsabellLookRight)
     waitmovement(1)
     msgbox(Amnesia)
+    waitmessage
+    msgbox(PlayerName)
     applymovement(OBJ_EVENT_ID_PLAYER, Exclamation)
-    applymovement(1, IsabellStepBack)
+    waitmovement(0)
+        dynmultichoice(0,0, TRUE 3,0, DYN_MULTICHOICE_CB_NONE, "Roggenrola", "Litwick","Honedge")
+    if(var(VAR_RESULT)==0){
+        bufferspeciesname(STR_VAR_1, SPECIES_ROGGENROLA)
+        setvar(VAR_PICKED_STARTER, SPECIES_ROGGENROLA)
+        }
+    elif (var(VAR_RESULT)==1){
+        bufferspeciesname(STR_VAR_1, SPECIES_LITWICK)
+        setvar(VAR_PICKED_STARTER, SPECIES_LITWICK) 
+        }
+    else{
+        bufferspeciesname(STR_VAR_1, SPECIES_HONEDGE)
+        setvar(VAR_PICKED_STARTER, SPECIES_HONEDGE) 
+    }
+    msgbox(Starter)
+    closemessage
+        if (var(VAR_TEMP_0) == 1){
+        applymovement(1, IsabellStepBackRight)
+        }
+    else {
+        applymovement(1, IsabellStepBackLeft)    
+    }
     waitmovement(1)
     release
 }
 text Amnesia{
-    format("So... you really don't remember? Nothing recent at all?\p Do you at least know who you are?")
+    format("{CREATE_MUGSHOT MUGSHOT_ISABELL EMOTE_NORMAL}So... you really don't remember?\p Do you at least know who you are?")
+}
+
+text PlayerName{
+    format("{PLAYER}... so you did not forget everything.\p How about your hometown? Friends? Family?\p..\n..\l..\pNothing at all... And what about your Pokemon? You had one with you.")
+}
+
+text Starter {
+    format("{CREATE_MUGSHOT MUGSHOT_ISABELL EMOTE_NORMAL}"
+            "Good, seems like you remember that as well.\p"
+            "..\n How do I know?\p" 
+            "Well, you weren't the only in critical condition when we found you.\p"
+            "I've made sure your {STR_VAR_1} is healthy too.\p"
+            "But, just to be sure, I need to test it's physical capabilities.\l" 
+            "And yours, too.\p"
+            "Your pokeball is on the table over there. Pick it up.")
 }
 
 movement Question {
@@ -113,12 +157,103 @@ movement Question {
 }
 
 movement Exclamation {
-    emote_question_mark
+    emote_exclamation_mark
     delay_16*8
 }
 
 movement IsabellLookRight {
     face_left
-    delay_16*8
+    delay_16*6
     face_up
+}
+
+movement IsabellStepBackLeft{
+    walk_down
+    walk_left
+    face_right
+}
+
+movement IsabellStepBackRight{
+    walk_down
+    walk_left *3
+    face_right
+}
+
+script IsabellBeforeStarterGet{
+    lock
+    msgbox(NoPokemon)
+    closemessage
+    release
+}
+
+text NoPokemon{
+    format("{CREATE_MUGSHOT MUGSHOT_ISABELL EMOTE_NORMAL}Well, what are you waiting for? I don't have all day.")
+}
+
+script LeaveBeforeStarter{
+    lock
+    msgbox("Don't try to sneak away")
+    waitmessage
+    applymovement(OBJ_EVENT_ID_PLAYER, GoBack)
+    waitmovement(0)
+    release
+}
+
+movement GoBack {
+    walk_up
+    
+}
+
+script ObtainStarterBall{
+    showmonpic(VAR_PICKED_STARTER, 10, 3)
+    msgbox("It's your {STR_VAR_1}!")
+    waitmessage
+    givemon(VAR_PICKED_STARTER, 5, ITEM_ORAN_BERRY)
+    playfanfare(MUS_OBTAIN_ITEM)
+    removeobject(2)
+    setflag(FLAG_SYS_POKEMON_GET)
+    call(NicknamePartyMon)
+    hidemonpic
+    closemessage
+    goto(IsabellStarterBattle)
+}
+
+script NicknamePartyMon{
+    msgbox("Did it have a nickname?", MSGBOX_YESNO)
+    hidemonpic
+    if(var(VAR_RESULT) == YES){
+        call(Common_EventScript_GetGiftMonPartySlot)
+        call(Common_EventScript_NameReceivedPartyMon)
+    }
+}
+
+script IsabellStarterBattle{
+    applymovement(OBJ_EVENT_ID_PLAYER, Walkup)
+    waitmovement(0)
+    trainerbattle_single(TRAINER_ISABELL_1, Isabell_1_Intro, Isabell_1_Outro, IsabellBattleOver)
+}
+
+text Isabell_1_Intro {
+    format("{CREATE_MUGSHOT MUGSHOT_ISABELL EMOTE_NORMAL}Let's see if you still remember how to battle.")
+}
+
+text Isabell_1_Outro{
+    format("You both seem to be in good condition again")
+}
+
+movement Walkup {
+    walk_down*2
+    walk_left*1
+    
+}
+
+script IsabellBattleOver{
+    lockall
+    msgbox(Healthy)
+    release 
+    end
+}
+
+text Healthy {
+    format("{CREATE_MUGSHOT MUGSHOT_ISABELL EMOTE_NORMAL}It appears that you've both made a full recovery.\l Excellent")
 }
