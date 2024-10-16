@@ -2,6 +2,11 @@ mapscripts Whitecliff_Castle_Infirmary_MapScripts {
     MAP_SCRIPT_ON_LOAD: CheckStarterBall
 }
 
+//VAR_Infirmary_Intro:
+//0: Player in bed
+//1: Player triggers Isabell walking in
+//2: Player recieved starter
+
 script CheckStarterBall{
     setflag(FLAG_STARTER_BALL)
 }
@@ -33,9 +38,10 @@ movement IsabellEnter{
 script IsabellQuestions{
     applymovement(1, IsabellEnter)
     waitmovement(1)
-    setvar(VAR_TEMP_4, 1)
+    setvar(VAR_TEMP_2, 1)
     delay(60)
     addobject(2)
+    clearflag(FLAG_STARTER_BALL)
     if (var(VAR_TEMP_0) == 1){
         applymovement(1, IsabellWalkLeft)
         }
@@ -82,12 +88,12 @@ text HowAreYou{
 }
 
 text TellPlayer{
-    format("{CREATE_MUGSHOT MUGSHOT_ISABELL EMOTE_NORMAL}Wonderful.\p You were on Yveltal's door when you were brought here.\p Apparantly you were out cold in the Golden Fields\p"
+    format("{CREATE_MUGSHOT MUGSHOT_ISABELL EMOTE_NORMAL}Wonderful, that means your condition has improved.\p You were on Yveltal's door when you were brought here.\p Apparantly you were out cold in the Golden Fields\p"
             "What happened to you?")
 }
 
 text GoldenFields{
-    format("{CREATE_MUGSHOT MUGSHOT_ISABELL EMOTE_NORMAL}Yeah, they're right outside Whitecliff Castle.\p..\n..\l..\p You don't know where that is?")
+    format("{CREATE_MUGSHOT MUGSHOT_ISABELL EMOTE_NORMAL}Correct, they're right outside Whitecliff Castle.\p..\n..\l..\p You don't know where that is?")
 }
 
 text NoIdea{
@@ -141,9 +147,7 @@ text PlayerName{
 }
 
 text Starter {
-    format("{CREATE_MUGSHOT MUGSHOT_ISABELL EMOTE_NORMAL}"
-            "Good, seems like you remember that as well.\p"
-            "..\n How do I know?\p" 
+    format("{CREATE_MUGSHOT MUGSHOT_ISABELL EMOTE_NORMAL}Ah, so you remember that as well.\p..\n How do I know?\p" 
             "Well, you weren't the only in critical condition when we found you.\p"
             "I've made sure your {STR_VAR_1} is healthy too.\p"
             "But, just to be sure, I need to test it's physical capabilities.\l" 
@@ -192,7 +196,7 @@ text NoPokemon{
 
 script LeaveBeforeStarter{
     lock
-    msgbox("Don't try to sneak away")
+    msgbox("{CREATE_MUGSHOT MUGSHOT_ISABELL EMOTE_NORMAL}Don't try to sneak away!")
     waitmessage
     applymovement(OBJ_EVENT_ID_PLAYER, GoBack)
     waitmovement(0)
@@ -211,7 +215,9 @@ script ObtainStarterBall{
     givemon(VAR_PICKED_STARTER, 5, ITEM_ORAN_BERRY)
     playfanfare(MUS_OBTAIN_ITEM)
     removeobject(2)
+    setflag(FLAG_STARTER_BALL)
     setflag(FLAG_SYS_POKEMON_GET)
+    setvar(VAR_INFIRMARY_INTRO, 2)
     call(NicknamePartyMon)
     hidemonpic
     closemessage
@@ -238,7 +244,7 @@ text Isabell_1_Intro {
 }
 
 text Isabell_1_Outro{
-    format("You both seem to be in good condition again")
+    format("Seems like you and your {STR_VAR_1} are doing great.")
 }
 
 movement Walkup {
@@ -255,5 +261,6 @@ script IsabellBattleOver{
 }
 
 text Healthy {
-    format("{CREATE_MUGSHOT MUGSHOT_ISABELL EMOTE_NORMAL}It appears that you've both made a full recovery.\l Excellent")
+    format("{CREATE_MUGSHOT MUGSHOT_ISABELL EMOTE_NORMAL}It appears that you've both made a full recovery.\l Well, under my care that's to be expected\p"
+            "Though, not even I can cure amnesia.")
 }
