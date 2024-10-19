@@ -773,6 +773,7 @@ u8 BattleSetup_GetTerrainId(void)
             return BATTLE_TERRAIN_POND;
         return BATTLE_TERRAIN_CAVE;
     case MAP_TYPE_INDOOR:
+        return BATTLE_TERRAIN_CASTLE;
     case MAP_TYPE_SECRET_BASE:
         return BATTLE_TERRAIN_BUILDING;
     case MAP_TYPE_UNDERWATER:
@@ -802,7 +803,7 @@ u8 BattleSetup_GetTerrainId(void)
     if (GetSavedWeather() == WEATHER_SANDSTORM)
         return BATTLE_TERRAIN_SAND;
 
-    return BATTLE_TERRAIN_PLAIN;
+    return BATTLE_TERRAIN_CASTLE;
 }
 
 static u8 GetBattleTransitionTypeByMap(void)

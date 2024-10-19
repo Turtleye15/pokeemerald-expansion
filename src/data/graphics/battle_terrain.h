@@ -86,3 +86,9 @@ const u32 gBattleTerrainAnimTilemap_Building[] = INCBIN_U32("graphics/battle_ter
 
 const u32 gBattleTerrainAnimTiles_Rayquaza[] = INCBIN_U32("graphics/battle_terrain/sky/anim_tiles.4bpp.lz");
 const u32 gBattleTerrainAnimTilemap_Rayquaza[] = INCBIN_U32("graphics/battle_terrain/sky/anim_map.bin.lz");
+
+const u32 gBattleTerrainTiles_Castle[] = INCBIN_U32("graphics/battle_terrain/castle/tiles.4bpp.lz");
+const u32 gBattleTerrainTilemap_Castle[] = INCBIN_U32("graphics/battle_terrain/castle/map.bin.lz");
+const u32 gBattleTerrainPalette_Castle[] = INCBIN_U32("graphics/battle_terrain/Castle/palette.gbapal.lz");
+const u32 gBattleTerrainAnimTiles_Castle[] = INCBIN_U32("graphics/battle_terrain/castle/anim_tiles.4bpp.lz");
+const u32 gBattleTerrainAnimTilemap_Castle[] = INCBIN_U32("graphics/battle_terrain/castle/anim_map.bin.lz");
