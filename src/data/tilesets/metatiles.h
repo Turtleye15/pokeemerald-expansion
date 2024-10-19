@@ -210,3 +210,6 @@ const u16 gMetatileAttributes_UnionRoom[] = INCBIN_U16("data/tilesets/secondary/
 
 const u16 gMetatiles_PorytilesPrimaryTest[] = INCBIN_U16("data/tilesets/primary/porytiles_primary_test/metatiles.bin");
 const u16 gMetatileAttributes_PorytilesPrimaryTest[] = INCBIN_U16("data/tilesets/primary/porytiles_primary_test/metatile_attributes.bin");
+
+const u16 gMetatiles_WhitecliffIndoor[] = INCBIN_U16("data/tilesets/primary/whitecliff_indoor/metatiles.bin");
+const u16 gMetatileAttributes_WhitecliffIndoor[] = INCBIN_U16("data/tilesets/primary/whitecliff_indoor/metatile_attributes.bin");

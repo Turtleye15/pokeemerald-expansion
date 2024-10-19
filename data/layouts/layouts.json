@@ -4426,7 +4426,7 @@
       "name": "PorytilesTestMap_Layout",
       "width": 20,
       "height": 20,
-      "primary_tileset": "gTileset_PorytilesPrimaryTest",
+      "primary_tileset": "gTileset_WhitecliffIndoor",
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/PorytilesTestMap/border.bin",
       "blockdata_filepath": "data/layouts/PorytilesTestMap/map.bin"
