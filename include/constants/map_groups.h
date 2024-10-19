@@ -9,6 +9,7 @@
 
 // gMapGroup_WhitecliffCastle_Indoor
 #define MAP_WHITECLIFF_CASTLE_INFIRMARY (0 | (1 << 8))
+#define MAP_PORYTILES_TEST_MAP          (1 | (1 << 8))
 
 // gMapGroup_TownsAndRoutes
 #define MAP_PETALBURG_CITY      (0 | (2 << 8))

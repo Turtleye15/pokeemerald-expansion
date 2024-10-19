@@ -1078,3 +1078,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/text/birch_speech.inc"
 
 	.include "data/maps/Whitecliff_Castle_Infirmary/scripts.inc"
+
+	.include "data/maps/PorytilesTestMap/scripts.inc"
