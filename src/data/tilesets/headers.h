@@ -847,3 +847,14 @@ const struct Tileset gTileset_WhitecliffIndoor =
     .metatileAttributes = gMetatileAttributes_WhitecliffIndoor,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_whitecliff_indoor =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_whitecliff_indoor,
+    .palettes = gTilesetPalettes_whitecliff_indoor,
+    .metatiles = gMetatiles_whitecliff_indoor,
+    .metatileAttributes = gMetatileAttributes_whitecliff_indoor,
+    .callback = NULL,
+};

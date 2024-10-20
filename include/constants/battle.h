@@ -420,7 +420,7 @@
 #define BATTLE_TERRAIN_CAVE             7
 #define BATTLE_TERRAIN_BUILDING         8
 #define BATTLE_TERRAIN_PLAIN            9
-#define BATTLE_TERRAIN_CASTLE           22
+
 // New battle terrains are used for Secret Power but not fully implemented.
 #define BATTLE_TERRAIN_SOARING          10
 #define BATTLE_TERRAIN_SKY_PILLAR       11
@@ -435,6 +435,8 @@
 #define BATTLE_TERRAIN_SPACE            20
 #define BATTLE_TERRAIN_ULTRA_SPACE      21
 
+//My own battle terrains
+#define BATTLE_TERRAIN_CASTLE           22
 #define BATTLE_TERRAIN_COUNT            23
 
 #define B_WAIT_TIME_LONG        (B_WAIT_TIME_MULTIPLIER * 4)

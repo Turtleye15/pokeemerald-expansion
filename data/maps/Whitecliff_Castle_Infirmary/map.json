@@ -6,7 +6,7 @@
   "region_map_section": "MAPSEC_ABANDONED_SHIP",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
-  "map_type": "MAP_TYPE_NONE",
+  "map_type": "MAP_TYPE_INDOOR",
   "allow_cycling": false,
   "allow_escaping": false,
   "allow_running": false,
@@ -16,8 +16,8 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_ISABELL",
-      "x": 10,
-      "y": 11,
+      "x": 13,
+      "y": 9,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 0,
@@ -29,8 +29,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
-      "x": 9,
-      "y": 3,
+      "x": 11,
+      "y": 4,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -43,15 +43,15 @@
   ],
   "warp_events": [
     {
-      "x": 11,
-      "y": 11,
+      "x": 14,
+      "y": 9,
       "elevation": 0,
       "dest_map": "MAP_PETALBURG_WOODS",
       "dest_warp_id": "1"
     },
     {
-      "x": 10,
-      "y": 11,
+      "x": 13,
+      "y": 9,
       "elevation": 0,
       "dest_map": "MAP_PETALBURG_WOODS",
       "dest_warp_id": "0"
@@ -60,16 +60,7 @@
   "coord_events": [
     {
       "type": "trigger",
-      "x": 4,
-      "y": 3,
-      "elevation": 0,
-      "var": "VAR_INFIRMARY_INTRO",
-      "var_value": "0",
-      "script": "Infirmary_IsabellCheckPlayerLeft"
-    },
-    {
-      "type": "trigger",
-      "x": 6,
+      "x": 8,
       "y": 3,
       "elevation": 0,
       "var": "VAR_INFIRMARY_INTRO",
@@ -78,8 +69,8 @@
     },
     {
       "type": "trigger",
-      "x": 11,
-      "y": 10,
+      "x": 14,
+      "y": 8,
       "elevation": 0,
       "var": "VAR_INFIRMARY_INTRO",
       "var_value": "1",
@@ -87,8 +78,8 @@
     },
     {
       "type": "trigger",
-      "x": 10,
-      "y": 10,
+      "x": 13,
+      "y": 8,
       "elevation": 0,
       "var": "VAR_INFIRMARY_INTRO",
       "var_value": "1",

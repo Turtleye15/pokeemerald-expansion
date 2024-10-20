@@ -14,24 +14,15 @@ script CheckStarterBall{
 script Infirmary_IsabellCheckPlayerRight{
     lock
     setvar(VAR_INFIRMARY_INTRO, 1)
-    setvar(VAR_TEMP_0, 1)
     goto(IsabellQuestions)
 }
 
-script Infirmary_IsabellCheckPlayerLeft{
-    lock
-    setvar(VAR_INFIRMARY_INTRO, 1)
-    setvar(VAR_TEMP_0, 2)
-    goto(IsabellQuestions)
-}
 
 movement IsabellEnter{
-    walk_up *6
+    walk_up *4
     walk_right *2
-    walk_up * 2
     delay_16 *6
-    walk_down 
-    walk_left *3
+    walk_left*4
     face_up
 }
 
@@ -42,13 +33,9 @@ script IsabellQuestions{
     delay(60)
     addobject(2)
     clearflag(FLAG_STARTER_BALL)
-    if (var(VAR_TEMP_0) == 1){
-        applymovement(1, IsabellWalkLeft)
-        }
-    else {
-        applymovement(1, IsabellWalkRight)    
-    }
+    applymovement(1, IsabellWalkLeft)
     waitmovement(1)
+    applymovement(OBJ_EVENT_ID_PLAYER, FaceDown)
     msgbox(HowAreYou)
     dynmultichoice(0,0, TRUE 2,0, DYN_MULTICHOICE_CB_NONE, "Could be better.","Awful...")
     msgbox(TellPlayer)
@@ -66,22 +53,18 @@ script IsabellQuestions{
     goto(AskPlayerName)
 }
 movement IsabellWalkLeft{
-    walk_down *2
+    walk_down *1
     face_left
     emote_exclamation_mark
     delay_16 * 5
-    walk_left *3
+    walk_left *4
     walk_up
 }
 
-movement IsabellWalkRight{
-    walk_down *2
-    face_left
-    emote_exclamation_mark
-    delay_16 * 5
-    walk_left *5
-    walk_up
+movement FaceDown {
+    face_down
 }
+
 text HowAreYou{
     format("{CREATE_MUGSHOT MUGSHOT_ISABELL EMOTE_NORMAL}Ah, you're awake. \n Good.\p"
             "How are you feeling?")
@@ -129,12 +112,7 @@ script AskPlayerName{
     }
     msgbox(Starter)
     closemessage
-        if (var(VAR_TEMP_0) == 1){
-        applymovement(1, IsabellStepBackRight)
-        }
-    else {
-        applymovement(1, IsabellStepBackLeft)    
-    }
+    applymovement(1, IsabellStepBackLeft)    
     waitmovement(1)
     release
 }
@@ -173,25 +151,26 @@ movement IsabellLookRight {
 
 movement IsabellStepBackLeft{
     walk_down
-    walk_left
-    face_right
-}
-
-movement IsabellStepBackRight{
-    walk_down
-    walk_left *3
+    walk_left * 3
     face_right
 }
 
 script IsabellBeforeStarterGet{
     lock
+    faceplayer
     msgbox(NoPokemon)
+    applymovement(1, IsabellFaceRight)
+    waitmessage
     closemessage
     release
 }
 
 text NoPokemon{
     format("{CREATE_MUGSHOT MUGSHOT_ISABELL EMOTE_NORMAL}Well, what are you waiting for? I don't have all day.")
+}
+
+movement IsabellFaceRight{
+    face_right
 }
 
 script LeaveBeforeStarter{
@@ -248,7 +227,7 @@ text Isabell_1_Outro{
 }
 
 movement Walkup {
-    walk_down*2
+    walk_down*1
     walk_left*1
     
 }

@@ -127,7 +127,7 @@ static void ClearFrontierRecord(void)
 
 static void WarpToTruck(void)
 {
-    SetWarpDestination(MAP_GROUP(WHITECLIFF_CASTLE_INFIRMARY), MAP_NUM(WHITECLIFF_CASTLE_INFIRMARY), WARP_ID_NONE, 5, 2);
+    SetWarpDestination(MAP_GROUP(WHITECLIFF_CASTLE_INFIRMARY), MAP_NUM(WHITECLIFF_CASTLE_INFIRMARY), WARP_ID_NONE, 9, 3);
     WarpIntoMap();
 }
 
