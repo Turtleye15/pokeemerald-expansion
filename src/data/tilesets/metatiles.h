@@ -216,3 +216,9 @@ const u16 gMetatileAttributes_WhitecliffIndoor[] = INCBIN_U16("data/tilesets/pri
 
 const u16 gMetatiles_whitecliff_indoor[] = INCBIN_U16("data/tilesets/secondary/whitecliff_indoor/metatiles.bin");
 const u16 gMetatileAttributes_whitecliff_indoor[] = INCBIN_U16("data/tilesets/secondary/whitecliff_indoor/metatile_attributes.bin");
+
+const u16 gMetatiles_golden_fields[] = INCBIN_U16("data/tilesets/primary/golden_fields/metatiles.bin");
+const u16 gMetatileAttributes_golden_fields[] = INCBIN_U16("data/tilesets/primary/golden_fields/metatile_attributes.bin");
+
+const u16 gMetatiles_whitecliff_castle[] = INCBIN_U16("data/tilesets/secondary/whitecliff_castle/metatiles.bin");
+const u16 gMetatileAttributes_whitecliff_castle[] = INCBIN_U16("data/tilesets/secondary/whitecliff_castle/metatile_attributes.bin");

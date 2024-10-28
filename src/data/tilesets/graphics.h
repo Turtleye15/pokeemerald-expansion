@@ -1691,3 +1691,41 @@ const u16 gTilesetPalettes_whitecliff_indoor[][16] =
 };
 
 const u32 gTilesetTiles_whitecliff_indoor[] = INCBIN_U32("data/tilesets/secondary/whitecliff_indoor/tiles.4bpp.lz");
+
+const u16 gTilesetPalettes_golden_fields[][16] =
+{
+    INCBIN_U16("data/tilesets/primary/golden_fields/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/primary/golden_fields/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/primary/golden_fields/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/primary/golden_fields/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/primary/golden_fields/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/primary/golden_fields/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/primary/golden_fields/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/primary/golden_fields/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/primary/golden_fields/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/primary/golden_fields/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/primary/golden_fields/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/primary/golden_fields/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/primary/golden_fields/palettes/12.gbapal"),
+};
+
+const u32 gTilesetTiles_golden_fields[] = INCBIN_U32("data/tilesets/primary/golden_fields/tiles.4bpp.lz");
+
+const u16 gTilesetPalettes_whitecliff_castle[][16] =
+{
+    INCBIN_U16("data/tilesets/secondary/whitecliff_castle/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/whitecliff_castle/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/whitecliff_castle/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/whitecliff_castle/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/whitecliff_castle/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/whitecliff_castle/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/whitecliff_castle/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/whitecliff_castle/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/whitecliff_castle/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/whitecliff_castle/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/whitecliff_castle/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/whitecliff_castle/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/whitecliff_castle/palettes/12.gbapal"),
+};
+
+const u32 gTilesetTiles_whitecliff_castle[] = INCBIN_U32("data/tilesets/secondary/whitecliff_castle/tiles.4bpp.lz");

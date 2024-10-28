@@ -4426,10 +4426,20 @@
       "name": "PorytilesTestMap_Layout",
       "width": 20,
       "height": 20,
-      "primary_tileset": "gTileset_WhitecliffIndoor",
-      "secondary_tileset": "gTileset_Petalburg",
+      "primary_tileset": "gTileset_golden_fields",
+      "secondary_tileset": "gTileset_whitecliff_castle",
       "border_filepath": "data/layouts/PorytilesTestMap/border.bin",
       "blockdata_filepath": "data/layouts/PorytilesTestMap/map.bin"
+    },
+    {
+      "id": "LAYOUT_WHITECLIFF_CASTLLE",
+      "name": "Whitecliff_Castlle_Layout",
+      "width": 60,
+      "height": 36,
+      "primary_tileset": "gTileset_golden_fields",
+      "secondary_tileset": "gTileset_whitecliff_castle",
+      "border_filepath": "data/layouts/Whitecliff_Castlle/border.bin",
+      "blockdata_filepath": "data/layouts/Whitecliff_Castlle/map.bin"
     }
   ]
 }

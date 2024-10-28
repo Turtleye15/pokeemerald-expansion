@@ -14,6 +14,7 @@ script CheckStarterBall{
 script Infirmary_IsabellCheckPlayerRight{
     lock
     setvar(VAR_INFIRMARY_INTRO, 1)
+    applymovement(OBJ_EVENT_ID_PLAYER, FaceDown)
     goto(IsabellQuestions)
 }
 
@@ -35,7 +36,6 @@ script IsabellQuestions{
     clearflag(FLAG_STARTER_BALL)
     applymovement(1, IsabellWalkLeft)
     waitmovement(1)
-    applymovement(OBJ_EVENT_ID_PLAYER, FaceDown)
     msgbox(HowAreYou)
     dynmultichoice(0,0, TRUE 2,0, DYN_MULTICHOICE_CB_NONE, "Could be better.","Awful...")
     msgbox(TellPlayer)
@@ -57,7 +57,7 @@ movement IsabellWalkLeft{
     face_left
     emote_exclamation_mark
     delay_16 * 5
-    walk_left *4
+    walk_left *3
     walk_up
 }
 
@@ -80,7 +80,7 @@ text GoldenFields{
 }
 
 text NoIdea{
-    format("{CREATE_MUGSHOT MUGSHOT_ISABELL EMOTE_NORMAL}Hmm, you can't remember? Not surprising, I suppose. Up until what do you remember?")
+    format("{CREATE_MUGSHOT MUGSHOT_ISABELL EMOTE_NORMAL}Hmm, you don't know? Not surprising, I suppose. Can you recall anything else?")
 }
 
 text Starving{
@@ -97,18 +97,30 @@ script AskPlayerName{
     msgbox(PlayerName)
     applymovement(OBJ_EVENT_ID_PLAYER, Exclamation)
     waitmovement(0)
-        dynmultichoice(0,0, TRUE 3,0, DYN_MULTICHOICE_CB_NONE, "Roggenrola", "Litwick","Honedge")
+    goto(AskPlayerMon)
+}
+script AskPlayerMon{ 
+        dynmultichoice(0,0, TRUE 3,0, DYN_MULTICHOICE_CB_NONE, "I have a Roggenrola!", "It's a Litwick!","My Honedge!")
     if(var(VAR_RESULT)==0){
-        bufferspeciesname(STR_VAR_1, SPECIES_ROGGENROLA)
+        bufferspeciesname(STR_VAR_3, SPECIES_ROGGENROLA)
         setvar(VAR_PICKED_STARTER, SPECIES_ROGGENROLA)
         }
     elif (var(VAR_RESULT)==1){
-        bufferspeciesname(STR_VAR_1, SPECIES_LITWICK)
+        bufferspeciesname(STR_VAR_3, SPECIES_LITWICK)
         setvar(VAR_PICKED_STARTER, SPECIES_LITWICK) 
         }
     else{
-        bufferspeciesname(STR_VAR_1, SPECIES_HONEDGE)
+        bufferspeciesname(STR_VAR_3, SPECIES_HONEDGE)
         setvar(VAR_PICKED_STARTER, SPECIES_HONEDGE) 
+    }
+    goto(ConfirmPlayerMon)
+}
+
+script ConfirmPlayerMon{
+    msgbox("{DESTROY_MUGSHOT}Are you sure?", MSGBOX_YESNO)
+    if(var(VAR_RESULT)== NO){
+        msgbox(AskAgain)
+        goto(AskPlayerMon)
     }
     msgbox(Starter)
     closemessage
@@ -124,10 +136,15 @@ text PlayerName{
     format("{PLAYER}... so you did not forget everything.\p How about your hometown? Friends? Family?\p..\n..\l..\pNothing at all... And what about your Pokemon? You had one with you.")
 }
 
+text AskAgain {
+    format("{CREATE_MUGSHOT MUGSHOT_ISABELL EMOTE_NORMAL}So, then it was...?")
+    
+}
+
 text Starter {
     format("{CREATE_MUGSHOT MUGSHOT_ISABELL EMOTE_NORMAL}Ah, so you remember that as well.\p..\n How do I know?\p" 
             "Well, you weren't the only in critical condition when we found you.\p"
-            "I've made sure your {STR_VAR_1} is healthy too.\p"
+            "I've made sure your {STR_VAR_3} is healthy too.\p"
             "But, just to be sure, I need to test it's physical capabilities.\l" 
             "And yours, too.\p"
             "Your pokeball is on the table over there. Pick it up.")
@@ -140,7 +157,7 @@ movement Question {
 
 movement Exclamation {
     emote_exclamation_mark
-    delay_16*8
+    delay_16*4
 }
 
 movement IsabellLookRight {
@@ -176,7 +193,8 @@ movement IsabellFaceRight{
 script LeaveBeforeStarter{
     lock
     msgbox("{CREATE_MUGSHOT MUGSHOT_ISABELL EMOTE_NORMAL}Don't try to sneak away!")
-    waitmessage
+    closemessage
+    removefieldmugshot
     applymovement(OBJ_EVENT_ID_PLAYER, GoBack)
     waitmovement(0)
     release
@@ -189,7 +207,8 @@ movement GoBack {
 
 script ObtainStarterBall{
     showmonpic(VAR_PICKED_STARTER, 10, 3)
-    msgbox("It's your {STR_VAR_1}!")
+    bufferspeciesname(STR_VAR_3, VAR_PICKED_STARTER)
+    msgbox("It's your {STR_VAR_3}!")
     waitmessage
     givemon(VAR_PICKED_STARTER, 5, ITEM_ORAN_BERRY)
     playfanfare(MUS_OBTAIN_ITEM)
@@ -214,6 +233,7 @@ script NicknamePartyMon{
 
 script IsabellStarterBattle{
     applymovement(OBJ_EVENT_ID_PLAYER, Walkup)
+    bufferspeciesname(STR_VAR_3, VAR_PICKED_STARTER)
     waitmovement(0)
     trainerbattle_single(TRAINER_ISABELL_1, Isabell_1_Intro, Isabell_1_Outro, IsabellBattleOver)
 }
@@ -223,7 +243,7 @@ text Isabell_1_Intro {
 }
 
 text Isabell_1_Outro{
-    format("Seems like you and your {STR_VAR_1} are doing great.")
+    format("Seems like you and your {STR_VAR_3} are doing great.")
 }
 
 movement Walkup {
@@ -242,4 +262,76 @@ script IsabellBattleOver{
 text Healthy {
     format("{CREATE_MUGSHOT MUGSHOT_ISABELL EMOTE_NORMAL}It appears that you've both made a full recovery.\l Well, under my care that's to be expected\p"
             "Though, not even I can cure amnesia.")
+}
+
+script WC_Infirmary_PotionBox{
+    lock
+    msgbox(format("Glass bottles are piled up in this crate."))
+    release
+}
+
+script WC_Infirmary_BerryTree{
+    lock
+    msgbox(format("A tree growing berries. It seems they will be used for making medicine."))
+    release
+}
+
+script WC_Infirmary_GrassBox{
+    lock
+    msgbox(format("A box full with gilded leaves. Maybe they have medicinal qualities?"))
+    release
+}
+
+script WC_Infirmary_Bookshelf{
+    lock
+    msgbox(format("There's a book here about potion brewing! Do you want to read it?"), MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        msgbox(GoldenFieldInfo)
+    }
+    if(var(VAR_RESULT) == NO){
+        closemessage
+        release
+    }
+    msgbox(format("Continue Reading?"), MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        msgbox(Brewing)
+    }
+    closemessage
+    release
+}
+
+text GoldenFieldInfo{
+    format("The Golden Fields surround Whitecliff Castle.\p" 
+            "It's named after the grass that only grows in this region.\p"
+            "For a cleric, these leaves serve an important purpose.\p"
+            "They can draw out and amplify the properties of various berries.\p"
+            "Most often, they are combined with Sitrus berries to create health potions.\p"
+            "But, it works with lots of other berries!\p"
+            "In the next chapters, I will explain this in more detail.")
+}
+
+text Brewing{
+    format("Creating potions is surprisingly simple.\p"
+            "You'll need berries, dried golden leaves, and an empty container\p"
+            "First, crush the berries of choice lightly, and place them in the container.\l"
+            "Then, add 1 leaf per berry\p"
+            "Close the bottle tightly and after a little while your potion will be ready!\p"
+            "While the process itself is simple, obtaining the desired result might be hard.\p"
+            "You can add more ingredients to create potions with a wide range of effetcs!\p")
+}
+
+script InfirmaryMunna{
+    lock 
+    faceplayer
+    playmoncry(SPECIES_MUNNA, CRY_MODE_ENCOUNTER)
+    delay(20)
+    msgbox(format("This Munna seems to be monitoring the patient!"))
+    waitmessage
+    applymovement(4, LookLeft)
+    waitmovement(4)
+    release
+}
+
+movement LookLeft {
+    face_left
 }

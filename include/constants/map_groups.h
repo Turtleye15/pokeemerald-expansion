@@ -6,6 +6,7 @@
 //
 
 // gMapGroup_WhitecliffCastle
+#define MAP_WHITECLIFF_CASTLLE (0 | (0 << 8))
 
 // gMapGroup_WhitecliffCastle_Indoor
 #define MAP_WHITECLIFF_CASTLE_INFIRMARY (0 | (1 << 8))
