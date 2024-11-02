@@ -245,11 +245,17 @@
 
 // New NPCs
 #define OBJ_EVENT_GFX_ISABELL                    241
+#define OBJ_EVENT_GFX_COMMONER_MAN_1             242
+#define OBJ_EVENT_GFX_COMMONER_MAN_2             243
+#define OBJ_EVENT_GFX_COMMONER_WOMAN_1           244
+#define OBJ_EVENT_GFX_COMMONER_WOMAN_2           245
+#define OBJ_EVENT_GFX_COMMONER_OLD_MAN           246
+#define OBJ_EVENT_GFX_COMMONER_OLD_WOMAN         247
 
 // NOTE: The maximum amount of object events has been expanded from 255 to 65535.
 // Since dynamic graphics ids still require at least 16 free values, the actual limit
 // is 65519, but even considering follower Pokémon, this should be more than enough :)
-#define NUM_OBJ_EVENT_GFX                        242
+#define NUM_OBJ_EVENT_GFX                        248
 
 
 // These are dynamic object gfx ids.
@@ -383,6 +389,7 @@
 
 //New stuff
 #define OBJ_EVENT_PAL_TAG_ISABELL                 0x1125
+#define OBJ_EVENT_PAL_TAG_COMMONER                0x1126
 
 #if OW_FOLLOWERS_POKEBALLS
 // Vanilla

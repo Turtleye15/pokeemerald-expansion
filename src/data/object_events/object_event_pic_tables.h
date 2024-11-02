@@ -315,6 +315,31 @@ static const struct SpriteFrameImage sPicTable_Isabell[] = {
     overworld_ascending_frames(gObjectEventPic_Isabell, 4, 4),
 };
 
+static const struct SpriteFrameImage sPicTable_CommonerMan1[] = {
+    overworld_ascending_frames(gObjectEventPic_CommonerMan1, 2, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_CommonerMan2[] = {
+    overworld_ascending_frames(gObjectEventPic_CommonerMan2, 2, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_CommonerWoman1[] = {
+    overworld_ascending_frames(gObjectEventPic_CommonerWoman1, 2, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_CommonerWoman2[] = {
+    overworld_ascending_frames(gObjectEventPic_CommonerWoman2, 2, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_CommonerOldMan[] = {
+    overworld_ascending_frames(gObjectEventPic_CommonerOldMan, 2, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_CommonerOldWoman[] = {
+    overworld_ascending_frames(gObjectEventPic_CommonerOldWoman, 2, 4),
+};
+
+
 static const struct SpriteFrameImage sPicTable_UnusedNatuDoll[] = {
     obj_frame_tiles(gObjectEventPic_UnusedNatuDoll),
 };

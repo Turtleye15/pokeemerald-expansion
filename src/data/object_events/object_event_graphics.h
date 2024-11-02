@@ -169,6 +169,13 @@ const u32 gObjectEventPic_Mom[] = INCBIN_U32("graphics/object_events/pics/people
 const u32 gObjectEventPic_Isabell[] = INCBIN_U32("graphics/object_events/pics/people/whitecliff/isabell.4bpp");
 const u16 gObjectEventPal_Isabell[] = INCBIN_U16("graphics/object_events/pics/people/whitecliff/isabell.gbapal");
 
+const u16 gObjectEventPal_Commoner[] = INCBIN_U16("graphics/object_events/palettes/commoner.gbapal");
+const u32 gObjectEventPic_CommonerMan1[] = INCBIN_U32("graphics/object_events/pics/people/commoner_man_1.4bpp");
+const u32 gObjectEventPic_CommonerMan2[] = INCBIN_U32("graphics/object_events/pics/people/commoner_man_2.4bpp");
+const u32 gObjectEventPic_CommonerWoman1[] = INCBIN_U32("graphics/object_events/pics/people/commoner_woman_1.4bpp");
+const u32 gObjectEventPic_CommonerWoman2[] = INCBIN_U32("graphics/object_events/pics/people/commoner_woman_2.4bpp");
+const u32 gObjectEventPic_CommonerOldMan[] = INCBIN_U32("graphics/object_events/pics/people/commoner_elder_man.4bpp");
+const u32 gObjectEventPic_CommonerOldWoman[] = INCBIN_U32("graphics/object_events/pics/people/commoner_elder_woman.4bpp");
 
 const u16 gObjectEventPal_Kyogre[] = INCBIN_U16("graphics/object_events/palettes/kyogre.gbapal");
 const u16 gObjectEventPal_KyogreReflection[] = INCBIN_U16("graphics/object_events/palettes/kyogre_reflection.gbapal");

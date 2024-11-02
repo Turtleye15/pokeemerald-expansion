@@ -497,6 +497,12 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
 
     //New NPCs
     [OBJ_EVENT_GFX_ISABELL] =                  &gObjectEventGraphicsInfo_Isabell,
+    [OBJ_EVENT_GFX_COMMONER_MAN_1] =           &gObjectEventGraphicsInfo_CommonerMan1,
+    [OBJ_EVENT_GFX_COMMONER_MAN_2] =           &gObjectEventGraphicsInfo_CommonerMan2,
+    [OBJ_EVENT_GFX_COMMONER_WOMAN_1] =         &gObjectEventGraphicsInfo_CommonerWoman1,
+    [OBJ_EVENT_GFX_COMMONER_WOMAN_2] =         &gObjectEventGraphicsInfo_CommonerWoman2,
+    [OBJ_EVENT_GFX_COMMONER_OLD_MAN] =         &gObjectEventGraphicsInfo_CommonerOldMan,
+    [OBJ_EVENT_GFX_COMMONER_OLD_WOMAN] =       &gObjectEventGraphicsInfo_CommonerOldWoman,
 };
 
 const struct ObjectEventGraphicsInfo *const gMauvilleOldManGraphicsInfoPointers[] = {
