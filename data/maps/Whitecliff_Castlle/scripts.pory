@@ -1,0 +1,74 @@
+mapscripts Whitecliff_Castlle_MapScripts {
+
+}
+
+script WC_CliffGirl {
+    lock 
+    faceplayer
+    msgbox(WC_text_cliffgirl)
+    closemessage
+    release
+}
+
+text WC_text_cliffgirl {
+    format("I love the view up here. I wonder what's on that island on the horizon.")
+}
+
+script WC_Gardener {
+    lock 
+    faceplayer
+    msgbox(WC_text_Gardener)
+    closemessage
+    release
+}
+
+text WC_text_Gardener {
+    format("Oho, a youngster found our little garden. If you're interested in gardening too, you should talk with my husband! He's inside.")
+}
+
+script WC_Shopper {
+    lock 
+    faceplayer
+    msgbox(WC_text_Shopper)
+    closemessage
+    release
+}
+text WC_text_Shopper {
+    format("I was hoping to buy a batch of time candles, but it seems the candlemaker's not here today")
+}
+
+script WC_Fashiongirl {
+    lock 
+    faceplayer
+    msgbox(WC_text_Fashion)
+    closemessage
+    release
+}
+
+text WC_text_Fashion {
+    format("Whoa... your outfit is so cool! I've never seen something like that! Where did you get it from?")
+}
+
+script WC_BlacksmithNeighbour {
+    lock 
+    faceplayer
+    msgbox(WC_text_Neighbour)
+    closemessage
+    release
+}
+
+text WC_text_Neighbour {
+    format("I'm glad we've got a skilled blacksmith in Whitecliff, but living next to her drives me insane.\pHow can someone produce this much sound!?")
+}
+
+script WC_CrazyGuy {
+    lock 
+    faceplayer
+    msgbox(WC_text_CrazyGuy)
+    closemessage
+    release
+}
+
+text WC_text_CrazyGuy {
+    format("The sun is moving! It's moving, I tell ya! The end is upon us!")
+}

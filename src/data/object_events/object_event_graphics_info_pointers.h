@@ -239,6 +239,12 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_HoOh;
 
 //New npcs
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Isabell;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CommonerMan1;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CommonerMan2;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CommonerWoman1;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CommonerWoman2;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CommonerOldMan;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CommonerOldWoman;
 
 // Begin pokemon event objects
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PokeBall;
