@@ -185,7 +185,7 @@ static const struct WindowTemplate sWindowTemplate_StartClock = {
 
 static const struct WindowTemplate sWindowTemplate_MenuName = {
   .bg = 0, 
-  .tilemapLeft = 16, 
+  .tilemapLeft = 17, 
   .tilemapTop = 17, 
   .width = 7, 
   .height = 2, 
@@ -743,7 +743,7 @@ static void HeatStartMenu_CreateSprites(void) {
     sHeatStartMenu->spriteIdTrainerCard = CreateSprite(&gSpriteIconTrainerCard, x, y3 + 3, 0);
     sHeatStartMenu->spriteIdQuest       = CreateSprite(&gSpriteIconQuest,x, y4, 0);
     sHeatStartMenu->spriteIdSave        = CreateSprite(&gSpriteIconSave, x, y5 + 1, 0);
-    sHeatStartMenu->spriteIdOptions     = CreateSprite(&gSpriteIconOptions, x, y6 - 4, 0);
+    sHeatStartMenu->spriteIdOptions     = CreateSprite(&gSpriteIconOptions, x, y6, 0);
     return;
   } else {
     sHeatStartMenu->spriteIdBag         = CreateSprite(&gSpriteIconBag, x, y1, 0);

@@ -294,15 +294,13 @@ script IsabellBattleOver{
     playfanfare(MUS_HEAL)
     delay(60)
     msgbox(WC_Infirmary_WhatNow)
-    closemessage
-    delay(20)
-    applymovement(OBJ_EVENT_ID_PLAYER, Walkinplace)
-    waitmovement(0)
+    dynmultichoice(0,0, TRUE 1,0, DYN_MULTICHOICE_CB_NONE, "Are you unable to restore my mind?")
     msgbox(WC_Infirmary_ThePast)
     waitmessage
     applymovement(isabell, LookUp)
     waitmovement(isabell)
     msgbox(WC_Infirmary_ThePresent)
+    questmenu(QUEST_MENU_SET_ACTIVE, QUEST_CHAPTER_1)
     closemessage
     release 
     end
