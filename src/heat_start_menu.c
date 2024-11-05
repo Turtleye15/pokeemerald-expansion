@@ -154,7 +154,7 @@ static const u32 sStartMenuTiles[] = INCBIN_U32("graphics/heat_start_menu/bg.4bp
 static const u32 sStartMenuTilemap[] = INCBIN_U32("graphics/heat_start_menu/bg.bin.lz");
 static const u32 sStartMenuTilemapSafari[] = INCBIN_U32("graphics/heat_start_menu/bg_safari.bin.lz");
 static const u16 sStartMenuPalette[] = INCBIN_U16("graphics/heat_start_menu/bg.gbapal");
-static const u16 gStandardMenuPaletteTest[] = INCBIN_U16("graphics/interface/std_menu.gbapal");
+static const u16 gStandardMenuPaletteTest[] = INCBIN_U16("graphics/heat_start_menu/std_menu.gbapal");
 
 //--SPRITE-GFX--
 #define TAG_ICON_GFX 1234
@@ -180,7 +180,7 @@ static const struct WindowTemplate sWindowTemplate_StartClock = {
   .width = 12, // If you want to shorten the dates to Sat., Sun., etc., change this to 9
   .height = 2, 
   .paletteNum = 15,
-  .baseBlock = 0x30
+  .baseBlock = 0x52
 };
 
 static const struct WindowTemplate sWindowTemplate_MenuName = {
@@ -190,7 +190,7 @@ static const struct WindowTemplate sWindowTemplate_MenuName = {
   .width = 7, 
   .height = 2, 
   .paletteNum = 15,
-  .baseBlock = 0x30 + (12*2)
+  .baseBlock = 0x52 + (12*2)
 };
 
 static const struct WindowTemplate sWindowTemplate_SafariBalls = {
@@ -200,7 +200,7 @@ static const struct WindowTemplate sWindowTemplate_SafariBalls = {
     .width = 7,
     .height = 4,
     .paletteNum = 15,
-    .baseBlock = (0x30 + (12*2)) + (7*2)
+    .baseBlock = (0x52 + (12*2)) + (7*2)
 };
 
 static const struct SpritePalette sSpritePal_Icon[] =
@@ -710,32 +710,33 @@ static void HeatStartMenu_LoadSprites(void) {
 }
 
 static void HeatStartMenu_CreateSprites(void) {
-  u32 x = 224;
-  u32 y1 = 14;
-  u32 y2 = 38;
-  u32 y3 = 60;
-  u32 y4 = 84;
-  u32 y5 = 109;
-  u32 y6 = 130;
-  u32 y7 = 150;
+  u32 x = 230;
+  u32 x2 = 224;
+  u32 y1 = 13;
+  u32 y2 = 34;
+  u32 y3 = 55;
+  u32 y4 = 78;
+  u32 y5 = 98;
+  u32 y6 = 118;
+  u32 y7 = 138;
 
   if (FlagGet(FLAG_SYS_POKENAV_GET) == TRUE) {
-    sHeatStartMenu->spriteIdPokedex     = CreateSprite(&gSpriteIconPokedex, x-1, y1-2, 0);
+    sHeatStartMenu->spriteIdPokedex     = CreateSprite(&gSpriteIconPokedex, x-10, y1-2, 0);
     sHeatStartMenu->spriteIdParty       = CreateSprite(&gSpriteIconParty, x, y2-3, 0);
-    sHeatStartMenu->spriteIdBag         = CreateSprite(&gSpriteIconBag, x, y3-2, 0);
+    sHeatStartMenu->spriteIdBag         = CreateSprite(&gSpriteIconBag, x-13, y3-2, 0);
     sHeatStartMenu->spriteIdPoketch     = CreateSprite(&gSpriteIconPoketch, x, y4+1, 0);
     sHeatStartMenu->spriteIdTrainerCard = CreateSprite(&gSpriteIconTrainerCard, x, y5, 0);
     sHeatStartMenu->spriteIdSave        = CreateSprite(&gSpriteIconSave, x, y6, 0);
     sHeatStartMenu->spriteIdOptions     = CreateSprite(&gSpriteIconOptions, x, y7, 0);
     return;
   } else if (FlagGet(FLAG_SYS_POKEDEX_GET) == TRUE) {
-    sHeatStartMenu->spriteIdPokedex     = CreateSprite(&gSpriteIconPokedex, x-1, y1, 0);
-    sHeatStartMenu->spriteIdParty       = CreateSprite(&gSpriteIconParty, x, y2-1, 0);
-    sHeatStartMenu->spriteIdBag         = CreateSprite(&gSpriteIconBag, x, y3+1, 0);
-    sHeatStartMenu->spriteIdTrainerCard = CreateSprite(&gSpriteIconTrainerCard, x, y4 + 2, 0);
-    sHeatStartMenu->spriteIdQuest       = CreateSprite(&gSpriteIconQuest,x, y5, 0);
-    sHeatStartMenu->spriteIdSave        = CreateSprite(&gSpriteIconSave, x, y6 - 1, 0);
-    sHeatStartMenu->spriteIdOptions     = CreateSprite(&gSpriteIconOptions, x, y7-2, 0);
+    sHeatStartMenu->spriteIdPokedex     = CreateSprite(&gSpriteIconPokedex, x-10, y1, 0);
+    sHeatStartMenu->spriteIdParty       = CreateSprite(&gSpriteIconParty, x, y2, 0);
+    sHeatStartMenu->spriteIdBag         = CreateSprite(&gSpriteIconBag, x-13, y3, 0);
+    sHeatStartMenu->spriteIdTrainerCard = CreateSprite(&gSpriteIconTrainerCard, x-1, y4, 0);
+    sHeatStartMenu->spriteIdQuest       = CreateSprite(&gSpriteIconQuest,x-12, y5, 0);
+    sHeatStartMenu->spriteIdSave        = CreateSprite(&gSpriteIconSave, x, y6, 0);
+    sHeatStartMenu->spriteIdOptions     = CreateSprite(&gSpriteIconOptions, x-8, y7, 0);
     return;
   } else if (FlagGet(FLAG_SYS_POKEMON_GET) == TRUE) {
     sHeatStartMenu->spriteIdParty       = CreateSprite(&gSpriteIconParty, x, y1, 0);
@@ -746,11 +747,11 @@ static void HeatStartMenu_CreateSprites(void) {
     sHeatStartMenu->spriteIdOptions     = CreateSprite(&gSpriteIconOptions, x, y6, 0);
     return;
   } else {
-    sHeatStartMenu->spriteIdBag         = CreateSprite(&gSpriteIconBag, x, y1, 0);
-    sHeatStartMenu->spriteIdTrainerCard = CreateSprite(&gSpriteIconTrainerCard, x, y2 + 1, 0);
-    sHeatStartMenu->spriteIdQuest       = CreateSprite(&gSpriteIconQuest,x, y3, 0);
-    sHeatStartMenu->spriteIdSave        = CreateSprite(&gSpriteIconSave, x, y4 + 3, 0);
-    sHeatStartMenu->spriteIdOptions     = CreateSprite(&gSpriteIconOptions, x, y5 + 1, 0);
+    sHeatStartMenu->spriteIdBag         = CreateSprite(&gSpriteIconBag, x2, y1, 0);
+    sHeatStartMenu->spriteIdTrainerCard = CreateSprite(&gSpriteIconTrainerCard, x2, y2 + 1, 0);
+    sHeatStartMenu->spriteIdQuest       = CreateSprite(&gSpriteIconQuest,x2, y3, 0);
+    sHeatStartMenu->spriteIdSave        = CreateSprite(&gSpriteIconSave, x2, y4 + 3, 0);
+    sHeatStartMenu->spriteIdOptions     = CreateSprite(&gSpriteIconOptions, x2, y5 + 1, 0);
   }
 }
 
@@ -852,15 +853,15 @@ static void HeatStartMenu_UpdateClockDisplay(void)
 	CopyWindowToVram(sHeatStartMenu->sStartClockWindowId, COPYWIN_GFX);
 }
 
-static const u8 gText_Poketch[] = _("  PokeNav");
-static const u8 gText_Pokedex[] = _("  Pokédex");
-static const u8 gText_Party[]   = _("    Party ");
-static const u8 gText_Bag[]     = _("      Bag  ");
-static const u8 gText_Trainer[] = _("   Trainer");
-static const u8 gText_Quest[]   = _("  Quests");
-static const u8 gText_Save[]    = _("     Save  ");
-static const u8 gText_Options[] = _("   Options");
-static const u8 gText_Flag[]    = _("   Retire");
+static const u8 gText_Poketch[] = _(" PokeNav");
+static const u8 gText_Pokedex[] = _(" Pokédex");
+static const u8 gText_Party[]   = _(" Party ");
+static const u8 gText_Bag[]     = _(" Bag  ");
+static const u8 gText_Trainer[] = _(" Trainer");
+static const u8 gText_Quest[]   = _(" Quests");
+static const u8 gText_Save[]    = _(" Save  ");
+static const u8 gText_Options[] = _(" Options");
+static const u8 gText_Flag[]    = _(" Retire");
 
 static void HeatStartMenu_UpdateMenuName(void) {
   
