@@ -880,3 +880,25 @@ const struct Tileset gTileset_whitecliff_castle =
     .metatileAttributes = gMetatileAttributes_whitecliff_castle,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_whitecliff_interior =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_whitecliff_interior,
+    .palettes = gTilesetPalettes_whitecliff_interior,
+    .metatiles = gMetatiles_whitecliff_interior,
+    .metatileAttributes = gMetatileAttributes_whitecliff_interior,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_whitecliff_interior_secondary =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_whitecliff_interior_secondary,
+    .palettes = gTilesetPalettes_whitecliff_interior_secondary,
+    .metatiles = gMetatiles_whitecliff_interior_secondary,
+    .metatileAttributes = gMetatileAttributes_whitecliff_interior_secondary,
+    .callback = NULL,
+};
