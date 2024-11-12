@@ -42,7 +42,18 @@
   ],
   "gMapGroup_WhitecliffCastle_Indoor": [
     "Whitecliff_Castle_Infirmary",
-    "PorytilesTestMap"
+    "PorytilesTestMap",
+    "Whitecliff_Castle_Botanist",
+    "Whitecliff_Castle_House1",
+    "Whitecliff_Castle_House1_F2",
+    "Whitecliff_Castle_Botanist_F2",
+    "Whitecliff_Castle_Inn",
+    "Whitecliff_Castle_Inn_F2",
+    "Whitecliff_Castle_House2",
+    "Whitecliff_Castle_House2_F2",
+    "Whitecliff_Castle_House3",
+    "NewMap1",
+    "Whitecliff_Castle_House3_F2"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",

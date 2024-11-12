@@ -9,8 +9,19 @@
 #define MAP_WHITECLIFF_CASTLLE (0 | (0 << 8))
 
 // gMapGroup_WhitecliffCastle_Indoor
-#define MAP_WHITECLIFF_CASTLE_INFIRMARY (0 | (1 << 8))
-#define MAP_PORYTILES_TEST_MAP          (1 | (1 << 8))
+#define MAP_WHITECLIFF_CASTLE_INFIRMARY   (0 | (1 << 8))
+#define MAP_PORYTILES_TEST_MAP            (1 | (1 << 8))
+#define MAP_WHITECLIFF_CASTLE_BOTANIST    (2 | (1 << 8))
+#define MAP_WHITECLIFF_CASTLE_HOUSE1      (3 | (1 << 8))
+#define MAP_WHITECLIFF_CASTLE_HOUSE1_F2   (4 | (1 << 8))
+#define MAP_WHITECLIFF_CASTLE_BOTANIST_F2 (5 | (1 << 8))
+#define MAP_WHITECLIFF_CASTLE_INN         (6 | (1 << 8))
+#define MAP_WHITECLIFF_CASTLE_INN_F2      (7 | (1 << 8))
+#define MAP_WHITECLIFF_CASTLE_HOUSE2      (8 | (1 << 8))
+#define MAP_WHITECLIFF_CASTLE_HOUSE2_F2   (9 | (1 << 8))
+#define MAP_WHITECLIFF_CASTLE_HOUSE3      (10 | (1 << 8))
+#define MAP_NEW_MAP1                      (11 | (1 << 8))
+#define MAP_WHITECLIFF_CASTLE_HOUSE3_F2   (12 | (1 << 8))
 
 // gMapGroup_TownsAndRoutes
 #define MAP_PETALBURG_CITY      (0 | (2 << 8))

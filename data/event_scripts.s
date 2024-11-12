@@ -1082,3 +1082,25 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/PorytilesTestMap/scripts.inc"
 
 	.include "data/maps/Whitecliff_Castlle/scripts.inc"
+
+	.include "data/maps/Whitecliff_Castle_Botanist/scripts.inc"
+
+	.include "data/maps/Whitecliff_Castle_House1/scripts.inc"
+
+	.include "data/maps/Whitecliff_Castle_House1_F2/scripts.inc"
+
+	.include "data/maps/Whitecliff_Castle_Botanist_F2/scripts.inc"
+
+	.include "data/maps/Whitecliff_Castle_Inn/scripts.inc"
+
+	.include "data/maps/Whitecliff_Castle_Inn_F2/scripts.inc"
+
+	.include "data/maps/Whitecliff_Castle_House2/scripts.inc"
+
+	.include "data/maps/Whitecliff_Castle_House2_F2/scripts.inc"
+
+	.include "data/maps/Whitecliff_Castle_House3/scripts.inc"
+
+	.include "data/maps/NewMap1/scripts.inc"
+
+	.include "data/maps/Whitecliff_Castle_House3_F2/scripts.inc"

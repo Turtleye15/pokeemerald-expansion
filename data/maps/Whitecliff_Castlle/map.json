@@ -100,6 +100,41 @@
       "elevation": 0,
       "dest_map": "MAP_WHITECLIFF_CASTLE_INFIRMARY",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 23,
+      "y": 25,
+      "elevation": 0,
+      "dest_map": "MAP_WHITECLIFF_CASTLE_HOUSE1",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 8,
+      "y": 25,
+      "elevation": 0,
+      "dest_map": "MAP_WHITECLIFF_CASTLE_BOTANIST",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 14,
+      "y": 9,
+      "elevation": 0,
+      "dest_map": "MAP_WHITECLIFF_CASTLE_INN",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 37,
+      "y": 24,
+      "elevation": 0,
+      "dest_map": "MAP_WHITECLIFF_CASTLE_HOUSE2",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 3,
+      "y": 11,
+      "elevation": 0,
+      "dest_map": "MAP_WHITECLIFF_CASTLLE",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [

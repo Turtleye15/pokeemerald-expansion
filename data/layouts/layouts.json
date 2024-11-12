@@ -2417,7 +2417,7 @@
       "width": 58,
       "height": 26,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "0",
+      "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/UnusedOutdoorArea/border.bin",
       "blockdata_filepath": "data/layouts/UnusedOutdoorArea/map.bin"
     },
@@ -4416,8 +4416,8 @@
       "name": "Whitecliff_Castle_Infirmary_Layout",
       "width": 17,
       "height": 10,
-      "primary_tileset": "gTileset_WhitecliffIndoor",
-      "secondary_tileset": "gTileset_whitecliff_indoor",
+      "primary_tileset": "gTileset_whitecliff_interior",
+      "secondary_tileset": "gTileset_whitecliff_interior_secondary",
       "border_filepath": "data/layouts/Whitecliff_Castle_Infirmary/border.bin",
       "blockdata_filepath": "data/layouts/Whitecliff_Castle_Infirmary/map.bin"
     },
@@ -4440,6 +4440,116 @@
       "secondary_tileset": "gTileset_whitecliff_castle",
       "border_filepath": "data/layouts/Whitecliff_Castlle/border.bin",
       "blockdata_filepath": "data/layouts/Whitecliff_Castlle/map.bin"
+    },
+    {
+      "id": "LAYOUT_WHITECLIFF_CASTLE_BOTANIST",
+      "name": "Whitecliff_Castle_Botanist_Layout",
+      "width": 8,
+      "height": 9,
+      "primary_tileset": "gTileset_whitecliff_interior",
+      "secondary_tileset": "gTileset_whitecliff_interior_secondary",
+      "border_filepath": "data/layouts/Whitecliff_Castle_Botanist/border.bin",
+      "blockdata_filepath": "data/layouts/Whitecliff_Castle_Botanist/map.bin"
+    },
+    {
+      "id": "LAYOUT_WHITECLIFF_CASTLE_HOUSE1",
+      "name": "Whitecliff_Castle_House1_Layout",
+      "width": 7,
+      "height": 8,
+      "primary_tileset": "gTileset_whitecliff_interior",
+      "secondary_tileset": "gTileset_whitecliff_interior_secondary",
+      "border_filepath": "data/layouts/Whitecliff_Castle_House1/border.bin",
+      "blockdata_filepath": "data/layouts/Whitecliff_Castle_House1/map.bin"
+    },
+    {
+      "id": "LAYOUT_WHITECLIFF_CASTLE_HOUSE1_F2",
+      "name": "Whitecliff_Castle_House1_F2_Layout",
+      "width": 8,
+      "height": 9,
+      "primary_tileset": "gTileset_whitecliff_interior",
+      "secondary_tileset": "gTileset_whitecliff_interior_secondary",
+      "border_filepath": "data/layouts/Whitecliff_Castle_House1_F2/border.bin",
+      "blockdata_filepath": "data/layouts/Whitecliff_Castle_House1_F2/map.bin"
+    },
+    {
+      "id": "LAYOUT_WHITECLIFF_CASTLE_BOTANIST_F2",
+      "name": "Whitecliff_Castle_Botanist_F2_Layout",
+      "width": 8,
+      "height": 11,
+      "primary_tileset": "gTileset_whitecliff_interior",
+      "secondary_tileset": "gTileset_whitecliff_interior_secondary",
+      "border_filepath": "data/layouts/Whitecliff_Castle_Botanist_F2/border.bin",
+      "blockdata_filepath": "data/layouts/Whitecliff_Castle_Botanist_F2/map.bin"
+    },
+    {
+      "id": "LAYOUT_WHITECLIFF_CASTLE_INN",
+      "name": "Whitecliff_Castle_Inn_Layout",
+      "width": 17,
+      "height": 9,
+      "primary_tileset": "gTileset_whitecliff_interior",
+      "secondary_tileset": "gTileset_whitecliff_interior_secondary",
+      "border_filepath": "data/layouts/Whitecliff_Castle_Inn/border.bin",
+      "blockdata_filepath": "data/layouts/Whitecliff_Castle_Inn/map.bin"
+    },
+    {
+      "id": "LAYOUT_WHITECLIFF_CASTLE_INN_F2",
+      "name": "Whitecliff_Castle_Inn_F2_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_whitecliff_interior",
+      "secondary_tileset": "gTileset_whitecliff_interior_secondary",
+      "border_filepath": "data/layouts/Whitecliff_Castle_Inn_F2/border.bin",
+      "blockdata_filepath": "data/layouts/Whitecliff_Castle_Inn_F2/map.bin"
+    },
+    {
+      "id": "LAYOUT_WHITECLIFF_CASTLE_HOUSE2",
+      "name": "Whitecliff_Castle_House2_Layout",
+      "width": 8,
+      "height": 8,
+      "primary_tileset": "gTileset_whitecliff_interior",
+      "secondary_tileset": "gTileset_whitecliff_interior_secondary",
+      "border_filepath": "data/layouts/Whitecliff_Castle_House2/border.bin",
+      "blockdata_filepath": "data/layouts/Whitecliff_Castle_House2/map.bin"
+    },
+    {
+      "id": "LAYOUT_WHITECLIFF_CASTLE_HOUSE2_F2",
+      "name": "Whitecliff_Castle_House2_F2_Layout",
+      "width": 8,
+      "height": 10,
+      "primary_tileset": "gTileset_whitecliff_interior",
+      "secondary_tileset": "gTileset_whitecliff_interior_secondary",
+      "border_filepath": "data/layouts/Whitecliff_Castle_House2_F2/border.bin",
+      "blockdata_filepath": "data/layouts/Whitecliff_Castle_House2_F2/map.bin"
+    },
+    {
+      "id": "LAYOUT_WHITECLIFF_CASTLE_HOUSE3",
+      "name": "Whitecliff_Castle_House3_Layout",
+      "width": 8,
+      "height": 8,
+      "primary_tileset": "gTileset_whitecliff_interior",
+      "secondary_tileset": "gTileset_whitecliff_interior_secondary",
+      "border_filepath": "data/layouts/Whitecliff_Castle_House3/border.bin",
+      "blockdata_filepath": "data/layouts/Whitecliff_Castle_House3/map.bin"
+    },
+    {
+      "id": "LAYOUT_NEW_MAP1",
+      "name": "NewMap1_Layout",
+      "width": 8,
+      "height": 10,
+      "primary_tileset": "gTileset_whitecliff_interior",
+      "secondary_tileset": "gTileset_whitecliff_interior_secondary",
+      "border_filepath": "data/layouts/NewMap1/border.bin",
+      "blockdata_filepath": "data/layouts/NewMap1/map.bin"
+    },
+    {
+      "id": "LAYOUT_WHITECLIFF_CASTLE_HOUSE3_F2",
+      "name": "Whitecliff_Castle_House3_F2_Layout",
+      "width": 8,
+      "height": 10,
+      "primary_tileset": "gTileset_whitecliff_interior",
+      "secondary_tileset": "gTileset_whitecliff_interior_secondary",
+      "border_filepath": "data/layouts/Whitecliff_Castle_House3_F2/border.bin",
+      "blockdata_filepath": "data/layouts/Whitecliff_Castle_House3_F2/map.bin"
     }
   ]
 }

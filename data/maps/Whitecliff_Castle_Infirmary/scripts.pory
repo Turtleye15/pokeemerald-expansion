@@ -143,15 +143,15 @@ script ConfirmPlayerMon{
         msgbox(AskAgain)
         goto(AskPlayerMon)
     }
-    msgbox(Starter)
-    closemessage
-    applymovement(isabell, IsabellStepBackLeft)    
-    waitmovement(isabell)
-    msgbox(MyNameIs)
-    closemessage
-    setobjectmovementtype(isabell, MOVEMENT_TYPE_FACE_RIGHT)
-    closemessage
-    release
+        msgbox(Starter)
+        closemessage
+        applymovement(isabell, IsabellStepBackLeft)    
+        waitmovement(isabell)
+        msgbox(MyNameIs)
+        closemessage
+        setobjectmovementtype(isabell, MOVEMENT_TYPE_FACE_RIGHT)
+        closemessage
+        release
 }
 text Amnesia{
     format("{CREATE_MUGSHOT MUGSHOT_ISABELL EMOTE_NORMAL}So... you really don't remember?\p Do you at least know who you are?")
