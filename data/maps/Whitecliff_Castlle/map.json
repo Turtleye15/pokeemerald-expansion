@@ -12,7 +12,18 @@
   "allow_running": true,
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": 0,
+  "connections": [
+    {
+      "map": "MAP_GOLDEN_FIELDS_EAST",
+      "offset": -5,
+      "direction": "left"
+    },
+    {
+      "map": "MAP_WHITE_CLIFFS",
+      "offset": 0,
+      "direction": "down"
+    }
+  ],
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_COMMONER_MAN_1",
@@ -133,7 +144,7 @@
       "x": 3,
       "y": 11,
       "elevation": 0,
-      "dest_map": "MAP_WHITECLIFF_CASTLLE",
+      "dest_map": "MAP_WHITECLIFF_CASTLE_HOUSE3",
       "dest_warp_id": "0"
     }
   ],

@@ -5,8 +5,10 @@
 // DO NOT MODIFY THIS FILE! It is auto-generated from data/maps/map_groups.json
 //
 
-// gMapGroup_WhitecliffCastle
+// gMapGroup_Golden_Plateau
 #define MAP_WHITECLIFF_CASTLLE (0 | (0 << 8))
+#define MAP_GOLDEN_FIELDS_EAST (1 | (0 << 8))
+#define MAP_WHITE_CLIFFS       (2 | (0 << 8))
 
 // gMapGroup_WhitecliffCastle_Indoor
 #define MAP_WHITECLIFF_CASTLE_INFIRMARY   (0 | (1 << 8))

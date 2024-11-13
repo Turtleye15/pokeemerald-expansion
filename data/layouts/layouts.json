@@ -4435,7 +4435,7 @@
       "id": "LAYOUT_WHITECLIFF_CASTLLE",
       "name": "Whitecliff_Castlle_Layout",
       "width": 60,
-      "height": 36,
+      "height": 38,
       "primary_tileset": "gTileset_golden_fields",
       "secondary_tileset": "gTileset_whitecliff_castle",
       "border_filepath": "data/layouts/Whitecliff_Castlle/border.bin",
@@ -4494,8 +4494,8 @@
     {
       "id": "LAYOUT_WHITECLIFF_CASTLE_INN_F2",
       "name": "Whitecliff_Castle_Inn_F2_Layout",
-      "width": 20,
-      "height": 20,
+      "width": 19,
+      "height": 16,
       "primary_tileset": "gTileset_whitecliff_interior",
       "secondary_tileset": "gTileset_whitecliff_interior_secondary",
       "border_filepath": "data/layouts/Whitecliff_Castle_Inn_F2/border.bin",
@@ -4550,6 +4550,26 @@
       "secondary_tileset": "gTileset_whitecliff_interior_secondary",
       "border_filepath": "data/layouts/Whitecliff_Castle_House3_F2/border.bin",
       "blockdata_filepath": "data/layouts/Whitecliff_Castle_House3_F2/map.bin"
+    },
+    {
+      "id": "LAYOUT_GOLDEN_FIELDS_EAST",
+      "name": "Golden_Fields_East_Layout",
+      "width": 58,
+      "height": 58,
+      "primary_tileset": "gTileset_golden_fields",
+      "secondary_tileset": "gTileset_whitecliff_castle",
+      "border_filepath": "data/layouts/Golden_Fields_East/border.bin",
+      "blockdata_filepath": "data/layouts/Golden_Fields_East/map.bin"
+    },
+    {
+      "id": "LAYOUT_WHITE_CLIFFS",
+      "name": "White_Cliffs_Layout",
+      "width": 50,
+      "height": 60,
+      "primary_tileset": "gTileset_golden_fields",
+      "secondary_tileset": "gTileset_whitecliff_castle",
+      "border_filepath": "data/layouts/White_Cliffs/border.bin",
+      "blockdata_filepath": "data/layouts/White_Cliffs/map.bin"
     }
   ]
 }
