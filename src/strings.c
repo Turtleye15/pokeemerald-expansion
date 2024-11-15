@@ -1671,8 +1671,6 @@ const u8 gText_SideQuestDoneDesc_30[] = _("Completed Quest 30");
 //map
 const u8 gText_SideQuestMap_Chapter_1[] = _("Whitecliff Castle");
 const u8 gText_SideQuestMap2[] = _("Map 2");
-const u8 gText_Relearn[] = _("{START_BUTTON} RELEARN"); // future note: don't decap this, because it mimics the summary screen BG graphics which will not get decapped
-const u8 gText_Rename[] = _("RENAME");
 const u8 gText_SideQuestMap3[] = _("Map 3");
 const u8 gText_SideQuestMap4[] = _("Map 4");
 const u8 gText_SideQuestMap5[] = _("Map 5");
@@ -1766,3 +1764,9 @@ const u8 gText_SubQuest2_Desc17[] = _("Description Sub 17");
 const u8 gText_SubQuest2_Desc18[] = _("Description Sub 18");
 const u8 gText_SubQuest2_Desc19[] = _("Description Sub 19");
 const u8 gText_SubQuest2_Desc20[] = _("Description Sub 20");
+
+
+const u8 gText_AM[] = _("AM");
+const u8 gText_PM[] = _("PM");
+const u8 gText_Relearn[] = _("{START_BUTTON} RELEARN"); // future note: don't decap this, because it mimics the summary screen BG graphics which will not get decapped
+const u8 gText_Rename[] = _("RENAME");
