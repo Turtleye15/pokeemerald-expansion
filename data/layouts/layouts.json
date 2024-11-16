@@ -4564,8 +4564,8 @@
     {
       "id": "LAYOUT_WHITE_CLIFFS",
       "name": "White_Cliffs_Layout",
-      "width": 50,
-      "height": 60,
+      "width": 60,
+      "height": 25,
       "primary_tileset": "gTileset_golden_fields",
       "secondary_tileset": "gTileset_whitecliff_castle",
       "border_filepath": "data/layouts/White_Cliffs/border.bin",
