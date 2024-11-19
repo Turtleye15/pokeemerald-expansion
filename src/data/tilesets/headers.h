@@ -902,3 +902,14 @@ const struct Tileset gTileset_whitecliff_interior_secondary =
     .metatileAttributes = gMetatileAttributes_whitecliff_interior_secondary,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_golden_plateau =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_golden_plateau,
+    .palettes = gTilesetPalettes_golden_plateau,
+    .metatiles = gMetatiles_golden_plateau,
+    .metatileAttributes = gMetatileAttributes_golden_plateau,
+    .callback = NULL,
+};

@@ -1767,3 +1767,22 @@ const u16 gTilesetPalettes_whitecliff_interior_secondary[][16] =
 };
 
 const u32 gTilesetTiles_whitecliff_interior_secondary[] = INCBIN_U32("data/tilesets/secondary/whitecliff_interior_secondary/tiles.4bpp.lz");
+
+const u16 gTilesetPalettes_golden_plateau[][16] =
+{
+    INCBIN_U16("data/tilesets/secondary/golden_plateau/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/golden_plateau/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/golden_plateau/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/golden_plateau/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/golden_plateau/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/golden_plateau/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/golden_plateau/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/golden_plateau/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/golden_plateau/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/golden_plateau/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/golden_plateau/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/golden_plateau/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/golden_plateau/palettes/12.gbapal"),
+};
+
+const u32 gTilesetTiles_golden_plateau[] = INCBIN_U32("data/tilesets/secondary/golden_plateau/tiles.4bpp.lz");

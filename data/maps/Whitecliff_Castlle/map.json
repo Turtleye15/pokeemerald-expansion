@@ -27,7 +27,7 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_COMMONER_MAN_1",
-      "x": 16,
+      "x": 23,
       "y": 13,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -40,7 +40,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_COMMONER_WOMAN_1",
-      "x": 46,
+      "x": 53,
       "y": 14,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -53,7 +53,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_COMMONER_WOMAN_2",
-      "x": 19,
+      "x": 26,
       "y": 18,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
@@ -66,7 +66,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_COMMONER_OLD_WOMAN",
-      "x": 7,
+      "x": 14,
       "y": 27,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
@@ -79,7 +79,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_COMMONER_MAN_2",
-      "x": 20,
+      "x": 27,
       "y": 26,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
@@ -92,7 +92,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_COMMONER_OLD_MAN",
-      "x": 35,
+      "x": 42,
       "y": 25,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_ROTATE_COUNTERCLOCKWISE",
@@ -105,7 +105,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK",
-      "x": 41,
+      "x": 48,
       "y": 30,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -119,42 +119,42 @@
   ],
   "warp_events": [
     {
-      "x": 32,
+      "x": 39,
       "y": 14,
       "elevation": 0,
       "dest_map": "MAP_WHITECLIFF_CASTLE_INFIRMARY",
       "dest_warp_id": "0"
     },
     {
-      "x": 23,
+      "x": 30,
       "y": 25,
       "elevation": 0,
       "dest_map": "MAP_WHITECLIFF_CASTLE_HOUSE1",
       "dest_warp_id": "0"
     },
     {
-      "x": 8,
+      "x": 15,
       "y": 25,
       "elevation": 0,
       "dest_map": "MAP_WHITECLIFF_CASTLE_BOTANIST",
       "dest_warp_id": "0"
     },
     {
-      "x": 14,
+      "x": 21,
       "y": 9,
       "elevation": 0,
       "dest_map": "MAP_WHITECLIFF_CASTLE_INN",
       "dest_warp_id": "0"
     },
     {
-      "x": 37,
+      "x": 44,
       "y": 24,
       "elevation": 0,
       "dest_map": "MAP_WHITECLIFF_CASTLE_HOUSE2",
       "dest_warp_id": "0"
     },
     {
-      "x": 3,
+      "x": 10,
       "y": 11,
       "elevation": 0,
       "dest_map": "MAP_WHITECLIFF_CASTLE_HOUSE3",
