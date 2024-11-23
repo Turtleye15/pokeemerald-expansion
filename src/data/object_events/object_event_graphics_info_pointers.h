@@ -238,7 +238,10 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Lugia;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_HoOh;
 
 //New npcs
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Cecile;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Dania;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Isabell;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Isaria;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CommonerMan1;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CommonerMan2;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CommonerWoman1;
@@ -502,7 +505,10 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_OW_MON] =                   &gObjectEventGraphicsInfo_Follower,
 
     //New NPCs
+    [OBJ_EVENT_GFX_CECILE] =                   &gObjectEventGraphicsInfo_Cecile,
+    [OBJ_EVENT_GFX_DANIA] =                    &gObjectEventGraphicsInfo_Dania,
     [OBJ_EVENT_GFX_ISABELL] =                  &gObjectEventGraphicsInfo_Isabell,
+    [OBJ_EVENT_GFX_ISARIA] =                   &gObjectEventGraphicsInfo_Isaria,
     [OBJ_EVENT_GFX_COMMONER_MAN_1] =           &gObjectEventGraphicsInfo_CommonerMan1,
     [OBJ_EVENT_GFX_COMMONER_MAN_2] =           &gObjectEventGraphicsInfo_CommonerMan2,
     [OBJ_EVENT_GFX_COMMONER_WOMAN_1] =         &gObjectEventGraphicsInfo_CommonerWoman1,

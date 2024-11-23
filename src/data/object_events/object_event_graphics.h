@@ -166,8 +166,11 @@ const u32 gObjectEventPic_TuberMSwimming[] = INCBIN_U32("graphics/object_events/
 const u32 gObjectEventPic_Mom[] = INCBIN_U32("graphics/object_events/pics/people/mom.4bpp");
 
 //Custom NPCs
+const u16 gObjectEventPal_WhitecliffMain[] = INCBIN_U16("graphics/object_events/pics/people/whitecliff/whitecliffmain.gbapal");
+const u32 gObjectEventPic_Cecile[] = INCBIN_U32("graphics/object_events/pics/people/whitecliff/cecile.4bpp");
+const u32 gObjectEventPic_Dania[] = INCBIN_U32("graphics/object_events/pics/people/whitecliff/dania.4bpp");
 const u32 gObjectEventPic_Isabell[] = INCBIN_U32("graphics/object_events/pics/people/whitecliff/isabell.4bpp");
-const u16 gObjectEventPal_Isabell[] = INCBIN_U16("graphics/object_events/pics/people/whitecliff/isabell.gbapal");
+const u32 gObjectEventPic_Isaria[] = INCBIN_U32("graphics/object_events/pics/people/whitecliff/isaria.4bpp");
 
 const u16 gObjectEventPal_Commoner[] = INCBIN_U16("graphics/object_events/palettes/commoner.gbapal");
 const u32 gObjectEventPic_CommonerMan1[] = INCBIN_U32("graphics/object_events/pics/people/commoner_man_1.4bpp");

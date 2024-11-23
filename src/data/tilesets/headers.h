@@ -867,7 +867,7 @@ const struct Tileset gTileset_golden_fields =
     .palettes = gTilesetPalettes_golden_fields,
     .metatiles = gMetatiles_golden_fields,
     .metatileAttributes = gMetatileAttributes_golden_fields,
-    .callback = NULL,
+    .callback = InitTilesetAnim_GoldenFields,
 };
 
 const struct Tileset gTileset_whitecliff_castle =
