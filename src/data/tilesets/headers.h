@@ -900,7 +900,7 @@ const struct Tileset gTileset_whitecliff_interior_secondary =
     .palettes = gTilesetPalettes_whitecliff_interior_secondary,
     .metatiles = gMetatiles_whitecliff_interior_secondary,
     .metatileAttributes = gMetatileAttributes_whitecliff_interior_secondary,
-    .callback = NULL,
+    .callback = InitTilesetAnim_WhitecliffInterior_Secondary,
 };
 
 const struct Tileset gTileset_golden_plateau =

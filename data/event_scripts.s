@@ -1108,3 +1108,7 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/Golden_Fields_East/scripts.inc"
 
 	.include "data/maps/White_Cliffs/scripts.inc"
+
+	.include "data/maps/Whitecliff_Castle_Smithy/scripts.inc"
+
+	.include "data/maps/Whitecliff_Castle_Smithy_F2/scripts.inc"

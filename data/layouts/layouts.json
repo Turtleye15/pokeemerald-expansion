@@ -4570,6 +4570,26 @@
       "secondary_tileset": "gTileset_golden_plateau",
       "border_filepath": "data/layouts/White_Cliffs/border.bin",
       "blockdata_filepath": "data/layouts/White_Cliffs/map.bin"
+    },
+    {
+      "id": "LAYOUT_WHITECLIFF_CASTLE_SMITHY",
+      "name": "Whitecliff_Castle_Smithy_Layout",
+      "width": 11,
+      "height": 12,
+      "primary_tileset": "gTileset_whitecliff_interior",
+      "secondary_tileset": "gTileset_whitecliff_interior_secondary",
+      "border_filepath": "data/layouts/Whitecliff_Castle_Smithy/border.bin",
+      "blockdata_filepath": "data/layouts/Whitecliff_Castle_Smithy/map.bin"
+    },
+    {
+      "id": "LAYOUT_WHITECLIFF_CASTLE_SMITHY_F2",
+      "name": "Whitecliff_Castle_Smithy_F2_Layout",
+      "width": 12,
+      "height": 11,
+      "primary_tileset": "gTileset_whitecliff_interior",
+      "secondary_tileset": "gTileset_whitecliff_interior_secondary",
+      "border_filepath": "data/layouts/Whitecliff_Castle_Smithy_F2/border.bin",
+      "blockdata_filepath": "data/layouts/Whitecliff_Castle_Smithy_F2/map.bin"
     }
   ]
 }

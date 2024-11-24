@@ -1219,3 +1219,36 @@ void InitTilesetAnim_GoldenFields(void)
     sPrimaryTilesetAnimCounterMax = 256;
     sPrimaryTilesetAnimCallback = TilesetAnim_GoldenFields;
 }
+//
+
+const u16 gTilesetAnims_WhitecliffInterior_Secondary_Forge_Frame0[] = INCBIN_U16("data/tilesets/secondary/whitecliff_interior_secondary/anim/forge/00.4bpp");
+const u16 gTilesetAnims_WhitecliffInterior_Secondary_Forge_Frame1[] = INCBIN_U16("data/tilesets/secondary/whitecliff_interior_secondary/anim/forge/01.4bpp");
+const u16 gTilesetAnims_WhitecliffInterior_Secondary_Forge_Frame2[] = INCBIN_U16("data/tilesets/secondary/whitecliff_interior_secondary/anim/forge/02.4bpp");
+const u16 gTilesetAnims_WhitecliffInterior_Secondary_Forge_Frame3[] = INCBIN_U16("data/tilesets/secondary/whitecliff_interior_secondary/anim/forge/03.4bpp");
+
+const u16 *const gTilesetAnims_WhitecliffInterior_Secondary_Forge[] = {
+    gTilesetAnims_WhitecliffInterior_Secondary_Forge_Frame0,
+    gTilesetAnims_WhitecliffInterior_Secondary_Forge_Frame1,
+    gTilesetAnims_WhitecliffInterior_Secondary_Forge_Frame2,
+    gTilesetAnims_WhitecliffInterior_Secondary_Forge_Frame3
+};
+
+static void QueueAnimTiles_WhitecliffInterior_Secondary_Forge(u16 timer)
+{
+    u16 i = timer % ARRAY_COUNT(gTilesetAnims_WhitecliffInterior_Secondary_Forge);
+    AppendTilesetAnimToBuffer(gTilesetAnims_WhitecliffInterior_Secondary_Forge[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(512)), 16 * TILE_SIZE_4BPP);
+}
+
+static void TilesetAnim_WhitecliffInterior_Secondary(u16 timer)
+{
+    if (timer % 16 == 0){
+        QueueAnimTiles_WhitecliffInterior_Secondary_Forge(timer /16);
+    }
+}
+
+void InitTilesetAnim_WhitecliffInterior_Secondary(void)
+{
+    sPrimaryTilesetAnimCounter = 0;
+    sPrimaryTilesetAnimCounterMax = 256;
+    sPrimaryTilesetAnimCallback = TilesetAnim_WhitecliffInterior_Secondary;
+}

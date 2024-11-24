@@ -34,5 +34,6 @@ void InitTilesetAnim_BattlePyramid(void);
 
 // custom tile animations
 void InitTilesetAnim_GoldenFields(void);
+void InitTilesetAnim_WhitecliffInterior_Secondary(void);
 
 #endif // GUARD_TILESET_ANIMS_H

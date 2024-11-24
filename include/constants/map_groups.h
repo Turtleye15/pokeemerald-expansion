@@ -24,6 +24,8 @@
 #define MAP_WHITECLIFF_CASTLE_HOUSE3      (10 | (1 << 8))
 #define MAP_NEW_MAP1                      (11 | (1 << 8))
 #define MAP_WHITECLIFF_CASTLE_HOUSE3_F2   (12 | (1 << 8))
+#define MAP_WHITECLIFF_CASTLE_SMITHY      (13 | (1 << 8))
+#define MAP_WHITECLIFF_CASTLE_SMITHY_F2   (14 | (1 << 8))
 
 // gMapGroup_TownsAndRoutes
 #define MAP_PETALBURG_CITY      (0 | (2 << 8))
