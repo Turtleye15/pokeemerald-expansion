@@ -1,0 +1,37 @@
+mapscripts Whitecliff_Castle_Botanist_MapScripts {
+    
+}
+
+script Whitecliff_Botanist{
+    lock 
+    faceplayer
+    msgbox(Whitecliff_TalkWithBotanist)
+        dynmultipush("Do you have anything for sale?", 0)
+        switch(var(VAR_WHITECLIFF_BOTANY)){
+            case 0: dynmultipush("Can you tell me about berries?",1)
+            case 1:
+        }
+    dynmultistack(0,0, FALSE, 6, FALSE, 0, DYN_MULTICHOICE_CB_NONE)
+    switch(var(VAR_RESULT)){
+        case 0: goto(Whitecliff_Botanist_Shop)
+        case 1: goto(Whitecliff_Botanist_Quest)
+    }
+}
+
+text Whitecliff_TalkWithBotanist {
+    "Ah, good day! Can I help ye wit' something?"
+}
+
+script Whitecliff_Botanist_Shop {
+    //pokemart 
+    msgbox("this is a placeholder for the mart")
+    waitmessage
+    release
+}
+
+script Whitecliff_Botanist_Quest{
+    //quest
+    msgbox("this is a placeholder for the quest")
+    waitmessage
+    release
+}

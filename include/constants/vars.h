@@ -267,8 +267,8 @@
 #define VAR_INFIRMARY_INTRO                              0x40F7 
 #define VAR_PICKED_STARTER                               0x40F8 
 #define VAR_CAN_HEAL                                     0x40F9 
-#define VAR_UNUSED_0x40FA                                0x40FA // Unused Var
-#define VAR_UNUSED_0x40FB                                0x40FB // Unused Var
+#define VAR_DANIA_STATE                                  0x40FA // Dania location tracker
+#define VAR_WHITECLIFF_BOTANY                               0x40FB // Whitecliff Botany quest tracker
 #define VAR_UNUSED_0x40FC                                0x40FC // Unused Var
 #define VAR_UNUSED_0x40FD                                0x40FD // Unused Var
 #define VAR_UNUSED_0x40FE                                0x40FE // Unused Var

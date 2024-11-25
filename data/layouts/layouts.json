@@ -4555,7 +4555,7 @@
       "id": "LAYOUT_GOLDEN_FIELDS_EAST",
       "name": "Golden_Fields_East_Layout",
       "width": 53,
-      "height": 58,
+      "height": 61,
       "primary_tileset": "gTileset_golden_fields",
       "secondary_tileset": "gTileset_golden_plateau",
       "border_filepath": "data/layouts/Golden_Fields_East/border.bin",

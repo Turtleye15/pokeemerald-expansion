@@ -1,0 +1,22 @@
+//Dania States: VAR_DANIA_STATE
+//0: Before getting berries from farm. Dania is at the memorial statue.
+//1: After obtaining the berries. Cutscene with Dania entering the farm.
+
+script Update_DaniaLocation {
+    switch(var(VAR_DANIA_STATE)){
+        case 0:
+            goto(Dania_Script_MoveToStatue)
+        case 1:
+            goto(Dania_Script_MoveToFarm)
+    }
+}
+
+script Dania_Script_MoveToStatue {
+    clearflag(FLAG_DANIA_LOCATION_WHITE_CLIFFS)
+    setflag(FLAG_DANIA_LOCATION_GOLDEN_FIELDS)
+}
+
+script Dania_Script_MoveToFarm {
+    clearflag(FLAG_DANIA_LOCATION_GOLDEN_FIELDS)
+    setflag(FLAG_DANIA_LOCATION_WHITE_CLIFFS)
+}

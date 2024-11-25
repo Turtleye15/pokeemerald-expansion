@@ -1,0 +1,7 @@
+mapscripts Golden_Fields_East_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: Golden_Fields_OnTransition
+}
+
+script Golden_Fields_OnTransition{
+    call(Update_DaniaLocation)
+}

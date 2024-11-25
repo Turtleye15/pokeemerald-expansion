@@ -1,0 +1,29 @@
+mapscripts White_Cliffs_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: White_Cliffs_OnTransition
+}
+
+script White_Cliffs_OnTransition {
+    call(Update_DaniaLocation)
+    //Other Onload stuff
+}
+
+const dania = 1
+
+script White_Cliffs_Dania_Statue {
+    lock 
+    faceplayer
+    msgbox(White_Cliffs_Dania_Memorial)
+    waitmessage
+    applymovement(dania, moves(face_up))
+    waitmovement(dania)
+    release 
+    return
+}
+
+text White_Cliffs_Dania_Memorial {
+    "Oh. Hello.\pI'm not in the mood for a chat\nright now."
+}
+
+script White_Cliff_Memorial {
+    msgbox("Let the departed ride on forever on\ntheir final journey to peace.", MSGBOX_SIGN)
+}
