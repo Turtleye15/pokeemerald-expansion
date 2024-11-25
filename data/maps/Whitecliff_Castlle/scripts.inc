@@ -86,6 +86,36 @@ WC_CrazyGuy::
 	return
 
 
+WC_Sign_Botanist::
+# 77 "data/maps/Whitecliff_Castlle/scripts.pory"
+	msgbox WC_Sign_Botanist_Text_0, MSGBOX_SIGN
+	return
+
+
+WC_Sign_Blacksmith::
+# 81 "data/maps/Whitecliff_Castlle/scripts.pory"
+	msgbox WC_Sign_Blacksmith_Text_0, MSGBOX_SIGN
+	return
+
+
+WC_Sign_Market::
+# 85 "data/maps/Whitecliff_Castlle/scripts.pory"
+	msgbox WC_Sign_Market_Text_0, MSGBOX_SIGN
+	return
+
+
+WC_Sign_Botanist_Text_0:
+# 77 "data/maps/Whitecliff_Castlle/scripts.pory"
+	.string "Emma's Flora.\n A flower for everyone!$"
+
+WC_Sign_Blacksmith_Text_0:
+# 81 "data/maps/Whitecliff_Castlle/scripts.pory"
+	.string "Whitecliff's finest blacksmith!$"
+
+WC_Sign_Market_Text_0:
+# 85 "data/maps/Whitecliff_Castlle/scripts.pory"
+	.string "Market days: Wednesday & Thursday$"
+
 WC_text_cliffgirl::
 # 13 "data/maps/Whitecliff_Castlle/scripts.pory"
 	.string "I love the view up here. I wonder what's\n"

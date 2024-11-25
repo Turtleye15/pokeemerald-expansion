@@ -161,6 +161,7 @@ struct InGameTrade {
     u8 otGender;
     u8 sheen;
     u16 requestedSpecies;
+    // u16 requestedAbility;
 };
 
 static EWRAM_DATA u8 *sMenuTextTileBuffer = NULL;
@@ -4515,6 +4516,13 @@ u16 GetInGameTradeSpeciesInfo(void)
     StringCopy(gStringVar2, GetSpeciesName(inGameTrade->species));
     return inGameTrade->requestedSpecies;
 }
+
+// u16 GetInGameTradeAbilityInfo(void)
+// {
+//     const struct InGameTrade *InGameTrade = &sIngameTrades[gSpecialVar_0x8004];
+//     StringCopy(gStringVar1,GetMonAbility(InGameTrade->requestedAbility));
+//     StringCopy(gStringVar1, GetSpeciesName(inGameTrade))
+// }
 
 static void BufferInGameTradeMonName(void)
 {

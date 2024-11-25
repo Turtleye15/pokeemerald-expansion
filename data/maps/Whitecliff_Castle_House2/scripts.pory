@@ -1,0 +1,11 @@
+mapscripts Whitecliff_Castle_House2_MapScripts {
+    
+}
+
+script Whitecliff_House2_Man {
+    msgbox(Whitecliff_House2_Man_Chat, MSGBOX_NPC)
+}
+
+text Whitecliff_House2_Man_Chat {
+    "Don't mind my old man outside. He's\n getting old and senile.\pThe sun moves, can you believe it?\n What's next, the sky is red?"
+}

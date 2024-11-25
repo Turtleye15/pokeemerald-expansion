@@ -113,7 +113,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "EventScript_RockSmash",
       "flag": "0"
     }
   ],
@@ -172,6 +172,29 @@
 
   ],
   "bg_events": [
-
+    {
+      "type": "sign",
+      "x": 17,
+      "y": 25,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "WC_Sign_Botanist"
+    },
+    {
+      "type": "sign",
+      "x": 35,
+      "y": 26,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "WC_Sign_Blacksmith"
+    },
+    {
+      "type": "sign",
+      "x": 25,
+      "y": 14,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "WC_Sign_Market"
+    }
   ]
 }

@@ -80,4 +80,4 @@ Whitecliff_Botanist_Quest_Text_0:
 
 Whitecliff_TalkWithBotanist::
 # 21 "data/maps/Whitecliff_Castle_Botanist/scripts.pory"
-	.string "Ah, good day! Can I help ye wit' something?$"
+	.string "Ah, good day! Can ah help ye wit'\nsomething?$"

@@ -1,0 +1,15 @@
+mapscripts Whitecliff_Castle_House3_MapScripts {
+    
+}
+
+script Whitecliff_House3_Man {
+    lock 
+    faceplayer
+    msgbox(Whitecliff_House3_Trade)
+    waitmessage
+    release
+}
+
+text Whitecliff_House3_Trade {
+    "I got this Shinx for my daughter,\nbut it doesn't want to be cuddled.\pDo you have a fluffy pokemon? I'd\nhappily trade my Shinx for it!"
+}

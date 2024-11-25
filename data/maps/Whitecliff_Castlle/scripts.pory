@@ -72,3 +72,15 @@ script WC_CrazyGuy {
 text WC_text_CrazyGuy {
     format("The sun is moving! It's moving, I tell ya! The end is upon us!")
 }
+
+script WC_Sign_Botanist {
+    msgbox("Emma's Flora.\n A flower for everyone!", MSGBOX_SIGN)
+}
+
+script WC_Sign_Blacksmith {
+    msgbox("Whitecliff's finest blacksmith!", MSGBOX_SIGN)
+}
+
+script WC_Sign_Market {
+    msgbox("Market days: Wednesday & Thursday", MSGBOX_SIGN)
+}

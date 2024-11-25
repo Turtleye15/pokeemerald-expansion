@@ -19,7 +19,7 @@ script Whitecliff_Botanist{
 }
 
 text Whitecliff_TalkWithBotanist {
-    "Ah, good day! Can I help ye wit' something?"
+    "Ah, good day! Can ah help ye wit'\nsomething?"
 }
 
 script Whitecliff_Botanist_Shop {

@@ -1,0 +1,16 @@
+mapscripts Whitecliff_Castle_House1_F2_MapScripts {
+    
+}
+
+script Whitecliff_House1_Woman {
+    msgbox("I got this Hoothoot to help me and\nmy husband sleep.",MSGBOX_NPC)
+}
+
+script Whitecliff_House1_Hoothoot {
+    lock
+    faceplayer
+    playmoncry(SPECIES_HOOTHOOT, CRY_MODE_ENCOUNTER)
+    msgbox("Hoothoot stares at you. You start\nfeeling drowsy...\pBetter look away!")
+    waitmessage
+    release 
+}
