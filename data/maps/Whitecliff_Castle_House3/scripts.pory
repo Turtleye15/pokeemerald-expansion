@@ -1,15 +1,87 @@
 mapscripts Whitecliff_Castle_House3_MapScripts {
-    
+    MAP_SCRIPT_ON_TRANSITION: Whitecliff_Castle_House3_OnTransition
+}
+
+script Whitecliff_Castle_House3_OnTransition{
+    if(flag(FLAG_WHITECLIFF_CASTLE_TRADE)== TRUE){
+        clearflag(FLAG_WHITECLIFF_WOOBAT)
+    }
+    else{
+        setflag(FLAG_WHITECLIFF_WOOBAT)
+    }
 }
 
 script Whitecliff_House3_Man {
     lock 
     faceplayer
-    msgbox(Whitecliff_House3_Trade)
-    waitmessage
+    if(flag(FLAG_WHITECLIFF_CASTLE_TRADE)== TRUE){
+        goto(Whitecliff_House3_Trade_Done)
+    }
+
+    setvar(VAR_0x8008, INGAME_TRADE_SHINX)
+    copyvar(VAR_0x8004, VAR_0x8008)
+    specialvar(VAR_0x8009, GetInGameTradeSpeciesInfo)
+    msgbox(Whitecliff_House3_Trade, MSGBOX_YESNO)
+    if(var(VAR_RESULT)==NO){
+        goto(Whitecliff_House3_Trade_Decline)
+    }
+
+    // Select mon
+    special(ChoosePartyMon)
+    waitstate
+    if(var(VAR_0x8004)==PARTY_NOTHING_CHOSEN){
+        goto(Whitecliff_House3_Trade_Decline)
+    }
+    copyvar(VAR_0x8005, VAR_0x8004)
+    specialvar(VAR_RESULT, GetTradeSpecies)
+    if(var(VAR_RESULT) != VAR_0x8009){
+        goto(Whitecliff_House3_WrongSpecies)
+    }
+
+    // Perform trade
+    copyvar(VAR_0x8004, VAR_0x8008)
+    special(CreateInGameTradePokemon)
+    special(DoInGameTradeScene)
+    setflag(FLAG_WHITECLIFF_CASTLE_TRADE)
     release
 }
 
 text Whitecliff_House3_Trade {
-    "I got this Shinx for my daughter,\nbut it doesn't want to be cuddled.\pDo you have a fluffy pokemon? I'd\nhappily trade my Shinx for it!"
+    "I got this {STR_VAR_2} for my daughter,\nbut it's cold shocks make it\ldifficult to cuddle...\pDo you have a {STR_VAR_1}?\nI heard they are very soft!\pI will trade you our {STR_VAR_2} for it."
+}
+
+script Whitecliff_House3_Trade_Done {
+    msgbox("My daughter loves this woobat! Thank\nyou so much.")
+    waitmessage
+    release
+}
+
+script Whitecliff_House3_Trade_Decline {
+    msgbox("Ah, that's no big deal. Let me know\nif you change your mind")
+    waitmessage
+    release
+}
+
+script Whitecliff_House3_WrongSpecies{
+    msgbox("This isn't the pokemon I'm looking for...")
+    waitmessage
+    release
+}
+
+script Whitecliff_House3_Woobat {
+    lock
+    faceplayer
+    playmoncry(SPECIES_WOOBAT, CRY_MODE_ENCOUNTER)
+    msgbox("Woobat seems happy with all the\nattention it is getting")
+    waitmessage
+    release 
+}
+
+script Whitecliff_House3_Girl {
+    if(flag(FLAG_WHITECLIFF_CASTLE_TRADE)== FALSE){
+        msgbox("Oww...\nMy fingers...", MSGBOX_NPC)
+    }
+    else{
+        msgbox("Woobat is so soft!", MSGBOX_NPC)
+    }
 }

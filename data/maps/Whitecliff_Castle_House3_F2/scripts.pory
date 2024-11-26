@@ -1,0 +1,40 @@
+mapscripts Whitecliff_Castle_House3_F2_MapScripts {
+    
+}
+
+script Whitecliff_House3_Bookshelf {
+    lock
+    msgbox("It's someone's diary...\nOpen it?", MSGBOX_YESNO)
+    if(var(VAR_RESULT)== NO){
+        goto(Whitecliff_House3_DiaryEnd)
+    }
+    else{
+        goto(Whitecliff_House3_Diary)
+    }
+}
+
+script Whitecliff_House3_DiaryEnd {
+    msgbox("Private matters!")
+    waitmessage
+    release
+}
+
+script Whitecliff_House3_Diary{
+    msgbox("Nov 3, 1431\nElla adviced me to get a\ljournal to vent my feelings. I'll\lgive it a go...")
+    waitmessage
+    msgbox("Nov 4, 1431\nI miss her so much. It happened too\lquickly, it happened too soon.\pIt hurts.")
+    waitmessage
+    msgbox("Nov 4, 1431\nBeatrice keeps asking where\lmommy is.\pI can't bring myself to tell her the truth.")
+    waitmessage
+    msgbox("Nov 20, 1431\nToday, I told Beatrice what\lhappened. It was... difficult.")
+    waitmessage
+    msgbox("Dec 13, 1431\nI suppose the singular good thing\lis that I have to provide for 1\lless person.\pI feel like I am a monster for even\nthinking about this. Forgive me.")
+    waitmessage
+    msgbox("Jan 21, 1432\nI came across a merchant selling\lpokemon, and bought one of them.\pHopefully, it can keep Beatrice\ncompany when I am working. I can't\lkeep bothering Ella")
+    waitmessage
+    if(flag(FLAG_WHITECLIFF_CASTLE_TRADE)== TRUE){
+        msgbox("Feb 2, 1432\nAgh... The Shinx was a bad idea.\pBut, I found someone who wanted to\ntrade their Woobat for it! Beatrice\ladores this furball!")
+        waitmessage
+    }
+    release
+}

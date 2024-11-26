@@ -51,6 +51,8 @@
 #include "constants/songs.h"
 #include "constants/union_room.h"
 
+#include "pokemon.h"
+
 // IDs for RunTradeMenuCallback
 enum {
     CB_MAIN_MENU,
@@ -163,6 +165,11 @@ struct InGameTrade {
     u16 requestedSpecies;
     // u16 requestedAbility;
 };
+
+// void ScriptSavePlayerSpecies(void)
+// {
+//    VarSet(VAR_TEMP_A, GetMonAbility()); 
+// }
 
 static EWRAM_DATA u8 *sMenuTextTileBuffer = NULL;
 

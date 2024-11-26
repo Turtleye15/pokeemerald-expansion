@@ -4565,7 +4565,7 @@
       "id": "LAYOUT_WHITE_CLIFFS",
       "name": "White_Cliffs_Layout",
       "width": 67,
-      "height": 26,
+      "height": 27,
       "primary_tileset": "gTileset_golden_fields",
       "secondary_tileset": "gTileset_golden_plateau",
       "border_filepath": "data/layouts/White_Cliffs/border.bin",

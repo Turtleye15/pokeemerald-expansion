@@ -106,7 +106,7 @@ WC_Sign_Market::
 
 WC_Sign_Botanist_Text_0:
 # 77 "data/maps/Whitecliff_Castlle/scripts.pory"
-	.string "Emma's Flora.\n A flower for everyone!$"
+	.string "Rowin's Flora.\n A flower for everyone!$"
 
 WC_Sign_Blacksmith_Text_0:
 # 81 "data/maps/Whitecliff_Castlle/scripts.pory"

@@ -74,7 +74,7 @@ text WC_text_CrazyGuy {
 }
 
 script WC_Sign_Botanist {
-    msgbox("Emma's Flora.\n A flower for everyone!", MSGBOX_SIGN)
+    msgbox("Rowin's Flora.\n A flower for everyone!", MSGBOX_SIGN)
 }
 
 script WC_Sign_Blacksmith {
