@@ -80,15 +80,15 @@ Whitecliff_House3_DiaryEnd_Text_0:
 
 Whitecliff_House3_Diary_Text_0:
 # 23 "data/maps/Whitecliff_Castle_House3_F2/scripts.pory"
-	.string "Nov 3, 1431\nMy sister adviced my to get a\ljournal to vent my feelings. I'll\lgive it a go...$"
+	.string "Nov 3, 1431\nElla adviced me to get a\ljournal to vent my feelings. I'll\lgive it a go...$"
 
 Whitecliff_House3_Diary_Text_1:
 # 25 "data/maps/Whitecliff_Castle_House3_F2/scripts.pory"
-	.string "Nov 4, 1431\nI miss her so much. It happened too\lquickly, it happened too soon.\p It hurts.$"
+	.string "Nov 4, 1431\nI miss her so much. It happened too\lquickly, it happened too soon.\pIt hurts.$"
 
 Whitecliff_House3_Diary_Text_2:
 # 27 "data/maps/Whitecliff_Castle_House3_F2/scripts.pory"
-	.string "Nov 4, 1431\nBeatrice keeps asking where\lmommy is. I can't bring myself to tell her the truth.$"
+	.string "Nov 4, 1431\nBeatrice keeps asking where\lmommy is.\pI can't bring myself to tell her the truth.$"
 
 Whitecliff_House3_Diary_Text_3:
 # 29 "data/maps/Whitecliff_Castle_House3_F2/scripts.pory"
@@ -100,8 +100,8 @@ Whitecliff_House3_Diary_Text_4:
 
 Whitecliff_House3_Diary_Text_5:
 # 33 "data/maps/Whitecliff_Castle_House3_F2/scripts.pory"
-	.string "Jan 21, 1432\nI came across a merchant selling\lpokemon, and bought one of them.\pHopefully, it can keep Beatrice company when I am working. I can't\lkeep bothering Ella$"
+	.string "Jan 21, 1432\nI came across a merchant selling\lpokemon, and bought one of them.\pHopefully, it can keep Beatrice\ncompany when I am working. I can't\lkeep bothering Ella$"
 
 Whitecliff_House3_Diary_Text_6:
 # 36 "data/maps/Whitecliff_Castle_House3_F2/scripts.pory"
-	.string "Feb 2, 1432\nAgh... The Shinx was a bad idea.\pBut, I found someone who wanted to\ntrade theur Woobat for it! Beatrice\ladores this furball!$"
+	.string "Feb 2, 1432\nAgh... The Shinx was a bad idea.\pBut, I found someone who wanted to\ntrade their Woobat for it! Beatrice\ladores this furball!$"

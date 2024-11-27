@@ -779,6 +779,10 @@
 #define METATILE_Underwater_FloorShadow  0x228
 #define METATILE_Underwater_RockWall     0x21E
 
+// gTileset_whitecliff_castle
+#define METATILE_whitecliff_castle_Door_Inn               0x36E
+#define METATILE_whitecliff_castle_Door_WhitecliffCastle  0x36D
+
 // Other
 #define METATILE_RSMossdeepGym_RedArrow_Down   0x205
 #define METATILE_RSMossdeepGym_RedArrow_Left   0x20C
