@@ -35,6 +35,7 @@
 #include "constants/rgb.h"
 #include "constants/songs.h"
 #include "constants/map_types.h"
+#include "tilesets.h"
 
 #define subsprite_table(ptr) {.subsprites = ptr, .subspriteCount = (sizeof ptr) / (sizeof(struct Subsprite))}
 
@@ -287,6 +288,7 @@ bool8 (*const gFieldEffectScriptFuncs[])(u8 **, u32 *) =
     FieldEffectCmd_loadgfx_callnative,
     FieldEffectCmd_loadtiles_callnative,
     FieldEffectCmd_loadfadedpal_callnative,
+    FieldEffectCmd_loadfadedpal_callnative_TallGrass,
 };
 
 static const struct OamData sOam_64x64 =
@@ -768,6 +770,14 @@ bool8 FieldEffectCmd_loadfadedpal_callnative(u8 **script, u32 *val)
     return TRUE;
 }
 
+bool8 FieldEffectCmd_loadfadedpal_callnative_TallGrass(u8 **script, u32 *val)
+{
+    (*script)++;
+    FieldEffectScript_LoadFadedPalette_TallGrass(script);
+    FieldEffectScript_CallNative(script, val);
+    return TRUE;
+}
+
 u32 FieldEffectScript_ReadWord(u8 **script)
 {
     return (*script)[0]
@@ -789,6 +799,27 @@ void FieldEffectScript_LoadFadedPalette(u8 **script)
     struct SpritePalette *palette = (struct SpritePalette *)FieldEffectScript_ReadWord(script);
     LoadSpritePalette(palette);
     UpdateSpritePaletteWithWeather(IndexOfSpritePaletteTag(palette->tag));
+    (*script) += 4;
+}
+
+void FieldEffectScript_LoadFadedPalette_TallGrass(u8 **script)
+{
+    int palId = 0;
+    struct SpritePalette *palettes = (struct SpritePalette *)FieldEffectScript_ReadWord(script);
+    //dynamically change TallGrass subsprites based on tileset
+    DebugPrintf("pals - current map = %d", GetPrimaryTilesetIdCurrentMap());
+    switch (GetPrimaryTilesetIdCurrentMap())
+    {
+        case TILESET_GOLDEN_FIELDS:
+            palId = TALL_GRASS_GOLD;
+            break;
+        default:
+            palId = TALL_GRASS_VANILLA;
+            break;
+    }
+    DebugPrintf("palId = %d", palId);
+    LoadSpritePalette(&palettes[palId]);
+    UpdateSpritePaletteWithWeather(IndexOfSpritePaletteTag(palettes[palId].tag));
     (*script) += 4;
 }
 

@@ -10,4 +10,13 @@ extern const struct Tileset * const gTilesetPointer_SecretBaseRedCave;
 extern const struct Tileset gTileset_Building;
 extern const struct Tileset gTileset_BrendansMaysHouse;
 
+//My primaries
+extern const struct Tileset gTileset_golden_fields;
+
+enum TilesetsPrimary
+{
+    TILESET_VANILLA,
+    TILESET_GOLDEN_FIELDS,
+};
+
 #endif //GUARD_tilesets_H

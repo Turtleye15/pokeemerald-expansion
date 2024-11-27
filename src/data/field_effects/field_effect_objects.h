@@ -1,6 +1,13 @@
 const struct SpritePalette gSpritePalette_GeneralFieldEffect0 = {gFieldEffectObjectPalette0, FLDEFF_PAL_TAG_GENERAL_0};
 const struct SpritePalette gSpritePalette_GeneralFieldEffect1 = {gFieldEffectObjectPalette1, FLDEFF_PAL_TAG_GENERAL_1};
 
+//adding new palettes for TallGrass sub sprites
+const struct SpritePalette gSpritePalette_TallGrass[] = 
+{
+    {gFieldEffectObjectPalette1, FLDEFF_PAL_TAG_GRASS}, //default pal
+    {gFieldEffectObjectPalette_TallGrass_Gold, FLDEFF_PAL_TAG_GRASS},
+};
+
 static const union AnimCmd sAnim_Shadow[] =
 {
     ANIMCMD_FRAME(0, 1),
@@ -91,12 +98,31 @@ static const union AnimCmd *const sAnimTable_TallGrass[] =
     sAnim_TallGrass,
 };
 
+
+
 const struct SpriteTemplate gFieldEffectObjectTemplate_TallGrass = {
     .tileTag = TAG_NONE,
-    .paletteTag = FLDEFF_PAL_TAG_GENERAL_1,
+    .paletteTag = FLDEFF_PAL_TAG_GRASS,
     .oam = &gObjectEventBaseOam_16x16,
     .anims = sAnimTable_TallGrass,
     .images = sPicTable_TallGrass,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = UpdateTallGrassFieldEffect,
+};
+static const struct SpriteFrameImage sPicTable_TallGrass_Gold[] = {
+    overworld_frame(gFieldEffectObjectPic_TallGrass_Gold, 2, 2, 0),
+    overworld_frame(gFieldEffectObjectPic_TallGrass_Gold, 2, 2, 1),
+    overworld_frame(gFieldEffectObjectPic_TallGrass_Gold, 2, 2, 2),
+    overworld_frame(gFieldEffectObjectPic_TallGrass_Gold, 2, 2, 3),
+    overworld_frame(gFieldEffectObjectPic_TallGrass_Gold, 2, 2, 4),
+};
+
+const struct SpriteTemplate gFieldEffectObjectTemplate_TallGrass_Gold = {
+    .tileTag = TAG_NONE,
+    .paletteTag = FLDEFF_PAL_TAG_GRASS, // Add in palette here
+    .oam = &gObjectEventBaseOam_16x16,
+    .anims = sAnimTable_TallGrass,
+    .images = sPicTable_TallGrass_Gold,  // add in field effect spritesheet here
     .affineAnims = gDummySpriteAffineAnimTable,
     .callback = UpdateTallGrassFieldEffect,
 };
