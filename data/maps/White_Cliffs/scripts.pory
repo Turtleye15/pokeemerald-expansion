@@ -12,6 +12,7 @@ const dania = 1
 script White_Cliffs_Dania_Statue {
     lock 
     faceplayer
+    speakername("Dania")
     msgbox(White_Cliffs_Dania_Memorial)
     waitmessage
     applymovement(dania, moves(face_up))
