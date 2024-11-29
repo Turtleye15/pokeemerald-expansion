@@ -86,34 +86,59 @@ WC_CrazyGuy::
 	return
 
 
-WC_Sign_Botanist::
+Whitecliff_Cecile::
 # 77 "data/maps/Whitecliff_Castlle/scripts.pory"
+	lock
+# 78 "data/maps/Whitecliff_Castlle/scripts.pory"
+	faceplayer
+# 79 "data/maps/Whitecliff_Castlle/scripts.pory"
+	speakername Whitecliff_Cecile_Text_0
+# 80 "data/maps/Whitecliff_Castlle/scripts.pory"
+	msgbox Whitecliff_Cecile_Text_1
+# 82 "data/maps/Whitecliff_Castlle/scripts.pory"
+	waitmessage
+# 83 "data/maps/Whitecliff_Castlle/scripts.pory"
+	release
+	return
+
+
+WC_Sign_Botanist::
+# 87 "data/maps/Whitecliff_Castlle/scripts.pory"
 	msgbox WC_Sign_Botanist_Text_0, MSGBOX_SIGN
 	return
 
 
 WC_Sign_Blacksmith::
-# 81 "data/maps/Whitecliff_Castlle/scripts.pory"
+# 91 "data/maps/Whitecliff_Castlle/scripts.pory"
 	msgbox WC_Sign_Blacksmith_Text_0, MSGBOX_SIGN
 	return
 
 
 WC_Sign_Market::
-# 85 "data/maps/Whitecliff_Castlle/scripts.pory"
+# 95 "data/maps/Whitecliff_Castlle/scripts.pory"
 	msgbox WC_Sign_Market_Text_0, MSGBOX_SIGN
 	return
 
 
+Whitecliff_Cecile_Text_0:
+# 79 "data/maps/Whitecliff_Castlle/scripts.pory"
+	.string "Cecile$"
+
+Whitecliff_Cecile_Text_1:
+# 80 "data/maps/Whitecliff_Castlle/scripts.pory"
+	.string "{CREATE_MUGSHOT MUGSHOT_CECILE EMOTE_NORMAL}Hmm? You're new here, aren't you...\p"
+	.string "{CREATE_MUGSHOT MUGSHOT_CECILE EMOTE_ALT}I hope we can get along!$"
+
 WC_Sign_Botanist_Text_0:
-# 77 "data/maps/Whitecliff_Castlle/scripts.pory"
+# 87 "data/maps/Whitecliff_Castlle/scripts.pory"
 	.string "Rowin's Flora.\n A flower for everyone!$"
 
 WC_Sign_Blacksmith_Text_0:
-# 81 "data/maps/Whitecliff_Castlle/scripts.pory"
+# 91 "data/maps/Whitecliff_Castlle/scripts.pory"
 	.string "Whitecliff's finest blacksmith!$"
 
 WC_Sign_Market_Text_0:
-# 85 "data/maps/Whitecliff_Castlle/scripts.pory"
+# 95 "data/maps/Whitecliff_Castlle/scripts.pory"
 	.string "Market days: Wednesday & Thursday$"
 
 WC_text_cliffgirl::

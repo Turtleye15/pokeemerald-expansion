@@ -22,7 +22,7 @@ script White_Cliffs_Dania_Statue {
 }
 
 text White_Cliffs_Dania_Memorial {
-    "Oh. Hello.\pI'm not in the mood for a chat\nright now."
+    "{CREATE_MUGSHOT MUGSHOT_DANIA EMOTE_NORMAL}Oh. Hello.\pI'm not in the mood for a chat\nright now."
 }
 
 script White_Cliff_Memorial {

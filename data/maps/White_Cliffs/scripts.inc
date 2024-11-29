@@ -52,4 +52,4 @@ White_Cliff_Memorial_Text_0:
 
 White_Cliffs_Dania_Memorial::
 # 24 "data/maps/White_Cliffs/scripts.pory"
-	.string "Oh. Hello.\pI'm not in the mood for a chat\nright now.$"
+	.string "{CREATE_MUGSHOT MUGSHOT_DANIA EMOTE_NORMAL}Oh. Hello.\pI'm not in the mood for a chat\nright now.$"

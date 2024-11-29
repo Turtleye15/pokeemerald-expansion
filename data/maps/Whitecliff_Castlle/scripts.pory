@@ -73,6 +73,16 @@ text WC_text_CrazyGuy {
     format("The sun is moving! It's moving, I tell ya! The end is upon us!")
 }
 
+script Whitecliff_Cecile {
+    lock
+    faceplayer
+    speakername("Cecile")
+    msgbox("{CREATE_MUGSHOT MUGSHOT_CECILE EMOTE_NORMAL}Hmm? You're new here, aren't you...\p"
+            "{CREATE_MUGSHOT MUGSHOT_CECILE EMOTE_ALT}I hope we can get along!")
+    waitmessage
+    release
+}
+
 script WC_Sign_Botanist {
     msgbox("Rowin's Flora.\n A flower for everyone!", MSGBOX_SIGN)
 }
