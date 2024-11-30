@@ -192,14 +192,14 @@ static const u8 sText_PackingUp[] = _("Packing up.{PLAY_SE SE_BALL}{PAUSE 25}.{P
 
 static const struct MenuAction sCraftTableActions[] = {
     [TABLE_ACTION_BLANK]            = {gText_Dash,        {.u8_void = CraftMenuAddSwapCallback}},
-    [TABLE_ACTION_ITEM]             = {gText_Dash,        {.u8_void = CraftMenuItemOptionsCallback}} //check out startmenusavecallback
+    [TABLE_ACTION_ITEM]             = {gText_Dash,        {.u8_void = CraftMenuItemOptionsCallback}}, //check out startmenusavecallback
 };
 
 static const struct MenuAction sCraftOptionsActions[] = { //craft actions, SWAP/READY/PUT AWAY/CANCEL
     [MENU_ACTION_SWAP]            = {gText_Swap,        {.u8_void = CraftMenuAddSwapCallback}},
     [MENU_ACTION_BAG]             = {gText_PutAway,                 NULL},
     [MENU_ACTION_READY]           = {sText_Ready,       {.u8_void = CraftMenuReadyCallback}},
-    [MENU_ACTION_CANCEL]          = {gText_Cancel,      {.u8_void = CraftMenuCancelCallback}}
+    [MENU_ACTION_CANCEL]          = {gText_Cancel,      {.u8_void = CraftMenuCancelCallback}},
 };
 
 static const u8 sCraftOptionsActions_List[] = {
