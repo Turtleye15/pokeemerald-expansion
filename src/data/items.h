@@ -14090,7 +14090,7 @@ const struct Item gItemsInfo[] =
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_FIELD,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .iconPic = gItemIcon_CraftBundle,
-        .iconPalette = gItemIconPalette_CraftBundle,
+        .iconPic = gItemIcon_TeraShard,
+        .iconPalette = gItemIconPalette_BugTeraShard,
     },
 };

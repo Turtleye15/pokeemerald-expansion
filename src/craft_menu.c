@@ -713,22 +713,22 @@ static bool8 HandleCraftMenuInput(void){
             if (JOY_NEW(DPAD_UP))
             {
                 PlaySE(SE_BALL);
-                sCraftMenuCursorPos = ChangeGridMenuCursorPosition(0,-1);
+                sCraftMenuCursorPos = ChangeMenuGridCursorPosition(0,-1);
             }
             if (JOY_NEW(DPAD_LEFT))
             {
                 PlaySE(SE_BALL);
-                sCraftMenuCursorPos = ChangeGridMenuCursorPosition(-1,0);
+                sCraftMenuCursorPos = ChangeMenuGridCursorPosition(-1,0);
             }
             if (JOY_NEW(DPAD_RIGHT))
             {
                 PlaySE(SE_BALL);
-                sCraftMenuCursorPos = ChangeGridMenuCursorPosition(1,0);
+                sCraftMenuCursorPos = ChangeMenuGridCursorPosition(1,0);
             }
             if (JOY_NEW(DPAD_DOWN))
             {
                 PlaySE(SE_BALL);
-                sCraftMenuCursorPos = ChangeGridMenuCursorPosition(0,1);
+                sCraftMenuCursorPos = ChangeMenuGridCursorPosition(0,1);
             }
 
             if (JOY_NEW(A_BUTTON)){

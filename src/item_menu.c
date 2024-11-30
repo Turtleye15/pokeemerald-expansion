@@ -1380,6 +1380,7 @@ static void Task_BagMenu_HandleInput(u8 taskId)
         }
     }
 }
+}
 
 static void ReturnToItemList(u8 taskId)
 {
