@@ -1372,39 +1372,39 @@ u8 ChangeMenuGridCursorPosition(s8 deltaX, s8 deltaY)
     }
 }
 
-u8 ChangeMenuGridCursorPosition(s8 deltaX, s8 deltaY)
-{
-    u8 oldPos = sMenu.cursorPos;
+// u8 ChangeMenuGridCursorPosition(s8 deltaX, s8 deltaY)
+// {
+//     u8 oldPos = sMenu.cursorPos;
 
-    if (deltaX != 0)
-    {
-        if (((sMenu.cursorPos % sMenu.columns) + deltaX >= 0) &&
-        ((sMenu.cursorPos % sMenu.columns) + deltaX < sMenu.columns))
-        {
-            sMenu.cursorPos += deltaX;
-        }
-    }
+//     if (deltaX != 0)
+//     {
+//         if (((sMenu.cursorPos % sMenu.columns) + deltaX >= 0) &&
+//         ((sMenu.cursorPos % sMenu.columns) + deltaX < sMenu.columns))
+//         {
+//             sMenu.cursorPos += deltaX;
+//         }
+//     }
 
-    if (deltaY != 0)
-    {
-        if (((sMenu.cursorPos / sMenu.columns) + deltaY >= 0) &&
-        ((sMenu.cursorPos / sMenu.columns) + deltaY < sMenu.rows))
-        {
-            sMenu.cursorPos += (sMenu.columns * deltaY);
-        }
-    }
+//     if (deltaY != 0)
+//     {
+//         if (((sMenu.cursorPos / sMenu.columns) + deltaY >= 0) &&
+//         ((sMenu.cursorPos / sMenu.columns) + deltaY < sMenu.rows))
+//         {
+//             sMenu.cursorPos += (sMenu.columns * deltaY);
+//         }
+//     }
 
-    if (sMenu.cursorPos > sMenu.maxCursorPos)
-    {
-        sMenu.cursorPos = oldPos;
-        return sMenu.cursorPos;
-    }
-    else
-    {
-        MoveMenuGridCursor(oldPos, sMenu.cursorPos);
-        return sMenu.cursorPos;
-    }
-}
+//     if (sMenu.cursorPos > sMenu.maxCursorPos)
+//     {
+//         sMenu.cursorPos = oldPos;
+//         return sMenu.cursorPos;
+//     }
+//     else
+//     {
+//         MoveMenuGridCursor(oldPos, sMenu.cursorPos);
+//         return sMenu.cursorPos;
+//     }
+// }
 
 static s8 UNUSED Menu_ProcessGridInput_NoSoundLimit(void)
 {

@@ -12,7 +12,7 @@
   "allow_running": false,
   "show_map_name": false,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": null,
+  "connections": 0,
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_MOVING_BOX",
@@ -113,7 +113,7 @@
       "y": 0,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "InsideOfTruck_EventScript_MovingBox"
+      "script": "Craft_EventScript_CraftTable"
     },
     {
       "type": "sign",
@@ -129,7 +129,7 @@
       "y": 3,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "InsideOfTruck_EventScript_MovingBox"
+      "script": "Craft_EventScript_CraftTable"
     },
     {
       "type": "sign",
@@ -137,7 +137,7 @@
       "y": 1,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "InsideOfTruck_EventScript_MovingBox"
+      "script": "Craft_EventScript_CraftTable"
     },
     {
       "type": "sign",
@@ -145,7 +145,7 @@
       "y": 2,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "InsideOfTruck_EventScript_MovingBox"
+      "script": "Craft_EventScript_CraftTable"
     }
   ]
 }

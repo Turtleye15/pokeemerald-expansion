@@ -1013,3 +1013,74 @@ u32 GetItemStatus2Mask(u16 itemId)
     else
         return 0;
 }
+
+void ShowItemIconSprite(u16 item, bool8 flash, u8 screen_x, u8 screen_y)
+{
+    s16 x = 0;
+    s16 y = 0;
+    u8 iconSpriteId;   
+    u8 spriteId2 = MAX_SPRITES;
+
+    if (flash)
+    {
+        SetGpuRegBits(REG_OFFSET_DISPCNT, DISPCNT_OBJWIN_ON);
+        SetGpuRegBits(REG_OFFSET_WINOUT, WINOUT_WINOBJ_OBJ);
+    }
+
+    iconSpriteId = AddItemIconSprite(ITEM_TAG, ITEM_TAG, item);
+    if (flash)
+        spriteId2 = AddItemIconSprite(ITEM_TAG, ITEM_TAG, item);
+    if (iconSpriteId != MAX_SPRITES)
+    {
+
+        //dropping this since we're specifying in the parameters
+        /*if (!firstTime)
+        {
+            //show in message box
+            x = 213;
+            y = 140;
+        }
+        else
+        {
+            // show in header box
+            x = ITEM_ICON_X;
+            y = ITEM_ICON_Y;
+        }
+        */
+
+        //parameters!
+        x = screen_x;
+        y = screen_y;
+
+        gSprites[iconSpriteId].x2 = x;
+        gSprites[iconSpriteId].y2 = y;
+        gSprites[iconSpriteId].oam.priority = 0;
+    }
+
+    if (spriteId2 != MAX_SPRITES)
+    {
+        gSprites[spriteId2].x2 = x;
+        gSprites[spriteId2].y2 = y;
+        gSprites[spriteId2].oam.priority = 0;
+        gSprites[spriteId2].oam.objMode = ST_OAM_OBJ_WINDOW;
+        sItemIconSpriteId2 = spriteId2;
+    }
+
+    sItemIconSpriteId = iconSpriteId;
+}
+
+void DestroyItemIconSprite(void)
+{
+    FreeSpriteTilesByTag(ITEM_TAG);
+    FreeSpritePaletteByTag(ITEM_TAG);
+    FreeSpriteOamMatrix(&gSprites[sItemIconSpriteId]);
+    DestroySprite(&gSprites[sItemIconSpriteId]);
+
+    if ((GetFlashLevel() > 0 || InBattlePyramid_()) && sItemIconSpriteId2 != MAX_SPRITES)
+    {
+        //FreeSpriteTilesByTag(ITEM_TAG);
+        //FreeSpritePaletteByTag(ITEM_TAG);
+        FreeSpriteOamMatrix(&gSprites[sItemIconSpriteId2]);
+        DestroySprite(&gSprites[sItemIconSpriteId2]);
+    }
+}

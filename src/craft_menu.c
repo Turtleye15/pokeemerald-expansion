@@ -118,7 +118,7 @@ enum CraftConfirmMessages{
 };
 
 // IWRAM common
-bool8 (*gMenuCallback)(void);
+bool8 (*gCraftingMenuCallback)(void);
 
 // EWRAM
 EWRAM_DATA static u8 sCraftTableWindowId = 0;
@@ -195,9 +195,10 @@ static const struct MenuAction sCraftTableActions[] = {
     [TABLE_ACTION_ITEM]             = {gText_Dash,        {.u8_void = CraftMenuItemOptionsCallback}}, //check out startmenusavecallback
 };
 
-static const struct MenuAction sCraftOptionsActions[] = { //craft actions, SWAP/READY/PUT AWAY/CANCEL
+ //craft actions, SWAP/READY/PUT AWAY/CANCEL
+static const struct MenuAction sCraftOptionsActions[] = {
     [MENU_ACTION_SWAP]            = {gText_Swap,        {.u8_void = CraftMenuAddSwapCallback}},
-    [MENU_ACTION_BAG]             = {gText_PutAway,                 NULL},
+    [MENU_ACTION_BAG]             = {gText_PutAway,                 {NULL}},
     [MENU_ACTION_READY]           = {sText_Ready,       {.u8_void = CraftMenuReadyCallback}},
     [MENU_ACTION_CANCEL]          = {gText_Cancel,      {.u8_void = CraftMenuCancelCallback}},
 };
@@ -643,11 +644,11 @@ void Task_ShowCraftMenu(u8 taskId){
 
     switch(task->data[0]){
         case 0:
-            gMenuCallback = HandleCraftMenuInput;
+            gCraftingMenuCallback = HandleCraftMenuInput;
             task->data[0]++;
             break;
         case 1:
-            if (gMenuCallback() == TRUE)
+            if (gCraftingMenuCallback() == TRUE)
                 DestroyTask(taskId);
             break;
     }
@@ -735,10 +736,10 @@ static bool8 HandleCraftMenuInput(void){
 
                 PlaySE(SE_SELECT);
 
-                gMenuCallback = sCraftTableActions[
+                gCraftingMenuCallback = sCraftTableActions[
                     sCurrentCraftTableItems[sCraftMenuCursorPos][CRAFT_TABLE_ACTION]].func.u8_void;
 
-                if (gMenuCallback == CraftMenuAddSwapCallback) //if it's blank
+                if (gCraftingMenuCallback == CraftMenuAddSwapCallback) //if it's blank
                     FadeScreen(FADE_TO_BLACK, 0);
 
                 return FALSE;
@@ -751,7 +752,7 @@ static bool8 HandleCraftMenuInput(void){
                 else {
                     ClearCraftInfo(sCraftMenuCursorPos);
                     CraftMessage = CRAFT_READY_CONFIRM;
-                    gMenuCallback = CraftStartConfirmCallback;
+                    gCraftingMenuCallback = CraftStartConfirmCallback;
                 }
 
                 return FALSE;
@@ -769,7 +770,7 @@ static bool8 HandleCraftMenuInput(void){
 
             if (JOY_NEW(B_BUTTON)){
 
-                //If !IsCraftTableEmpty then gmenucallback = CraftMenuPackUpCallback, otherwise just quit
+                //If !IsCraftTableEmpty then gCraftingMenuCallback = CraftMenuPackUpCallback, otherwise just quit
                 if (IsCraftTableEmpty()){
 
                     PlaySE(SE_SELECT);
@@ -780,7 +781,7 @@ static bool8 HandleCraftMenuInput(void){
 
                 ClearCraftInfo(sCraftMenuCursorPos);
                 CraftMessage = CRAFT_PACKUP_CONFIRM;
-                gMenuCallback = CraftStartConfirmCallback; //let the gMenu pinball begin
+                gCraftingMenuCallback = CraftStartConfirmCallback; //let the gMenu pinball begin
 
                 return FALSE;
             }
@@ -854,7 +855,8 @@ static bool8 HandleCraftMenuInput(void){
 
             return FALSE;
     }
-}
+    return 0;
+};
 
 static void CraftMenu_PrintCursorAtPos(u8 cursorPos, u8 colorIndex){
 
@@ -880,7 +882,7 @@ static bool8 CraftMenuItemOptionsCallback(void){
     CraftMenu_PrintCursorAtPos(sCraftMenuCursorPos, COLORID_LIGHT_GRAY);
     ShowCraftOptionsWindow();
     sCraftState = STATE_OPTIONS_INPUT;
-    gMenuCallback = HandleCraftMenuInput;
+    gCraftingMenuCallback = HandleCraftMenuInput;
 
     return FALSE;
 }
@@ -979,7 +981,7 @@ static u8 CraftMenuPackUpCallback(void){
             break;
             //return TRUE;
             //return CraftPackUpFinish();
-            //gMenuCallback = CraftPackUpFinish;
+            //gCraftingMenuCallback = CraftPackUpFinish;
         }
 
     default:
@@ -1036,7 +1038,7 @@ static bool8 CraftMenuAddSwapCallback(void){
 
 static bool8 CraftMenuDoOptionsSwapCallback(void){
 
-    gMenuCallback = CraftMenuAddSwapCallback;
+    gCraftingMenuCallback = CraftMenuAddSwapCallback;
     sCraftState = STATE_TABLE_INPUT;
 
     return FALSE;
@@ -1045,7 +1047,7 @@ static bool8 CraftMenuDoOptionsSwapCallback(void){
 static bool8 CraftMenuDoOptionsReadyCallback(void){
 
     CraftMessage = CRAFT_READY_CONFIRM;
-    gMenuCallback = CraftStartConfirmCallback;
+    gCraftingMenuCallback = CraftStartConfirmCallback;
 
     return FALSE;
 }
@@ -1288,8 +1290,8 @@ static u8 CraftMessageWaitForButtonPress(void){
     return CRAFT_MESSAGE_IN_PROGRESS;
 }
 
-static void ShowCraftMessage(const u8 *message, u8 (*craftCallback)(void)){
 
+static void ShowCraftMessage(const u8 *message, u8 (*craftCallback)(void)){
     StringExpandPlaceholders(gStringVar4, message);
     LoadMessageBoxAndFrameGfx(0, TRUE);
     AddTextPrinterForMessage_2(TRUE);
@@ -1298,7 +1300,7 @@ static void ShowCraftMessage(const u8 *message, u8 (*craftCallback)(void)){
 
 static u8 sCraftDialogueConfirmCallback(void){
 
-    const u8 *message;
+    const u8 *message = gText_EmptyString2;
     u16 CraftProduct, CraftQty;
 
     HideCraftMenu();
@@ -1366,7 +1368,7 @@ static bool8 CraftStartConfirmCallback(void){
 
     sCraftDialogCallback = sCraftDialogueConfirmCallback;
 
-    gMenuCallback = CraftConfirmCallback;
+    gCraftingMenuCallback = CraftConfirmCallback;
 
     return FALSE;
 }
@@ -1391,7 +1393,7 @@ static bool8 CraftConfirmCallback(void){
                     break;
             }
         case CRAFT_MESSAGE_CANCEL:
-            gMenuCallback = HandleCraftMenuInput;
+            gCraftingMenuCallback = HandleCraftMenuInput;
             return FALSE;
     }
 
