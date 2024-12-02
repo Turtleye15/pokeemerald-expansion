@@ -35,7 +35,6 @@ script Whitecliff_Infirmary_OnLoad {
 script Infirmary_IsabellEnterBuilding{
     lock
     setvar(VAR_INFIRMARY_INTRO, 1)
-    setflag(FLAG_SYS_B_DASH)
     applymovement(OBJ_EVENT_ID_PLAYER, FaceDown)
     goto(IsabellQuestions)
 }
@@ -122,7 +121,7 @@ script AskPlayerName{
     goto(AskPlayerMon)
 }
 script AskPlayerMon{ 
-        dynmultichoice(0,0, TRUE 3,0, DYN_MULTICHOICE_CB_NONE, "I have a Roggenrola!", "It's a Litwick!","My Honedge!")
+        dynmultichoice(0,0, TRUE 3,0, DYN_MULTICHOICE_CB_NONE, "I have a Roggenrola!", "It's a Litwick!","My Aron!")
     if(var(VAR_RESULT)==0){
         bufferspeciesname(STR_VAR_1, SPECIES_ROGGENROLA)
         setvar(VAR_PICKED_STARTER, SPECIES_ROGGENROLA)
@@ -132,8 +131,8 @@ script AskPlayerMon{
         setvar(VAR_PICKED_STARTER, SPECIES_LITWICK) 
         }
     else{
-        bufferspeciesname(STR_VAR_1, SPECIES_HONEDGE)
-        setvar(VAR_PICKED_STARTER, SPECIES_HONEDGE)
+        bufferspeciesname(STR_VAR_1, SPECIES_ARON)
+        setvar(VAR_PICKED_STARTER, SPECIES_ARON)
     }
     goto(ConfirmPlayerMon)
 }
@@ -374,7 +373,6 @@ script RestAtInfirmary{
     applymovement(OBJ_EVENT_ID_PLAYER, FaceDown)
     msgbox(format("This bed is nice and confortable. Would you like to rest?"), MSGBOX_YESNO)
     if (var(VAR_RESULT)== YES){
-        setflag(FLAG_SYS_B_DASH)
         fadescreen(FADE_TO_BLACK)
         special(HealPlayerParty)
         playfanfare(MUS_HEAL)

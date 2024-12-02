@@ -25,7 +25,7 @@
 
 enum {
     WIN_MAPSEC_NAME,
-    WIN_TITLE,
+    // WIN_TITLE,
 };
 
 enum {
@@ -40,7 +40,7 @@ static EWRAM_DATA struct {
     u16 state;
 } *sFieldRegionMapHandler = NULL;
 
-static void MCB2_InitRegionMapRegisters(void);
+void MCB2_InitRegionMapRegisters(void);
 static void VBCB_FieldUpdateRegionMap(void);
 static void MCB2_FieldUpdateRegionMap(void);
 static void FieldUpdateRegionMap(void);
@@ -55,12 +55,22 @@ static const struct BgTemplate sFieldRegionMapBgTemplates[] = {
         .paletteMode = 0,
         .priority = 0,
         .baseTile = 0
-    }, {
+    },
+    {
+        .bg = 1,
+        .charBaseIndex = 1,
+        .mapBaseIndex = 30,
+        .screenSize = 0,
+        .paletteMode = 0,
+        .priority = 0,
+        .baseTile = 0
+    }, 
+    {
         .bg = 2,
         .charBaseIndex = 2,
         .mapBaseIndex = 28,
-        .screenSize = 2,
-        .paletteMode = 1,
+        .screenSize = 0,
+        .paletteMode = 0,
         .priority = 2,
         .baseTile = 0
     }
@@ -77,15 +87,15 @@ static const struct WindowTemplate sFieldRegionMapWindowTemplates[] =
         .paletteNum = 15,
         .baseBlock = 1
     },
-    [WIN_TITLE] = {
-        .bg = 0,
-        .tilemapLeft = 22,
-        .tilemapTop = 1,
-        .width = 7,
-        .height = 2,
-        .paletteNum = 15,
-        .baseBlock = 25
-    },
+    // [WIN_TITLE] = {
+    //     .bg = 0,
+    //     .tilemapLeft = 22,
+    //     .tilemapTop = 1,
+    //     .width = 7,
+    //     .height = 2,
+    //     .paletteNum = 15,
+    //     .baseBlock = 25
+    // },
     DUMMY_WIN_TEMPLATE
 };
 
@@ -98,7 +108,7 @@ void FieldInitRegionMap(MainCallback callback)
     SetMainCallback2(MCB2_InitRegionMapRegisters);
 }
 
-static void MCB2_InitRegionMapRegisters(void)
+ void MCB2_InitRegionMapRegisters(void)
 {
     SetGpuReg(REG_OFFSET_DISPCNT, 0);
     SetGpuReg(REG_OFFSET_BG0HOFS, 0);
@@ -112,7 +122,7 @@ static void MCB2_InitRegionMapRegisters(void)
     ResetSpriteData();
     FreeAllSpritePalettes();
     ResetBgsAndClearDma3BusyFlags(0);
-    InitBgsFromTemplates(1, sFieldRegionMapBgTemplates, ARRAY_COUNT(sFieldRegionMapBgTemplates));
+    InitBgsFromTemplates(0, sFieldRegionMapBgTemplates, ARRAY_COUNT(sFieldRegionMapBgTemplates));
     InitWindows(sFieldRegionMapWindowTemplates);
     DeactivateAllTextPrinters();
     LoadUserWindowBorderGfx(0, 0x27, BG_PLTT_ID(13));
@@ -150,10 +160,10 @@ static void FieldUpdateRegionMap(void)
             sFieldRegionMapHandler->state++;
             break;
         case 1:
-            DrawStdFrameWithCustomTileAndPalette(WIN_TITLE, FALSE, 0x27, 0xd);
-            offset = GetStringCenterAlignXOffset(FONT_NORMAL, gText_Hoenn, 0x38);
-            AddTextPrinterParameterized(WIN_TITLE, FONT_NORMAL, gText_Hoenn, offset, 1, 0, NULL);
-            ScheduleBgCopyTilemapToVram(0);
+            // DrawStdFrameWithCustomTileAndPalette(WIN_TITLE, FALSE, 0x27, 0xd);
+            // offset = GetStringCenterAlignXOffset(FONT_NORMAL, gText_Hoenn, 0x38);
+            // AddTextPrinterParameterized(WIN_TITLE, FONT_NORMAL, gText_Hoenn, offset, 1, 0, NULL);
+            // ScheduleBgCopyTilemapToVram(0);
             DrawStdFrameWithCustomTileAndPalette(WIN_MAPSEC_NAME, FALSE, 0x27, 0xd);
             PrintRegionMapSecName();
             BeginNormalPaletteFade(PALETTES_ALL, 0, 16, 0, RGB_BLACK);
