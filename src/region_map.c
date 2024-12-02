@@ -378,7 +378,7 @@ static const struct BgTemplate sFlyMapBgTemplates[] =
         .charBaseIndex = 2,
         .mapBaseIndex = 28,
         .screenSize = 2,
-        .paletteMode = 1,
+        .paletteMode = 0,
         .priority = 2
     }
 };
@@ -1683,7 +1683,7 @@ void CB2_OpenFlyMap(void)
         break;
     case 1:
         ResetBgsAndClearDma3BusyFlags(0);
-        InitBgsFromTemplates(1, sFlyMapBgTemplates, ARRAY_COUNT(sFlyMapBgTemplates));
+        InitBgsFromTemplates(0, sFlyMapBgTemplates, ARRAY_COUNT(sFlyMapBgTemplates));
         gMain.state++;
         break;
     case 2:
