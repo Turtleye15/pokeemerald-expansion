@@ -310,6 +310,9 @@ static const struct SpriteFrameImage sPicTable_MauvilleOldMan2[] = {
     overworld_ascending_frames(gObjectEventPic_MauvilleOldMan2, 2, 4),
 };
 
+
+
+
 //Custom npcs
 static const struct SpriteFrameImage sPicTable_Cecile[] = {
     overworld_ascending_frames(gObjectEventPic_Cecile, 4, 4),
@@ -350,6 +353,15 @@ static const struct SpriteFrameImage sPicTable_CommonerOldMan[] = {
 static const struct SpriteFrameImage sPicTable_CommonerOldWoman[] = {
     overworld_ascending_frames(gObjectEventPic_CommonerOldWoman, 2, 4),
 };
+
+static const struct SpriteFrameImage sPicTable_CommonerBoy[] = {
+    overworld_ascending_frames(gObjectEventPic_CommonerBoy, 2, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_CommonerGirl[] = {
+    overworld_ascending_frames(gObjectEventPic_CommonerGirl, 2, 4),
+};
+
 
 
 static const struct SpriteFrameImage sPicTable_UnusedNatuDoll[] = {

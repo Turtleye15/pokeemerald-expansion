@@ -248,6 +248,8 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CommonerWom
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CommonerWoman2;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CommonerOldMan;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CommonerOldWoman;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CommonerBoy;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CommonerGirl;
 
 // Begin pokemon event objects
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PokeBall;
@@ -515,6 +517,8 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_COMMONER_WOMAN_2] =         &gObjectEventGraphicsInfo_CommonerWoman2,
     [OBJ_EVENT_GFX_COMMONER_OLD_MAN] =         &gObjectEventGraphicsInfo_CommonerOldMan,
     [OBJ_EVENT_GFX_COMMONER_OLD_WOMAN] =       &gObjectEventGraphicsInfo_CommonerOldWoman,
+    [OBJ_EVENT_GFX_COMMONER_BOY] =           &gObjectEventGraphicsInfo_CommonerBoy,
+    [OBJ_EVENT_GFX_COMMONER_GIRL] =           &gObjectEventGraphicsInfo_CommonerGirl,
 };
 
 const struct ObjectEventGraphicsInfo *const gMauvilleOldManGraphicsInfoPointers[] = {
