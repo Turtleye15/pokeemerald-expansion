@@ -1704,6 +1704,29 @@
       "width": 1,
       "height": 1
     },
-
+    {
+      "map_section": "MAPSEC_WHITECLIFF_CASTLE",
+      "name": "Whitecliff Castle",
+      "x": 12,
+      "y": 5,
+      "width": 2,
+      "height": 1
+    },
+    {
+      "map_section": "MAPSEC_GOLDEN_FIELDS",
+      "name": "Golden Fields",
+      "x": 9,
+      "y": 5,
+      "width": 3,
+      "height": 2
+    },
+    {
+      "map_section": "MAPSEC_WHITE_CLIFFS",
+      "name": "White Cliffs",
+      "x": 12,
+      "y": 6,
+      "width": 1,
+      "height": 1
+    }
   ]
 }
