@@ -4590,6 +4590,16 @@
       "secondary_tileset": "gTileset_whitecliff_interior_secondary",
       "border_filepath": "data/layouts/Whitecliff_Castle_Smithy_F2/border.bin",
       "blockdata_filepath": "data/layouts/Whitecliff_Castle_Smithy_F2/map.bin"
+    },
+    {
+      "id": "LAYOUT_NEW_MAP2",
+      "name": "NewMap2_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_whitecliff_interior",
+      "secondary_tileset": "gTileset_whitecliff_interior_secondary",
+      "border_filepath": "data/layouts/NewMap2/border.bin",
+      "blockdata_filepath": "data/layouts/NewMap2/map.bin"
     }
   ]
 }
