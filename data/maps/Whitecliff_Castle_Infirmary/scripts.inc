@@ -551,146 +551,148 @@ Infirmary_IsabellTalk_3:
 # 363 "data/maps/Whitecliff_Castle_Infirmary/scripts.pory"
 	faceplayer
 # 364 "data/maps/Whitecliff_Castle_Infirmary/scripts.pory"
-	msgbox IsabellGetBerries
+	speakername Infirmary_IsabellTalk_Text_0
 # 365 "data/maps/Whitecliff_Castle_Infirmary/scripts.pory"
-	closemessage
+	msgbox IsabellGetBerries
 # 366 "data/maps/Whitecliff_Castle_Infirmary/scripts.pory"
+	closemessage
+# 367 "data/maps/Whitecliff_Castle_Infirmary/scripts.pory"
 	release
 	return
 
 
 RestAtInfirmary::
-# 372 "data/maps/Whitecliff_Castle_Infirmary/scripts.pory"
-	lockall
 # 373 "data/maps/Whitecliff_Castle_Infirmary/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, FaceDown
+	lockall
 # 374 "data/maps/Whitecliff_Castle_Infirmary/scripts.pory"
-	msgbox RestAtInfirmary_Text_0, MSGBOX_YESNO
+	applymovement OBJ_EVENT_ID_PLAYER, FaceDown
 # 375 "data/maps/Whitecliff_Castle_Infirmary/scripts.pory"
+	msgbox RestAtInfirmary_Text_0, MSGBOX_YESNO
+# 376 "data/maps/Whitecliff_Castle_Infirmary/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq RestAtInfirmary_1
-# 386 "data/maps/Whitecliff_Castle_Infirmary/scripts.pory"
-	closemessage
 # 387 "data/maps/Whitecliff_Castle_Infirmary/scripts.pory"
+	closemessage
+# 388 "data/maps/Whitecliff_Castle_Infirmary/scripts.pory"
 	releaseall
 	end
 
 RestAtInfirmary_1:
-# 376 "data/maps/Whitecliff_Castle_Infirmary/scripts.pory"
-	fadescreen FADE_TO_BLACK
 # 377 "data/maps/Whitecliff_Castle_Infirmary/scripts.pory"
-	special HealPlayerParty
+	fadescreen FADE_TO_BLACK
 # 378 "data/maps/Whitecliff_Castle_Infirmary/scripts.pory"
-	playfanfare MUS_HEAL
+	special HealPlayerParty
 # 379 "data/maps/Whitecliff_Castle_Infirmary/scripts.pory"
-	delay 80
+	playfanfare MUS_HEAL
 # 380 "data/maps/Whitecliff_Castle_Infirmary/scripts.pory"
-	fadescreen FADE_FROM_BLACK
+	delay 80
 # 381 "data/maps/Whitecliff_Castle_Infirmary/scripts.pory"
-	msgbox RestAtInfirmary_Text_1
+	fadescreen FADE_FROM_BLACK
 # 382 "data/maps/Whitecliff_Castle_Infirmary/scripts.pory"
+	msgbox RestAtInfirmary_Text_1
+# 383 "data/maps/Whitecliff_Castle_Infirmary/scripts.pory"
 	releaseall
 	end
 
 
 WC_Infirmary_PotionBox::
-# 393 "data/maps/Whitecliff_Castle_Infirmary/scripts.pory"
-	lock
 # 394 "data/maps/Whitecliff_Castle_Infirmary/scripts.pory"
-	msgbox WC_Infirmary_PotionBox_Text_0
+	lock
 # 395 "data/maps/Whitecliff_Castle_Infirmary/scripts.pory"
+	msgbox WC_Infirmary_PotionBox_Text_0
+# 396 "data/maps/Whitecliff_Castle_Infirmary/scripts.pory"
 	release
 	return
 
 
 WC_Infirmary_BerryTree::
-# 399 "data/maps/Whitecliff_Castle_Infirmary/scripts.pory"
-	lock
 # 400 "data/maps/Whitecliff_Castle_Infirmary/scripts.pory"
-	msgbox WC_Infirmary_BerryTree_Text_0
+	lock
 # 401 "data/maps/Whitecliff_Castle_Infirmary/scripts.pory"
+	msgbox WC_Infirmary_BerryTree_Text_0
+# 402 "data/maps/Whitecliff_Castle_Infirmary/scripts.pory"
 	release
 	return
 
 
 WC_Infirmary_GrassBox::
-# 405 "data/maps/Whitecliff_Castle_Infirmary/scripts.pory"
-	lock
 # 406 "data/maps/Whitecliff_Castle_Infirmary/scripts.pory"
-	msgbox WC_Infirmary_GrassBox_Text_0
+	lock
 # 407 "data/maps/Whitecliff_Castle_Infirmary/scripts.pory"
+	msgbox WC_Infirmary_GrassBox_Text_0
+# 408 "data/maps/Whitecliff_Castle_Infirmary/scripts.pory"
 	release
 	return
 
 
 WC_Infirmary_Bookshelf::
-# 411 "data/maps/Whitecliff_Castle_Infirmary/scripts.pory"
-	lock
 # 412 "data/maps/Whitecliff_Castle_Infirmary/scripts.pory"
-	msgbox WC_Infirmary_Bookshelf_Text_0, MSGBOX_YESNO
+	lock
 # 413 "data/maps/Whitecliff_Castle_Infirmary/scripts.pory"
+	msgbox WC_Infirmary_Bookshelf_Text_0, MSGBOX_YESNO
+# 414 "data/maps/Whitecliff_Castle_Infirmary/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq WC_Infirmary_Bookshelf_2
 WC_Infirmary_Bookshelf_1:
-# 416 "data/maps/Whitecliff_Castle_Infirmary/scripts.pory"
+# 417 "data/maps/Whitecliff_Castle_Infirmary/scripts.pory"
 	compare VAR_RESULT, NO
 	goto_if_eq WC_Infirmary_Bookshelf_5
 WC_Infirmary_Bookshelf_4:
-# 420 "data/maps/Whitecliff_Castle_Infirmary/scripts.pory"
-	msgbox WC_Infirmary_Bookshelf_Text_1, MSGBOX_YESNO
 # 421 "data/maps/Whitecliff_Castle_Infirmary/scripts.pory"
+	msgbox WC_Infirmary_Bookshelf_Text_1, MSGBOX_YESNO
+# 422 "data/maps/Whitecliff_Castle_Infirmary/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq WC_Infirmary_Bookshelf_8
 WC_Infirmary_Bookshelf_7:
-# 424 "data/maps/Whitecliff_Castle_Infirmary/scripts.pory"
-	closemessage
 # 425 "data/maps/Whitecliff_Castle_Infirmary/scripts.pory"
+	closemessage
+# 426 "data/maps/Whitecliff_Castle_Infirmary/scripts.pory"
 	release
 	return
 
 WC_Infirmary_Bookshelf_2:
-# 414 "data/maps/Whitecliff_Castle_Infirmary/scripts.pory"
+# 415 "data/maps/Whitecliff_Castle_Infirmary/scripts.pory"
 	msgbox GoldenFieldInfo
 	goto WC_Infirmary_Bookshelf_1
 
 WC_Infirmary_Bookshelf_5:
-# 417 "data/maps/Whitecliff_Castle_Infirmary/scripts.pory"
-	closemessage
 # 418 "data/maps/Whitecliff_Castle_Infirmary/scripts.pory"
+	closemessage
+# 419 "data/maps/Whitecliff_Castle_Infirmary/scripts.pory"
 	release
 	goto WC_Infirmary_Bookshelf_4
 
 WC_Infirmary_Bookshelf_8:
-# 422 "data/maps/Whitecliff_Castle_Infirmary/scripts.pory"
+# 423 "data/maps/Whitecliff_Castle_Infirmary/scripts.pory"
 	msgbox Brewing
 	goto WC_Infirmary_Bookshelf_7
 
 
 InfirmaryMunna::
-# 449 "data/maps/Whitecliff_Castle_Infirmary/scripts.pory"
-	lock
 # 450 "data/maps/Whitecliff_Castle_Infirmary/scripts.pory"
-	faceplayer
+	lock
 # 451 "data/maps/Whitecliff_Castle_Infirmary/scripts.pory"
-	playmoncry SPECIES_MUNNA, CRY_MODE_ENCOUNTER
+	faceplayer
 # 452 "data/maps/Whitecliff_Castle_Infirmary/scripts.pory"
-	delay 20
+	playmoncry SPECIES_MUNNA, CRY_MODE_ENCOUNTER
 # 453 "data/maps/Whitecliff_Castle_Infirmary/scripts.pory"
-	msgbox InfirmaryMunna_Text_0
+	delay 20
 # 454 "data/maps/Whitecliff_Castle_Infirmary/scripts.pory"
-	waitmessage
+	msgbox InfirmaryMunna_Text_0
 # 455 "data/maps/Whitecliff_Castle_Infirmary/scripts.pory"
-	applymovement 4, LookLeft
+	waitmessage
 # 456 "data/maps/Whitecliff_Castle_Infirmary/scripts.pory"
-	waitmovement 4
+	applymovement 4, LookLeft
 # 457 "data/maps/Whitecliff_Castle_Infirmary/scripts.pory"
+	waitmovement 4
+# 458 "data/maps/Whitecliff_Castle_Infirmary/scripts.pory"
 	release
 	return
 
 
-# 460 "data/maps/Whitecliff_Castle_Infirmary/scripts.pory"
-LookLeft:
 # 461 "data/maps/Whitecliff_Castle_Infirmary/scripts.pory"
+LookLeft:
+# 462 "data/maps/Whitecliff_Castle_Infirmary/scripts.pory"
 	face_left
 	step_end
 
@@ -746,40 +748,44 @@ IsabellBattleOver_Text_0:
 # 299 "data/maps/Whitecliff_Castle_Infirmary/scripts.pory"
 	.string "Are you unable to restore my mind?$"
 
+Infirmary_IsabellTalk_Text_0:
+# 364 "data/maps/Whitecliff_Castle_Infirmary/scripts.pory"
+	.string "Isabell$"
+
 RestAtInfirmary_Text_0:
-# 374 "data/maps/Whitecliff_Castle_Infirmary/scripts.pory"
+# 375 "data/maps/Whitecliff_Castle_Infirmary/scripts.pory"
 	.string "This bed is nice and confortable. Would\n"
 	.string "you like to rest?$"
 
 RestAtInfirmary_Text_1:
-# 381 "data/maps/Whitecliff_Castle_Infirmary/scripts.pory"
+# 382 "data/maps/Whitecliff_Castle_Infirmary/scripts.pory"
 	.string "You and your pokemon feel refreshed!$"
 
 WC_Infirmary_PotionBox_Text_0:
-# 394 "data/maps/Whitecliff_Castle_Infirmary/scripts.pory"
+# 395 "data/maps/Whitecliff_Castle_Infirmary/scripts.pory"
 	.string "Glass bottles are piled up in this crate.$"
 
 WC_Infirmary_BerryTree_Text_0:
-# 400 "data/maps/Whitecliff_Castle_Infirmary/scripts.pory"
+# 401 "data/maps/Whitecliff_Castle_Infirmary/scripts.pory"
 	.string "A tree growing berries. It seems they\n"
 	.string "will be used for making medicine.$"
 
 WC_Infirmary_GrassBox_Text_0:
-# 406 "data/maps/Whitecliff_Castle_Infirmary/scripts.pory"
+# 407 "data/maps/Whitecliff_Castle_Infirmary/scripts.pory"
 	.string "A box full with gilded leaves. Maybe\n"
 	.string "they have medicinal qualities?$"
 
 WC_Infirmary_Bookshelf_Text_0:
-# 412 "data/maps/Whitecliff_Castle_Infirmary/scripts.pory"
+# 413 "data/maps/Whitecliff_Castle_Infirmary/scripts.pory"
 	.string "There's a book here about potion\n"
 	.string "brewing! Do you want to read it?$"
 
 WC_Infirmary_Bookshelf_Text_1:
-# 420 "data/maps/Whitecliff_Castle_Infirmary/scripts.pory"
+# 421 "data/maps/Whitecliff_Castle_Infirmary/scripts.pory"
 	.string "Continue Reading?$"
 
 InfirmaryMunna_Text_0:
-# 453 "data/maps/Whitecliff_Castle_Infirmary/scripts.pory"
+# 454 "data/maps/Whitecliff_Castle_Infirmary/scripts.pory"
 	.string "This Munna seems to be monitoring the\n"
 	.string "patient!$"
 
@@ -932,7 +938,7 @@ IsabellGetBerries::
 	.string "If not, please don't bother me.$"
 
 GoldenFieldInfo::
-# 428 "data/maps/Whitecliff_Castle_Infirmary/scripts.pory"
+# 429 "data/maps/Whitecliff_Castle_Infirmary/scripts.pory"
 	.string "The Golden Fields surround Whitecliff\n"
 	.string "Castle.\p"
 	.string "It's named after the grass that only\n"
@@ -949,7 +955,7 @@ GoldenFieldInfo::
 	.string "this in more detail.$"
 
 Brewing::
-# 438 "data/maps/Whitecliff_Castle_Infirmary/scripts.pory"
+# 439 "data/maps/Whitecliff_Castle_Infirmary/scripts.pory"
 	.string "Creating potions is surprisingly simple.\p"
 	.string "You'll need berries, dried golden leaves,\n"
 	.string "and an empty container\p"

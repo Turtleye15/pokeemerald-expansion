@@ -2,6 +2,7 @@
   "group_order": [
     "gMapGroup_Golden_Plateau",
     "gMapGroup_WhitecliffCastle_Indoor",
+    "gMapGroup_IndoorGolden_Plateau",
     "gMapGroup_TownsAndRoutes",
     "gMapGroup_IndoorLittleroot",
     "gMapGroup_IndoorOldale",
@@ -58,6 +59,9 @@
     "Whitecliff_Castle_House3_F2",
     "Whitecliff_Castle_Smithy",
     "Whitecliff_Castle_Smithy_F2"
+  ],
+  "gMapGroup_IndoorGolden_Plateau": [
+    "NewMap2"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",

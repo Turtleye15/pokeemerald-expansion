@@ -361,6 +361,7 @@ script Infirmary_IsabellTalk{
         case 2:
             lock 
             faceplayer
+            speakername("Isabell")
             msgbox(IsabellGetBerries)
             closemessage
             release
