@@ -5,3 +5,10 @@ mapscripts Golden_Fields_East_MapScripts {
 script Golden_Fields_OnTransition{
     call(Update_DaniaLocation)
 }
+
+
+
+
+script Golden_Fields_Sign1 {
+    msgbox("Farm placeholder text", MSGBOX_SIGN)
+}

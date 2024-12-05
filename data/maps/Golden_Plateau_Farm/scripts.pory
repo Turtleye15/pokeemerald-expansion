@@ -1,0 +1,150 @@
+mapscripts Golden_Plateau_Farm_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION:Golden_Plateau_Farm_OnTransition
+}
+
+//
+
+const player = OBJ_EVENT_ID_PLAYER
+const dania = 4
+const gaius = 1
+
+script Golden_Plateau_Farm_OnTransition{
+    removeobject(dania)
+    setflag(FLAG_DANIA_LOCATION_FARM)
+}
+
+script Golden_Plateau_Farm_Gaius {
+    lock
+    faceplayer
+    if(var(VAR_CHAPTER_1)==0){
+        goto(Golden_Plateau_Farm_GetBerries)
+    }
+    else{
+        goto(Golden_Plateau_Farm_Shop)
+    }
+}
+
+script Golden_Plateau_Farm_GetBerries {
+    setvar(VAR_CHAPTER_1, 1)
+    setvar(VAR_DANIA_STATE, 1)
+    msgbox(Golden_Plateau_Farm_Greeting)
+    dynmultichoice(0,0, TRUE 1,0, DYN_MULTICHOICE_CB_NONE, "I'm here on Isabell's behalf")
+    msgbox(Golden_Plateau_Farm_GreetingSecond)
+    closemessage
+    applymovement(gaius, CollectBerries)
+    waitmovement(gaius)
+    clearflag(FLAG_DANIA_LOCATION_FARM)
+    playse(SE_DOOR)
+    addobject(dania)
+    applymovement(gaius, CollectBerries_Second)
+    speakername("???")
+    msgbox("{CREATE_MUGSHOT MUGSHOT_DANIA EMOTE_NORMAL}Hey all, I'm back!")
+    closemessage
+    applymovement(dania, moves(walk_up *2))
+    waitmovement(0)
+    applymovement(player, moves(face_right))
+    applymovement(dania, moves(face_left))
+    waitmovement(0)
+    speakername("???")
+    msgbox("{CREATE_MUGSHOT MUGSHOT_DANIA EMOTE_NORMAL}Oh, got a customer?")
+    applymovement(gaius, moves(face_down))
+    closemessage
+    msgbox("Aye, sort of. They're here to\ncollect goods for lady Isabell.")
+    closemessage
+    applymovement(dania, moves(face_up))
+    speakername("???")
+    msgbox(Golden_Plateau_Farm_Dania_Isabell)
+    removefieldmugshot
+    applymovement(gaius, CollectBerries_Third)
+    waitmovement(gaius)
+    closemessage
+    msgbox(Golden_Plateau_Farm_CalmDown)
+    closemessage
+    speakername("Dania")
+    msgbox(Golden_Plateau_Farm_Prepare)
+    removefieldmugshot
+    closemessage
+    applymovement(dania, moves(walk_down*2))
+    waitmovement(dania)
+    playse(SE_DOOR)
+    removeobject(dania)
+    setflag(FLAG_DANIA_LOCATION_FARM)
+    delay(30)
+    applymovement(player, moves(face_up))
+    applymovement(gaius, moves(walk_left, walk_down))
+    waitmovement(gaius)
+    msgbox(Golden_Plateau_Farm_HandOverBerries)
+    closemessage
+    playfanfare(MUS_OBTAIN_ITEM)
+    msgbox("Obtained a satchel with berries!")
+    waitmessage
+    release 
+
+}
+
+script Golden_Plateau_Farm_Shop {
+    msgbox("'ave a look at our produce!")
+    waitmessage
+    pokemart(FarmShop)
+    msgbox("See ye again!")
+    closemessage
+    release
+}
+
+mart FarmShop {
+    ITEM_CHERI_BERRY
+    ITEM_CHESTO_BERRY
+    ITEM_RAZZ_BERRY
+    ITEM_RAWST_BERRY
+    ITEM_PINAP_BERRY
+    ITEM_BERRY_JUICE
+    
+}
+
+text Golden_Plateau_Farm_Greeting {
+        "Welcome to the farm! Came to have a\nlook at our produce?\p"
+        "⋯ Oh, yer 'ere for somethin' else?\p"  
+}
+
+text Golden_Plateau_Farm_GreetingSecond {
+        "She's running low on Rawst and Sitrus\nberries? Sure thing!\p"
+        "I'll get ye sorted, give me a minute."  
+}
+
+text Golden_Plateau_Farm_Dania_Isabell {
+    "{CREATE_MUGSHOT MUGSHOT_DANIA EMOTE_NORMAL}I see.\p" 
+    "So little miss princess does not\nwant to grace us with her presence.\p"
+    "How unfortunate.\nSeems that we are only worthy\lof speaking to her servant."
+}
+
+text Golden_Plateau_Farm_CalmDown {
+    "Oh stuff it Dania, they're not her\nservant. Just runnin' an errand\lafter she saved their live.\p"
+    "And stop dragging 'er name through\nthe mud. Not a good look on ye."
+}
+
+text Golden_Plateau_Farm_Prepare {
+    "{CREATE_MUGSHOT MUGSHOT_DANIA EMOTE_NORMAL}⋯ fine.\nWe don't have to talk about this.\p"
+    "I'm going to get Rapidash and prepare\nfor the trip."
+}
+
+text Golden_Plateau_Farm_HandOverBerries {
+    "'ere ye go, got the Rawst and Sitrus\nberries Isabell asked for.\p"
+    "Don't mind my sis, she's got some\nstrong opinions on certain folks."
+}
+
+movement CollectBerries {
+    walk_up
+    walk_right * 2
+    face_down
+    delay_16 *2
+    walk_left *3
+}
+
+movement CollectBerries_Second {
+    walk_up
+}
+
+movement CollectBerries_Third{
+    walk_right *2
+    walk_down *1
+}

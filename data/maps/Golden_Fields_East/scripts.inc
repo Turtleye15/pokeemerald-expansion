@@ -9,3 +9,13 @@ Golden_Fields_OnTransition::
 	call Update_DaniaLocation
 	return
 
+
+Golden_Fields_Sign1::
+# 13 "data/maps/Golden_Fields_East/scripts.pory"
+	msgbox Golden_Fields_Sign1_Text_0, MSGBOX_SIGN
+	return
+
+
+Golden_Fields_Sign1_Text_0:
+# 13 "data/maps/Golden_Fields_East/scripts.pory"
+	.string "Farm placeholder text$"

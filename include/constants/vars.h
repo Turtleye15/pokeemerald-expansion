@@ -269,7 +269,7 @@
 #define VAR_CAN_HEAL                                     0x40F9 
 #define VAR_DANIA_STATE                                  0x40FA // Dania location tracker
 #define VAR_WHITECLIFF_BOTANY                               0x40FB // Whitecliff Botany quest tracker
-#define VAR_UNUSED_0x40FC                                0x40FC // Unused Var
+#define VAR_CHAPTER_1                                    0x40FC // Chapter 1 tracker
 #define VAR_UNUSED_0x40FD                                0x40FD // Unused Var
 #define VAR_UNUSED_0x40FE                                0x40FE // Unused Var
 #define VAR_UNUSED_0x40FF                                0x40FF // Unused Var
