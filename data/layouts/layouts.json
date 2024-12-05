@@ -4554,8 +4554,8 @@
     {
       "id": "LAYOUT_GOLDEN_FIELDS_EAST",
       "name": "Golden_Fields_East_Layout",
-      "width": 53,
-      "height": 61,
+      "width": 57,
+      "height": 64,
       "primary_tileset": "gTileset_golden_fields",
       "secondary_tileset": "gTileset_golden_plateau",
       "border_filepath": "data/layouts/Golden_Fields_East/border.bin",
@@ -4600,6 +4600,16 @@
       "secondary_tileset": "gTileset_whitecliff_interior_secondary",
       "border_filepath": "data/layouts/NewMap2/border.bin",
       "blockdata_filepath": "data/layouts/NewMap2/map.bin"
+    },
+    {
+      "id": "LAYOUT_GOLDEN_PLATEAU_FARM",
+      "name": "Golden_Plateau_Farm_Layout",
+      "width": 13,
+      "height": 8,
+      "primary_tileset": "gTileset_whitecliff_interior",
+      "secondary_tileset": "gTileset_whitecliff_interior_secondary",
+      "border_filepath": "data/layouts/Golden_Plateau_Farm/border.bin",
+      "blockdata_filepath": "data/layouts/Golden_Plateau_Farm/map.bin"
     }
   ]
 }

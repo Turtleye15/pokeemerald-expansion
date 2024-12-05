@@ -1233,10 +1233,12 @@ const u16 *const gTilesetAnims_WhitecliffInterior_Secondary_Forge[] = {
     gTilesetAnims_WhitecliffInterior_Secondary_Forge_Frame3
 };
 
+#define FORGE_ANIM_INDEX 512
+
 static void QueueAnimTiles_WhitecliffInterior_Secondary_Forge(u16 timer)
 {
     u16 i = timer % ARRAY_COUNT(gTilesetAnims_WhitecliffInterior_Secondary_Forge);
-    AppendTilesetAnimToBuffer(gTilesetAnims_WhitecliffInterior_Secondary_Forge[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(512)), 16 * TILE_SIZE_4BPP);
+    AppendTilesetAnimToBuffer(gTilesetAnims_WhitecliffInterior_Secondary_Forge[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(FORGE_ANIM_INDEX)), 16 * TILE_SIZE_4BPP);
 }
 
 static void TilesetAnim_WhitecliffInterior_Secondary(u16 timer)
