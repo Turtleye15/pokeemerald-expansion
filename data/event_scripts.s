@@ -1078,6 +1078,7 @@ EventScript_VsSeekerChargingDone::
 	.include "data/text/birch_speech.inc"
 
 	.include "data/scripts/dania.inc"
+	.include "data/scripts/global_scripts.inc"
 
 	.include "data/maps/Whitecliff_Castle_Infirmary/scripts.inc"
 
@@ -1118,3 +1119,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/NewMap2/scripts.inc"
 
 	.include "data/maps/Golden_Plateau_Farm/scripts.inc"
+
+	.include "data/maps/Golden_Plateau_Farm_F2/scripts.inc"

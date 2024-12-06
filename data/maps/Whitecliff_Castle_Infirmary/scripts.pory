@@ -303,6 +303,7 @@ script IsabellBattleOver{
     waitmovement(isabell)
     msgbox(WC_Infirmary_ThePresent)
     questmenu(QUEST_MENU_SET_ACTIVE, QUEST_CHAPTER_1)
+    subquestmenu(QUEST_MENU_COMPLETE_QUEST, QUEST_CHAPTER_1, SUB_QUEST_1)
     closemessage
     release 
     end
@@ -363,6 +364,7 @@ script Infirmary_IsabellTalk{
             faceplayer
             speakername("Isabell")
             msgbox(IsabellGetBerries)
+            questmenu(QUEST_MENU_SET_ACTIVE, QUEST_CHAPTER_1)
             closemessage
             release
 

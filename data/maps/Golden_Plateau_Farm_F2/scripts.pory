@@ -1,0 +1,30 @@
+mapscripts Golden_Plateau_Farm_F2_MapScripts {
+    
+}
+
+script Golden_Plateau_Farm_ElderWoman {
+    lock
+    faceplayer
+    msgbox("Oh, are you a traveller? Care to\nentertain an old gal's wishes?", MSGBOX_YESNO)
+    if(var(VAR_RESULT)==YES){
+        goto(Golden_Plateau_Farm_AcceptQuest)
+    }
+    else {
+        msgbox("No worries, I understand.")
+        closemessage
+        release
+    }
+
+}
+
+script Golden_Plateau_Farm_AcceptQuest{
+    msgbox("A long time ago, I made a promise to\nmy husband.\p"
+            "We would travel to Seaside City on\nour honeymoon⋯\p"
+            "But shortly before, war broke out⋯\nand by the time it was resolved,\lwe had a family and no time."
+            "We never ended up going there⋯\p"
+            "The city's famous for it's pottery,\nand we have always wanted a vase\lfrom there."
+            "If you ever go there, could you\nbring me back a vase?")
+    //questmenu(QUEST_MENU_SET_ACTIVE, QUEST_VASE)
+    closemessage
+    release
+}

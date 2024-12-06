@@ -28,8 +28,9 @@
 #define MAP_WHITECLIFF_CASTLE_SMITHY_F2   (14 | (1 << 8))
 
 // gMapGroup_IndoorGolden_Plateau
-#define MAP_NEW_MAP2            (0 | (2 << 8))
-#define MAP_GOLDEN_PLATEAU_FARM (1 | (2 << 8))
+#define MAP_NEW_MAP2               (0 | (2 << 8))
+#define MAP_GOLDEN_PLATEAU_FARM    (1 | (2 << 8))
+#define MAP_GOLDEN_PLATEAU_FARM_F2 (2 | (2 << 8))
 
 // gMapGroup_TownsAndRoutes
 #define MAP_PETALBURG_CITY      (0 | (3 << 8))

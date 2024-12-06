@@ -3056,7 +3056,11 @@ extern const u8 gText_QuestComplete[];
 extern const u8 gText_QuestActive[];
 
 //names
-extern const u8 gText_SideQuest_Chapter_1[];
+extern const u8 gText_MainQuest_Chapter_1[];
+extern const u8 gText_MainQuestDesc_Chapter_1[];
+extern const u8 gText_MainQuestDone_Chapter_1[];
+extern const u8 gText_MainQuestMap_Chapter_1[];
+
 extern const u8 gText_SideQuestName_2[];
 extern const u8 gText_SideQuestName_3[];
 extern const u8 gText_SideQuestName_4[];
@@ -3088,7 +3092,7 @@ extern const u8 gText_SideQuestName_29[];
 extern const u8 gText_SideQuestName_30[];
 
 //descriptions
-extern const u8 gText_SideQuestDesc_Chapter_1[];
+
 extern const u8 gText_SideQuestDesc_2[];
 extern const u8 gText_SideQuestDesc_3[];
 extern const u8 gText_SideQuestDesc_4[];
@@ -3120,7 +3124,7 @@ extern const u8 gText_SideQuestDesc_29[];
 extern const u8 gText_SideQuestDesc_30[];
 
 //completed quest description
-extern const u8 gText_SideQuestDone_Chapter_1[];
+
 extern const u8 gText_SideQuestDoneDesc_2[];
 extern const u8 gText_SideQuestDoneDesc_3[];
 extern const u8 gText_SideQuestDoneDesc_4[];
@@ -3152,7 +3156,7 @@ extern const u8 gText_SideQuestDoneDesc_29[];
 extern const u8 gText_SideQuestDoneDesc_30[];
 
 //map
-extern const u8 gText_SideQuestMap_Chapter_1[];
+
 extern const u8 gText_SideQuestMap2[];
 extern const u8 gText_SideQuestMap3[];
 extern const u8 gText_SideQuestMap4[];
@@ -3184,7 +3188,11 @@ extern const u8 gText_SideQuestMap29[];
 extern const u8 gText_SideQuestMap30[];
 
 //subquests
-extern const u8 gText_SubQuest1_Name1[];
+extern const u8 gText_SubQuest_Chapter1_Name1[]; 
+extern const u8 gText_SubQuest_Chapter1_Desc1[];
+extern const u8 gText_SubQuest_Chapter1_Map1[];
+
+
 extern const u8 gText_SubQuest1_Name2[];
 extern const u8 gText_SubQuest1_Name3[];
 extern const u8 gText_SubQuest1_Name4[];
@@ -3216,7 +3224,7 @@ extern const u8 gText_SubQuest2_Name18[];
 extern const u8 gText_SubQuest2_Name19[];
 extern const u8 gText_SubQuest2_Name20[];
 
-extern const u8 gText_SubQuest1_Desc1[];
+
 extern const u8 gText_SubQuest1_Desc2[];
 extern const u8 gText_SubQuest1_Desc3[];
 extern const u8 gText_SubQuest1_Desc4[];

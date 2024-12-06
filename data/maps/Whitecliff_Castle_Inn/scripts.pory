@@ -1,0 +1,44 @@
+mapscripts Whitecliff_Castle_Inn_MapScripts {
+    
+}
+
+script Whitecliff_Inn_Keeper {
+    lock
+    faceplayer
+    msgbox("Hey there kiddo, how can I help ye out?")
+    dynmultichoice(0,0, FALSE, 4,0, DYN_MULTICHOICE_CB_NONE, 
+                    "I'd like to rest up",
+                    "Any interesting news?",
+                    "What's on the menu?",
+                    "Nevermind...")
+    switch(var(VAR_RESULT)){
+        case 0:
+            msgbox("I've got a room free for ye")
+            closemessage
+            goto(Common_Eventscript_Inn_Heal)
+            msgbox("See ye next time!")
+            closemessage
+            end
+        case 1:
+            goto(Whitecliff_Inn_Gossip)
+        case 2:
+            goto(Whitecliff_Inn_Shop)
+        case 3:
+            closemessage
+            end
+    }
+    closemessage
+    end
+}
+
+script Whitecliff_Inn_Gossip {
+    msgbox("This is a test message")
+    closemessage
+    end
+}
+
+script Whitecliff_Inn_Shop {
+    msgbox("This is where the shop goes")
+    closemessage
+    end
+}

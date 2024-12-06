@@ -4610,6 +4610,16 @@
       "secondary_tileset": "gTileset_whitecliff_interior_secondary",
       "border_filepath": "data/layouts/Golden_Plateau_Farm/border.bin",
       "blockdata_filepath": "data/layouts/Golden_Plateau_Farm/map.bin"
+    },
+    {
+      "id": "LAYOUT_GOLDEN_PLATEAU_FARM_F2",
+      "name": "Golden_Plateau_Farm_F2_Layout",
+      "width": 13,
+      "height": 9,
+      "primary_tileset": "gTileset_whitecliff_interior",
+      "secondary_tileset": "gTileset_whitecliff_interior_secondary",
+      "border_filepath": "data/layouts/Golden_Plateau_Farm_F2/border.bin",
+      "blockdata_filepath": "data/layouts/Golden_Plateau_Farm_F2/map.bin"
     }
   ]
 }

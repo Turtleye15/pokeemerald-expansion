@@ -1842,7 +1842,11 @@ const u8 gText_QuestComplete[] =_("complete");
 const u8 gText_QuestActive[] =_("active");
 
 //names
-const u8 gText_SideQuest_Chapter_1[] = _("Chapter 1");
+const u8 gText_MainQuest_Chapter_1[] = _("Chapter 1");
+const u8 gText_MainQuestDesc_Chapter_1[] = _("You wake up in an unfamiliar world.");
+const u8 gText_MainQuestDone_Chapter_1[] = _("Having fully recovered, you set forth on your journey");
+const u8 gText_MainQuestMap_Chapter_1[] = _("Golden Plateau");
+
 const u8 gText_SideQuestName_2[] = _("Side Quest 2");
 const u8 gText_SideQuestName_3[] = _("Side Quest 3");
 const u8 gText_SideQuestName_4[] = _("Side Quest 4");
@@ -1874,7 +1878,7 @@ const u8 gText_SideQuestName_29[] = _("Side Quest 29");
 const u8 gText_SideQuestName_30[] = _("Side Quest 30");
 
 //descriptions
-const u8 gText_SideQuestDesc_Chapter_1[] = _("You wake up in an unfamiliar world.");
+
 const u8 gText_SideQuestDesc_2[] = _("Description 2");
 const u8 gText_SideQuestDesc_3[] = _("Description 3");
 const u8 gText_SideQuestDesc_4[] = _("Description 4");
@@ -1906,7 +1910,7 @@ const u8 gText_SideQuestDesc_29[] = _("Description 29");
 const u8 gText_SideQuestDesc_30[] = _("Description 30");
 
 //completed quest description
-const u8 gText_SideQuestDone_Chapter_1[] = _("Having fully recovered, you set forth on your journey");
+
 const u8 gText_SideQuestDoneDesc_2[] = _("Completed Quest 2");
 const u8 gText_SideQuestDoneDesc_3[] = _("Completed Quest 3");
 const u8 gText_SideQuestDoneDesc_4[] = _("Completed Quest 4");
@@ -1938,7 +1942,7 @@ const u8 gText_SideQuestDoneDesc_29[] = _("Completed Quest 29");
 const u8 gText_SideQuestDoneDesc_30[] = _("Completed Quest 30");
 
 //map
-const u8 gText_SideQuestMap_Chapter_1[] = _("Whitecliff Castle");
+
 const u8 gText_SideQuestMap2[] = _("Map 2");
 const u8 gText_SideQuestMap3[] = _("Map 3");
 const u8 gText_SideQuestMap4[] = _("Map 4");
@@ -1970,7 +1974,10 @@ const u8 gText_SideQuestMap29[] = _("Map 29");
 const u8 gText_SideQuestMap30[] = _("Map 30");
 
 //subquests
-const u8 gText_SubQuest1_Name1[] = _("Part 1");
+const u8 gText_SubQuest_Chapter1_Name1[] = _("Part 1");
+const u8 gText_SubQuest_Chapter1_Desc1[] = _("Description Sub 1");
+const u8 gText_SubQuest_Chapter1_Map1[] = _("Whitecliff Castle");
+
 const u8 gText_SubQuest1_Name2[] = _("Part 2");
 const u8 gText_SubQuest1_Name3[] = _("Part 3");
 const u8 gText_SubQuest1_Name4[] = _("Part 4");
@@ -2002,7 +2009,7 @@ const u8 gText_SubQuest2_Name18[] = _("Part 18");
 const u8 gText_SubQuest2_Name19[] = _("Part 19");
 const u8 gText_SubQuest2_Name20[] = _("Part 20");
 
-const u8 gText_SubQuest1_Desc1[] = _("Description Sub 1");
+
 const u8 gText_SubQuest1_Desc2[] = _("Description Sub 2");
 const u8 gText_SubQuest1_Desc3[] = _("Description Sub 3");
 const u8 gText_SubQuest1_Desc4[] = _("Description Sub 4");
