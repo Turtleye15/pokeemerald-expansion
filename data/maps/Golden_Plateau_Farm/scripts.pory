@@ -28,11 +28,13 @@ script Golden_Plateau_Farm_GetBerries {
     setvar(VAR_CHAPTER_1, 1)
     setvar(VAR_DANIA_STATE, 1)
     msgbox(Golden_Plateau_Farm_Greeting)
+    waitmessage
     dynmultichoice(0,0, TRUE 1,0, DYN_MULTICHOICE_CB_NONE, "I'm here on Isabell's behalf")
     msgbox(Golden_Plateau_Farm_GreetingSecond)
     closemessage
     applymovement(gaius, CollectBerries)
     waitmovement(gaius)
+
     clearflag(FLAG_DANIA_LOCATION_FARM)
     playse(SE_DOOR)
     addobject(dania)
@@ -51,6 +53,7 @@ script Golden_Plateau_Farm_GetBerries {
     closemessage
     msgbox("Aye, sort of. They're here to\ncollect goods for lady Isabell.")
     closemessage
+
     applymovement(dania, moves(face_up))
     speakername("???")
     msgbox(Golden_Plateau_Farm_Dania_Isabell)
@@ -64,12 +67,14 @@ script Golden_Plateau_Farm_GetBerries {
     msgbox(Golden_Plateau_Farm_Prepare)
     removefieldmugshot
     closemessage
+
     applymovement(dania, moves(walk_down*2))
     waitmovement(dania)
     playse(SE_DOOR)
     removeobject(dania)
     setflag(FLAG_DANIA_LOCATION_FARM)
     delay(30)
+
     applymovement(player, moves(face_up))
     applymovement(gaius, moves(walk_left, walk_down))
     waitmovement(gaius)
@@ -147,4 +152,12 @@ movement CollectBerries_Second {
 movement CollectBerries_Third{
     walk_right *2
     walk_down *1
+}
+
+script Golden_Plateau_Farm_Woman {
+    msgbox("I love having everyone around, but\nfeeding them's a big task.", MSGBOX_NPC)
+}
+
+script Golden_Plateau_Farm_BerryBox {
+    msgbox("A variety of berries stacked high.\nThey look freshly picked!", MSGBOX_SIGN)
 }
