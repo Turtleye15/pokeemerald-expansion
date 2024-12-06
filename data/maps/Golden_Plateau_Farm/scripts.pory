@@ -5,7 +5,7 @@ mapscripts Golden_Plateau_Farm_MapScripts {
 //
 
 const player = OBJ_EVENT_ID_PLAYER
-const dania = 4
+const dania = 3
 const gaius = 1
 
 script Golden_Plateau_Farm_OnTransition{
