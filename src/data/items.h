@@ -14077,4 +14077,19 @@ const struct Item gItemsInfo[] =
         .iconPic = gItemIcon_PokeshiDoll,
         .iconPalette = gItemIconPalette_PokeshiDoll,
     },
+
+    [ITEM_BERRY_SATCHEL] =
+    {
+        .name = _("Berry Satchel"),
+        .price = 2000,
+        .description = COMPOUND_STRING(
+            "A wooden toy carved\n"
+            "in the image of a\n"
+            "Pokémon. Can be sold."),
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_PokeshiDoll,
+        .iconPalette = gItemIconPalette_PokeshiDoll,
+    },
 };

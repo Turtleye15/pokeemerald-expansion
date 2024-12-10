@@ -25,7 +25,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Infirmary_IsabellTalk",
-      "flag": "0"
+      "flag": "FLAG_ISABELL_LOCATION_INFIRMARY"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
@@ -89,7 +89,7 @@
       "x": 8,
       "y": 3,
       "elevation": 0,
-      "var": "VAR_INFIRMARY_INTRO",
+      "var": "VAR_CHAPTER_1",
       "var_value": "0",
       "script": "Infirmary_IsabellEnterBuilding"
     },
@@ -98,7 +98,7 @@
       "x": 14,
       "y": 8,
       "elevation": 0,
-      "var": "VAR_INFIRMARY_INTRO",
+      "var": "VAR_CHAPTER_1",
       "var_value": "1",
       "script": "LeaveBeforeStarter"
     },
@@ -107,7 +107,7 @@
       "x": 13,
       "y": 8,
       "elevation": 0,
-      "var": "VAR_INFIRMARY_INTRO",
+      "var": "VAR_CHAPTER_1",
       "var_value": "1",
       "script": "LeaveBeforeStarter"
     },
@@ -119,6 +119,33 @@
       "var": "VAR_CAN_HEAL",
       "var_value": "1",
       "script": "RestAtInfirmary"
+    },
+    {
+      "type": "trigger",
+      "x": 10,
+      "y": 5,
+      "elevation": 0,
+      "var": "VAR_CHAPTER_1",
+      "var_value": "4",
+      "script": "WC_Infirmary_DayTwo"
+    },
+    {
+      "type": "trigger",
+      "x": 10,
+      "y": 6,
+      "elevation": 0,
+      "var": "VAR_CHAPTER_1",
+      "var_value": "4",
+      "script": "WC_Infirmary_DayTwo"
+    },
+    {
+      "type": "trigger",
+      "x": 10,
+      "y": 7,
+      "elevation": 0,
+      "var": "VAR_CHAPTER_1",
+      "var_value": "4",
+      "script": "WC_Infirmary_DayTwo"
     }
   ],
   "bg_events": [

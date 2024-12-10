@@ -6,7 +6,7 @@ Golden_Plateau_Farm_MapScripts::
 
 Golden_Plateau_Farm_OnTransition::
 # 12 "data/maps/Golden_Plateau_Farm/scripts.pory"
-	removeobject 4
+	removeobject 3
 # 13 "data/maps/Golden_Plateau_Farm/scripts.pory"
 	setflag FLAG_DANIA_LOCATION_FARM
 	return
@@ -18,7 +18,7 @@ Golden_Plateau_Farm_Gaius::
 # 18 "data/maps/Golden_Plateau_Farm/scripts.pory"
 	faceplayer
 # 19 "data/maps/Golden_Plateau_Farm/scripts.pory"
-	compare VAR_CHAPTER_1, 0
+	compare VAR_CHAPTER_1, 2
 	goto_if_eq Golden_Plateau_Farm_Gaius_1
 # 23 "data/maps/Golden_Plateau_Farm/scripts.pory"
 	goto Golden_Plateau_Farm_Shop
@@ -32,7 +32,7 @@ Golden_Plateau_Farm_Gaius_1:
 
 Golden_Plateau_Farm_GetBerries::
 # 28 "data/maps/Golden_Plateau_Farm/scripts.pory"
-	setvar VAR_CHAPTER_1, 1
+	setvar VAR_CHAPTER_1, 3
 # 29 "data/maps/Golden_Plateau_Farm/scripts.pory"
 	setvar VAR_DANIA_STATE, 1
 # 30 "data/maps/Golden_Plateau_Farm/scripts.pory"
@@ -54,7 +54,7 @@ Golden_Plateau_Farm_GetBerries::
 # 39 "data/maps/Golden_Plateau_Farm/scripts.pory"
 	playse SE_DOOR
 # 40 "data/maps/Golden_Plateau_Farm/scripts.pory"
-	addobject 4
+	addobject 3
 # 41 "data/maps/Golden_Plateau_Farm/scripts.pory"
 	applymovement 1, CollectBerries_Second
 # 42 "data/maps/Golden_Plateau_Farm/scripts.pory"
@@ -64,13 +64,13 @@ Golden_Plateau_Farm_GetBerries::
 # 44 "data/maps/Golden_Plateau_Farm/scripts.pory"
 	closemessage
 # 45 "data/maps/Golden_Plateau_Farm/scripts.pory"
-	applymovement 4, Golden_Plateau_Farm_GetBerries_Movement_0
+	applymovement 3, Golden_Plateau_Farm_GetBerries_Movement_0
 # 46 "data/maps/Golden_Plateau_Farm/scripts.pory"
 	waitmovement 0
 # 47 "data/maps/Golden_Plateau_Farm/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, Golden_Plateau_Farm_GetBerries_Movement_1
 # 48 "data/maps/Golden_Plateau_Farm/scripts.pory"
-	applymovement 4, Golden_Plateau_Farm_GetBerries_Movement_2
+	applymovement 3, Golden_Plateau_Farm_GetBerries_Movement_2
 # 49 "data/maps/Golden_Plateau_Farm/scripts.pory"
 	waitmovement 0
 # 50 "data/maps/Golden_Plateau_Farm/scripts.pory"
@@ -86,7 +86,7 @@ Golden_Plateau_Farm_GetBerries::
 # 55 "data/maps/Golden_Plateau_Farm/scripts.pory"
 	closemessage
 # 57 "data/maps/Golden_Plateau_Farm/scripts.pory"
-	applymovement 4, Golden_Plateau_Farm_GetBerries_Movement_4
+	applymovement 3, Golden_Plateau_Farm_GetBerries_Movement_4
 # 58 "data/maps/Golden_Plateau_Farm/scripts.pory"
 	speakername Golden_Plateau_Farm_GetBerries_Text_1
 # 59 "data/maps/Golden_Plateau_Farm/scripts.pory"
@@ -112,13 +112,13 @@ Golden_Plateau_Farm_GetBerries::
 # 69 "data/maps/Golden_Plateau_Farm/scripts.pory"
 	closemessage
 # 71 "data/maps/Golden_Plateau_Farm/scripts.pory"
-	applymovement 4, Golden_Plateau_Farm_GetBerries_Movement_5
+	applymovement 3, Golden_Plateau_Farm_GetBerries_Movement_5
 # 72 "data/maps/Golden_Plateau_Farm/scripts.pory"
-	waitmovement 4
+	waitmovement 3
 # 73 "data/maps/Golden_Plateau_Farm/scripts.pory"
 	playse SE_DOOR
 # 74 "data/maps/Golden_Plateau_Farm/scripts.pory"
-	removeobject 4
+	removeobject 3
 # 75 "data/maps/Golden_Plateau_Farm/scripts.pory"
 	setflag FLAG_DANIA_LOCATION_FARM
 # 76 "data/maps/Golden_Plateau_Farm/scripts.pory"
@@ -136,7 +136,7 @@ Golden_Plateau_Farm_GetBerries::
 # 83 "data/maps/Golden_Plateau_Farm/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
 # 84 "data/maps/Golden_Plateau_Farm/scripts.pory"
-	msgbox Golden_Plateau_Farm_GetBerries_Text_6
+	giveitem ITEM_BERRY_SATCHEL
 # 85 "data/maps/Golden_Plateau_Farm/scripts.pory"
 	waitmessage
 # 86 "data/maps/Golden_Plateau_Farm/scripts.pory"
@@ -298,10 +298,6 @@ Golden_Plateau_Farm_GetBerries_Text_4:
 Golden_Plateau_Farm_GetBerries_Text_5:
 # 66 "data/maps/Golden_Plateau_Farm/scripts.pory"
 	.string "Dania$"
-
-Golden_Plateau_Farm_GetBerries_Text_6:
-# 84 "data/maps/Golden_Plateau_Farm/scripts.pory"
-	.string "Obtained a satchel with berries!$"
 
 Golden_Plateau_Farm_Shop_Text_0:
 # 91 "data/maps/Golden_Plateau_Farm/scripts.pory"

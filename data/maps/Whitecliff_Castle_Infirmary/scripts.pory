@@ -3,39 +3,32 @@ mapscripts Whitecliff_Castle_Infirmary_MapScripts {
     // MAP_SCRIPT_ON_TRANSITION: Whitecliff_Infirmary_OnTransition
 }
 
-//VAR_Infirmary_Intro:
+//VAR_CHAPTER_1:
 //0: Player in bed
 //1: Player triggers Isabell walking in
-//2: Player recieved starter
+//2: Player recieved starter, recieved berry quest
+//3: Player obtained berries
+//4: Player handed over berries, started next day
 
 const isabell = 1
+const player = OBJ_EVENT_ID_PLAYER
 
 script Whitecliff_Infirmary_OnLoad {
-    if(var(VAR_INFIRMARY_INTRO) == 0){
+    if(var(VAR_CHAPTER_1) == 0){
         setflag(FLAG_STARTER_BALL)
         setobjectxyperm(isabell, 13,10)
         setobjectmovementtype(isabell, MOVEMENT_TYPE_FACE_DOWN)
     }
-    elif(var(VAR_INFIRMARY_INTRO) == 1) {
+    elif(var(VAR_CHAPTER_1) == 1) {
         setobjectxyperm(isabell, 5,6)
     }
 }
 
-// script Whitecliff_Infirmary_OnTransition {
-//     if(var(VAR_INFIRMARY_INTRO)== 2){
-//         setobjectxy(isabell, 12, 3)
-//         setobjectmovementtype(isabell, MOVEMENT_TYPE_FACE_DOWN)
-//     }
-// }
-
-// script CheckStarterBall{
-//     setflag(FLAG_STARTER_BALL)
-// }
 
 script Infirmary_IsabellEnterBuilding{
     lock
-    setvar(VAR_INFIRMARY_INTRO, 1)
-    applymovement(OBJ_EVENT_ID_PLAYER, FaceDown)
+    setvar(VAR_CHAPTER_1, 1)
+    applymovement(player, FaceDown)
     goto(IsabellQuestions)
 }
 
@@ -43,7 +36,7 @@ script Infirmary_IsabellEnterBuilding{
 movement IsabellEnter{
     walk_up *5
     walk_right *2
-    delay_16 *6
+    delay_16 *3
     walk_left*4
     face_up
 }
@@ -55,8 +48,12 @@ script IsabellQuestions{
     delay(60)
     addobject(2)
     clearflag(FLAG_STARTER_BALL)
-    applymovement(isabell, IsabellWalkLeft)
+    applymovement(isabell, moves(walk_down *1,face_left))
     waitmovement(isabell)
+    playse(SE_PIN)
+    applymovement(isabell,IsabellWalkLeft)
+    waitmovement(isabell)
+    speakername("???")
     msgbox(HowAreYou)
     dynmultichoice(0,0, TRUE 2,0, DYN_MULTICHOICE_CB_NONE, "Could be better.","Awful...")
     msgbox(TellPlayer)
@@ -74,8 +71,6 @@ script IsabellQuestions{
     goto(AskPlayerName)
 }
 movement IsabellWalkLeft{
-    walk_down *1
-    face_left
     emote_exclamation_mark
     delay_16 * 5
     walk_left *3
@@ -109,19 +104,23 @@ text Starving{
 }
 
 script AskPlayerName{
-    applymovement(OBJ_EVENT_ID_PLAYER, Question)
+    playse(SE_PIN)
+    applymovement(player, Question)
     waitmovement(0)
     applymovement(isabell, IsabellLookRight)
     waitmovement(isabell)
+    speakername("???")
     msgbox(Amnesia)
     waitmessage
+    applymovement(player,moves(walk_in_place_down))
     msgbox(PlayerName)
-    applymovement(OBJ_EVENT_ID_PLAYER, Exclamation)
+    playse(SE_PIN)
+    applymovement(player, Exclamation)
     waitmovement(0)
     goto(AskPlayerMon)
 }
 script AskPlayerMon{ 
-        dynmultichoice(0,0, TRUE 3,0, DYN_MULTICHOICE_CB_NONE, "I have a Roggenrola!", "It's a Litwick!","My Aron!")
+        dynmultichoice(0,0, TRUE 3,0, DYN_MULTICHOICE_CB_NONE, "My Roggenrola!", "It's a Litwick!","I have an Aron!")
     if(var(VAR_RESULT)==0){
         bufferspeciesname(STR_VAR_1, SPECIES_ROGGENROLA)
         setvar(VAR_PICKED_STARTER, SPECIES_ROGGENROLA)
@@ -147,6 +146,7 @@ script ConfirmPlayerMon{
         closemessage
         applymovement(isabell, IsabellStepBackLeft)    
         waitmovement(isabell)
+        speakername("Isabell")
         msgbox(MyNameIs)
         closemessage
         setobjectmovementtype(isabell, MOVEMENT_TYPE_FACE_RIGHT)
@@ -169,7 +169,7 @@ text AskAgain {
 text Starter {
     format("{CREATE_MUGSHOT MUGSHOT_ISABELL EMOTE_NORMAL}Ah, so you remember that as well.\p..\n How do I know?\p" 
             "Well, you weren't the only one in critical condition when we found you.\p"
-            "I've made sure your {STR_VAR_1} is Healthy too.\p"
+            "I've made sure your {STR_VAR_1} is healthy too.\p"
             "But, just to be sure, I need to test it's physical capabilities.\l" 
             "And yours, too.\p"
             "Your pokeball is on the table over there. Pick it up.")
@@ -202,15 +202,7 @@ movement IsabellStepBackLeft{
     face_right
 }
 
-script IsabellBeforeStarterGet{
-    lock
-    faceplayer
-    msgbox(NoPokemon)
-    applymovement(isabell, IsabellFaceRight)
-    waitmessage
-    closemessage
-    release
-}
+
 
 text NoPokemon{
     format("{CREATE_MUGSHOT MUGSHOT_ISABELL EMOTE_NORMAL}Well, what are you waiting for? I don't have all day.")
@@ -222,10 +214,11 @@ movement IsabellFaceRight{
 
 script LeaveBeforeStarter{
     lock
+    speakername("Isabell")
     msgbox("{CREATE_MUGSHOT MUGSHOT_ISABELL EMOTE_NORMAL}Don't try to sneak away!")
     closemessage
     removefieldmugshot
-    applymovement(OBJ_EVENT_ID_PLAYER, GoBack)
+    applymovement(player, GoBack)
     waitmovement(0)
     release
 }
@@ -237,6 +230,7 @@ movement GoBack {
 
 script ObtainStarterBall{
     showmonpic(VAR_PICKED_STARTER, 10, 3)
+    playmoncry(VAR_PICKED_STARTER,CRY_MODE_NORMAL)
     bufferspeciesname(STR_VAR_1, VAR_PICKED_STARTER)
     msgbox("It's your {STR_VAR_1}!")
     waitmessage
@@ -248,7 +242,7 @@ script ObtainStarterBall{
     setflag(FLAG_SYS_POKEMON_GET)
     setflag(FLAG_SYS_B_DASH)
     setvar(VAR_CAN_HEAL, 1)
-    setvar(VAR_INFIRMARY_INTRO, 2)
+    setvar(VAR_CHAPTER_1, 2)
     call(NicknamePartyMon)
     hidemonpic
     closemessage
@@ -265,7 +259,7 @@ script NicknamePartyMon{
 }
 
 script IsabellStarterBattle{
-    applymovement(OBJ_EVENT_ID_PLAYER, Walkup)
+    applymovement(player, Walkup)
     bufferspeciesname(STR_VAR_1, VAR_PICKED_STARTER)
     waitmovement(0)
     trainerbattle_single(TRAINER_ISABELL_1, Isabell_1_Intro, Isabell_1_Outro, IsabellBattleOver)
@@ -276,7 +270,7 @@ text Isabell_1_Intro {
 }
 
 text Isabell_1_Outro{
-    format("Seems like you and your {STR_VAR_1} are doing great.")
+    format("Seems like you and {STR_VAR_1} are doing great.")
 }
 
 movement Walkup {
@@ -288,6 +282,7 @@ movement Walkup {
 script IsabellBattleOver{
     lockall
     bufferspeciesname(STR_VAR_1, VAR_PICKED_STARTER)
+    speakername("Isabell")
     msgbox(WC_Infirmary_Healthy)
     closemessage
     applymovement(isabell, HealPlayer)
@@ -295,8 +290,9 @@ script IsabellBattleOver{
     special(HealPlayerParty)
     playfanfare(MUS_HEAL)
     delay(60)
+    speakername("Isabell")
     msgbox(WC_Infirmary_WhatNow)
-    dynmultichoice(0,0, TRUE 1,0, DYN_MULTICHOICE_CB_NONE, "Are you unable to restore my mind?")
+    dynmultichoice(0,0, TRUE 1,0, DYN_MULTICHOICE_CB_NONE, "Can't you do anything?")
     msgbox(WC_Infirmary_ThePast)
     waitmessage
     applymovement(isabell, LookUp)
@@ -310,8 +306,8 @@ script IsabellBattleOver{
 }
 
 text WC_Infirmary_Healthy {
-    format("{CREATE_MUGSHOT MUGSHOT_ISABELL EMOTE_NORMAL}It appears that you've both made a full recovery.\l Well, under my care that's to be expected\p"
-            "Here, let me heal your {STR_VAR_1}")
+    format("{CREATE_MUGSHOT MUGSHOT_ISABELL EMOTE_NORMAL}It appears that you've both made a full recovery.\l Well, under my care that's to be expected.\p"
+            "Here, let me heal your {STR_VAR_1}.")
 }
 
 text WC_Infirmary_WhatNow {
@@ -321,18 +317,17 @@ text WC_Infirmary_WhatNow {
 
 text WC_Infirmary_ThePast {
     format("{CREATE_MUGSHOT MUGSHOT_ISABELL EMOTE_NORMAL}I appreciate your sentiment, but not even I can cure amnesia.\p" 
-           "I specialize in curing phsyical trauma, mental issues are something far too complex for even a veteran cleric.")
+           "I specialize in curing phsyical trauma, mental issues are outside my expertise.")
     
 }
 
 text WC_Infirmary_ThePresent {
-    format("{CREATE_MUGSHOT MUGSHOT_ISABELL EMOTE_NORMAL}Hmmm... I might know someone who can help you out. But, I have to pull some strings and that will take some time.\p"
-            "I was planning to have you here for a day or 2 at least, so I can monitor your condition.\p"
-            "So in the meantime, you can run some errands for me.\p"
-            "You made me use up quite a number of supplies to keep you alive, so as a payment I'll need you to go fetch a fresh batch of Lum and Rawst berries\p"
-            "It's nothing too strenuous, I just have other matters to attent to at the moment.\p"
-            "Plus, some fresh air might do you well. And you'll be able to tour the area if you'd like.\p"
-            "The farm I get my goods from is just west of Whitecliff Castle. Tell them Isabell sent you.")
+    format("{CREATE_MUGSHOT MUGSHOT_ISABELL EMOTE_NORMAL}Hmmm... I might know someone who can help you out. But, I have to pull some strings for that.\p"
+            "You should stay here for a while to fully recover anyway.\p"
+            "I almost ran out of Rawst & Sitrus berries taking care of you.\p"
+            "So I'll need you to restock those for me at the farm.\p"
+            "Some fresh air will do you well, and you can explore the castle if you want.\p"
+            "The farm is just west of Whitecliff Castle. Tell them Isabell sent you.")
 }
 
 movement HealPlayer {
@@ -355,32 +350,108 @@ text IsabellGetBerries {
 }
 
 script Infirmary_IsabellTalk{
-    switch (var(VAR_INFIRMARY_INTRO)){
+    lock
+    faceplayer
+    switch (var(VAR_CHAPTER_1)){
         case 0:
         case 1:
             goto(IsabellBeforeStarterGet)
         case 2:
-            lock 
-            faceplayer
-            speakername("Isabell")
-            msgbox(IsabellGetBerries)
-            questmenu(QUEST_MENU_SET_ACTIVE, QUEST_CHAPTER_1)
-            closemessage
-            release
-
+            goto(WC_Infirmary_GetBerries)
+        case 3:
+            goto(WC_Infirmary_DeliverBerries)
+        }
     }
+
+
+script IsabellBeforeStarterGet{
+    speakername("Isabell")
+    msgbox(NoPokemon)
+    applymovement(isabell, IsabellFaceRight)
+    waitmessage
+    closemessage
+    release
 }
+
+script WC_Infirmary_GetBerries {
+    speakername("Isabell")
+    msgbox(IsabellGetBerries)
+    questmenu(QUEST_MENU_SET_ACTIVE, QUEST_CHAPTER_1)
+    closemessage
+    release    
+}
+
+script WC_Infirmary_DeliverBerries {
+    removeitem(ITEM_BERRY_SATCHEL)
+    setvar(VAR_CHAPTER_1,4)
+    speakername("Isabell")
+    msgbox(WC_Infirmary_BerryDelivery)
+    waitmessage
+    dynmultichoice(0,0, TRUE 3,0, DYN_MULTICHOICE_CB_NONE, "It was nice.","These cliffs are tall!","I ran into Diana.",)
+    switch(var(VAR_RESULT)){
+        case 0:
+            msgbox(WC_Infirmary_Sightseeing)
+        case 1:
+            msgbox(WC_Infirmary_Altitude)
+        case 2:
+            msgbox(WC_Infirmary_Dania)
+    
+    }
+    waitmessage
+    msgbox("Allright, you should get some rest.\nI'll wake you up in a couple of\lhours.")
+    removefieldmugshot
+    fadescreen(FADE_TO_BLACK)
+    warpsilent(MAP_WHITECLIFF_CASTLE_INFIRMARY,9,3)
+    setflag(FLAG_ISABELL_LOCATION_INFIRMARY)
+    removeobject(isabell)
+    delay(80)
+    fadescreen(FADE_FROM_BLACK)
+    
+}
+
+text WC_Infirmary_BerryDelivery {
+    "{CREATE_MUGSHOT MUGSHOT_DANIA EMOTE_NORMAL}There you are. Do you have\neverything I sent you to collect?\p"
+    "⋯\n Wonderful. That's all for now.\p"
+    "Did you enjoy the walk around the\ncastle?"
+}
+
+text WC_Infirmary_Sightseeing {
+    "Mhm, this place is quite stunning.\nI love it up here."
+}
+
+text WC_Infirmary_Altitude {
+    "Oh yeah, this place is incredibly\nhigh up.\p"
+    "Makes it hard to reach. Especially\nwithout using the lift."
+}
+
+text WC_Infirmary_Dania {
+    "Oh, you've met our cavalry captain?\nI assumed she'd already left for\lher next mission"
+    "I should've expected she would stall\nthings out⋯ typical."
+}
+
+script WC_Infirmary_DayTwo {
+
+    speakername("Isabell")
+    msgbox("-ve nobody else who can help-\n⋯\l-ne, I'll get them-")
+    waitmessage
+    setobjectxyperm(isabell, 13,9)
+    clearflag(FLAG_ISABELL_LOCATION_INFIRMARY)
+    playse(SE_DOOR)
+    addobject(isabell)
+    applymovement(isabell, moves(walk_up*3, face_left))
+    // speakername("Isabell")
+    // msgbox("{CREATE_MUGSHOT MUGSHOT_DANIA EMOTE_NORMAL}Hey. I need your help")
+    closemessage
+    release
+}
+
 
 script RestAtInfirmary{
     lockall
-    applymovement(OBJ_EVENT_ID_PLAYER, FaceDown)
+    applymovement(player, FaceDown)
     msgbox(format("This bed is nice and confortable. Would you like to rest?"), MSGBOX_YESNO)
     if (var(VAR_RESULT)== YES){
-        fadescreen(FADE_TO_BLACK)
-        special(HealPlayerParty)
-        playfanfare(MUS_HEAL)
-        delay(80)
-        fadescreen(FADE_FROM_BLACK)
+        goto(Common_Eventscript_Inn_Heal)
         msgbox(format("You and your pokemon feel refreshed!"))
         releaseall
         end

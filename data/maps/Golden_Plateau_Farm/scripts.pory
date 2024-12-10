@@ -16,7 +16,7 @@ script Golden_Plateau_Farm_OnTransition{
 script Golden_Plateau_Farm_Gaius {
     lock
     faceplayer
-    if(var(VAR_CHAPTER_1)==0){
+    if(var(VAR_CHAPTER_1)==2){
         goto(Golden_Plateau_Farm_GetBerries)
     }
     else{
@@ -25,7 +25,7 @@ script Golden_Plateau_Farm_Gaius {
 }
 
 script Golden_Plateau_Farm_GetBerries {
-    setvar(VAR_CHAPTER_1, 1)
+    setvar(VAR_CHAPTER_1, 3)
     setvar(VAR_DANIA_STATE, 1)
     msgbox(Golden_Plateau_Farm_Greeting)
     waitmessage
@@ -81,7 +81,7 @@ script Golden_Plateau_Farm_GetBerries {
     msgbox(Golden_Plateau_Farm_HandOverBerries)
     closemessage
     playfanfare(MUS_OBTAIN_ITEM)
-    msgbox("Obtained a satchel with berries!")
+    giveitem(ITEM_BERRY_SATCHEL)
     waitmessage
     release 
 
