@@ -126,7 +126,7 @@
       "y": 5,
       "elevation": 0,
       "var": "VAR_CHAPTER_1",
-      "var_value": "4",
+      "var_value": "3",
       "script": "WC_Infirmary_DayTwo"
     },
     {
@@ -135,7 +135,7 @@
       "y": 6,
       "elevation": 0,
       "var": "VAR_CHAPTER_1",
-      "var_value": "4",
+      "var_value": "3",
       "script": "WC_Infirmary_DayTwo"
     },
     {
@@ -144,7 +144,7 @@
       "y": 7,
       "elevation": 0,
       "var": "VAR_CHAPTER_1",
-      "var_value": "4",
+      "var_value": "3",
       "script": "WC_Infirmary_DayTwo"
     }
   ],

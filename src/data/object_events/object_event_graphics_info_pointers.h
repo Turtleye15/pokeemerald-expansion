@@ -238,10 +238,13 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Lugia;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_HoOh;
 
 //New npcs
+//Major npcs
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Cecile;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Dania;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Isabell;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Isaria;
+
+//Other npcs
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CommonerMan1;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CommonerMan2;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CommonerWoman1;
@@ -250,6 +253,7 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CommonerOld
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CommonerOldWoman;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CommonerBoy;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CommonerGirl;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_WhitecliffGuard;
 
 // Begin pokemon event objects
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PokeBall;
@@ -507,10 +511,13 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_OW_MON] =                   &gObjectEventGraphicsInfo_Follower,
 
     //New NPCs
+    //Major NPCs
     [OBJ_EVENT_GFX_CECILE] =                   &gObjectEventGraphicsInfo_Cecile,
     [OBJ_EVENT_GFX_DANIA] =                    &gObjectEventGraphicsInfo_Dania,
     [OBJ_EVENT_GFX_ISABELL] =                  &gObjectEventGraphicsInfo_Isabell,
     [OBJ_EVENT_GFX_ISARIA] =                   &gObjectEventGraphicsInfo_Isaria,
+
+    //Other NPCs
     [OBJ_EVENT_GFX_COMMONER_MAN_1] =           &gObjectEventGraphicsInfo_CommonerMan1,
     [OBJ_EVENT_GFX_COMMONER_MAN_2] =           &gObjectEventGraphicsInfo_CommonerMan2,
     [OBJ_EVENT_GFX_COMMONER_WOMAN_1] =         &gObjectEventGraphicsInfo_CommonerWoman1,
@@ -519,6 +526,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_COMMONER_OLD_WOMAN] =       &gObjectEventGraphicsInfo_CommonerOldWoman,
     [OBJ_EVENT_GFX_COMMONER_BOY] =           &gObjectEventGraphicsInfo_CommonerBoy,
     [OBJ_EVENT_GFX_COMMONER_GIRL] =           &gObjectEventGraphicsInfo_CommonerGirl,
+    [OBJ_EVENT_GFX_WHITECLIFF_GUARD] =           &gObjectEventGraphicsInfo_WhitecliffGuard,
 };
 
 const struct ObjectEventGraphicsInfo *const gMauvilleOldManGraphicsInfoPointers[] = {

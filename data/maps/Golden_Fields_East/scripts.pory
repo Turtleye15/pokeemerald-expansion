@@ -6,7 +6,23 @@ script Golden_Fields_OnTransition{
     call(Update_DaniaLocation)
 }
 
+script Golden_Fields_TrainerAriana {
+    trainerbattle_single(TRAINER_ARIANA, Golden_Fields_ArianaIntro, Golden_Fields_ArianaOutro)
+    msgbox(Golden_Fields_ArianaPostBattle, MSGBOX_NPC)
+    end
+}
 
+text Golden_Fields_ArianaIntro {
+    "Hey there! Let's have a battle!"
+}
+
+text Golden_Fields_ArianaOutro {
+    "Dang, not strong enough"
+}
+
+text Golden_Fields_ArianaPostBattle {
+    "'t was fun though!"
+}
 
 
 script Golden_Fields_Sign1 {

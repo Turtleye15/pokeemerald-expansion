@@ -367,7 +367,6 @@ const struct TrainerClass gTrainerClasses[TRAINER_CLASS_COUNT] =
     TRAINER_CLASS(BUG_CATCHER, "BUG CATCHER", 4),
     TRAINER_CLASS(PKMN_RANGER, "{PKMN} RANGER", 12),
     TRAINER_CLASS(MAGMA_LEADER, "MAGMA LEADER", 20, ITEM_MASTER_BALL),
-    TRAINER_CLASS(LASS, "LASS", 4),
     TRAINER_CLASS(YOUNG_COUPLE, "YOUNG COUPLE", 8),
     TRAINER_CLASS(OLD_COUPLE, "OLD COUPLE", 10),
     TRAINER_CLASS(SIS_AND_BRO, "SIS AND BRO", 3),
@@ -379,7 +378,16 @@ const struct TrainerClass gTrainerClasses[TRAINER_CLASS_COUNT] =
     TRAINER_CLASS(PIKE_QUEEN, "PIKE QUEEN"),
     TRAINER_CLASS(PYRAMID_KING, "PYRAMID KING"),
     TRAINER_CLASS(RS_PROTAG, "{PKMN} TRAINER"),
+
+    //Trainer classes for GTHC
+    //Major trainers
     TRAINER_CLASS(HEIRESS, "Heiress", 1, ITEM_LUXURY_BALL),
+    TRAINER_CLASS(SERVANT, "Servant", 1, ITEM_DUSK_BALL),
+    TRAINER_CLASS(CAPTAIN, "Captain",1, ITEM_QUICK_BALL),
+
+    //other classes
+    TRAINER_CLASS(LASS, "Lass"),
+    TRAINER_CLASS(GUARD, "Guard"),
 };
 
 static void (* const sTurnActionsFuncsTable[])(void) =

@@ -149,6 +149,7 @@ script ConfirmPlayerMon{
         speakername("Isabell")
         msgbox(MyNameIs)
         closemessage
+        removefieldmugshot
         setobjectmovementtype(isabell, MOVEMENT_TYPE_FACE_RIGHT)
         closemessage
         release
@@ -300,6 +301,7 @@ script IsabellBattleOver{
     msgbox(WC_Infirmary_ThePresent)
     questmenu(QUEST_MENU_SET_ACTIVE, QUEST_CHAPTER_1)
     subquestmenu(QUEST_MENU_COMPLETE_QUEST, QUEST_CHAPTER_1, SUB_QUEST_1)
+    removefieldmugshot
     closemessage
     release 
     end
@@ -383,7 +385,6 @@ script WC_Infirmary_GetBerries {
 
 script WC_Infirmary_DeliverBerries {
     removeitem(ITEM_BERRY_SATCHEL)
-    setvar(VAR_CHAPTER_1,4)
     speakername("Isabell")
     msgbox(WC_Infirmary_BerryDelivery)
     waitmessage
@@ -403,14 +404,14 @@ script WC_Infirmary_DeliverBerries {
     fadescreen(FADE_TO_BLACK)
     warpsilent(MAP_WHITECLIFF_CASTLE_INFIRMARY,9,3)
     setflag(FLAG_ISABELL_LOCATION_INFIRMARY)
-    removeobject(isabell)
-    delay(80)
+    hideobjectat(isabell, MAP_WHITECLIFF_CASTLE_INFIRMARY)
+    delay(240)
     fadescreen(FADE_FROM_BLACK)
-    
+    release
 }
 
 text WC_Infirmary_BerryDelivery {
-    "{CREATE_MUGSHOT MUGSHOT_DANIA EMOTE_NORMAL}There you are. Do you have\neverything I sent you to collect?\p"
+    "{CREATE_MUGSHOT MUGSHOT_ISABELL EMOTE_NORMAL}There you are. Do you have\neverything I sent you to collect?\p"
     "⋯\n Wonderful. That's all for now.\p"
     "Did you enjoy the walk around the\ncastle?"
 }
@@ -425,20 +426,23 @@ text WC_Infirmary_Altitude {
 }
 
 text WC_Infirmary_Dania {
-    "Oh, you've met our cavalry captain?\nI assumed she'd already left for\lher next mission"
+    "Oh, you've met our cavalry captain?\nI assumed she'd already left for\lher next mission.\p"
     "I should've expected she would stall\nthings out⋯ typical."
 }
 
 script WC_Infirmary_DayTwo {
-
+    setvar(VAR_CHAPTER_1,4)
+    lock
     speakername("Isabell")
     msgbox("-ve nobody else who can help-\n⋯\l-ne, I'll get them-")
-    waitmessage
+    closemessage
+    delay(120)
     setobjectxyperm(isabell, 13,9)
-    clearflag(FLAG_ISABELL_LOCATION_INFIRMARY)
+    showobjectat(isabell, MAP_WHITECLIFF_CASTLE_INFIRMARY)
     playse(SE_DOOR)
     addobject(isabell)
     applymovement(isabell, moves(walk_up*3, face_left))
+    waitmovement(isabell)
     // speakername("Isabell")
     // msgbox("{CREATE_MUGSHOT MUGSHOT_DANIA EMOTE_NORMAL}Hey. I need your help")
     closemessage
