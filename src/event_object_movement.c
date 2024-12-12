@@ -512,7 +512,7 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     // New NPCs
     {gObjectEventPal_WhitecliffMain,        OBJ_EVENT_PAL_TAG_WHITECLIFF},
     {gObjectEventPal_Commoner,              OBJ_EVENT_PAL_TAG_COMMONER},
-    {gObjectEventPal_WhitecliffGuard,       OBJ_EVENT_PAL_TAG_WHITECLIFF_GUARD}
+    {gObjectEventPal_WhitecliffGuard,       OBJ_EVENT_PAL_TAG_WHITECLIFF_GUARD},
 #if OW_FOLLOWERS_POKEBALLS
     {gObjectEventPal_MasterBall,            OBJ_EVENT_PAL_TAG_BALL_MASTER},
     {gObjectEventPal_UltraBall,             OBJ_EVENT_PAL_TAG_BALL_ULTRA},

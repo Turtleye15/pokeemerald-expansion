@@ -1,5 +1,177 @@
 mapscripts Whitecliff_Castlle_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: WhiteCliff_Castle_OnTransition
+    MAP_SCRIPT_ON_FRAME_TABLE [
+        VAR_CHAPTER_1, 6: Whitecliff_Castle_ForcePlayerHelp
+    ]
+}
 
+const player = OBJ_EVENT_ID_PLAYER
+const isabell = 11
+const cecile = 8
+
+script WhiteCliff_Castle_OnTransition {
+    call(Update_IsabellLocation)
+    if(var(VAR_CHAPTER_1)==6){
+        clearflag(FLAG_CECILE_LOCATION_CASTLE)
+        setobjectxyperm(cecile, 41, 17)
+        setobjectmovementtype(cecile, MOVEMENT_TYPE_FACE_UP)
+    }
+}
+
+
+script Whitecliff_Castle_ForcePlayerHelp {
+    lockall
+    setvar(VAR_CHAPTER_1, 7)
+    speakername("???")
+    msgbox("{CREATE_MUGSHOT MUGSHOT_CECILE EMOTE_NORMAL}Well, lookie here. They've got some\ngood timing!")
+    closemessage
+    applymovement(cecile, moves(walk_left*2, face_up))
+    applymovement(isabell, moves(face_left))
+    waitmovement(cecile)
+    speakername("???")
+    msgbox("{CREATE_MUGSHOT MUGSHOT_CECILE EMOTE_NORMAL}Hey hey, come here. No need to be\nafraid of me.")
+    waitmessage
+    removefieldmugshot
+    speakername("Isabell")
+    msgbox("{CREATE_MUGSHOT MUGSHOT_ISABELL EMOTE_NORMAL}It's fine, {PLAYER}.")
+    closemessage
+    applymovement(player, moves(walk_down))
+    waitmovement(player)
+    
+    speakername("???")
+    msgbox("I saw you run around the castle\nyesterday⋯ So you're Isabell's\lnew toy? Must be nice.")
+    waitmessage
+    playse(SE_LEDGE)
+    applymovement(cecile, moves(jump_in_place_up))
+    speakername("Cecile")
+    msgbox("Oh, how uncivilized of me, I haven't\neven introduced myself! I'm Cecile.\p"
+            "Nice to meet you, {PLAYER}.\nI hope we'll get along well, hehe")
+    closemessage
+    speakername("Isabell")
+    msgbox("Cecile. Stop it. You're just making them\nconfused.")
+    waitmessage
+    applymovement(isabell, moves(walk_left))
+    applymovement(player, moves(face_right))
+    waitmovement(isabell)
+    msgbox("I've got one more task for you\nbefore I can let you go.\p"
+            "We've got report that some children\nhave gone missing.\p"
+            "Normally I wouldn't ask outsiders to\nhelp⋯ but there have been other\lincidents today too.\p"
+            "It's too many to be a coincidence,\nbut my current priority is to get\lthe citizens back to safety.\p"
+            "I need you to work with Cecile to\nlocate and bring back the kids.")
+    goto(Whitecliff_Castle_RescueChoice)
+}
+
+script Whitecliff_Castle_RescueChoice {
+    dynmultipush("Sure thing!", 0)
+    dynmultipush("Fine, but what's in it for me?", 1)
+    if(var(VAR_TEMP_0)==0){
+        dynmultipush("What if I say no?", 2)
+    }
+    dynmultistack(0,0, TRUE, 6, FALSE, 0, DYN_MULTICHOICE_CB_NONE)
+    switch(var(VAR_RESULT)){
+        case 0: goto(Whitecliff_Castle_Agree)
+        case 1: goto(Whitecliff_Castle_Compensation)
+        case 2: goto(Whitecliff_Castle_Reject)
+    }
+}
+
+script Whitecliff_Castle_Agree{
+    msgbox("Good, thank you for accepting. I'll make sure it is worth your while")
+    closemessage
+    goto(Whitecliff_Castle_AfterChoice)
+}
+
+script Whitecliff_Castle_Compensation {
+    msgbox("Well, besides a payment, I'll get a\ngood word for you in with my\lparents.\p"
+            "As long as you succeed.")
+    closemessage
+    goto(Whitecliff_Castle_AfterChoice)
+}
+
+script Whitecliff_Castle_Reject {
+    msgbox("Well, if you don't agree I'll have\nyou imprisoned for not following\la royal's orders.\p"
+            "Justー trust me, helping out will be\nbeneficial for you too.")
+    waitmessage
+    setvar(VAR_TEMP_0, 1)
+    goto (Whitecliff_Castle_RescueChoice)
+}
+
+script Whitecliff_Castle_AfterChoice{
+    applymovement(cecile, moves(face_right))
+    speakername("Cecile")
+    msgbox("See! I knew they'd help. Nobody can\nresist you, ofcourse.")
+    waitmessage
+    applymovement(player, moves(face_down))
+    playse(SE_LEDGE)
+    applymovement(cecile, moves(face_up, jump_in_place_up))
+    waitmovement(cecile)
+    msgbox("I've already scoped out where the\nkids could be taken to.\p" 
+            "But there's too many ruffians for me\nto take on alone. I need someone to\lprovide a distraction.\p")
+    waitmessage
+    applymovement(cecile, moves(walk_down, face_up))
+    waitmovement(cecile)
+    msgbox("Meet me at the Calcite Caves. Don't\nkeep me waiting! I won't be nice if\lyou forget about me!")
+    applymovement(cecile, moves(walk_right, walk_down*6))
+    waitmovement(cecile)
+    setflag(FLAG_CECILE_LOCATION_CASTLE)
+    removeobject(cecile)
+    releaseall
+    end
+}
+
+movement CecileLeave {
+
+}
+
+
+script WC_GuardLeft {
+    lock
+    faceplayer
+    msgbox(WC_GuardLeft_NoEntry)
+    closemessage
+    release
+}
+
+script WC_GuardLeft_Halt {
+    lock
+    playse(SE_PIN)
+    applymovement(9, moves(emote_exclamation_mark, face_right))
+    msgbox(WC_GuardLeft_NoEntry)
+    closemessage
+    applymovement(player, moves(walk_down))
+    applymovement(9, moves(face_down))
+    waitmovement(0)
+    release
+    end
+}
+
+text WC_GuardLeft_NoEntry {
+    "Hold it. No entry beyond this point."
+}
+
+script WC_GuardRight {
+    lock
+    faceplayer
+    msgbox(WC_GuardLeft_NoEntry)
+    closemessage
+    release
+}
+
+script WC_GuardRight_Halt {
+    lock
+    playse(SE_PIN)
+    applymovement(10, moves(emote_exclamation_mark, face_left))
+    msgbox(WC_GuardRight_NoEntry)
+    closemessage
+    applymovement(player, moves(walk_down))
+    applymovement(10, moves(face_down))
+    waitmovement(0)
+    release
+    end
+}
+
+text WC_GuardRight_NoEntry {
+    "Sorry kid, can't let ye through\nwithout an official invitation"
 }
 
 script WC_CliffGirl {

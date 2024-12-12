@@ -1,6 +1,6 @@
 mapscripts Whitecliff_Castle_Infirmary_MapScripts {
     MAP_SCRIPT_ON_LOAD: Whitecliff_Infirmary_OnLoad
-    // MAP_SCRIPT_ON_TRANSITION: Whitecliff_Infirmary_OnTransition
+    MAP_SCRIPT_ON_TRANSITION: Whitecliff_Infirmary_OnTransition
 }
 
 //VAR_CHAPTER_1:
@@ -22,6 +22,10 @@ script Whitecliff_Infirmary_OnLoad {
     elif(var(VAR_CHAPTER_1) == 1) {
         setobjectxyperm(isabell, 5,6)
     }
+}
+
+script Whitecliff_Infirmary_OnTransition {
+    call(Update_IsabellLocation)
 }
 
 
@@ -356,12 +360,10 @@ script Infirmary_IsabellTalk{
     faceplayer
     switch (var(VAR_CHAPTER_1)){
         case 0:
-        case 1:
-            goto(IsabellBeforeStarterGet)
-        case 2:
-            goto(WC_Infirmary_GetBerries)
-        case 3:
-            goto(WC_Infirmary_DeliverBerries)
+        case 1: goto(IsabellBeforeStarterGet)
+        case 2: goto(WC_Infirmary_GetBerries)
+        case 3: goto(WC_Infirmary_DeliverBerries)
+        case 4: goto(WC_Infirmary_AskForRest)
         }
     }
 
@@ -385,6 +387,7 @@ script WC_Infirmary_GetBerries {
 
 script WC_Infirmary_DeliverBerries {
     removeitem(ITEM_BERRY_SATCHEL)
+    setvar(VAR_CHAPTER_1, 4)
     speakername("Isabell")
     msgbox(WC_Infirmary_BerryDelivery)
     waitmessage
@@ -399,20 +402,43 @@ script WC_Infirmary_DeliverBerries {
     
     }
     waitmessage
-    msgbox("Allright, you should get some rest.\nI'll wake you up in a couple of\lhours.")
+
+}
+
+script WC_Infirmary_AskForRest {
+    msgbox("{DESTROY_MUGSHOT}Would you like to take a break?", MSGBOX_YESNO)
+    if(var(VAR_RESULT)==TRUE){
+        goto(WC_Infirmary_RestForNextDay)
+    }
+    else{
+        msgbox("{CREATE_MUGSHOT MUGSHOT_ISABELL EMOTE_NORMAL}Let me know when you're feeling\ntired.")
+    closemessage
+    release
+    }
+}
+
+script WC_Infirmary_RestForNextDay{
+    
+    msgbox("Allright then, go get some rest.\nI'll wake you up in a couple of\lhours.")
+    closemessage
     removefieldmugshot
     fadescreen(FADE_TO_BLACK)
-    warpsilent(MAP_WHITECLIFF_CASTLE_INFIRMARY,9,3)
+    setvar(VAR_CHAPTER_1,5)
+    setflag(FLAG_REMOVE_WARP_FADE)
     setflag(FLAG_ISABELL_LOCATION_INFIRMARY)
     hideobjectat(isabell, MAP_WHITECLIFF_CASTLE_INFIRMARY)
-    delay(240)
-    fadescreen(FADE_FROM_BLACK)
+    setvar(VAR_ISABELL_STATE, 1)
+    delay(60)
+    msgbox("Some time later...")
+    closemessage
+    warpsilent(MAP_WHITECLIFF_CASTLE_INFIRMARY,9,3)
     release
+    end
 }
 
 text WC_Infirmary_BerryDelivery {
     "{CREATE_MUGSHOT MUGSHOT_ISABELL EMOTE_NORMAL}There you are. Do you have\neverything I sent you to collect?\p"
-    "⋯\n Wonderful. That's all for now.\p"
+    "⋯\nWonderful. That's all for now.\p"
     "Did you enjoy the walk around the\ncastle?"
 }
 
@@ -431,22 +457,15 @@ text WC_Infirmary_Dania {
 }
 
 script WC_Infirmary_DayTwo {
-    setvar(VAR_CHAPTER_1,4)
     lock
+    setvar(VAR_CHAPTER_1, 6)
+    speakername("???")
+    msgbox("-sy with other things.")
+    waitmessage
     speakername("Isabell")
-    msgbox("-ve nobody else who can help-\n⋯\l-ne, I'll get them-")
+    msgbox("Fine, have it your way.")
     closemessage
-    delay(120)
-    setobjectxyperm(isabell, 13,9)
-    showobjectat(isabell, MAP_WHITECLIFF_CASTLE_INFIRMARY)
-    playse(SE_DOOR)
-    addobject(isabell)
-    applymovement(isabell, moves(walk_up*3, face_left))
-    waitmovement(isabell)
-    // speakername("Isabell")
-    // msgbox("{CREATE_MUGSHOT MUGSHOT_DANIA EMOTE_NORMAL}Hey. I need your help")
-    closemessage
-    release
+
 }
 
 

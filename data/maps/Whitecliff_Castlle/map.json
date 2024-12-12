@@ -127,7 +127,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Whitecliff_Cecile",
-      "flag": "0"
+      "flag": "FLAG_CECILE_LOCATION_CASTLE"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_WHITECLIFF_GUARD",
@@ -139,7 +139,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "WC_GuardLeft",
       "flag": "0"
     },
     {
@@ -152,8 +152,21 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "WC_GuardRight",
       "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ISABELL",
+      "x": 41,
+      "y": 16,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_ISABELL_LOCATION_CASTLE"
     }
   ],
   "warp_events": [
@@ -208,7 +221,24 @@
     }
   ],
   "coord_events": [
-
+    {
+      "type": "trigger",
+      "x": 32,
+      "y": 9,
+      "elevation": 0,
+      "var": "FLAG_WHITECLIFF_GUARDS",
+      "var_value": "0",
+      "script": "WC_GuardLeft_Halt"
+    },
+    {
+      "type": "trigger",
+      "x": 33,
+      "y": 9,
+      "elevation": 0,
+      "var": "FLAG_WHITECLIFF_GUARDS",
+      "var_value": "0",
+      "script": "WC_GuardRight_Halt"
+    }
   ],
   "bg_events": [
     {

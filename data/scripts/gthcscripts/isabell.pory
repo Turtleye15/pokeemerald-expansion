@@ -1,0 +1,21 @@
+//Isabell states: VAR_ISABELL_STATE
+//0: In infirmary
+//1: In Whitecliff Castle (outside)
+script Update_IsabellLocation{
+        switch(var(VAR_ISABELL_STATE)){
+        case 0:
+            goto(Isabell_Script_MoveToInfirmary)
+        case 1:
+            goto(Isabell_Script_MoveToWhitecliffCastle)
+    }
+}
+
+script Isabell_Script_MoveToInfirmary {
+    clearflag(FLAG_ISABELL_LOCATION_INFIRMARY)
+    setflag(FLAG_ISABELL_LOCATION_CASTLE)
+}
+
+script Isabell_Script_MoveToWhitecliffCastle {
+    clearflag(FLAG_ISABELL_LOCATION_CASTLE)
+    setflag(FLAG_ISABELL_LOCATION_INFIRMARY)
+}

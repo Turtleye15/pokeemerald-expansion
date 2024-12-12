@@ -4620,6 +4620,16 @@
       "secondary_tileset": "gTileset_whitecliff_interior_secondary",
       "border_filepath": "data/layouts/Golden_Plateau_Farm_F2/border.bin",
       "blockdata_filepath": "data/layouts/Golden_Plateau_Farm_F2/map.bin"
+    },
+    {
+      "id": "LAYOUT_CALCITE_CAVES",
+      "name": "CalciteCaves_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/CalciteCaves/border.bin",
+      "blockdata_filepath": "data/layouts/CalciteCaves/map.bin"
     }
   ]
 }

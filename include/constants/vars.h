@@ -264,13 +264,15 @@
 #define VAR_ROXANNE_CALL_STEP_COUNTER                    0x40F4
 #define VAR_SCOTT_BF_CALL_STEP_COUNTER                   0x40F5
 #define VAR_RIVAL_RAYQUAZA_CALL_STEP_COUNTER             0x40F6
+
+
 #define VAR_INFIRMARY_INTRO                              0x40F7 
 #define VAR_PICKED_STARTER                               0x40F8 
 #define VAR_CAN_HEAL                                     0x40F9 
 #define VAR_DANIA_STATE                                  0x40FA // Dania location tracker
 #define VAR_WHITECLIFF_BOTANY                               0x40FB // Whitecliff Botany quest tracker
 #define VAR_CHAPTER_1                                    0x40FC // Chapter 1 tracker
-#define VAR_UNUSED_0x40FD                                0x40FD // Unused Var
+#define VAR_ISABELL_STATE                                0x40FD // Unused Var
 #define VAR_UNUSED_0x40FE                                0x40FE // Unused Var
 #define VAR_UNUSED_0x40FF                                0x40FF // Unused Var
 

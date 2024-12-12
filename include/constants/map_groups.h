@@ -9,6 +9,7 @@
 #define MAP_WHITECLIFF_CASTLLE (0 | (0 << 8))
 #define MAP_GOLDEN_FIELDS_EAST (1 | (0 << 8))
 #define MAP_WHITE_CLIFFS       (2 | (0 << 8))
+#define MAP_CALCITE_CAVES      (3 | (0 << 8))
 
 // gMapGroup_WhitecliffCastle_Indoor
 #define MAP_WHITECLIFF_CASTLE_INFIRMARY   (0 | (1 << 8))
