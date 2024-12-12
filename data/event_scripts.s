@@ -1077,7 +1077,7 @@ EventScript_VsSeekerChargingDone::
 	.include "data/text/save.inc"
 	.include "data/text/birch_speech.inc"
 
-	.include "data/scripts/dania.inc"
+	.include "data/scripts/gthcscripts/dania.inc"
 	.include "data/scripts/global_scripts.inc"
 
 	.include "data/maps/Whitecliff_Castle_Infirmary/scripts.inc"
