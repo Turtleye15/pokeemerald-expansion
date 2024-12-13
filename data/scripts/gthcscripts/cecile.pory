@@ -1,0 +1,19 @@
+//Isabell states: VAR_ISABELL_STATE
+//0: In infirmary
+//1: In Whitecliff Castle (outside)
+script Update_CecileLocation{
+        switch(var(VAR_CECILE_STATE)){
+        case 0: goto(Cecile_Script_MoveToWhitecliffCastle)
+        case 1: goto(Cecile_Script_MoveToWhiteCliffs)
+    }
+}
+
+script Cecile_Script_MoveToWhitecliffCastle {
+    clearflag(FLAG_CECILE_LOCATION_CASTLE)
+    setflag(FLAG_CECILE_LOCATION_WHITE_CLIFFS)
+}
+
+script Cecile_Script_MoveToWhiteCliffs {
+    clearflag(FLAG_CECILE_LOCATION_WHITE_CLIFFS)
+    setflag(FLAG_CECILE_LOCATION_CASTLE)
+}

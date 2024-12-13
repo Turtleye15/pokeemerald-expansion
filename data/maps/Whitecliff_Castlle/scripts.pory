@@ -11,6 +11,7 @@ const cecile = 8
 
 script WhiteCliff_Castle_OnTransition {
     call(Update_IsabellLocation)
+    call(Update_CecileLocation)
     if(var(VAR_CHAPTER_1)==6){
         clearflag(FLAG_CECILE_LOCATION_CASTLE)
         setobjectxyperm(cecile, 41, 17)
@@ -22,18 +23,22 @@ script WhiteCliff_Castle_OnTransition {
 script Whitecliff_Castle_ForcePlayerHelp {
     lockall
     setvar(VAR_CHAPTER_1, 7)
+    playse(SE_PIN)
+    applymovement(cecile, moves(emote_exclamation_mark,delay_16*2, walk_left, face_up))
+    waitmovement(cecile)
     speakername("???")
     msgbox("{CREATE_MUGSHOT MUGSHOT_CECILE EMOTE_NORMAL}Well, lookie here. They've got some\ngood timing!")
     closemessage
-    applymovement(cecile, moves(walk_left*2, face_up))
+    applymovement(cecile, moves(walk_left, face_up))
     applymovement(isabell, moves(face_left))
     waitmovement(cecile)
     speakername("???")
     msgbox("{CREATE_MUGSHOT MUGSHOT_CECILE EMOTE_NORMAL}Hey hey, come here. No need to be\nafraid of me.")
     waitmessage
     removefieldmugshot
+    applymovement(player,moves(face_right))
     speakername("Isabell")
-    msgbox("{CREATE_MUGSHOT MUGSHOT_ISABELL EMOTE_NORMAL}It's fine, {PLAYER}.")
+    msgbox("{CREATE_MUGSHOT MUGSHOT_ISABELL EMOTE_NORMAL}Sigh⋯ It's fine, {PLAYER}.")
     closemessage
     applymovement(player, moves(walk_down))
     waitmovement(player)
@@ -45,10 +50,10 @@ script Whitecliff_Castle_ForcePlayerHelp {
     applymovement(cecile, moves(jump_in_place_up))
     speakername("Cecile")
     msgbox("Oh, how uncivilized of me, I haven't\neven introduced myself! I'm Cecile.\p"
-            "Nice to meet you, {PLAYER}.\nI hope we'll get along well, hehe")
+            "Nice to meet you, {PLAYER}.\nI hope we'll get along well, hehe.")
     closemessage
     speakername("Isabell")
-    msgbox("Cecile. Stop it. You're just making them\nconfused.")
+    msgbox("Cecile. Stop it. You're just weirding\nthem out.")
     waitmessage
     applymovement(isabell, moves(walk_left))
     applymovement(player, moves(face_right))
@@ -56,7 +61,7 @@ script Whitecliff_Castle_ForcePlayerHelp {
     msgbox("I've got one more task for you\nbefore I can let you go.\p"
             "We've got report that some children\nhave gone missing.\p"
             "Normally I wouldn't ask outsiders to\nhelp⋯ but there have been other\lincidents today too.\p"
-            "It's too many to be a coincidence,\nbut my current priority is to get\lthe citizens back to safety.\p"
+            "It's too many to be a coincidence,\nbut my current priority is to get\lour citizens back to safety.\p"
             "I need you to work with Cecile to\nlocate and bring back the kids.")
     goto(Whitecliff_Castle_RescueChoice)
 }
@@ -76,7 +81,7 @@ script Whitecliff_Castle_RescueChoice {
 }
 
 script Whitecliff_Castle_Agree{
-    msgbox("Good, thank you for accepting. I'll make sure it is worth your while")
+    msgbox("Good, thank you for accepting. I'll\nmake sure it is worth your while.")
     closemessage
     goto(Whitecliff_Castle_AfterChoice)
 }
@@ -97,7 +102,8 @@ script Whitecliff_Castle_Reject {
 }
 
 script Whitecliff_Castle_AfterChoice{
-    applymovement(cecile, moves(face_right))
+    playse(SE_PIN)
+    applymovement(cecile, moves(face_right, emote_heart))
     speakername("Cecile")
     msgbox("See! I knew they'd help. Nobody can\nresist you, ofcourse.")
     waitmessage
@@ -106,21 +112,34 @@ script Whitecliff_Castle_AfterChoice{
     applymovement(cecile, moves(face_up, jump_in_place_up))
     waitmovement(cecile)
     msgbox("I've already scoped out where the\nkids could be taken to.\p" 
-            "But there's too many ruffians for me\nto take on alone. I need someone to\lprovide a distraction.\p")
+            "But there's too many ruffians for me\nto take on alone. I need someone to\lprovide a distraction.")
     waitmessage
     applymovement(cecile, moves(walk_down, face_up))
     waitmovement(cecile)
     msgbox("Meet me at the Calcite Caves. Don't\nkeep me waiting! I won't be nice if\lyou forget about me!")
+    closemessage
     applymovement(cecile, moves(walk_right, walk_down*6))
-    waitmovement(cecile)
+    delay(60)
+    applymovement(player, moves(face_right))
+    speakername("Isabell")
+    msgbox("In case you haven't been there yet,\nthe cave entrance is to the south\lof the castle.")
+    closemessage
+    setvar(VAR_CECILE_STATE, 1)
     setflag(FLAG_CECILE_LOCATION_CASTLE)
     removeobject(cecile)
+    applymovement(isabell, moves(walk_up, walk_left*4, face_right))
+    waitmovement(isabell)
+    applymovement(player, moves(face_left))
+    speakername("Isabell")
+    msgbox("⋯\pTake care.")
+    closemessage
+    applymovement(isabell, moves(walk_left*3, walk_up*5))
+    waitmovement(isabell)
+    clearflag(FLAG_ISABELL_LOCATION_CASTLE)
+    setvar(VAR_ISABELL_STATE, 2)
+    removeobject(isabell)
     releaseall
     end
-}
-
-movement CecileLeave {
-
 }
 
 

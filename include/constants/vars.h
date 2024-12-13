@@ -273,7 +273,7 @@
 #define VAR_WHITECLIFF_BOTANY                               0x40FB // Whitecliff Botany quest tracker
 #define VAR_CHAPTER_1                                    0x40FC // Chapter 1 tracker
 #define VAR_ISABELL_STATE                                0x40FD // Unused Var
-#define VAR_UNUSED_0x40FE                                0x40FE // Unused Var
+#define VAR_CECILE_STATE                                0x40FE // Unused Var
 #define VAR_UNUSED_0x40FF                                0x40FF // Unused Var
 
 #define VARS_END                                         0x40FF

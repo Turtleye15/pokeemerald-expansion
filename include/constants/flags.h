@@ -53,7 +53,7 @@
 #define FLAG_REMOVE_WARP_FADE    0x28 // Unused Flag
 #define FLAG_ISABELL_LOCATION_CASTLE    0x29 // Unused Flag
 #define FLAG_CECILE_LOCATION_CASTLE    0x2A // Unused Flag
-#define FLAG_UNUSED_0x02B    0x2B // Unused Flag
+#define FLAG_CECILE_LOCATION_WHITE_CLIFFS    0x2B // Unused Flag
 #define FLAG_UNUSED_0x02C    0x2C // Unused Flag
 #define FLAG_UNUSED_0x02D    0x2D // Unused Flag
 #define FLAG_UNUSED_0x02E    0x2E // Unused Flag

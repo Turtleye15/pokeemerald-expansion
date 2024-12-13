@@ -4,10 +4,12 @@ mapscripts White_Cliffs_MapScripts {
 
 script White_Cliffs_OnTransition {
     call(Update_DaniaLocation)
+    call(Update_CecileLocation)
     //Other Onload stuff
 }
 
 const dania = 1
+const cecile = 2
 
 script White_Cliffs_Dania_Statue {
     lock 
@@ -19,6 +21,28 @@ script White_Cliffs_Dania_Statue {
     waitmovement(dania)
     release 
     return
+}
+
+script White_Cliffs_Cecile_Waiting {
+    lock
+    speakername("Cecile")
+    msgbox("{CREATE_MUGSHOT MUGSHOT_CECILE EMOTE_ALT}I have a little challenge\nfor you first")
+    trainerbattle_single(TRAINER_CECILE_1, White_Cliffs_CecileIntro, White_Cliffs_CecileOutro, White_Cliffs_CecileAfterBattle)
+}
+
+text White_Cliffs_CecileIntro{
+    "Hehee, lets go!"
+}
+
+text White_Cliffs_CecileOutro{
+    "Mmhm looks like my intuition was\ncorrect! Wonderful!"
+}
+
+script White_Cliffs_CecileAfterBattle {
+    msgbox("{CREATE_MUGSHOT MUGSHOT_CECILE EMOTE_ALT}Okay, here's the plan. You're going down first.\p")
+    closemessage
+    release
+    end
 }
 
 text White_Cliffs_Dania_Memorial {

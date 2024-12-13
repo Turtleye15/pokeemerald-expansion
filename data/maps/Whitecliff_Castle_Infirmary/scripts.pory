@@ -8,7 +8,6 @@ mapscripts Whitecliff_Castle_Infirmary_MapScripts {
 //1: Player triggers Isabell walking in
 //2: Player recieved starter, recieved berry quest
 //3: Player obtained berries
-//4: Player handed over berries, started next day
 
 const isabell = 1
 const player = OBJ_EVENT_ID_PLAYER
@@ -406,6 +405,7 @@ script WC_Infirmary_DeliverBerries {
 }
 
 script WC_Infirmary_AskForRest {
+    speakername("Isabell")
     msgbox("{DESTROY_MUGSHOT}Would you like to take a break?", MSGBOX_YESNO)
     if(var(VAR_RESULT)==TRUE){
         goto(WC_Infirmary_RestForNextDay)
@@ -428,6 +428,7 @@ script WC_Infirmary_RestForNextDay{
     setflag(FLAG_ISABELL_LOCATION_INFIRMARY)
     hideobjectat(isabell, MAP_WHITECLIFF_CASTLE_INFIRMARY)
     setvar(VAR_ISABELL_STATE, 1)
+    special(HealPlayerParty)
     delay(60)
     msgbox("Some time later...")
     closemessage
