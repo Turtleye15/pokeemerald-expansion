@@ -60,6 +60,14 @@ White_Cliff_Memorial::
 	return
 
 
+Golden_Fields_TrainerLinnet::
+# 58 "data/maps/White_Cliffs/scripts.pory"
+	trainerbattle_single TRAINER_LINNET, Golden_Fields_LinnetIntro, Golden_Fields_LinnetOutro
+# 59 "data/maps/White_Cliffs/scripts.pory"
+	msgbox Golden_Fields_LinnetPostBattle, MSGBOX_NPC
+	end
+
+
 # 20 "data/maps/White_Cliffs/scripts.pory"
 White_Cliffs_Dania_Statue_Movement_0:
 # 20 "data/maps/White_Cliffs/scripts.pory"
@@ -97,3 +105,15 @@ White_Cliffs_CecileOutro::
 White_Cliffs_Dania_Memorial::
 # 48 "data/maps/White_Cliffs/scripts.pory"
 	.string "{CREATE_MUGSHOT MUGSHOT_DANIA EMOTE_NORMAL}Oh. Hello.\pI'm not in the mood for a chat\nright now.$"
+
+Golden_Fields_LinnetIntro::
+# 63 "data/maps/White_Cliffs/scripts.pory"
+	.string "Hey there! Let's have a battle!$"
+
+Golden_Fields_LinnetOutro::
+# 67 "data/maps/White_Cliffs/scripts.pory"
+	.string "Dang, not strong enough$"
+
+Golden_Fields_LinnetPostBattle::
+# 71 "data/maps/White_Cliffs/scripts.pory"
+	.string "'t was fun though!$"

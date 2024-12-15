@@ -52,3 +52,22 @@ text White_Cliffs_Dania_Memorial {
 script White_Cliff_Memorial {
     msgbox("Let the departed ride on forever on\ntheir final journey to peace.", MSGBOX_SIGN)
 }
+
+//trainers
+script Golden_Fields_TrainerLinnet {
+    trainerbattle_single(TRAINER_LINNET, Golden_Fields_LinnetIntro, Golden_Fields_LinnetOutro)
+    msgbox(Golden_Fields_LinnetPostBattle, MSGBOX_NPC)
+    end
+}
+
+text Golden_Fields_LinnetIntro {
+    "Hey there! Let's have a battle!"
+}
+
+text Golden_Fields_LinnetOutro {
+    "Dang, not strong enough"
+}
+
+text Golden_Fields_LinnetPostBattle {
+    "'t was fun though!"
+}

@@ -277,6 +277,8 @@ extern const u32 gBattleTerrainPalette_StadiumPhoebe[];
 extern const u32 gBattleTerrainPalette_StadiumGlacia[];
 extern const u32 gBattleTerrainPalette_StadiumDrake[];
 extern const u32 gBattleTerrainPalette_StadiumWallace[];
+
+//
 extern const u32 gBattleTerrainTiles_Castle[];
 extern const u32 gBattleTerrainTilemap_Castle[];
 extern const u32 gBattleTerrainAnimTiles_Castle[];

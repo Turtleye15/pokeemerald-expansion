@@ -1125,3 +1125,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/Golden_Plateau_Farm_F2/scripts.inc"
 
 	.include "data/maps/CalciteCaves/scripts.inc"
+
+	.include "data/maps/CalciteCavesWest/scripts.inc"

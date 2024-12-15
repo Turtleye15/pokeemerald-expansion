@@ -305,6 +305,18 @@ const u32 gTrainerPalette_Dania[] = INCBIN_U32("graphics/trainers/front_pics/dan
 const u32 gTrainerFrontPic_WhitecliffGuard[] = INCBIN_U32("graphics/trainers/front_pics/guard_whitecliff.4bpp.lz");
 const u32 gTrainerPalette_WhitecliffGuard[] = INCBIN_U32("graphics/trainers/front_pics/guard_whitecliff.gbapal.lz");
 
+const u32 gTrainerFrontPic_RangerM[] = INCBIN_U32("graphics/trainers/front_pics/ranger_male.4bpp.lz");
+const u32 gTrainerPalette_RangerM[] = INCBIN_U32("graphics/trainers/front_pics/ranger_male.gbapal.lz");
+
+const u32 gTrainerFrontPic_RangerF[] = INCBIN_U32("graphics/trainers/front_pics/ranger_female.4bpp.lz");
+const u32 gTrainerPalette_RangerF[] = INCBIN_U32("graphics/trainers/front_pics/ranger_female.gbapal.lz");
+
+const u32 gTrainerFrontPic_BotanistM[] = INCBIN_U32("graphics/trainers/front_pics/botanist_male.4bpp.lz");
+const u32 gTrainerPalette_BotanistM[] = INCBIN_U32("graphics/trainers/front_pics/botanist_male.gbapal.lz");
+
+const u32 gTrainerFrontPic_BotanistF[] = INCBIN_U32("graphics/trainers/front_pics/botanist_female.4bpp.lz");
+const u32 gTrainerPalette_BotanistF[] = INCBIN_U32("graphics/trainers/front_pics/botanist_female.gbapal.lz");
+
 
 // The first two parameters invoke a front pic and palette by
 // calling a "TRAINER_PIC" constant (e.g. TRAINER_PIC_HIKER), and
@@ -419,6 +431,10 @@ const struct TrainerSprite gTrainerSprites[] =
     TRAINER_SPRITE(DANIA, Dania),
     TRAINER_SPRITE(CECILE, Cecile),
     TRAINER_SPRITE(WHITECLIFF_GUARD, WhitecliffGuard),
+    TRAINER_SPRITE(BOTANIST_MALE, BotanistM),
+    TRAINER_SPRITE(BOTANIST_FEMALE, BotanistF),
+    TRAINER_SPRITE(RANGER_MALE, RangerM),
+    TRAINER_SPRITE(RANGER_FEMALE, RangerF),
 };
 
 static const union AnimCmd sAnimCmd_Hoenn[] =

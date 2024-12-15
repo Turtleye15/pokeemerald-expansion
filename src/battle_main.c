@@ -388,6 +388,8 @@ const struct TrainerClass gTrainerClasses[TRAINER_CLASS_COUNT] =
     //other classes
     TRAINER_CLASS(LASS, "Lass"),
     TRAINER_CLASS(GUARD, "Guard"),
+    TRAINER_CLASS(RANGER, "Ranger"),
+    TRAINER_CLASS(BOTANIST, "Botanist"),
 };
 
 static void (* const sTurnActionsFuncsTable[])(void) =

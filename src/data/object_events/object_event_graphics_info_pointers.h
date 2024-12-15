@@ -254,6 +254,10 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CommonerOld
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CommonerBoy;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CommonerGirl;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_WhitecliffGuard;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BotanistM;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BotanistF;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RangerM;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RangerF;
 
 // Begin pokemon event objects
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PokeBall;
@@ -527,6 +531,10 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_COMMONER_BOY] =           &gObjectEventGraphicsInfo_CommonerBoy,
     [OBJ_EVENT_GFX_COMMONER_GIRL] =           &gObjectEventGraphicsInfo_CommonerGirl,
     [OBJ_EVENT_GFX_WHITECLIFF_GUARD] =           &gObjectEventGraphicsInfo_WhitecliffGuard,
+    [OBJ_EVENT_GFX_BOTANIST_MALE] =             &gObjectEventGraphicsInfo_BotanistM,
+    [OBJ_EVENT_GFX_BOTANIST_FEMALE] =           &gObjectEventGraphicsInfo_BotanistF,
+    [OBJ_EVENT_GFX_RANGER_FEMALE] =             &gObjectEventGraphicsInfo_RangerF,
+    [OBJ_EVENT_GFX_RANGER_MALE] =               &gObjectEventGraphicsInfo_RangerM,
 };
 
 const struct ObjectEventGraphicsInfo *const gMauvilleOldManGraphicsInfoPointers[] = {

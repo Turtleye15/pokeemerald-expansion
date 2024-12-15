@@ -112,7 +112,11 @@
 #define TRAINER_PIC_DANIA                 94
 #define TRAINER_PIC_CECILE                95
 #define TRAINER_PIC_WHITECLIFF_GUARD      96
-#define TRAINER_PIC_COUNT                 97
+#define TRAINER_PIC_RANGER_MALE           97
+#define TRAINER_PIC_RANGER_FEMALE         98
+#define TRAINER_PIC_BOTANIST_MALE         99
+#define TRAINER_PIC_BOTANIST_FEMALE       100
+#define TRAINER_PIC_COUNT                 101
 
 // The player back pics are assumed to alternate according to the gender values (MALE/FEMALE)
 #define TRAINER_BACK_PIC_BRENDAN                0
@@ -359,7 +363,9 @@
 #define TRAINER_CLASS_SERVANT        0x43
 #define TRAINER_CLASS_CAPTAIN        0x44
 #define TRAINER_CLASS_GUARD          0x45
-#define TRAINER_CLASS_COUNT          0x46
+#define TRAINER_CLASS_RANGER         0x46
+#define TRAINER_CLASS_BOTANIST       0x47
+#define TRAINER_CLASS_COUNT          0x48
 
 #define TRAINER_ENCOUNTER_MUSIC_MALE         0 // standard male encounter music
 #define TRAINER_ENCOUNTER_MUSIC_FEMALE       1 // standard female encounter music

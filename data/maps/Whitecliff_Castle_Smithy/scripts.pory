@@ -1,0 +1,10 @@
+mapscripts Whitecliff_Castle_Smithy_MapScripts {
+    
+}
+
+const isaria = 1
+
+script Whitecliff_Smithy_Isaria {
+    speakername("Isaria")
+    msgbox("{CREATE_MUGSHOT MUGSHOT_ISARIA EMOTE_NORMAL}Whoa! Watch your step, I'm working!",MSGBOX_NPC)
+}

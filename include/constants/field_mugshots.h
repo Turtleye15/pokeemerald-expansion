@@ -6,7 +6,8 @@
 #define MUGSHOT_ISABELL 2
 #define MUGSHOT_DANIA 3
 #define MUGSHOT_CECILE 4
-#define MUGSHOT_COUNT 5
+#define MUGSHOT_ISARIA 5
+#define MUGSHOT_COUNT 6
 
 #define EMOTE_NORMAL  0
 #define EMOTE_ALT     1

@@ -79,22 +79,7 @@ AquaHideout_B1F_EventScript_DefeatedElectrode2::
 // 	msgbox AquaHideout_B1F_Text_Grunt2PostBattle, MSGBOX_AUTOCLOSE
 // 	end
 
-AquaHideout_B1F_EventScript_Grunt2Defeated::
-	special PlayerFaceTrainerAfterBattle
-	waitmovement 0
-	msgbox AquaHideout_B1F_Text_Grunt2PostBattle, MSGBOX_DEFAULT
-	release
-	end
 
-AquaHideout_B1F_EventScript_Grunt3::
-	trainerbattle_single TRAINER_GRUNT_AQUA_HIDEOUT_3, AquaHideout_B1F_Text_Grunt3Intro, AquaHideout_B1F_Text_Grunt3Defeat, AquaHideout_B1F_EventScript_Grunt3Defeated
-	msgbox AquaHideout_B1F_Text_Grunt3PostBattle, MSGBOX_AUTOCLOSE
-	end
-
-AquaHideout_B1F_EventScript_Grunt3Defeated::
-	msgbox AquaHideout_B1F_Text_Grunt3PostBattle, MSGBOX_DEFAULT
-	release
-	end
 
 AquaHideout_B1F_EventScript_Grunt5::
 	trainerbattle_single TRAINER_GRUNT_AQUA_HIDEOUT_5, AquaHideout_B1F_Text_Grunt5Intro, AquaHideout_B1F_Text_Grunt5Defeat

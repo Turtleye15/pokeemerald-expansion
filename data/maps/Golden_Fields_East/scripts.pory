@@ -6,6 +6,14 @@ script Golden_Fields_OnTransition{
     call(Update_DaniaLocation)
 }
 
+
+
+
+script Golden_Fields_Sign1 {
+    msgbox("Farm placeholder text", MSGBOX_SIGN)
+}
+
+//Trainer Battles
 script Golden_Fields_TrainerAriana {
     trainerbattle_single(TRAINER_ARIANA, Golden_Fields_ArianaIntro, Golden_Fields_ArianaOutro)
     msgbox(Golden_Fields_ArianaPostBattle, MSGBOX_NPC)
@@ -24,7 +32,57 @@ text Golden_Fields_ArianaPostBattle {
     "'t was fun though!"
 }
 
+script Golden_Fields_TrainerRory {
+    trainerbattle_single(TRAINER_RORY, Golden_Fields_RoryIntro, Golden_Fields_RoryOutro)
+    msgbox(Golden_Fields_RoryPostBattle, MSGBOX_NPC)
+    end
+}
 
-script Golden_Fields_Sign1 {
-    msgbox("Farm placeholder text", MSGBOX_SIGN)
+text Golden_Fields_RoryIntro {
+    "Hey there! Let's have a battle!"
+}
+
+text Golden_Fields_RoryOutro {
+    "Dang, not strong enough"
+}
+
+text Golden_Fields_RoryPostBattle {
+    "'t was fun though!"
+}
+
+script Golden_Fields_TrainerReuben {
+
+    trainerbattle_single(TRAINER_REUBEN, Golden_Fields_ReubenIntro, Golden_Fields_ReubenOutro)
+    msgbox(Golden_Fields_ReubenPostBattle, MSGBOX_NPC)
+    end
+}
+
+text Golden_Fields_ReubenIntro {
+    "Hey there! Let's have a battle!"
+}
+
+text Golden_Fields_ReubenOutro {
+    "Dang, not strong enough"
+}
+
+text Golden_Fields_ReubenPostBattle {
+    "'t was fun though!"
+}
+
+script Golden_Fields_TrainerRenaud {
+    trainerbattle_single(TRAINER_RENAUD, Golden_Fields_RenaudIntro, Golden_Fields_RenaudOutro)
+    msgbox(Golden_Fields_RenaudPostBattle, MSGBOX_NPC)
+    end
+}
+
+text Golden_Fields_RenaudIntro {
+    "Hey there! Let's have a battle!"
+}
+
+text Golden_Fields_RenaudOutro {
+    "Dang, not strong enough"
+}
+
+text Golden_Fields_RenaudPostBattle {
+    "'t was fun though!"
 }

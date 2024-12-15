@@ -185,6 +185,12 @@ const u32 gObjectEventPic_CommonerGirl[] = INCBIN_U32("graphics/object_events/pi
 const u16 gObjectEventPal_WhitecliffGuard[] = INCBIN_U16("graphics/object_events/palettes/guard_whitecliff.gbapal");
 const u32 gObjectEventPic_WhitecliffGuard[] = INCBIN_U32("graphics/object_events/pics/people/guard_whitecliff.4bpp");
 
+const u16 gObjectEventPal_NPCGreen[] = INCBIN_U16("graphics/object_events/palettes/npc_green.gbapal");
+const u32 gObjectEventPic_BotanistM[] = INCBIN_U32("graphics/object_events/pics/people/botanist_male.4bpp");
+const u32 gObjectEventPic_BotanistF[] = INCBIN_U32("graphics/object_events/pics/people/botanist_female.4bpp");
+const u32 gObjectEventPic_RangerM[] = INCBIN_U32("graphics/object_events/pics/people/ranger_male.4bpp");
+const u32 gObjectEventPic_RangerF[] = INCBIN_U32("graphics/object_events/pics/people/ranger_female.4bpp");
+
 const u16 gObjectEventPal_Kyogre[] = INCBIN_U16("graphics/object_events/palettes/kyogre.gbapal");
 const u16 gObjectEventPal_KyogreReflection[] = INCBIN_U16("graphics/object_events/palettes/kyogre_reflection.gbapal");
 const u16 gObjectEventPal_Groudon[] = INCBIN_U16("graphics/object_events/palettes/groudon.gbapal");

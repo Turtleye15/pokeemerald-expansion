@@ -16,6 +16,9 @@ static const u32 sFieldMugshotGfx_CecileNormal[] = INCBIN_U32("graphics/field_mu
 static const u32 sFieldMugshotGfx_CecileAlt[] = INCBIN_U32("graphics/field_mugshots/cecile/alt.4bpp.lz");
 static const u16 sFieldMugshotPal_Cecile[] = INCBIN_U16("graphics/field_mugshots/cecile/normal.gbapal");
 
+static const u32 sFieldMugshotGfx_IsariaNormal[] = INCBIN_U32("graphics/field_mugshots/isaria/normal.4bpp.lz");
+static const u16 sFieldMugshotPal_Isaria[] = INCBIN_U16("graphics/field_mugshots/isaria/normal.gbapal");
+
 struct MugshotGfx
 {
     const u32 *gfx;
@@ -74,6 +77,15 @@ static const struct MugshotGfx sFieldMugshots[MUGSHOT_COUNT][EMOTE_COUNT] =
         {
             .gfx = sFieldMugshotGfx_CecileAlt,
             .pal = sFieldMugshotPal_Cecile,
+        },
+    },
+
+    [MUGSHOT_ISARIA] =
+       {
+        [EMOTE_NORMAL] =
+        {
+            .gfx = sFieldMugshotGfx_IsariaNormal,
+            .pal = sFieldMugshotPal_Isaria,
         },
     },
 };

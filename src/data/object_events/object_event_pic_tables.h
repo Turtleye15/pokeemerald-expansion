@@ -369,6 +369,22 @@ static const struct SpriteFrameImage sPicTable_WhitecliffGuard[] = {
     overworld_ascending_frames(gObjectEventPic_WhitecliffGuard, 2, 4),
 };
 
+static const struct SpriteFrameImage sPicTable_BotanistM[] = {
+    overworld_ascending_frames(gObjectEventPic_BotanistM, 2, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_BotanistF[] = {
+    overworld_ascending_frames(gObjectEventPic_BotanistF, 2, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_RangerM[] = {
+    overworld_ascending_frames(gObjectEventPic_RangerM, 2, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_RangerF[] = {
+    overworld_ascending_frames(gObjectEventPic_RangerF, 2, 4),
+};
+
 
 static const struct SpriteFrameImage sPicTable_UnusedNatuDoll[] = {
     obj_frame_tiles(gObjectEventPic_UnusedNatuDoll),

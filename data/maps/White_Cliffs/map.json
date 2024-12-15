@@ -52,7 +52,7 @@
       "flag": "FLAG_CECILE_LOCATION_WHITE_CLIFFS"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_ANABEL",
+      "graphics_id": "OBJ_EVENT_GFX_BOTANIST_FEMALE",
       "x": 31,
       "y": 14,
       "elevation": 0,
@@ -61,12 +61,32 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "5",
-      "script": "NULL",
+      "script": "Golden_Fields_TrainerLinnet",
       "flag": "0"
     }
   ],
   "warp_events": [
-
+    {
+      "x": 10,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_CALCITE_CAVES",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 8,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_CALCITE_CAVES",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 9,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_CALCITE_CAVES",
+      "dest_warp_id": "0"
+    }
   ],
   "coord_events": [
     {
