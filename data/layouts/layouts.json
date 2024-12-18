@@ -4627,7 +4627,7 @@
       "width": 70,
       "height": 29,
       "primary_tileset": "gTileset_calcite_caves",
-      "secondary_tileset": "gTileset_golden_plateau",
+      "secondary_tileset": "gTileset_calcite_secondary",
       "border_filepath": "data/layouts/CalciteCaves/border.bin",
       "blockdata_filepath": "data/layouts/CalciteCaves/map.bin"
     },
