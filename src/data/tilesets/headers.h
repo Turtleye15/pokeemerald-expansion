@@ -913,3 +913,14 @@ const struct Tileset gTileset_golden_plateau =
     .metatileAttributes = gMetatileAttributes_golden_plateau,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_calcite_caves =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_calcite_caves,
+    .palettes = gTilesetPalettes_calcite_caves,
+    .metatiles = gMetatiles_calcite_caves,
+    .metatileAttributes = gMetatileAttributes_calcite_caves,
+    .callback = NULL,
+};

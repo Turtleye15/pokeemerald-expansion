@@ -33,17 +33,17 @@ Golden_Fields_TrainerRory::
 
 
 Golden_Fields_TrainerReuben::
-# 55 "data/maps/Golden_Fields_East/scripts.pory"
+# 54 "data/maps/Golden_Fields_East/scripts.pory"
 	trainerbattle_single TRAINER_REUBEN, Golden_Fields_ReubenIntro, Golden_Fields_ReubenOutro
-# 56 "data/maps/Golden_Fields_East/scripts.pory"
+# 55 "data/maps/Golden_Fields_East/scripts.pory"
 	msgbox Golden_Fields_ReubenPostBattle, MSGBOX_NPC
 	end
 
 
 Golden_Fields_TrainerRenaud::
-# 73 "data/maps/Golden_Fields_East/scripts.pory"
+# 72 "data/maps/Golden_Fields_East/scripts.pory"
 	trainerbattle_single TRAINER_RENAUD, Golden_Fields_RenaudIntro, Golden_Fields_RenaudOutro
-# 74 "data/maps/Golden_Fields_East/scripts.pory"
+# 73 "data/maps/Golden_Fields_East/scripts.pory"
 	msgbox Golden_Fields_RenaudPostBattle, MSGBOX_NPC
 	end
 
@@ -77,25 +77,25 @@ Golden_Fields_RoryPostBattle::
 	.string "'t was fun though!$"
 
 Golden_Fields_ReubenIntro::
-# 60 "data/maps/Golden_Fields_East/scripts.pory"
+# 59 "data/maps/Golden_Fields_East/scripts.pory"
 	.string "Hey there! Let's have a battle!$"
 
 Golden_Fields_ReubenOutro::
-# 64 "data/maps/Golden_Fields_East/scripts.pory"
+# 63 "data/maps/Golden_Fields_East/scripts.pory"
 	.string "Dang, not strong enough$"
 
 Golden_Fields_ReubenPostBattle::
-# 68 "data/maps/Golden_Fields_East/scripts.pory"
+# 67 "data/maps/Golden_Fields_East/scripts.pory"
 	.string "'t was fun though!$"
 
 Golden_Fields_RenaudIntro::
-# 78 "data/maps/Golden_Fields_East/scripts.pory"
+# 77 "data/maps/Golden_Fields_East/scripts.pory"
 	.string "Hey there! Let's have a battle!$"
 
 Golden_Fields_RenaudOutro::
-# 82 "data/maps/Golden_Fields_East/scripts.pory"
+# 81 "data/maps/Golden_Fields_East/scripts.pory"
 	.string "Dang, not strong enough$"
 
 Golden_Fields_RenaudPostBattle::
-# 86 "data/maps/Golden_Fields_East/scripts.pory"
+# 85 "data/maps/Golden_Fields_East/scripts.pory"
 	.string "'t was fun though!$"

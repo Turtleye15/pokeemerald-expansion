@@ -51,7 +51,6 @@ text Golden_Fields_RoryPostBattle {
 }
 
 script Golden_Fields_TrainerReuben {
-
     trainerbattle_single(TRAINER_REUBEN, Golden_Fields_ReubenIntro, Golden_Fields_ReubenOutro)
     msgbox(Golden_Fields_ReubenPostBattle, MSGBOX_NPC)
     end

@@ -44,7 +44,7 @@ script Whitecliff_Castle_ForcePlayerHelp {
     waitmovement(player)
     
     speakername("???")
-    msgbox("I saw you run around the castle\nyesterday⋯ So you're Isabell's\lnew toy? Must be nice.")
+    msgbox("{CREATE_MUGSHOT MUGSHOT_CECILE EMOTE_NORMAL}I saw you run around the castle\nyesterday⋯ So you're Isabell's\lnew toy? Must be nice.")
     waitmessage
     playse(SE_LEDGE)
     applymovement(cecile, moves(jump_in_place_up))
@@ -53,7 +53,7 @@ script Whitecliff_Castle_ForcePlayerHelp {
             "Nice to meet you, {PLAYER}.\nI hope we'll get along well, hehe.")
     closemessage
     speakername("Isabell")
-    msgbox("Cecile. Stop it. You're just weirding\nthem out.")
+    msgbox("{CREATE_MUGSHOT MUGSHOT_ISABELL EMOTE_NORMAL}Cecile. Stop it. You're just weirding\nthem out.")
     waitmessage
     applymovement(isabell, moves(walk_left))
     applymovement(player, moves(face_right))
@@ -68,7 +68,7 @@ script Whitecliff_Castle_ForcePlayerHelp {
 
 script Whitecliff_Castle_RescueChoice {
     dynmultipush("Sure thing!", 0)
-    dynmultipush("Fine, but what's in it for me?", 1)
+    dynmultipush("Fine, what's in it for me?", 1)
     if(var(VAR_TEMP_0)==0){
         dynmultipush("What if I say no?", 2)
     }
@@ -105,7 +105,7 @@ script Whitecliff_Castle_AfterChoice{
     playse(SE_PIN)
     applymovement(cecile, moves(face_right, emote_heart))
     speakername("Cecile")
-    msgbox("See! I knew they'd help. Nobody can\nresist you, ofcourse.")
+    msgbox("{CREATE_MUGSHOT MUGSHOT_CECILE EMOTE_NORMAL}See! I knew they'd help. Nobody can\nresist you, ofcourse.")
     waitmessage
     applymovement(player, moves(face_down))
     playse(SE_LEDGE)
@@ -116,22 +116,26 @@ script Whitecliff_Castle_AfterChoice{
     waitmessage
     applymovement(cecile, moves(walk_down, face_up))
     waitmovement(cecile)
-    msgbox("Meet me at the Calcite Caves. Don't\nkeep me waiting! I won't be nice if\lyou forget about me!")
+    msgbox("Meet me at the Calcite Caves. Don't\nkeep me waiting!\p"
+            "{CREATE_MUGSHOT MUGSHOT_CECILE EMOTE_ALT}I won't be nice if you forget\nabout me!")
     closemessage
     applymovement(cecile, moves(walk_right, walk_down*6))
     delay(60)
     applymovement(player, moves(face_right))
     speakername("Isabell")
-    msgbox("In case you haven't been there yet,\nthe cave entrance is to the south\lof the castle.")
+    msgbox("{CREATE_MUGSHOT MUGSHOT_ISABELL EMOTE_NORMAL}In case you haven't been there yet,\nthe cave entrance is to the south\lof the castle.")
     closemessage
     setvar(VAR_CECILE_STATE, 1)
     setflag(FLAG_CECILE_LOCATION_CASTLE)
     removeobject(cecile)
-    applymovement(isabell, moves(walk_up, walk_left*4, face_right))
+    applymovement(isabell, moves(walk_up, walk_left*4))
     waitmovement(isabell)
     applymovement(player, moves(face_left))
     speakername("Isabell")
-    msgbox("⋯\pTake care.")
+    msgbox("{CREATE_MUGSHOT MUGSHOT_ISABELL EMOTE_NORMAL}⋯")
+    waitmessage
+    applymovement(isabell, moves(face_right))
+    msgbox("Take care")
     closemessage
     applymovement(isabell, moves(walk_left*3, walk_up*5))
     waitmovement(isabell)

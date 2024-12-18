@@ -212,239 +212,245 @@ Whitecliff_Castle_AfterChoice::
 	waitmovement 8
 # 119 "data/maps/Whitecliff_Castlle/scripts.pory"
 	msgbox Whitecliff_Castle_AfterChoice_Text_2
-# 120 "data/maps/Whitecliff_Castlle/scripts.pory"
-	closemessage
 # 121 "data/maps/Whitecliff_Castlle/scripts.pory"
-	applymovement 8, Whitecliff_Castle_AfterChoice_Movement_4
+	closemessage
 # 122 "data/maps/Whitecliff_Castlle/scripts.pory"
-	delay 60
+	applymovement 8, Whitecliff_Castle_AfterChoice_Movement_4
 # 123 "data/maps/Whitecliff_Castlle/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Whitecliff_Castle_ForcePlayerHelp_Movement_3
+	delay 60
 # 124 "data/maps/Whitecliff_Castlle/scripts.pory"
-	speakername Whitecliff_Castle_ForcePlayerHelp_Text_3
+	applymovement OBJ_EVENT_ID_PLAYER, Whitecliff_Castle_ForcePlayerHelp_Movement_3
 # 125 "data/maps/Whitecliff_Castlle/scripts.pory"
-	msgbox Whitecliff_Castle_AfterChoice_Text_3
-# 126 "data/maps/Whitecliff_Castlle/scripts.pory"
-	closemessage
-# 127 "data/maps/Whitecliff_Castlle/scripts.pory"
-	setvar VAR_CECILE_STATE, 1
-# 128 "data/maps/Whitecliff_Castlle/scripts.pory"
-	setflag FLAG_CECILE_LOCATION_CASTLE
-# 129 "data/maps/Whitecliff_Castlle/scripts.pory"
-	removeobject 8
-# 130 "data/maps/Whitecliff_Castlle/scripts.pory"
-	applymovement 11, Whitecliff_Castle_AfterChoice_Movement_5
-# 131 "data/maps/Whitecliff_Castlle/scripts.pory"
-	waitmovement 11
-# 132 "data/maps/Whitecliff_Castlle/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Whitecliff_Castle_ForcePlayerHelp_Movement_2
-# 133 "data/maps/Whitecliff_Castlle/scripts.pory"
 	speakername Whitecliff_Castle_ForcePlayerHelp_Text_3
-# 134 "data/maps/Whitecliff_Castlle/scripts.pory"
-	msgbox Whitecliff_Castle_AfterChoice_Text_4
-# 135 "data/maps/Whitecliff_Castlle/scripts.pory"
+# 126 "data/maps/Whitecliff_Castlle/scripts.pory"
+	msgbox Whitecliff_Castle_AfterChoice_Text_3
+# 127 "data/maps/Whitecliff_Castlle/scripts.pory"
 	closemessage
-# 136 "data/maps/Whitecliff_Castlle/scripts.pory"
-	applymovement 11, Whitecliff_Castle_AfterChoice_Movement_6
-# 137 "data/maps/Whitecliff_Castlle/scripts.pory"
+# 128 "data/maps/Whitecliff_Castlle/scripts.pory"
+	setvar VAR_CECILE_STATE, 1
+# 129 "data/maps/Whitecliff_Castlle/scripts.pory"
+	setflag FLAG_CECILE_LOCATION_CASTLE
+# 130 "data/maps/Whitecliff_Castlle/scripts.pory"
+	removeobject 8
+# 131 "data/maps/Whitecliff_Castlle/scripts.pory"
+	applymovement 11, Whitecliff_Castle_AfterChoice_Movement_5
+# 132 "data/maps/Whitecliff_Castlle/scripts.pory"
 	waitmovement 11
+# 133 "data/maps/Whitecliff_Castlle/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, Whitecliff_Castle_ForcePlayerHelp_Movement_2
+# 134 "data/maps/Whitecliff_Castlle/scripts.pory"
+	speakername Whitecliff_Castle_ForcePlayerHelp_Text_3
+# 135 "data/maps/Whitecliff_Castlle/scripts.pory"
+	msgbox Whitecliff_Castle_AfterChoice_Text_4
+# 136 "data/maps/Whitecliff_Castlle/scripts.pory"
+	waitmessage
+# 137 "data/maps/Whitecliff_Castlle/scripts.pory"
+	applymovement 11, Whitecliff_Castle_ForcePlayerHelp_Movement_3
 # 138 "data/maps/Whitecliff_Castlle/scripts.pory"
-	clearflag FLAG_ISABELL_LOCATION_CASTLE
+	msgbox Whitecliff_Castle_AfterChoice_Text_5
 # 139 "data/maps/Whitecliff_Castlle/scripts.pory"
-	setvar VAR_ISABELL_STATE, 2
+	closemessage
 # 140 "data/maps/Whitecliff_Castlle/scripts.pory"
-	removeobject 11
+	applymovement 11, Whitecliff_Castle_AfterChoice_Movement_6
 # 141 "data/maps/Whitecliff_Castlle/scripts.pory"
+	waitmovement 11
+# 142 "data/maps/Whitecliff_Castlle/scripts.pory"
+	clearflag FLAG_ISABELL_LOCATION_CASTLE
+# 143 "data/maps/Whitecliff_Castlle/scripts.pory"
+	setvar VAR_ISABELL_STATE, 2
+# 144 "data/maps/Whitecliff_Castlle/scripts.pory"
+	removeobject 11
+# 145 "data/maps/Whitecliff_Castlle/scripts.pory"
 	releaseall
 	end
 
 
 WC_GuardLeft::
-# 147 "data/maps/Whitecliff_Castlle/scripts.pory"
-	lock
-# 148 "data/maps/Whitecliff_Castlle/scripts.pory"
-	faceplayer
-# 149 "data/maps/Whitecliff_Castlle/scripts.pory"
-	msgbox WC_GuardLeft_NoEntry
-# 150 "data/maps/Whitecliff_Castlle/scripts.pory"
-	closemessage
 # 151 "data/maps/Whitecliff_Castlle/scripts.pory"
+	lock
+# 152 "data/maps/Whitecliff_Castlle/scripts.pory"
+	faceplayer
+# 153 "data/maps/Whitecliff_Castlle/scripts.pory"
+	msgbox WC_GuardLeft_NoEntry
+# 154 "data/maps/Whitecliff_Castlle/scripts.pory"
+	closemessage
+# 155 "data/maps/Whitecliff_Castlle/scripts.pory"
 	release
 	return
 
 
 WC_GuardLeft_Halt::
-# 155 "data/maps/Whitecliff_Castlle/scripts.pory"
-	lock
-# 156 "data/maps/Whitecliff_Castlle/scripts.pory"
-	playse SE_PIN
-# 157 "data/maps/Whitecliff_Castlle/scripts.pory"
-	applymovement 9, WC_GuardLeft_Halt_Movement_0
-# 158 "data/maps/Whitecliff_Castlle/scripts.pory"
-	msgbox WC_GuardLeft_NoEntry
 # 159 "data/maps/Whitecliff_Castlle/scripts.pory"
-	closemessage
+	lock
 # 160 "data/maps/Whitecliff_Castlle/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Whitecliff_Castle_ForcePlayerHelp_Movement_4
+	playse SE_PIN
 # 161 "data/maps/Whitecliff_Castlle/scripts.pory"
-	applymovement 9, Whitecliff_Castle_AfterChoice_Movement_1
+	applymovement 9, WC_GuardLeft_Halt_Movement_0
 # 162 "data/maps/Whitecliff_Castlle/scripts.pory"
-	waitmovement 0
+	msgbox WC_GuardLeft_NoEntry
 # 163 "data/maps/Whitecliff_Castlle/scripts.pory"
+	closemessage
+# 164 "data/maps/Whitecliff_Castlle/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, Whitecliff_Castle_ForcePlayerHelp_Movement_4
+# 165 "data/maps/Whitecliff_Castlle/scripts.pory"
+	applymovement 9, Whitecliff_Castle_AfterChoice_Movement_1
+# 166 "data/maps/Whitecliff_Castlle/scripts.pory"
+	waitmovement 0
+# 167 "data/maps/Whitecliff_Castlle/scripts.pory"
 	release
 	end
 
 
 WC_GuardRight::
-# 172 "data/maps/Whitecliff_Castlle/scripts.pory"
-	lock
-# 173 "data/maps/Whitecliff_Castlle/scripts.pory"
-	faceplayer
-# 174 "data/maps/Whitecliff_Castlle/scripts.pory"
-	msgbox WC_GuardLeft_NoEntry
-# 175 "data/maps/Whitecliff_Castlle/scripts.pory"
-	closemessage
 # 176 "data/maps/Whitecliff_Castlle/scripts.pory"
+	lock
+# 177 "data/maps/Whitecliff_Castlle/scripts.pory"
+	faceplayer
+# 178 "data/maps/Whitecliff_Castlle/scripts.pory"
+	msgbox WC_GuardLeft_NoEntry
+# 179 "data/maps/Whitecliff_Castlle/scripts.pory"
+	closemessage
+# 180 "data/maps/Whitecliff_Castlle/scripts.pory"
 	release
 	return
 
 
 WC_GuardRight_Halt::
-# 180 "data/maps/Whitecliff_Castlle/scripts.pory"
-	lock
-# 181 "data/maps/Whitecliff_Castlle/scripts.pory"
-	playse SE_PIN
-# 182 "data/maps/Whitecliff_Castlle/scripts.pory"
-	applymovement 10, WC_GuardRight_Halt_Movement_0
-# 183 "data/maps/Whitecliff_Castlle/scripts.pory"
-	msgbox WC_GuardRight_NoEntry
 # 184 "data/maps/Whitecliff_Castlle/scripts.pory"
-	closemessage
+	lock
 # 185 "data/maps/Whitecliff_Castlle/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Whitecliff_Castle_ForcePlayerHelp_Movement_4
+	playse SE_PIN
 # 186 "data/maps/Whitecliff_Castlle/scripts.pory"
-	applymovement 10, Whitecliff_Castle_AfterChoice_Movement_1
+	applymovement 10, WC_GuardRight_Halt_Movement_0
 # 187 "data/maps/Whitecliff_Castlle/scripts.pory"
-	waitmovement 0
+	msgbox WC_GuardRight_NoEntry
 # 188 "data/maps/Whitecliff_Castlle/scripts.pory"
+	closemessage
+# 189 "data/maps/Whitecliff_Castlle/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, Whitecliff_Castle_ForcePlayerHelp_Movement_4
+# 190 "data/maps/Whitecliff_Castlle/scripts.pory"
+	applymovement 10, Whitecliff_Castle_AfterChoice_Movement_1
+# 191 "data/maps/Whitecliff_Castlle/scripts.pory"
+	waitmovement 0
+# 192 "data/maps/Whitecliff_Castlle/scripts.pory"
 	release
 	end
 
 
 WC_CliffGirl::
-# 197 "data/maps/Whitecliff_Castlle/scripts.pory"
-	lock
-# 198 "data/maps/Whitecliff_Castlle/scripts.pory"
-	faceplayer
-# 199 "data/maps/Whitecliff_Castlle/scripts.pory"
-	msgbox WC_text_cliffgirl
-# 200 "data/maps/Whitecliff_Castlle/scripts.pory"
-	closemessage
 # 201 "data/maps/Whitecliff_Castlle/scripts.pory"
+	lock
+# 202 "data/maps/Whitecliff_Castlle/scripts.pory"
+	faceplayer
+# 203 "data/maps/Whitecliff_Castlle/scripts.pory"
+	msgbox WC_text_cliffgirl
+# 204 "data/maps/Whitecliff_Castlle/scripts.pory"
+	closemessage
+# 205 "data/maps/Whitecliff_Castlle/scripts.pory"
 	release
 	return
 
 
 WC_Gardener::
-# 209 "data/maps/Whitecliff_Castlle/scripts.pory"
-	lock
-# 210 "data/maps/Whitecliff_Castlle/scripts.pory"
-	faceplayer
-# 211 "data/maps/Whitecliff_Castlle/scripts.pory"
-	msgbox WC_text_Gardener
-# 212 "data/maps/Whitecliff_Castlle/scripts.pory"
-	closemessage
 # 213 "data/maps/Whitecliff_Castlle/scripts.pory"
+	lock
+# 214 "data/maps/Whitecliff_Castlle/scripts.pory"
+	faceplayer
+# 215 "data/maps/Whitecliff_Castlle/scripts.pory"
+	msgbox WC_text_Gardener
+# 216 "data/maps/Whitecliff_Castlle/scripts.pory"
+	closemessage
+# 217 "data/maps/Whitecliff_Castlle/scripts.pory"
 	release
 	return
 
 
 WC_Shopper::
-# 221 "data/maps/Whitecliff_Castlle/scripts.pory"
-	lock
-# 222 "data/maps/Whitecliff_Castlle/scripts.pory"
-	faceplayer
-# 223 "data/maps/Whitecliff_Castlle/scripts.pory"
-	msgbox WC_text_Shopper
-# 224 "data/maps/Whitecliff_Castlle/scripts.pory"
-	closemessage
 # 225 "data/maps/Whitecliff_Castlle/scripts.pory"
+	lock
+# 226 "data/maps/Whitecliff_Castlle/scripts.pory"
+	faceplayer
+# 227 "data/maps/Whitecliff_Castlle/scripts.pory"
+	msgbox WC_text_Shopper
+# 228 "data/maps/Whitecliff_Castlle/scripts.pory"
+	closemessage
+# 229 "data/maps/Whitecliff_Castlle/scripts.pory"
 	release
 	return
 
 
 WC_Fashiongirl::
-# 232 "data/maps/Whitecliff_Castlle/scripts.pory"
-	lock
-# 233 "data/maps/Whitecliff_Castlle/scripts.pory"
-	faceplayer
-# 234 "data/maps/Whitecliff_Castlle/scripts.pory"
-	msgbox WC_text_Fashion
-# 235 "data/maps/Whitecliff_Castlle/scripts.pory"
-	closemessage
 # 236 "data/maps/Whitecliff_Castlle/scripts.pory"
+	lock
+# 237 "data/maps/Whitecliff_Castlle/scripts.pory"
+	faceplayer
+# 238 "data/maps/Whitecliff_Castlle/scripts.pory"
+	msgbox WC_text_Fashion
+# 239 "data/maps/Whitecliff_Castlle/scripts.pory"
+	closemessage
+# 240 "data/maps/Whitecliff_Castlle/scripts.pory"
 	release
 	return
 
 
 WC_BlacksmithNeighbour::
-# 244 "data/maps/Whitecliff_Castlle/scripts.pory"
-	lock
-# 245 "data/maps/Whitecliff_Castlle/scripts.pory"
-	faceplayer
-# 246 "data/maps/Whitecliff_Castlle/scripts.pory"
-	msgbox WC_text_Neighbour
-# 247 "data/maps/Whitecliff_Castlle/scripts.pory"
-	closemessage
 # 248 "data/maps/Whitecliff_Castlle/scripts.pory"
+	lock
+# 249 "data/maps/Whitecliff_Castlle/scripts.pory"
+	faceplayer
+# 250 "data/maps/Whitecliff_Castlle/scripts.pory"
+	msgbox WC_text_Neighbour
+# 251 "data/maps/Whitecliff_Castlle/scripts.pory"
+	closemessage
+# 252 "data/maps/Whitecliff_Castlle/scripts.pory"
 	release
 	return
 
 
 WC_CrazyGuy::
-# 256 "data/maps/Whitecliff_Castlle/scripts.pory"
-	lock
-# 257 "data/maps/Whitecliff_Castlle/scripts.pory"
-	faceplayer
-# 258 "data/maps/Whitecliff_Castlle/scripts.pory"
-	msgbox WC_text_CrazyGuy
-# 259 "data/maps/Whitecliff_Castlle/scripts.pory"
-	closemessage
 # 260 "data/maps/Whitecliff_Castlle/scripts.pory"
+	lock
+# 261 "data/maps/Whitecliff_Castlle/scripts.pory"
+	faceplayer
+# 262 "data/maps/Whitecliff_Castlle/scripts.pory"
+	msgbox WC_text_CrazyGuy
+# 263 "data/maps/Whitecliff_Castlle/scripts.pory"
+	closemessage
+# 264 "data/maps/Whitecliff_Castlle/scripts.pory"
 	release
 	return
 
 
 Whitecliff_Cecile::
-# 268 "data/maps/Whitecliff_Castlle/scripts.pory"
+# 272 "data/maps/Whitecliff_Castlle/scripts.pory"
 	lock
-# 269 "data/maps/Whitecliff_Castlle/scripts.pory"
-	faceplayer
-# 270 "data/maps/Whitecliff_Castlle/scripts.pory"
-	speakername Whitecliff_Castle_ForcePlayerHelp_Text_6
-# 271 "data/maps/Whitecliff_Castlle/scripts.pory"
-	msgbox Whitecliff_Cecile_Text_0
 # 273 "data/maps/Whitecliff_Castlle/scripts.pory"
-	waitmessage
+	faceplayer
 # 274 "data/maps/Whitecliff_Castlle/scripts.pory"
+	speakername Whitecliff_Castle_ForcePlayerHelp_Text_6
+# 275 "data/maps/Whitecliff_Castlle/scripts.pory"
+	msgbox Whitecliff_Cecile_Text_0
+# 277 "data/maps/Whitecliff_Castlle/scripts.pory"
+	waitmessage
+# 278 "data/maps/Whitecliff_Castlle/scripts.pory"
 	release
 	return
 
 
 WC_Sign_Botanist::
-# 278 "data/maps/Whitecliff_Castlle/scripts.pory"
+# 282 "data/maps/Whitecliff_Castlle/scripts.pory"
 	msgbox WC_Sign_Botanist_Text_0, MSGBOX_SIGN
 	return
 
 
 WC_Sign_Blacksmith::
-# 282 "data/maps/Whitecliff_Castlle/scripts.pory"
+# 286 "data/maps/Whitecliff_Castlle/scripts.pory"
 	msgbox WC_Sign_Blacksmith_Text_0, MSGBOX_SIGN
 	return
 
 
 WC_Sign_Market::
-# 286 "data/maps/Whitecliff_Castlle/scripts.pory"
+# 290 "data/maps/Whitecliff_Castlle/scripts.pory"
 	msgbox WC_Sign_Market_Text_0, MSGBOX_SIGN
 	return
 
@@ -531,73 +537,71 @@ Whitecliff_Castle_AfterChoice_Movement_3:
 	face_up
 	step_end
 
-# 121 "data/maps/Whitecliff_Castlle/scripts.pory"
+# 122 "data/maps/Whitecliff_Castlle/scripts.pory"
 Whitecliff_Castle_AfterChoice_Movement_4:
-# 121 "data/maps/Whitecliff_Castlle/scripts.pory"
+# 122 "data/maps/Whitecliff_Castlle/scripts.pory"
 	walk_right
-# 121 "data/maps/Whitecliff_Castlle/scripts.pory"
+# 122 "data/maps/Whitecliff_Castlle/scripts.pory"
 	walk_down
-# 121 "data/maps/Whitecliff_Castlle/scripts.pory"
+# 122 "data/maps/Whitecliff_Castlle/scripts.pory"
 	walk_down
-# 121 "data/maps/Whitecliff_Castlle/scripts.pory"
+# 122 "data/maps/Whitecliff_Castlle/scripts.pory"
 	walk_down
-# 121 "data/maps/Whitecliff_Castlle/scripts.pory"
+# 122 "data/maps/Whitecliff_Castlle/scripts.pory"
 	walk_down
-# 121 "data/maps/Whitecliff_Castlle/scripts.pory"
+# 122 "data/maps/Whitecliff_Castlle/scripts.pory"
 	walk_down
-# 121 "data/maps/Whitecliff_Castlle/scripts.pory"
+# 122 "data/maps/Whitecliff_Castlle/scripts.pory"
 	walk_down
 	step_end
 
-# 130 "data/maps/Whitecliff_Castlle/scripts.pory"
+# 131 "data/maps/Whitecliff_Castlle/scripts.pory"
 Whitecliff_Castle_AfterChoice_Movement_5:
-# 130 "data/maps/Whitecliff_Castlle/scripts.pory"
+# 131 "data/maps/Whitecliff_Castlle/scripts.pory"
 	walk_up
-# 130 "data/maps/Whitecliff_Castlle/scripts.pory"
+# 131 "data/maps/Whitecliff_Castlle/scripts.pory"
 	walk_left
-# 130 "data/maps/Whitecliff_Castlle/scripts.pory"
+# 131 "data/maps/Whitecliff_Castlle/scripts.pory"
 	walk_left
-# 130 "data/maps/Whitecliff_Castlle/scripts.pory"
+# 131 "data/maps/Whitecliff_Castlle/scripts.pory"
 	walk_left
-# 130 "data/maps/Whitecliff_Castlle/scripts.pory"
+# 131 "data/maps/Whitecliff_Castlle/scripts.pory"
 	walk_left
-# 130 "data/maps/Whitecliff_Castlle/scripts.pory"
-	face_right
 	step_end
 
-# 136 "data/maps/Whitecliff_Castlle/scripts.pory"
+# 140 "data/maps/Whitecliff_Castlle/scripts.pory"
 Whitecliff_Castle_AfterChoice_Movement_6:
-# 136 "data/maps/Whitecliff_Castlle/scripts.pory"
+# 140 "data/maps/Whitecliff_Castlle/scripts.pory"
 	walk_left
-# 136 "data/maps/Whitecliff_Castlle/scripts.pory"
+# 140 "data/maps/Whitecliff_Castlle/scripts.pory"
 	walk_left
-# 136 "data/maps/Whitecliff_Castlle/scripts.pory"
+# 140 "data/maps/Whitecliff_Castlle/scripts.pory"
 	walk_left
-# 136 "data/maps/Whitecliff_Castlle/scripts.pory"
+# 140 "data/maps/Whitecliff_Castlle/scripts.pory"
 	walk_up
-# 136 "data/maps/Whitecliff_Castlle/scripts.pory"
+# 140 "data/maps/Whitecliff_Castlle/scripts.pory"
 	walk_up
-# 136 "data/maps/Whitecliff_Castlle/scripts.pory"
+# 140 "data/maps/Whitecliff_Castlle/scripts.pory"
 	walk_up
-# 136 "data/maps/Whitecliff_Castlle/scripts.pory"
+# 140 "data/maps/Whitecliff_Castlle/scripts.pory"
 	walk_up
-# 136 "data/maps/Whitecliff_Castlle/scripts.pory"
+# 140 "data/maps/Whitecliff_Castlle/scripts.pory"
 	walk_up
 	step_end
 
-# 157 "data/maps/Whitecliff_Castlle/scripts.pory"
+# 161 "data/maps/Whitecliff_Castlle/scripts.pory"
 WC_GuardLeft_Halt_Movement_0:
-# 157 "data/maps/Whitecliff_Castlle/scripts.pory"
+# 161 "data/maps/Whitecliff_Castlle/scripts.pory"
 	emote_exclamation_mark
-# 157 "data/maps/Whitecliff_Castlle/scripts.pory"
+# 161 "data/maps/Whitecliff_Castlle/scripts.pory"
 	face_right
 	step_end
 
-# 182 "data/maps/Whitecliff_Castlle/scripts.pory"
+# 186 "data/maps/Whitecliff_Castlle/scripts.pory"
 WC_GuardRight_Halt_Movement_0:
-# 182 "data/maps/Whitecliff_Castlle/scripts.pory"
+# 186 "data/maps/Whitecliff_Castlle/scripts.pory"
 	emote_exclamation_mark
-# 182 "data/maps/Whitecliff_Castlle/scripts.pory"
+# 186 "data/maps/Whitecliff_Castlle/scripts.pory"
 	face_left
 	step_end
 
@@ -623,7 +627,7 @@ Whitecliff_Castle_ForcePlayerHelp_Text_4:
 
 Whitecliff_Castle_ForcePlayerHelp_Text_5:
 # 47 "data/maps/Whitecliff_Castlle/scripts.pory"
-	.string "I saw you run around the castle\nyesterday⋯ So you're Isabell's\lnew toy? Must be nice.$"
+	.string "{CREATE_MUGSHOT MUGSHOT_CECILE EMOTE_NORMAL}I saw you run around the castle\nyesterday⋯ So you're Isabell's\lnew toy? Must be nice.$"
 
 Whitecliff_Castle_ForcePlayerHelp_Text_6:
 # 51 "data/maps/Whitecliff_Castlle/scripts.pory"
@@ -636,7 +640,7 @@ Whitecliff_Castle_ForcePlayerHelp_Text_7:
 
 Whitecliff_Castle_ForcePlayerHelp_Text_8:
 # 56 "data/maps/Whitecliff_Castlle/scripts.pory"
-	.string "Cecile. Stop it. You're just weirding\nthem out.$"
+	.string "{CREATE_MUGSHOT MUGSHOT_ISABELL EMOTE_NORMAL}Cecile. Stop it. You're just weirding\nthem out.$"
 
 Whitecliff_Castle_ForcePlayerHelp_Text_9:
 # 61 "data/maps/Whitecliff_Castlle/scripts.pory"
@@ -652,7 +656,7 @@ Whitecliff_Castle_RescueChoice_Text_0:
 
 Whitecliff_Castle_RescueChoice_Text_1:
 # 71 "data/maps/Whitecliff_Castlle/scripts.pory"
-	.string "Fine, but what's in it for me?$"
+	.string "Fine, what's in it for me?$"
 
 Whitecliff_Castle_RescueChoice_Text_2:
 # 73 "data/maps/Whitecliff_Castlle/scripts.pory"
@@ -674,7 +678,7 @@ Whitecliff_Castle_Reject_Text_0:
 
 Whitecliff_Castle_AfterChoice_Text_0:
 # 108 "data/maps/Whitecliff_Castlle/scripts.pory"
-	.string "See! I knew they'd help. Nobody can\nresist you, ofcourse.$"
+	.string "{CREATE_MUGSHOT MUGSHOT_CECILE EMOTE_NORMAL}See! I knew they'd help. Nobody can\nresist you, ofcourse.$"
 
 Whitecliff_Castle_AfterChoice_Text_1:
 # 114 "data/maps/Whitecliff_Castlle/scripts.pory"
@@ -683,67 +687,72 @@ Whitecliff_Castle_AfterChoice_Text_1:
 
 Whitecliff_Castle_AfterChoice_Text_2:
 # 119 "data/maps/Whitecliff_Castlle/scripts.pory"
-	.string "Meet me at the Calcite Caves. Don't\nkeep me waiting! I won't be nice if\lyou forget about me!$"
+	.string "Meet me at the Calcite Caves. Don't\nkeep me waiting!\p"
+	.string "{CREATE_MUGSHOT MUGSHOT_CECILE EMOTE_ALT}I won't be nice if you forget\nabout me!$"
 
 Whitecliff_Castle_AfterChoice_Text_3:
-# 125 "data/maps/Whitecliff_Castlle/scripts.pory"
-	.string "In case you haven't been there yet,\nthe cave entrance is to the south\lof the castle.$"
+# 126 "data/maps/Whitecliff_Castlle/scripts.pory"
+	.string "{CREATE_MUGSHOT MUGSHOT_ISABELL EMOTE_NORMAL}In case you haven't been there yet,\nthe cave entrance is to the south\lof the castle.$"
 
 Whitecliff_Castle_AfterChoice_Text_4:
-# 134 "data/maps/Whitecliff_Castlle/scripts.pory"
-	.string "⋯\pTake care.$"
+# 135 "data/maps/Whitecliff_Castlle/scripts.pory"
+	.string "{CREATE_MUGSHOT MUGSHOT_ISABELL EMOTE_NORMAL}⋯$"
+
+Whitecliff_Castle_AfterChoice_Text_5:
+# 138 "data/maps/Whitecliff_Castlle/scripts.pory"
+	.string "Take care$"
 
 Whitecliff_Cecile_Text_0:
-# 271 "data/maps/Whitecliff_Castlle/scripts.pory"
+# 275 "data/maps/Whitecliff_Castlle/scripts.pory"
 	.string "{CREATE_MUGSHOT MUGSHOT_CECILE EMOTE_NORMAL}Hmm? You're new here, aren't you...\p"
 	.string "{CREATE_MUGSHOT MUGSHOT_CECILE EMOTE_ALT}I hope we can get along!$"
 
 WC_Sign_Botanist_Text_0:
-# 278 "data/maps/Whitecliff_Castlle/scripts.pory"
+# 282 "data/maps/Whitecliff_Castlle/scripts.pory"
 	.string "Rowin's Flora.\n A flower for everyone!$"
 
 WC_Sign_Blacksmith_Text_0:
-# 282 "data/maps/Whitecliff_Castlle/scripts.pory"
+# 286 "data/maps/Whitecliff_Castlle/scripts.pory"
 	.string "Whitecliff's finest blacksmith!$"
 
 WC_Sign_Market_Text_0:
-# 286 "data/maps/Whitecliff_Castlle/scripts.pory"
+# 290 "data/maps/Whitecliff_Castlle/scripts.pory"
 	.string "Market days: Wednesday & Thursday$"
 
 WC_GuardLeft_NoEntry::
-# 167 "data/maps/Whitecliff_Castlle/scripts.pory"
+# 171 "data/maps/Whitecliff_Castlle/scripts.pory"
 	.string "Hold it. No entry beyond this point.$"
 
 WC_GuardRight_NoEntry::
-# 192 "data/maps/Whitecliff_Castlle/scripts.pory"
+# 196 "data/maps/Whitecliff_Castlle/scripts.pory"
 	.string "Sorry kid, can't let ye through\nwithout an official invitation$"
 
 WC_text_cliffgirl::
-# 204 "data/maps/Whitecliff_Castlle/scripts.pory"
+# 208 "data/maps/Whitecliff_Castlle/scripts.pory"
 	.string "I love the view up here. I wonder what's\n"
 	.string "on that island on the horizon.$"
 
 WC_text_Gardener::
-# 216 "data/maps/Whitecliff_Castlle/scripts.pory"
+# 220 "data/maps/Whitecliff_Castlle/scripts.pory"
 	.string "Oho, a youngster found our little\n"
 	.string "garden. If you're interested in\l"
 	.string "gardening too, you should talk with my\l"
 	.string "husband! He's inside.$"
 
 WC_text_Shopper::
-# 227 "data/maps/Whitecliff_Castlle/scripts.pory"
+# 231 "data/maps/Whitecliff_Castlle/scripts.pory"
 	.string "I was hoping to buy a batch of time\n"
 	.string "candles, but it seems the candlemaker's\l"
 	.string "not here today$"
 
 WC_text_Fashion::
-# 239 "data/maps/Whitecliff_Castlle/scripts.pory"
+# 243 "data/maps/Whitecliff_Castlle/scripts.pory"
 	.string "Whoa... your outfit is so cool! I've\n"
 	.string "never seen something like that! Where\l"
 	.string "did you get it from?$"
 
 WC_text_Neighbour::
-# 251 "data/maps/Whitecliff_Castlle/scripts.pory"
+# 255 "data/maps/Whitecliff_Castlle/scripts.pory"
 	.string "I'm glad we've got a skilled blacksmith\n"
 	.string "in Whitecliff, but living next to her\l"
 	.string "drives me insane.\p"
@@ -751,6 +760,6 @@ WC_text_Neighbour::
 	.string "sound!?$"
 
 WC_text_CrazyGuy::
-# 263 "data/maps/Whitecliff_Castlle/scripts.pory"
+# 267 "data/maps/Whitecliff_Castlle/scripts.pory"
 	.string "The sun is moving! It's moving, I tell ya!\n"
 	.string "The end is upon us!$"

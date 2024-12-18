@@ -231,3 +231,6 @@ const u16 gMetatileAttributes_whitecliff_interior_secondary[] = INCBIN_U16("data
 
 const u16 gMetatiles_golden_plateau[] = INCBIN_U16("data/tilesets/secondary/golden_plateau/metatiles.bin");
 const u16 gMetatileAttributes_golden_plateau[] = INCBIN_U16("data/tilesets/secondary/golden_plateau/metatile_attributes.bin");
+
+const u16 gMetatiles_calcite_caves[] = INCBIN_U16("data/tilesets/primary/calcite_caves/metatiles.bin");
+const u16 gMetatileAttributes_calcite_caves[] = INCBIN_U16("data/tilesets/primary/calcite_caves/metatile_attributes.bin");

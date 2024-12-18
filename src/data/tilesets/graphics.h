@@ -1786,3 +1786,22 @@ const u16 gTilesetPalettes_golden_plateau[][16] =
 };
 
 const u32 gTilesetTiles_golden_plateau[] = INCBIN_U32("data/tilesets/secondary/golden_plateau/tiles.4bpp.lz");
+
+const u16 gTilesetPalettes_calcite_caves[][16] =
+{
+    INCBIN_U16("data/tilesets/primary/calcite_caves/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/primary/calcite_caves/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/primary/calcite_caves/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/primary/calcite_caves/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/primary/calcite_caves/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/primary/calcite_caves/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/primary/calcite_caves/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/primary/calcite_caves/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/primary/calcite_caves/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/primary/calcite_caves/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/primary/calcite_caves/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/primary/calcite_caves/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/primary/calcite_caves/palettes/12.gbapal"),
+};
+
+const u32 gTilesetTiles_calcite_caves[] = INCBIN_U32("data/tilesets/primary/calcite_caves/tiles.4bpp.lz");
