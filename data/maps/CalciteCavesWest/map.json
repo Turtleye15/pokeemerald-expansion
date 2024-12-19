@@ -28,8 +28,22 @@
       "x": 16,
       "y": 22,
       "elevation": 0,
-      "dest_map": "MAP_CALCITE_CAVES_WEST",
+      "dest_map": "MAP_GOLDEN_FIELDS_EAST",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 8,
+      "y": 9,
+      "elevation": 0,
+      "dest_map": "MAP_CALCITE_CAVES_WEST",
+      "dest_warp_id": "3"
+    },
+    {
+      "x": 13,
+      "y": 12,
+      "elevation": 0,
+      "dest_map": "MAP_CALCITE_CAVES_WEST",
+      "dest_warp_id": "2"
     }
   ],
   "coord_events": [
