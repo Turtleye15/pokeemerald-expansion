@@ -9621,6 +9621,11 @@ void ObjectEventUpdateElevation(struct ObjectEvent *objEvent, struct Sprite *spr
     u8 curElevation = MapGridGetElevationAt(objEvent->currentCoords.x, objEvent->currentCoords.y);
     u8 prevElevation = MapGridGetElevationAt(objEvent->previousCoords.x, objEvent->previousCoords.y);
 
+    if (MetatileBehavior_IsElevatedDoor(objEvent->currentMetatileBehavior)){
+        curElevation = 3;
+        prevElevation = 3;
+    }
+    
     if (curElevation == 15 || prevElevation == 15)
     {
         // Ignore subsprite priorities under bridges
