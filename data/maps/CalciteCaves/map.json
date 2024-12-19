@@ -96,6 +96,13 @@
       "elevation": 0,
       "dest_map": "MAP_WHITE_CLIFFS",
       "dest_warp_id": "4"
+    },
+    {
+      "x": 8,
+      "y": 5,
+      "elevation": 0,
+      "dest_map": "MAP_CALCITE_CAVES_WEST",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [

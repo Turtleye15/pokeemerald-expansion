@@ -215,6 +215,13 @@
       "elevation": 0,
       "dest_map": "MAP_GOLDEN_PLATEAU_FARM",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 12,
+      "y": 49,
+      "elevation": 0,
+      "dest_map": "MAP_CALCITE_CAVES_WEST",
+      "dest_warp_id": "1"
     }
   ],
   "coord_events": [
