@@ -40,9 +40,7 @@ F_TRAINER_FEMALE |
 #line 90
             TRAINER_ENCOUNTER_MUSIC_FEMALE,
 #line 91
-        .doubleBattle = FALSE,
-#line 92
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -523,7 +521,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_HYPER_POTION },
 #line 283
         .doubleBattle = FALSE,
-#line 284
+#line 246
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 2,
         .party = (const struct TrainerMon[])
@@ -1206,7 +1204,7 @@ F_TRAINER_FEMALE |
             TRAINER_ENCOUNTER_MUSIC_INTENSE,
 #line 553
         .doubleBattle = FALSE,
-#line 554
+#line 516
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 2,
         .party = (const struct TrainerMon[])
@@ -1251,7 +1249,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_SUPER_POTION },
 #line 571
         .doubleBattle = FALSE,
-#line 572
+#line 534
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 2,
         .party = (const struct TrainerMon[])
@@ -1328,7 +1326,7 @@ F_TRAINER_FEMALE |
             TRAINER_ENCOUNTER_MUSIC_AQUA,
 #line 601
         .doubleBattle = FALSE,
-#line 602
+#line 564
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 2,
         .party = (const struct TrainerMon[])
@@ -1373,7 +1371,7 @@ F_TRAINER_FEMALE |
             TRAINER_ENCOUNTER_MUSIC_AQUA,
 #line 618
         .doubleBattle = FALSE,
-#line 619
+#line 581
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 2,
         .party = (const struct TrainerMon[])
@@ -1418,7 +1416,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_SUPER_POTION, ITEM_SUPER_POTION },
 #line 636
         .doubleBattle = FALSE,
-#line 637
+#line 599
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 3,
         .party = (const struct TrainerMon[])
@@ -1609,7 +1607,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_FULL_RESTORE },
 #line 709
         .doubleBattle = FALSE,
-#line 710
+#line 672
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 2,
         .party = (const struct TrainerMon[])
@@ -3083,7 +3081,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_HYPER_POTION },
 #line 1306
         .doubleBattle = FALSE,
-#line 1307
+#line 1269
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 1,
         .party = (const struct TrainerMon[])
@@ -3123,7 +3121,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_HYPER_POTION },
 #line 1323
         .doubleBattle = FALSE,
-#line 1324
+#line 1286
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 1,
         .party = (const struct TrainerMon[])
@@ -3163,7 +3161,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_HYPER_POTION },
 #line 1340
         .doubleBattle = FALSE,
-#line 1341
+#line 1303
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 1,
         .party = (const struct TrainerMon[])
@@ -3205,7 +3203,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_HYPER_POTION },
 #line 1357
         .doubleBattle = FALSE,
-#line 1358
+#line 1320
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 1,
         .party = (const struct TrainerMon[])
@@ -3244,7 +3242,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_HYPER_POTION },
 #line 1373
         .doubleBattle = FALSE,
-#line 1374
+#line 1336
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 5,
         .party = (const struct TrainerMon[])
@@ -3357,7 +3355,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_FULL_RESTORE },
 #line 1423
         .doubleBattle = FALSE,
-#line 1424
+#line 1386
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 3,
         .party = (const struct TrainerMon[])
@@ -3413,7 +3411,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_FULL_RESTORE },
 #line 1445
         .doubleBattle = FALSE,
-#line 1446
+#line 1408
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 2,
         .party = (const struct TrainerMon[])
@@ -3458,7 +3456,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_SUPER_POTION },
 #line 1463
         .doubleBattle = FALSE,
-#line 1464
+#line 1426
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 3,
         .party = (const struct TrainerMon[])
@@ -3514,7 +3512,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_FULL_RESTORE },
 #line 1485
         .doubleBattle = FALSE,
-#line 1486
+#line 1448
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 2,
         .party = (const struct TrainerMon[])
@@ -3559,7 +3557,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_FULL_RESTORE },
 #line 1503
         .doubleBattle = FALSE,
-#line 1504
+#line 1466
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 2,
         .party = (const struct TrainerMon[])
@@ -3604,7 +3602,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_FULL_RESTORE },
 #line 1521
         .doubleBattle = FALSE,
-#line 1522
+#line 1484
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 3,
         .party = (const struct TrainerMon[])
@@ -3660,7 +3658,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_FULL_RESTORE },
 #line 1543
         .doubleBattle = FALSE,
-#line 1544
+#line 1506
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 4,
         .party = (const struct TrainerMon[])
@@ -3727,7 +3725,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_FULL_RESTORE },
 #line 1569
         .doubleBattle = FALSE,
-#line 1570
+#line 1532
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 3,
         .party = (const struct TrainerMon[])
@@ -3783,7 +3781,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_HYPER_POTION },
 #line 1591
         .doubleBattle = FALSE,
-#line 1592
+#line 1554
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 3,
         .party = (const struct TrainerMon[])
@@ -3839,7 +3837,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_HYPER_POTION },
 #line 1613
         .doubleBattle = FALSE,
-#line 1614
+#line 1576
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 3,
         .party = (const struct TrainerMon[])
@@ -3895,7 +3893,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_FULL_RESTORE },
 #line 1635
         .doubleBattle = FALSE,
-#line 1636
+#line 1598
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 3,
         .party = (const struct TrainerMon[])
@@ -3951,7 +3949,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_FULL_RESTORE },
 #line 1657
         .doubleBattle = FALSE,
-#line 1658
+#line 1620
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 3,
         .party = (const struct TrainerMon[])
@@ -4007,7 +4005,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_FULL_RESTORE },
 #line 1679
         .doubleBattle = FALSE,
-#line 1680
+#line 1642
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 2,
         .party = (const struct TrainerMon[])
@@ -4054,7 +4052,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_HYPER_POTION },
 #line 1697
         .doubleBattle = FALSE,
-#line 1698
+#line 1660
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 1,
         .party = (const struct TrainerMon[])
@@ -4095,7 +4093,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_HYPER_POTION },
 #line 1713
         .doubleBattle = FALSE,
-#line 1714
+#line 1676
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 1,
         .party = (const struct TrainerMon[])
@@ -4137,7 +4135,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_HYPER_POTION },
 #line 1730
         .doubleBattle = FALSE,
-#line 1731
+#line 1693
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_SETUP_FIRST_TURN,
         .partySize = 1,
         .party = (const struct TrainerMon[])
@@ -4178,7 +4176,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_FULL_RESTORE },
 #line 1746
         .doubleBattle = FALSE,
-#line 1747
+#line 1709
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_SETUP_FIRST_TURN,
         .partySize = 3,
         .party = (const struct TrainerMon[])
@@ -4257,7 +4255,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_FULL_RESTORE },
 #line 1780
         .doubleBattle = FALSE,
-#line 1781
+#line 1743
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_SETUP_FIRST_TURN,
         .partySize = 2,
         .party = (const struct TrainerMon[])
@@ -4304,7 +4302,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_SUPER_POTION },
 #line 1798
         .doubleBattle = FALSE,
-#line 1799
+#line 1761
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 3,
         .party = (const struct TrainerMon[])
@@ -4362,7 +4360,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_FULL_RESTORE },
 #line 1820
         .doubleBattle = FALSE,
-#line 1821
+#line 1783
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 1,
         .party = (const struct TrainerMon[])
@@ -4398,7 +4396,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_FULL_RESTORE },
 #line 1834
         .doubleBattle = FALSE,
-#line 1835
+#line 1797
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 1,
         .party = (const struct TrainerMon[])
@@ -4434,7 +4432,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_FULL_RESTORE },
 #line 1848
         .doubleBattle = FALSE,
-#line 1849
+#line 1811
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 1,
         .party = (const struct TrainerMon[])
@@ -4470,7 +4468,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_FULL_RESTORE },
 #line 1862
         .doubleBattle = FALSE,
-#line 1863
+#line 1825
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 3,
         .party = (const struct TrainerMon[])
@@ -4528,7 +4526,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_FULL_RESTORE },
 #line 1884
         .doubleBattle = FALSE,
-#line 1885
+#line 1847
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 2,
         .party = (const struct TrainerMon[])
@@ -4575,7 +4573,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_FULL_RESTORE },
 #line 1902
         .doubleBattle = FALSE,
-#line 1903
+#line 1865
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 3,
         .party = (const struct TrainerMon[])
@@ -4633,7 +4631,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_HYPER_POTION },
 #line 1924
         .doubleBattle = FALSE,
-#line 1925
+#line 1887
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 3,
         .party = (const struct TrainerMon[])
@@ -4691,7 +4689,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_HYPER_POTION },
 #line 1946
         .doubleBattle = FALSE,
-#line 1947
+#line 1909
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 3,
         .party = (const struct TrainerMon[])
@@ -4749,7 +4747,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_FULL_RESTORE },
 #line 1968
         .doubleBattle = FALSE,
-#line 1969
+#line 1931
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 3,
         .party = (const struct TrainerMon[])
@@ -4807,7 +4805,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_FULL_RESTORE },
 #line 1990
         .doubleBattle = FALSE,
-#line 1991
+#line 1953
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 3,
         .party = (const struct TrainerMon[])
@@ -11487,9 +11485,9 @@ F_TRAINER_FEMALE |
         .items = { ITEM_FULL_RESTORE, ITEM_FULL_RESTORE },
 #line 4632
         .doubleBattle = FALSE,
-#line 4633
+#line 4595
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY | AI_FLAG_SETUP_FIRST_TURN,
-#line 4634
+#line 4596
         .mugshotEnabled = TRUE,
         .mugshotColor = MUGSHOT_COLOR_PURPLE,
         .partySize = 5,
@@ -11607,9 +11605,9 @@ F_TRAINER_FEMALE |
         .items = { ITEM_FULL_RESTORE, ITEM_FULL_RESTORE },
 #line 4683
         .doubleBattle = FALSE,
-#line 4684
+#line 4646
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-#line 4685
+#line 4647
         .mugshotEnabled = TRUE,
         .mugshotColor = MUGSHOT_COLOR_GREEN,
         .partySize = 5,
@@ -11727,9 +11725,9 @@ F_TRAINER_FEMALE |
         .items = { ITEM_FULL_RESTORE, ITEM_FULL_RESTORE },
 #line 4734
         .doubleBattle = FALSE,
-#line 4735
+#line 4697
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-#line 4736
+#line 4698
         .mugshotEnabled = TRUE,
         .mugshotColor = MUGSHOT_COLOR_PINK,
         .partySize = 5,
@@ -11845,9 +11843,9 @@ F_TRAINER_FEMALE |
         .items = { ITEM_FULL_RESTORE, ITEM_FULL_RESTORE },
 #line 4785
         .doubleBattle = FALSE,
-#line 4786
+#line 4748
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-#line 4787
+#line 4749
         .mugshotEnabled = TRUE,
         .mugshotColor = MUGSHOT_COLOR_BLUE,
         .partySize = 5,
@@ -11965,7 +11963,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_POTION, ITEM_POTION },
 #line 4836
         .doubleBattle = FALSE,
-#line 4837
+#line 4799
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 3,
         .party = (const struct TrainerMon[])
@@ -12044,7 +12042,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_SUPER_POTION, ITEM_SUPER_POTION },
 #line 4870
         .doubleBattle = FALSE,
-#line 4871
+#line 4833
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 3,
         .party = (const struct TrainerMon[])
@@ -12123,7 +12121,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_SUPER_POTION, ITEM_SUPER_POTION },
 #line 4904
         .doubleBattle = FALSE,
-#line 4905
+#line 4867
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 4,
         .party = (const struct TrainerMon[])
@@ -12222,7 +12220,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_HYPER_POTION, ITEM_HYPER_POTION },
 #line 4946
         .doubleBattle = FALSE,
-#line 4947
+#line 4909
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 4,
         .party = (const struct TrainerMon[])
@@ -12319,7 +12317,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_HYPER_POTION, ITEM_HYPER_POTION },
 #line 4988
         .doubleBattle = FALSE,
-#line 4989
+#line 4951
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 4,
         .party = (const struct TrainerMon[])
@@ -12418,7 +12416,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_HYPER_POTION, ITEM_HYPER_POTION },
 #line 5030
         .doubleBattle = FALSE,
-#line 5031
+#line 4993
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY | AI_FLAG_RISKY,
         .partySize = 5,
         .party = (const struct TrainerMon[])
@@ -12533,7 +12531,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_HYPER_POTION, ITEM_HYPER_POTION, ITEM_HYPER_POTION, ITEM_HYPER_POTION },
 #line 5080
         .doubleBattle = TRUE,
-#line 5081
+#line 5043
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 4,
         .party = (const struct TrainerMon[])
@@ -12632,7 +12630,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_HYPER_POTION, ITEM_HYPER_POTION },
 #line 5122
         .doubleBattle = FALSE,
-#line 5123
+#line 5085
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 5,
         .party = (const struct TrainerMon[])
@@ -14379,7 +14377,7 @@ F_TRAINER_FEMALE |
             TRAINER_ENCOUNTER_MUSIC_INTENSE,
 #line 5804
         .doubleBattle = FALSE,
-#line 5805
+#line 5767
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 1,
         .party = (const struct TrainerMon[])
@@ -14411,7 +14409,7 @@ F_TRAINER_FEMALE |
             TRAINER_ENCOUNTER_MUSIC_INTENSE,
 #line 5817
         .doubleBattle = FALSE,
-#line 5818
+#line 5780
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 1,
         .party = (const struct TrainerMon[])
@@ -14450,7 +14448,7 @@ F_TRAINER_FEMALE |
             TRAINER_ENCOUNTER_MUSIC_INTENSE,
 #line 5834
         .doubleBattle = FALSE,
-#line 5835
+#line 5797
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 1,
         .party = (const struct TrainerMon[])
@@ -14489,7 +14487,7 @@ F_TRAINER_FEMALE |
             TRAINER_ENCOUNTER_MUSIC_INTENSE,
 #line 5851
         .doubleBattle = FALSE,
-#line 5852
+#line 5814
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 1,
         .party = (const struct TrainerMon[])
@@ -14528,7 +14526,7 @@ F_TRAINER_FEMALE |
             TRAINER_ENCOUNTER_MUSIC_INTENSE,
 #line 5868
         .doubleBattle = FALSE,
-#line 5869
+#line 5831
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 1,
         .party = (const struct TrainerMon[])
@@ -14569,7 +14567,7 @@ F_TRAINER_FEMALE |
             TRAINER_ENCOUNTER_MUSIC_INTENSE,
 #line 5885
         .doubleBattle = FALSE,
-#line 5886
+#line 5848
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 1,
         .party = (const struct TrainerMon[])
@@ -14610,7 +14608,7 @@ F_TRAINER_FEMALE |
             TRAINER_ENCOUNTER_MUSIC_INTENSE,
 #line 5902
         .doubleBattle = FALSE,
-#line 5903
+#line 5865
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 2,
         .party = (const struct TrainerMon[])
@@ -14655,7 +14653,7 @@ F_TRAINER_FEMALE |
             TRAINER_ENCOUNTER_MUSIC_INTENSE,
 #line 5919
         .doubleBattle = FALSE,
-#line 5920
+#line 5882
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 2,
         .party = (const struct TrainerMon[])
@@ -14700,7 +14698,7 @@ F_TRAINER_FEMALE |
             TRAINER_ENCOUNTER_MUSIC_INTENSE,
 #line 5936
         .doubleBattle = FALSE,
-#line 5937
+#line 5899
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 2,
         .party = (const struct TrainerMon[])
@@ -14745,7 +14743,7 @@ F_TRAINER_FEMALE |
             TRAINER_ENCOUNTER_MUSIC_INTENSE,
 #line 5953
         .doubleBattle = FALSE,
-#line 5954
+#line 5916
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 2,
         .party = (const struct TrainerMon[])
@@ -14790,7 +14788,7 @@ F_TRAINER_FEMALE |
             TRAINER_ENCOUNTER_MUSIC_INTENSE,
 #line 5970
         .doubleBattle = FALSE,
-#line 5971
+#line 5933
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 2,
         .party = (const struct TrainerMon[])
@@ -15078,7 +15076,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_FULL_RESTORE },
 #line 6087
         .doubleBattle = FALSE,
-#line 6088
+#line 6050
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 2,
         .party = (const struct TrainerMon[])
@@ -15139,7 +15137,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_FULL_RESTORE },
 #line 6113
         .doubleBattle = FALSE,
-#line 6114
+#line 6076
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 2,
         .party = (const struct TrainerMon[])
@@ -15574,9 +15572,9 @@ F_TRAINER_FEMALE |
         .items = { ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE },
 #line 6288
         .doubleBattle = FALSE,
-#line 6289
+#line 6251
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-#line 6290
+#line 6252
         .mugshotEnabled = TRUE,
         .mugshotColor = MUGSHOT_COLOR_YELLOW,
         .partySize = 6,
@@ -23047,7 +23045,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_HYPER_POTION },
 #line 9229
         .doubleBattle = FALSE,
-#line 9230
+#line 9192
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 1,
         .party = (const struct TrainerMon[])
@@ -23079,7 +23077,7 @@ F_TRAINER_FEMALE |
             TRAINER_ENCOUNTER_MUSIC_SUSPICIOUS,
 #line 9242
         .doubleBattle = FALSE,
-#line 9243
+#line 9205
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 1,
         .party = (const struct TrainerMon[])
@@ -23249,7 +23247,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_HYPER_POTION },
 #line 9311
         .doubleBattle = FALSE,
-#line 9312
+#line 9274
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 1,
         .party = (const struct TrainerMon[])
@@ -23722,7 +23720,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_FULL_RESTORE, ITEM_FULL_RESTORE },
 #line 9499
         .doubleBattle = FALSE,
-#line 9500
+#line 9462
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 5,
         .party = (const struct TrainerMon[])
@@ -23833,7 +23831,7 @@ F_TRAINER_FEMALE |
             TRAINER_ENCOUNTER_MUSIC_MALE,
 #line 9548
         .doubleBattle = FALSE,
-#line 9549
+#line 9511
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 1,
         .party = (const struct TrainerMon[])
@@ -23865,7 +23863,7 @@ F_TRAINER_FEMALE |
             TRAINER_ENCOUNTER_MUSIC_MALE,
 #line 9561
         .doubleBattle = FALSE,
-#line 9562
+#line 9524
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 3,
         .party = (const struct TrainerMon[])
@@ -23919,7 +23917,7 @@ F_TRAINER_FEMALE |
             TRAINER_ENCOUNTER_MUSIC_MALE,
 #line 9582
         .doubleBattle = FALSE,
-#line 9583
+#line 9545
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 3,
         .party = (const struct TrainerMon[])
@@ -23973,7 +23971,7 @@ F_TRAINER_FEMALE |
             TRAINER_ENCOUNTER_MUSIC_MALE,
 #line 9603
         .doubleBattle = FALSE,
-#line 9604
+#line 9566
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_SETUP_FIRST_TURN,
         .partySize = 1,
         .party = (const struct TrainerMon[])
@@ -24005,7 +24003,7 @@ F_TRAINER_FEMALE |
             TRAINER_ENCOUNTER_MUSIC_MALE,
 #line 9616
         .doubleBattle = FALSE,
-#line 9617
+#line 9579
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 3,
         .party = (const struct TrainerMon[])
@@ -24059,7 +24057,7 @@ F_TRAINER_FEMALE |
             TRAINER_ENCOUNTER_MUSIC_MALE,
 #line 9637
         .doubleBattle = FALSE,
-#line 9638
+#line 9600
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 3,
         .party = (const struct TrainerMon[])
@@ -24113,7 +24111,7 @@ F_TRAINER_FEMALE |
             TRAINER_ENCOUNTER_MUSIC_MALE,
 #line 9658
         .doubleBattle = FALSE,
-#line 9659
+#line 9621
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 1,
         .party = (const struct TrainerMon[])
@@ -24145,7 +24143,7 @@ F_TRAINER_FEMALE |
             TRAINER_ENCOUNTER_MUSIC_MALE,
 #line 9671
         .doubleBattle = FALSE,
-#line 9672
+#line 9634
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 3,
         .party = (const struct TrainerMon[])
@@ -24199,7 +24197,7 @@ F_TRAINER_FEMALE |
             TRAINER_ENCOUNTER_MUSIC_MALE,
 #line 9692
         .doubleBattle = FALSE,
-#line 9693
+#line 9655
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 3,
         .party = (const struct TrainerMon[])
@@ -24255,7 +24253,7 @@ F_TRAINER_FEMALE |
             TRAINER_ENCOUNTER_MUSIC_FEMALE,
 #line 9713
         .doubleBattle = FALSE,
-#line 9714
+#line 9676
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 1,
         .party = (const struct TrainerMon[])
@@ -24289,7 +24287,7 @@ F_TRAINER_FEMALE |
             TRAINER_ENCOUNTER_MUSIC_FEMALE,
 #line 9726
         .doubleBattle = FALSE,
-#line 9727
+#line 9689
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 3,
         .party = (const struct TrainerMon[])
@@ -24345,7 +24343,7 @@ F_TRAINER_FEMALE |
             TRAINER_ENCOUNTER_MUSIC_FEMALE,
 #line 9747
         .doubleBattle = FALSE,
-#line 9748
+#line 9710
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 3,
         .party = (const struct TrainerMon[])
@@ -24401,7 +24399,7 @@ F_TRAINER_FEMALE |
             TRAINER_ENCOUNTER_MUSIC_FEMALE,
 #line 9768
         .doubleBattle = FALSE,
-#line 9769
+#line 9731
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 1,
         .party = (const struct TrainerMon[])
@@ -24435,7 +24433,7 @@ F_TRAINER_FEMALE |
             TRAINER_ENCOUNTER_MUSIC_FEMALE,
 #line 9781
         .doubleBattle = FALSE,
-#line 9782
+#line 9744
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 3,
         .party = (const struct TrainerMon[])
@@ -24491,7 +24489,7 @@ F_TRAINER_FEMALE |
             TRAINER_ENCOUNTER_MUSIC_FEMALE,
 #line 9802
         .doubleBattle = FALSE,
-#line 9803
+#line 9765
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 3,
         .party = (const struct TrainerMon[])
@@ -24547,7 +24545,7 @@ F_TRAINER_FEMALE |
             TRAINER_ENCOUNTER_MUSIC_FEMALE,
 #line 9823
         .doubleBattle = FALSE,
-#line 9824
+#line 9786
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 1,
         .party = (const struct TrainerMon[])
@@ -24581,7 +24579,7 @@ F_TRAINER_FEMALE |
             TRAINER_ENCOUNTER_MUSIC_FEMALE,
 #line 9836
         .doubleBattle = FALSE,
-#line 9837
+#line 9799
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 3,
         .party = (const struct TrainerMon[])
@@ -24637,7 +24635,7 @@ F_TRAINER_FEMALE |
             TRAINER_ENCOUNTER_MUSIC_FEMALE,
 #line 9857
         .doubleBattle = FALSE,
-#line 9858
+#line 9820
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 3,
         .party = (const struct TrainerMon[])
@@ -24810,7 +24808,7 @@ F_TRAINER_FEMALE |
             TRAINER_ENCOUNTER_MUSIC_COOL,
 #line 9924
         .doubleBattle = FALSE,
-#line 9925
+#line 9887
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 2,
         .party = (const struct TrainerMon[])
@@ -25308,7 +25306,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_FULL_RESTORE },
 #line 10115
         .doubleBattle = FALSE,
-#line 10116
+#line 10078
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 2,
         .party = (const struct TrainerMon[])
@@ -25741,7 +25739,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_FULL_RESTORE },
 #line 10278
         .doubleBattle = FALSE,
-#line 10279
+#line 10241
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 1,
         .party = (const struct TrainerMon[])
@@ -25775,7 +25773,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_FULL_RESTORE },
 #line 10292
         .doubleBattle = FALSE,
-#line 10293
+#line 10255
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 3,
         .party = (const struct TrainerMon[])
@@ -25831,7 +25829,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_FULL_RESTORE },
 #line 10314
         .doubleBattle = FALSE,
-#line 10315
+#line 10277
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 1,
         .party = (const struct TrainerMon[])
@@ -25865,7 +25863,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_FULL_RESTORE },
 #line 10328
         .doubleBattle = FALSE,
-#line 10329
+#line 10291
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_SETUP_FIRST_TURN,
         .partySize = 1,
         .party = (const struct TrainerMon[])
@@ -25899,7 +25897,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_FULL_RESTORE },
 #line 10342
         .doubleBattle = FALSE,
-#line 10343
+#line 10305
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 1,
         .party = (const struct TrainerMon[])
@@ -25933,7 +25931,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_FULL_RESTORE },
 #line 10356
         .doubleBattle = FALSE,
-#line 10357
+#line 10319
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_SETUP_FIRST_TURN,
         .partySize = 1,
         .party = (const struct TrainerMon[])
@@ -25967,7 +25965,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_FULL_RESTORE },
 #line 10370
         .doubleBattle = FALSE,
-#line 10371
+#line 10333
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 2,
         .party = (const struct TrainerMon[])
@@ -26014,7 +26012,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_FULL_RESTORE },
 #line 10388
         .doubleBattle = FALSE,
-#line 10389
+#line 10351
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_SETUP_FIRST_TURN,
         .partySize = 2,
         .party = (const struct TrainerMon[])
@@ -26061,7 +26059,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_FULL_RESTORE },
 #line 10406
         .doubleBattle = FALSE,
-#line 10407
+#line 10369
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_SETUP_FIRST_TURN,
         .partySize = 3,
         .party = (const struct TrainerMon[])
@@ -26119,7 +26117,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_FULL_RESTORE },
 #line 10428
         .doubleBattle = FALSE,
-#line 10429
+#line 10391
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 2,
         .party = (const struct TrainerMon[])
@@ -26166,7 +26164,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_FULL_RESTORE },
 #line 10446
         .doubleBattle = FALSE,
-#line 10447
+#line 10409
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_SETUP_FIRST_TURN,
         .partySize = 2,
         .party = (const struct TrainerMon[])
@@ -26213,7 +26211,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_FULL_RESTORE },
 #line 10464
         .doubleBattle = FALSE,
-#line 10465
+#line 10427
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 2,
         .party = (const struct TrainerMon[])
@@ -26260,7 +26258,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_FULL_RESTORE },
 #line 10482
         .doubleBattle = FALSE,
-#line 10483
+#line 10445
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_SETUP_FIRST_TURN,
         .partySize = 2,
         .party = (const struct TrainerMon[])
@@ -26307,7 +26305,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_FULL_RESTORE },
 #line 10500
         .doubleBattle = FALSE,
-#line 10501
+#line 10463
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 2,
         .party = (const struct TrainerMon[])
@@ -26769,7 +26767,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_HYPER_POTION },
 #line 10681
         .doubleBattle = FALSE,
-#line 10682
+#line 10644
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 2,
         .party = (const struct TrainerMon[])
@@ -27376,7 +27374,7 @@ F_TRAINER_FEMALE |
             TRAINER_ENCOUNTER_MUSIC_INTENSE,
 #line 10923
         .doubleBattle = FALSE,
-#line 10924
+#line 10886
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 2,
         .party = (const struct TrainerMon[])
@@ -27498,7 +27496,7 @@ F_TRAINER_FEMALE |
             TRAINER_ENCOUNTER_MUSIC_MAGMA,
 #line 10970
         .doubleBattle = FALSE,
-#line 10971
+#line 10933
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 4,
         .party = (const struct TrainerMon[])
@@ -27565,7 +27563,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_HYPER_POTION },
 #line 10996
         .doubleBattle = FALSE,
-#line 10997
+#line 10959
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_SETUP_FIRST_TURN,
         .partySize = 2,
         .party = (const struct TrainerMon[])
@@ -27608,7 +27606,7 @@ F_TRAINER_FEMALE |
             TRAINER_ENCOUNTER_MUSIC_MALE,
 #line 11013
         .doubleBattle = FALSE,
-#line 11014
+#line 10976
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 2,
         .party = (const struct TrainerMon[])
@@ -27653,7 +27651,7 @@ F_TRAINER_FEMALE |
             TRAINER_ENCOUNTER_MUSIC_FEMALE,
 #line 11030
         .doubleBattle = FALSE,
-#line 11031
+#line 10993
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_SETUP_FIRST_TURN,
         .partySize = 2,
         .party = (const struct TrainerMon[])
@@ -27698,7 +27696,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_SUPER_POTION, ITEM_SUPER_POTION },
 #line 11048
         .doubleBattle = FALSE,
-#line 11049
+#line 11011
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 3,
         .party = (const struct TrainerMon[])
@@ -27754,7 +27752,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_SUPER_POTION, ITEM_SUPER_POTION },
 #line 11070
         .doubleBattle = FALSE,
-#line 11071
+#line 11033
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 3,
         .party = (const struct TrainerMon[])
@@ -27934,7 +27932,7 @@ F_TRAINER_FEMALE |
             TRAINER_ENCOUNTER_MUSIC_FEMALE,
 #line 11138
         .doubleBattle = FALSE,
-#line 11139
+#line 11101
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 3,
         .party = (const struct TrainerMon[])
@@ -29907,7 +29905,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_HYPER_POTION },
 #line 11907
         .doubleBattle = FALSE,
-#line 11908
+#line 11870
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 1,
         .party = (const struct TrainerMon[])
@@ -30316,7 +30314,7 @@ F_TRAINER_FEMALE |
             TRAINER_ENCOUNTER_MUSIC_MALE,
 #line 12079
         .doubleBattle = FALSE,
-#line 12080
+#line 12042
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 1,
         .party = (const struct TrainerMon[])
@@ -30350,7 +30348,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_FULL_RESTORE, ITEM_FULL_RESTORE },
 #line 12093
         .doubleBattle = FALSE,
-#line 12094
+#line 12056
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 5,
         .party = (const struct TrainerMon[])
@@ -30463,7 +30461,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_FULL_RESTORE, ITEM_FULL_RESTORE },
 #line 12143
         .doubleBattle = FALSE,
-#line 12144
+#line 12106
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 5,
         .party = (const struct TrainerMon[])
@@ -30576,7 +30574,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_FULL_RESTORE, ITEM_FULL_RESTORE },
 #line 12193
         .doubleBattle = FALSE,
-#line 12194
+#line 12156
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 5,
         .party = (const struct TrainerMon[])
@@ -30689,7 +30687,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_FULL_RESTORE, ITEM_FULL_RESTORE },
 #line 12243
         .doubleBattle = FALSE,
-#line 12244
+#line 12206
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 5,
         .party = (const struct TrainerMon[])
@@ -30800,7 +30798,7 @@ F_TRAINER_FEMALE |
             TRAINER_ENCOUNTER_MUSIC_MALE,
 #line 12292
         .doubleBattle = FALSE,
-#line 12293
+#line 12255
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 4,
         .party = (const struct TrainerMon[])
@@ -30865,7 +30863,7 @@ F_TRAINER_FEMALE |
             TRAINER_ENCOUNTER_MUSIC_MALE,
 #line 12317
         .doubleBattle = FALSE,
-#line 12318
+#line 12280
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 4,
         .party = (const struct TrainerMon[])
@@ -30930,7 +30928,7 @@ F_TRAINER_FEMALE |
             TRAINER_ENCOUNTER_MUSIC_MALE,
 #line 12342
         .doubleBattle = FALSE,
-#line 12343
+#line 12305
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 4,
         .party = (const struct TrainerMon[])
@@ -30997,7 +30995,7 @@ F_TRAINER_FEMALE |
             TRAINER_ENCOUNTER_MUSIC_FEMALE,
 #line 12367
         .doubleBattle = FALSE,
-#line 12368
+#line 12330
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 4,
         .party = (const struct TrainerMon[])
@@ -31064,7 +31062,7 @@ F_TRAINER_FEMALE |
             TRAINER_ENCOUNTER_MUSIC_FEMALE,
 #line 12392
         .doubleBattle = FALSE,
-#line 12393
+#line 12355
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 4,
         .party = (const struct TrainerMon[])
@@ -31131,7 +31129,7 @@ F_TRAINER_FEMALE |
             TRAINER_ENCOUNTER_MUSIC_FEMALE,
 #line 12417
         .doubleBattle = FALSE,
-#line 12418
+#line 12380
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 4,
         .party = (const struct TrainerMon[])
@@ -31351,7 +31349,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_FULL_RESTORE },
 #line 12502
         .doubleBattle = FALSE,
-#line 12503
+#line 12465
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 2,
         .party = (const struct TrainerMon[])
@@ -31396,7 +31394,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_HYPER_POTION },
 #line 12520
         .doubleBattle = FALSE,
-#line 12521
+#line 12483
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 2,
         .party = (const struct TrainerMon[])
@@ -31859,7 +31857,7 @@ F_TRAINER_FEMALE |
             TRAINER_ENCOUNTER_MUSIC_INTENSE,
 #line 12710
         .doubleBattle = TRUE,
-#line 12711
+#line 12673
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 2,
         .party = (const struct TrainerMon[])
@@ -31916,7 +31914,7 @@ F_TRAINER_FEMALE |
             TRAINER_ENCOUNTER_MUSIC_INTENSE,
 #line 12735
         .doubleBattle = TRUE,
-#line 12736
+#line 12698
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 2,
         .party = (const struct TrainerMon[])
@@ -31973,7 +31971,7 @@ F_TRAINER_FEMALE |
             TRAINER_ENCOUNTER_MUSIC_INTENSE,
 #line 12760
         .doubleBattle = TRUE,
-#line 12761
+#line 12723
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 2,
         .party = (const struct TrainerMon[])
@@ -32030,7 +32028,7 @@ F_TRAINER_FEMALE |
             TRAINER_ENCOUNTER_MUSIC_INTENSE,
 #line 12785
         .doubleBattle = TRUE,
-#line 12786
+#line 12748
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_SETUP_FIRST_TURN,
         .partySize = 2,
         .party = (const struct TrainerMon[])
@@ -32087,7 +32085,7 @@ F_TRAINER_FEMALE |
             TRAINER_ENCOUNTER_MUSIC_INTENSE,
 #line 12810
         .doubleBattle = TRUE,
-#line 12811
+#line 12773
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 2,
         .party = (const struct TrainerMon[])
@@ -33981,7 +33979,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_HYPER_POTION },
 #line 13556
         .doubleBattle = FALSE,
-#line 13557
+#line 13519
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 2,
         .party = (const struct TrainerMon[])
@@ -34024,7 +34022,7 @@ F_TRAINER_FEMALE |
             TRAINER_ENCOUNTER_MUSIC_MAGMA,
 #line 13573
         .doubleBattle = FALSE,
-#line 13574
+#line 13536
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 3,
         .party = (const struct TrainerMon[])
@@ -34320,7 +34318,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_HYPER_POTION },
 #line 13689
         .doubleBattle = FALSE,
-#line 13690
+#line 13652
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 3,
         .party = (const struct TrainerMon[])
@@ -35051,7 +35049,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_HYPER_POTION },
 #line 13971
         .doubleBattle = FALSE,
-#line 13972
+#line 13934
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 2,
         .party = (const struct TrainerMon[])
@@ -35205,7 +35203,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_HYPER_POTION },
 #line 14032
         .doubleBattle = FALSE,
-#line 14033
+#line 13995
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 1,
         .party = (const struct TrainerMon[])
@@ -35511,7 +35509,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_HYPER_POTION },
 #line 14149
         .doubleBattle = FALSE,
-#line 14150
+#line 14112
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 2,
         .party = (const struct TrainerMon[])
@@ -35556,7 +35554,7 @@ F_TRAINER_FEMALE |
             TRAINER_ENCOUNTER_MUSIC_FEMALE,
 #line 14166
         .doubleBattle = FALSE,
-#line 14167
+#line 14129
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 2,
         .party = (const struct TrainerMon[])
@@ -35601,7 +35599,7 @@ F_TRAINER_FEMALE |
             TRAINER_ENCOUNTER_MUSIC_FEMALE,
 #line 14183
         .doubleBattle = FALSE,
-#line 14184
+#line 14146
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 2,
         .party = (const struct TrainerMon[])
@@ -35648,7 +35646,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE },
 #line 14201
         .doubleBattle = TRUE,
-#line 14202
+#line 14164
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 4,
         .party = (const struct TrainerMon[])
@@ -35749,7 +35747,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE },
 #line 14243
         .doubleBattle = TRUE,
-#line 14244
+#line 14206
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 5,
         .party = (const struct TrainerMon[])
@@ -35868,7 +35866,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE },
 #line 14293
         .doubleBattle = TRUE,
-#line 14294
+#line 14256
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 5,
         .party = (const struct TrainerMon[])
@@ -35987,7 +35985,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE },
 #line 14343
         .doubleBattle = TRUE,
-#line 14344
+#line 14306
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 6,
         .party = (const struct TrainerMon[])
@@ -36122,7 +36120,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE },
 #line 14401
         .doubleBattle = TRUE,
-#line 14402
+#line 14364
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 4,
         .party = (const struct TrainerMon[])
@@ -36221,7 +36219,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE },
 #line 14443
         .doubleBattle = TRUE,
-#line 14444
+#line 14406
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 4,
         .party = (const struct TrainerMon[])
@@ -36320,7 +36318,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE },
 #line 14485
         .doubleBattle = TRUE,
-#line 14486
+#line 14448
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 5,
         .party = (const struct TrainerMon[])
@@ -36437,7 +36435,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE },
 #line 14535
         .doubleBattle = TRUE,
-#line 14536
+#line 14498
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 6,
         .party = (const struct TrainerMon[])
@@ -36572,7 +36570,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE },
 #line 14593
         .doubleBattle = TRUE,
-#line 14594
+#line 14556
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 4,
         .party = (const struct TrainerMon[])
@@ -36671,7 +36669,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE },
 #line 14635
         .doubleBattle = TRUE,
-#line 14636
+#line 14598
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 5,
         .party = (const struct TrainerMon[])
@@ -36788,7 +36786,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE },
 #line 14685
         .doubleBattle = TRUE,
-#line 14686
+#line 14648
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 5,
         .party = (const struct TrainerMon[])
@@ -36905,7 +36903,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE },
 #line 14735
         .doubleBattle = TRUE,
-#line 14736
+#line 14698
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 6,
         .party = (const struct TrainerMon[])
@@ -37042,7 +37040,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE },
 #line 14793
         .doubleBattle = TRUE,
-#line 14794
+#line 14756
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 4,
         .party = (const struct TrainerMon[])
@@ -37145,7 +37143,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE },
 #line 14835
         .doubleBattle = TRUE,
-#line 14836
+#line 14798
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 5,
         .party = (const struct TrainerMon[])
@@ -37266,7 +37264,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE },
 #line 14885
         .doubleBattle = TRUE,
-#line 14886
+#line 14848
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 6,
         .party = (const struct TrainerMon[])
@@ -37405,7 +37403,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE },
 #line 14943
         .doubleBattle = TRUE,
-#line 14944
+#line 14906
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 6,
         .party = (const struct TrainerMon[])
@@ -37542,7 +37540,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE },
 #line 15001
         .doubleBattle = TRUE,
-#line 15002
+#line 14964
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 4,
         .party = (const struct TrainerMon[])
@@ -37641,7 +37639,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE },
 #line 15043
         .doubleBattle = TRUE,
-#line 15044
+#line 15006
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 5,
         .party = (const struct TrainerMon[])
@@ -37758,7 +37756,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE },
 #line 15093
         .doubleBattle = TRUE,
-#line 15094
+#line 15056
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 5,
         .party = (const struct TrainerMon[])
@@ -37875,7 +37873,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE },
 #line 15143
         .doubleBattle = TRUE,
-#line 15144
+#line 15106
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 6,
         .party = (const struct TrainerMon[])
@@ -38012,7 +38010,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE },
 #line 15201
         .doubleBattle = TRUE,
-#line 15202
+#line 15164
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY | AI_FLAG_RISKY,
         .partySize = 5,
         .party = (const struct TrainerMon[])
@@ -38131,7 +38129,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE },
 #line 15251
         .doubleBattle = TRUE,
-#line 15252
+#line 15214
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY | AI_FLAG_RISKY,
         .partySize = 6,
         .party = (const struct TrainerMon[])
@@ -38268,7 +38266,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE },
 #line 15309
         .doubleBattle = TRUE,
-#line 15310
+#line 15272
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY | AI_FLAG_RISKY,
         .partySize = 6,
         .party = (const struct TrainerMon[])
@@ -38405,7 +38403,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE },
 #line 15367
         .doubleBattle = TRUE,
-#line 15368
+#line 15330
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY | AI_FLAG_RISKY,
         .partySize = 6,
         .party = (const struct TrainerMon[])
@@ -38540,7 +38538,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE },
 #line 15425
         .doubleBattle = TRUE,
-#line 15426
+#line 15388
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 5,
         .party = (const struct TrainerMon[])
@@ -38659,7 +38657,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE },
 #line 15475
         .doubleBattle = TRUE,
-#line 15476
+#line 15438
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 6,
         .party = (const struct TrainerMon[])
@@ -38796,7 +38794,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE },
 #line 15533
         .doubleBattle = TRUE,
-#line 15534
+#line 15496
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 6,
         .party = (const struct TrainerMon[])
@@ -38933,7 +38931,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE },
 #line 15591
         .doubleBattle = TRUE,
-#line 15592
+#line 15554
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 6,
         .party = (const struct TrainerMon[])
@@ -39070,7 +39068,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE },
 #line 15649
         .doubleBattle = TRUE,
-#line 15650
+#line 15612
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 5,
         .party = (const struct TrainerMon[])
@@ -39187,7 +39185,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE },
 #line 15699
         .doubleBattle = TRUE,
-#line 15700
+#line 15662
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 5,
         .party = (const struct TrainerMon[])
@@ -39304,7 +39302,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE },
 #line 15749
         .doubleBattle = TRUE,
-#line 15750
+#line 15712
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 6,
         .party = (const struct TrainerMon[])
@@ -39439,7 +39437,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE },
 #line 15807
         .doubleBattle = TRUE,
-#line 15808
+#line 15770
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 6,
         .party = (const struct TrainerMon[])
@@ -39572,7 +39570,7 @@ F_TRAINER_FEMALE |
             TRAINER_ENCOUNTER_MUSIC_SUSPICIOUS,
 #line 15864
         .doubleBattle = FALSE,
-#line 15865
+#line 15827
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 2,
         .party = (const struct TrainerMon[])
@@ -39627,7 +39625,7 @@ F_TRAINER_FEMALE |
             TRAINER_ENCOUNTER_MUSIC_COOL,
 #line 15887
         .doubleBattle = FALSE,
-#line 15888
+#line 15850
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 1,
         .party = (const struct TrainerMon[])
@@ -39661,7 +39659,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE },
 #line 15901
         .doubleBattle = FALSE,
-#line 15902
+#line 15864
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 6,
         .party = (const struct TrainerMon[])
@@ -39794,7 +39792,7 @@ F_TRAINER_FEMALE |
             TRAINER_ENCOUNTER_MUSIC_MALE,
 #line 15958
         .doubleBattle = FALSE,
-#line 15959
+#line 15921
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 1,
         .party = (const struct TrainerMon[])
@@ -39826,7 +39824,7 @@ F_TRAINER_FEMALE |
             TRAINER_ENCOUNTER_MUSIC_MALE,
 #line 15971
         .doubleBattle = FALSE,
-#line 15972
+#line 15934
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 1,
         .party = (const struct TrainerMon[])
@@ -39858,7 +39856,7 @@ F_TRAINER_FEMALE |
             TRAINER_ENCOUNTER_MUSIC_MALE,
 #line 15984
         .doubleBattle = FALSE,
-#line 15985
+#line 15947
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 1,
         .party = (const struct TrainerMon[])
@@ -39892,7 +39890,7 @@ F_TRAINER_FEMALE |
             TRAINER_ENCOUNTER_MUSIC_MALE,
 #line 15997
         .doubleBattle = FALSE,
-#line 15998
+#line 15960
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 1,
         .party = (const struct TrainerMon[])
@@ -39924,7 +39922,7 @@ F_TRAINER_FEMALE |
             TRAINER_ENCOUNTER_MUSIC_MALE,
 #line 16010
         .doubleBattle = FALSE,
-#line 16011
+#line 15973
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 1,
         .party = (const struct TrainerMon[])
@@ -39958,7 +39956,7 @@ F_TRAINER_FEMALE |
             TRAINER_ENCOUNTER_MUSIC_MALE,
 #line 16023
         .doubleBattle = FALSE,
-#line 16024
+#line 15986
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 1,
         .party = (const struct TrainerMon[])
@@ -39990,7 +39988,7 @@ F_TRAINER_FEMALE |
             TRAINER_ENCOUNTER_MUSIC_MALE,
 #line 16036
         .doubleBattle = FALSE,
-#line 16037
+#line 15999
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 1,
         .party = (const struct TrainerMon[])
@@ -40857,7 +40855,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_HYPER_POTION },
 #line 16374
         .doubleBattle = FALSE,
-#line 16375
+#line 16337
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 2,
         .party = (const struct TrainerMon[])
@@ -40904,7 +40902,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_HYPER_POTION },
 #line 16392
         .doubleBattle = FALSE,
-#line 16393
+#line 16355
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 3,
         .party = (const struct TrainerMon[])
@@ -40962,7 +40960,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_HYPER_POTION },
 #line 16414
         .doubleBattle = FALSE,
-#line 16415
+#line 16377
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 3,
         .party = (const struct TrainerMon[])
@@ -41020,7 +41018,7 @@ F_TRAINER_FEMALE |
         .items = { ITEM_HYPER_POTION },
 #line 16436
         .doubleBattle = FALSE,
-#line 16437
+#line 16399
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 3,
         .party = (const struct TrainerMon[])
@@ -41290,7 +41288,7 @@ F_TRAINER_FEMALE |
             TRAINER_ENCOUNTER_MUSIC_HIKER,
 #line 16541
         .doubleBattle = FALSE,
-#line 16542
+#line 16504
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 2,
         .party = (const struct TrainerMon[])
@@ -41333,7 +41331,7 @@ F_TRAINER_FEMALE |
             TRAINER_ENCOUNTER_MUSIC_HIKER,
 #line 16558
         .doubleBattle = FALSE,
-#line 16559
+#line 16521
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 3,
         .party = (const struct TrainerMon[])
@@ -41387,7 +41385,7 @@ F_TRAINER_FEMALE |
             TRAINER_ENCOUNTER_MUSIC_HIKER,
 #line 16579
         .doubleBattle = FALSE,
-#line 16580
+#line 16542
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 3,
         .party = (const struct TrainerMon[])
@@ -41441,7 +41439,7 @@ F_TRAINER_FEMALE |
             TRAINER_ENCOUNTER_MUSIC_HIKER,
 #line 16600
         .doubleBattle = FALSE,
-#line 16601
+#line 16563
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .partySize = 3,
         .party = (const struct TrainerMon[])
