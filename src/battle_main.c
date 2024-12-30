@@ -361,7 +361,6 @@ const struct TrainerClass gTrainerClasses[TRAINER_CLASS_COUNT] =
     [TRAINER_CLASS_BUG_CATCHER] = { _("BUG CATCHER"), 4 },
     [TRAINER_CLASS_PKMN_RANGER] = { _("{PKMN} RANGER"), 12 },
     [TRAINER_CLASS_MAGMA_LEADER] = { _("MAGMA LEADER"), 20, BALL_MASTER },
-    [TRAINER_CLASS_LASS] = { _("LASS"), 4 },
     [TRAINER_CLASS_YOUNG_COUPLE] = { _("YOUNG COUPLE"), 8 },
     [TRAINER_CLASS_OLD_COUPLE] = { _("OLD COUPLE"), 10 },
     [TRAINER_CLASS_SIS_AND_BRO] = { _("SIS AND BRO"), 3 },
@@ -373,6 +372,18 @@ const struct TrainerClass gTrainerClasses[TRAINER_CLASS_COUNT] =
     [TRAINER_CLASS_PIKE_QUEEN] = { _("PIKE QUEEN") },
     [TRAINER_CLASS_PYRAMID_KING] = { _("PYRAMID KING") },
     [TRAINER_CLASS_RS_PROTAG] = { _("{PKMN} TRAINER") },
+
+    //Trainer classes for GTHC
+    //Unique Trainers
+    [TRAINER_CLASS_HEIRESS] = {_("Heiress"), 1, BALL_LUXURY},
+    [TRAINER_CLASS_SERVANT] = {_("Servant"), 1, BALL_DUSK},
+    [TRAINER_CLASS_CAPTAIN] = {_("Captain")},
+    
+    //Other classes
+    [TRAINER_CLASS_LASS] = { _("LASS"), 4 },
+    [TRAINER_CLASS_GUARD] = {_("Guard")},
+    [TRAINER_CLASS_RANGER] = {_("Ranger")},
+    [TRAINER_CLASS_BOTANIST] = {_("Gotanist")},
 };
 
 static void (* const sTurnActionsFuncsTable[])(void) =

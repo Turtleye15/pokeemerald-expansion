@@ -427,6 +427,16 @@ const struct TrainerSprite gTrainerSprites[] =
     TRAINER_SPRITE(TRAINER_PIC_LEAF, gTrainerFrontPic_Leaf, gTrainerPalette_Leaf),
     TRAINER_SPRITE(TRAINER_PIC_RS_BRENDAN, gTrainerFrontPic_RubySapphireBrendan, gTrainerPalette_RubySapphireBrendan),
     TRAINER_SPRITE(TRAINER_PIC_RS_MAY, gTrainerFrontPic_RubySapphireMay, gTrainerPalette_RubySapphireMay),
+
+    //Classes for GTHC
+    TRAINER_SPRITE(TRAINER_PIC_ISABELL, gTrainerFrontPic_Isabell, gTrainerPalette_Isabell),
+    TRAINER_SPRITE(TRAINER_PIC_CECILE, gTrainerFrontPic_Cecile, gTrainerPalette_Cecile),
+    TRAINER_SPRITE(TRAINER_PIC_DANIA, gTrainerFrontPic_Dania, gTrainerPalette_Dania),
+    TRAINER_SPRITE(TRAINER_PIC_WHITECLIFF_GUARD, gTrainerFrontPic_WhitecliffGuard, gTrainerPalette_WhitecliffGuard),
+    TRAINER_SPRITE(TRAINER_PIC_BOTANIST_FEMALE, gTrainerFrontPic_BotanistF, gTrainerPalette_BotanistF),
+    TRAINER_SPRITE(TRAINER_PIC_BOTANIST_MALE, gTrainerFrontPic_BotanistM, gTrainerPalette_BotanistM),
+    TRAINER_SPRITE(TRAINER_PIC_RANGER_FEMALE, gTrainerFrontPic_RangerF, gTrainerPalette_RangerF),
+    TRAINER_SPRITE(TRAINER_PIC_RANGER_MALE, gTrainerFrontPic_RangerM, gTrainerPalette_RangerM),
 };
 
 static const union AnimCmd sAnimCmd_Hoenn[] =
