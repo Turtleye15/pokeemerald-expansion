@@ -22,6 +22,7 @@ enum {
     FONT_SMALL_NARROWER,
     FONT_SHORT_NARROW,
     FONT_SHORT_NARROWER,
+    FONT_CURSIVE,
 };
 
 // Return values for font functions
